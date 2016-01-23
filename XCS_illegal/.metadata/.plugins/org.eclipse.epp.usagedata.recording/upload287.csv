@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,view,org.eclipse.wst.server.ui,1.1.103.v20090909,"org.eclipse.wst.server.ui.ServersView",1318169400905
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1318169402421
+error,log,,,"CoreException calling delegate importConfiguration() ServerWorkingCopy Tomcat v5.5 Server at localhost",1318169402553
+error,log,,,"Error creating server",1318169402558
+started,bundle,org.eclipse.jst.server.tomcat.ui,1.1.102.v20090424,"org.eclipse.jst.server.tomcat.ui",1318169406856
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1318169414614
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1318169420746
+started,bundle,org.eclipse.wst.ws.ui,1.1.100.v200903112221,"org.eclipse.wst.ws.ui",1318169430665
+started,bundle,org.eclipse.epp.usagedata.ui,1.1.0.R200906100410,"org.eclipse.epp.usagedata.ui",1318169434310
+started,bundle,org.eclipse.tm.terminal.view,2.0.101.v200907301400,"org.eclipse.tm.terminal.view",1318169434710
+started,bundle,org.eclipse.debug.ui,3.5.1.v20090811_r351,"org.eclipse.debug.ui",1318169437780
+started,bundle,org.eclipse.ui.views.log,1.0.100.v20090731,"org.eclipse.ui.views.log",1318169438581
+started,bundle,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui",1318169438593
+started,bundle,org.eclipse.pde.core,3.5.100.v20090821,"org.eclipse.pde.core",1318169438704
+started,bundle,org.eclipse.rse.services,3.1.1.v200909160005,"org.eclipse.rse.services",1318169439667
+started,bundle,org.eclipse.rse.core,3.1.1.v200909160005,"org.eclipse.rse.core",1318169439692
+started,bundle,org.eclipse.rse.ui,3.1.1.v200909160005,"org.eclipse.rse.ui",1318169439831
+started,bundle,org.eclipse.rse.subsystems.files.core,3.1.1.v200909160005,"org.eclipse.rse.subsystems.files.core",1318169439855
+started,bundle,org.eclipse.rse.subsystems.files.local,2.1.101.v200907301400,"org.eclipse.rse.subsystems.files.local",1318169439856
+started,bundle,org.eclipse.rse.subsystems.shells.core,3.1.0.v200905272300,"org.eclipse.rse.subsystems.shells.core",1318169439888
+started,bundle,org.eclipse.rse.subsystems.shells.local,2.1.100.v200905272300,"org.eclipse.rse.subsystems.shells.local",1318169439889
+started,bundle,org.eclipse.rse.connectorservice.local,2.1.100.v200905272300,"org.eclipse.rse.connectorservice.local",1318169439918
+started,bundle,org.eclipse.rse.services.local,2.1.101.v200909160005,"org.eclipse.rse.services.local",1318169439920
+started,bundle,org.eclipse.birt.core,2.5.1.v20090903,"org.eclipse.birt.core",1318169441574
+started,bundle,org.eclipse.birt.chart.engine,2.5.1.v20090902,"org.eclipse.birt.chart.engine",1318169441598

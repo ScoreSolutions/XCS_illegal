@@ -1,0 +1,140 @@
+package com.ko.webapp.action;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.ko.domain.ApplicationArrest;
+import com.ko.domain.DutyGroup;
+import com.ko.domain.DutyTable;
+import com.ko.domain.DutyUnit;
+import com.ko.domain.Unit;
+import com.ko.util.DateUtil;
+
+
+public class DutyUnitList_MasterAction extends BaseAction {
+	String menuID="41";
+	@Override
+	
+	public void _default(HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		
+		if(uData.chkUserMenu(menuID)==true){
+	
+			DutyGroup dutygrplist = new DutyGroup(db);
+			List<Map<String,Object>> Listdutygroup = dutygrplist.findBySql("select dg.group_id,dg.group_name from duty_group dg where dg.group_status = 'N' order by dg.group_name ");		
+			//List viewduty = dutylist.findBySql("select dt.id, dt.duty_code,dt.duty_name,dg.group_name,to_char(dt.begin_date,'fmdd/MM/yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') As begin_date ,to_char(dt.end_date,'fmdd/MM/yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') As end_date,dt.group_id  from duty_table dt left join duty_group dg on  dt.group_id = dg.group_id and dg.group_status = 'N' order by dt.duty_code");		
+			
+			request.setAttribute("cmbDutyGroup", request.getParameter("cmbDutyGroup"));
+			request.setAttribute("dutygrplist", Listdutygroup);			
+			
+			log.debug(request.getParameter("unit_code"));
+			DutyUnit dutyunitlist = new DutyUnit(db);
+			String sql = "select dg.group_name , to_char(du.begin_date,'fmdd/MM/yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') As begin_date ,to_char(du.end_date,'fmdd/MM/yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') As end_date from duty_unit du left join duty_group dg on du.group_id = dg.group_id where du.unit_code = " + request.getParameter("unit_code") ;
+
+			List<Map<String,Object>> listdutyunit = dutyunitlist.findBySql(sql);		
+			request.setAttribute("viewdutyunit", listdutyunit);				
+		
+			forward("?page=/Master/DutyUnitList.jsp");
+		}else{
+    		HttpSession session = request.getSession();
+  		  	session.invalidate();
+  		  	request.setAttribute("errMsg", "ผู้ใช้ไม่มีสิทธิ์ดำเนินการ");
+  		  	forward("?page=/login.jsp", request, response);
+    	}		
+	}
+	public void create(HttpServletRequest request,HttpServletResponse response) throws Exception {
+		DutyUnit dutyunit = new DutyUnit(db);
+		
+			String id = (request.getParameter("id") != null ? request.getParameter("id").toString() : "");
+			
+			dutyunit.setUnit_code(request.getParameter("unit_code"));
+			dutyunit.setGroup_id(request.getParameter("cmbDutyGroup"));
+			dutyunit.setBegin_date(DateUtil.getDateFromString(request.getParameter("request_date_start").toString()));
+			dutyunit.setEnd_date(DateUtil.getDateFromString(request.getParameter("request_date_stop").toString()));
+			
+			if (request.getParameter("rdoProduct") != null)
+				dutyunit.setUsed_for(request.getParameter("rdoProduct"));
+			
+			dutyunit.setUpd_date(new java.util.Date());
+			
+			//log.debug(id);
+			if(id.equals("")){
+				dutyunit = dutyunit.update();
+			}else{
+				dutyunit = dutyunit.create();
+			}
+			
+			DutyGroup dutygrplist = new DutyGroup(db);
+			List<Map<String,Object>> listdutygroup = dutygrplist.findBySql("select dg.group_id,dg.group_name from duty_group dg where dg.group_status = 'N' order by dg.group_name ");		
+			
+			Unit unitlist = new Unit(db);
+			unitlist = unitlist.findByPk(Long.parseLong(request.getParameter("id")));	
+			
+			request.setAttribute("unitlist", unitlist);		
+			request.setAttribute("cmbDutyGroup", request.getParameter("cmbDutyGroup"));
+			request.setAttribute("dutygrplist", listdutygroup);			
+			
+			DutyUnit dutyunitlist = new DutyUnit(db);
+			String sql = "select du.id,dg.group_name , to_char(du.begin_date,'fmdd/MM/yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') As begin_date ,to_char(du.end_date,'fmdd/MM/yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') As end_date from duty_unit du left join duty_group dg on du.group_id = dg.group_id where du.unit_code = " + request.getParameter("unit_code") ;
+		
+			List<Map<String,Object>> listdutyunit = dutyunitlist.findBySql(sql);		
+			request.setAttribute("viewdutyunit", listdutyunit);	
+
+			forward("?page=/Master/DutyUnitList.jsp");
+	}	
+	public void cleardate(HttpServletRequest request,HttpServletResponse response) throws Exception {
+		log.debug("----------------clear--------------");
+		
+		String id = (request.getParameter("id") != null ? request.getParameter("id").toString() : "");
+		DutyGroup dutygrplist = new DutyGroup(db);
+		List<Map<String,Object>> listdutygroup = dutygrplist.findBySql("select dg.group_id,dg.group_name from duty_group dg where dg.group_status = 'N' order by dg.group_name ");		
+		
+		Unit unitlist = new Unit(db);
+		unitlist = unitlist.findByPk(Long.parseLong(request.getParameter("id")));	
+		
+		request.setAttribute("unitlist", unitlist);		
+		request.setAttribute("cmbDutyGroup", request.getParameter("cmbDutyGroup"));
+		request.setAttribute("dutygrplist", listdutygroup);			
+		
+		DutyUnit dutyunitlist = new DutyUnit(db);
+		String sql = "select du.id,dg.group_name , to_char(du.begin_date,'fmdd/MM/yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') As begin_date ,to_char(du.end_date,'fmdd/MM/yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') As end_date from duty_unit du left join duty_group dg on du.group_id = dg.group_id where du.unit_code = " + request.getParameter("unit_code") ;
+	
+		List<Map<String,Object>> listdutyunit = dutyunitlist.findBySql(sql);		
+		request.setAttribute("viewdutyunit", listdutyunit);	
+
+		forward("?page=/Master/DutyUnitList.jsp");		
+	}
+    public void del(HttpServletRequest request, HttpServletResponse response) throws Exception {
+  	
+        this.writeTranLog("ลบบันทึกการจับกุม");
+        log.debug("delete" + request.getParameter("id"));
+        Long id = new Long(request.getParameter("id"));
+        DutyUnit dutyunit = new DutyUnit(db);
+        dutyunit.deleteByPk(id);
+        
+        DutyGroup dutygrplist = new DutyGroup(db);
+		List<Map<String,Object>> listdutygroup = dutygrplist.findBySql("select dg.group_id,dg.group_name from duty_group dg where dg.group_status = 'N' order by dg.group_name ");		
+		
+		log.debug(Long.parseLong(request.getParameter("idd")));
+		Unit unitlist = new Unit(db);
+		unitlist = unitlist.findByPk(Long.parseLong(request.getParameter("idd")));	
+		
+		request.setAttribute("unitlist", unitlist);		
+		request.setAttribute("cmbDutyGroup", request.getParameter("cmbDutyGroup"));
+		request.setAttribute("dutygrplist", listdutygroup);			
+		
+		DutyUnit dutyunitlist = new DutyUnit(db);
+		String sql = "select du.id,dg.group_name , to_char(du.begin_date,'fmdd/MM/yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') As begin_date ,to_char(du.end_date,'fmdd/MM/yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') As end_date from duty_unit du left join duty_group dg on du.group_id = dg.group_id where du.unit_code = " + request.getParameter("ucode") ;
+	
+		List<Map<String,Object>> listdutyunit = dutyunitlist.findBySql(sql);		
+		request.setAttribute("viewdutyunit", listdutyunit);	
+		
+        forward("?page=/Master/DutyUnitList.jsp");
+    }	
+}
+

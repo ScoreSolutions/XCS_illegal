@@ -1,0 +1,27 @@
+#Fri Jun 08 14:51:42 ICT 2012
+eclipse.preferences.version=1
+encoding//WebContent/CompareCase/reward_request_form.jsp=UTF-8
+encoding//WebContent/Protect/arrest_search_conditions.html=UTF-8
+encoding//WebContent/Templates/Menu/ExciseMenu.css=UTF-8
+encoding//WebContent/Templates/footer.jsp=UTF-8
+encoding//WebContent/login.jsp=UTF-8
+encoding//src/com/ko/webapp/action/Brand_popAction.java=UTF-8
+encoding//src/com/ko/webapp/action/Invest2_27Action.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/schema/AuthenAndGetUserInfo/AuthenAndGetUserInfoRequest.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/schema/AuthenAndGetUserInfo/AuthenAndGetUserInfoResponse.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/schema/AuthenAndGetUserRole/AuthenAndGetUserRoleRequest.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/schema/AuthenAndGetUserRole/AuthenAndGetUserRoleResponse.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/schema/LdapUserBase/MessageBase.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/schema/LdapUserBase/RoleBase.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/schema/LdapUserBase/UserInfoBase.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/wsdl/LDAPGateway/LDPAGAuthenAndGetUserInfo/LDPAGAuthenAndGetUserInfoBindingStub.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/wsdl/LDAPGateway/LDPAGAuthenAndGetUserInfo/LDPAGAuthenAndGetUserInfoPortType.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/wsdl/LDAPGateway/LDPAGAuthenAndGetUserInfo/LDPAGAuthenAndGetUserInfoService.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/wsdl/LDAPGateway/LDPAGAuthenAndGetUserInfo/LDPAGAuthenAndGetUserInfoServiceLocator.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/wsdl/LDAPGateway/LDPAGAuthenAndGetUserRole/LDPAGAuthenAndGetUserRoleBindingImpl.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/wsdl/LDAPGateway/LDPAGAuthenAndGetUserRole/LDPAGAuthenAndGetUserRoleBindingSkeleton.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/wsdl/LDAPGateway/LDPAGAuthenAndGetUserRole/LDPAGAuthenAndGetUserRoleBindingStub.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/wsdl/LDAPGateway/LDPAGAuthenAndGetUserRole/LDPAGAuthenAndGetUserRolePortType.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/wsdl/LDAPGateway/LDPAGAuthenAndGetUserRole/LDPAGAuthenAndGetUserRoleService.java=UTF-8
+encoding//src/th/go/excise/dexsrvint/wsdl/LDAPGateway/LDPAGAuthenAndGetUserRole/LDPAGAuthenAndGetUserRoleServiceLocator.java=UTF-8
+encoding/<project>=UTF-8

@@ -1,0 +1,196 @@
+6 ¸.¤. 2553 14:04:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+6 ¸.¤. 2553 14:04:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+6 ¸.¤. 2553 14:04:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 14:04:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 14:04:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/GroupIDService'
+6 ¸.¤. 2553 14:04:04 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context641120585754652490.xml'
+6 ¸.¤. 2553 14:04:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/GroupIDService'
+6 ¸.¤. 2553 22:04:14 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+6 ¸.¤. 2553 22:04:14 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+6 ¸.¤. 2553 22:04:14 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:04:14 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:04:14 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+6 ¸.¤. 2553 22:04:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context2563082643177781978.xml'
+6 ¸.¤. 2553 22:04:47 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+6 ¸.¤. 2553 22:06:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:06:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 22:13:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:13:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 22:21:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:21:24 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 22:26:14 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:26:14 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 22:29:32 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:29:32 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 22:30:37 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:30:37 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 22:35:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:35:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 22:36:17 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:36:17 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 22:38:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:38:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 22:42:50 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:42:50 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 22:43:59 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:43:59 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 22:48:02 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:48:02 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 22:50:20 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:50:20 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 22:53:02 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:53:02 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 22:53:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:53:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 22:58:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:58:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 22:59:25 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 22:59:25 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:00:05 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:00:05 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:02:56 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:02:56 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:08:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:08:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:12:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:12:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:13:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:13:54 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:14:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:14:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:18:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:18:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:21:37 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:21:37 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:23:24 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:23:24 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:24:01 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:24:01 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:24:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:24:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:29:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:29:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:30:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:30:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:34:35 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:34:35 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:42:28 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:42:28 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:43:12 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:43:12 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:44:16 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:44:16 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:44:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:44:54 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:45:28 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:45:28 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:46:02 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:46:02 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:47:34 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:47:34 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:48:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:48:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:50:26 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:50:26 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:51:02 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:51:02 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+6 ¸.¤. 2553 23:56:40 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+6 ¸.¤. 2553 23:56:40 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'

@@ -1,0 +1,373 @@
+.body-scroll-x-panel {
+	padding:0px;
+	margin: 0px auto;
+	border: none;
+	overflow:auto;
+}
+.body-top-menu-x-panel {
+	padding:0px;
+	margin: 0px auto;
+	-x-border: dotted 1px #00A000;
+	border: none;
+	overflow: hidden; 
+	height:60px;
+}
+.body-top-menu-x-panel-body {
+	padding:0px;
+	
+	vertical-align: bottom;
+	width: 100%; 
+	-position: absolute; 
+	bottom: 0px; 
+	left: 0px; 
+}
+.body-top-menu-x-link  {
+	border-right: dotted 1px #800000;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	color: #A00000;
+	height: 30px;
+}
+a.body-top-menu-x-link:link  {
+	border-right: dotted 1px #800000;
+	padding-right:8px;
+	padding-left: 8px;
+	text-decoration: none;
+}
+a.body-top-menu-x-link:visited {
+	border-right: dotted 1px #800000;
+	padding-right:8px;
+	padding-left: 8px;
+	text-decoration: none;
+}
+a.body-top-menu-x-link:hover {
+	border-right: dotted 1px #800000;
+	padding-right:8px;
+	padding-left: 8px;
+	text-decoration: underline;
+}
+a.body-top-menu-x-link:active {
+	border-right: dotted 1px #800000;
+	padding-right:8px;
+	padding-left: 8px;
+	text-decoration: none;
+}
+.dr-stglpanel-marker {
+	float: left;
+}
+.leftMenuHeader {
+	vertical-align: midle;
+	border: dotted 1px #800000;
+}
+x-td {
+	border: dotted 1px #000080;
+}
+td#body-content {
+	vertical-align: top;
+}
+td#menu-content {
+	vertical-align: top;
+	width: 234px;
+}
+.rich-stglpanel-header {
+	height:25px;
+	vertical-align: middle;
+}
+.hPadding {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+rich-calendar-btn {
+	color: #E0E0E0;
+}
+.center-frame-header {
+	font-size: x-large;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+/* CSS Document */
+-td{
+	border: dotted 1px #C00000;
+}
+-span {
+	border: dotted 1px #00D000;
+}
+
+.subMenuPanelHeader{
+	padding-right: 0px;
+	padding-left: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border: 0px;
+}
+.subMenuPanelBody{
+	padding: 0px;
+	border: 0px;
+}
+.subMenuPanel{
+	padding: 0px;
+	border: 0px;
+}
+body
+{
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffff;
+    font-family: Tahoma;
+    font-size: 11px;
+}
+.bodytitleheader
+{
+font-family:Tahoma; font-size:10px; text-decoration: none; background-color: #FFFFFF; COLOR: #666666;
+}
+form {
+margin:0px;
+}
+
+A.bodytitleheader, A.bodytitleheader:ACTIVE, A.bodytitleheader:VISITED{
+text-decoration: none; font-size:10px;background-color: #FFFFFF; COLOR: #666666; padding: 0px; font-family:Tahoma;
+}
+
+.bodytext
+{
+font-family:Tahoma;
+font-size:11px;
+color:#000000;
+}
+
+.bodytitle
+{
+font-family:Tahoma;
+font-size:11px;
+color:#000000;
+}
+
+.bodyhead
+{
+font-family:Tahoma;
+font-size:11px;
+font-weight:bold;
+color:#000000;
+white-space:nowrap;
+}
+
+.tablehead
+{
+font-family:Tahoma;
+font-size:11px;
+font-weight:bold;
+color:#0000AA;
+}
+
+.button, .button:ACTIVE {height: 24px; font-size:11px;font-family: Tahoma; text-decoration: none; text-align: center; vertical-align: middle; color:#000000; background-color: #8EA8C6;  background-image: url(../images/bg_head_2.jpg);  background-repeat: repeat-x;
+border: 1px solid #4A637B; padding-top: 2px; padding-bottom: 2px; padding-left: 8px; padding-right: 8px; overflow:visible; background-position: top; cursor: pointer;}
+
+.button:HOVER {height: 24px; font-size:11px;font-family: Tahoma; text-decoration: none; text-align: center; vertical-align: middle; color:#FFFFFF; background-color: #19355E;  background-image: url(../images/button_bg_hover.gif);  background-repeat: repeat-x;
+border: 1px solid #19355E;  padding-top: 2px; padding-bottom: 2px; padding-left: 8px; padding-right: 8px; overflow:visible; background-position: bottom; cursor: pointer;}
+
+.buttondisabled {height: 24px; font-size:11px;font-family: Tahoma, Arial, Helvetica, sans-serif; text-decoration: none; text-align: center; vertical-align: middle; color:#999999; background-color: #eeeeee;  background-image: url(../images/button_disabled_bg.gif);  background-repeat: repeat-x; border: 1px solid #999999; padding-top: 2px; padding-bottom: 2px; padding-left: 8px; padding-right: 8px; overflow:visible; background-position: top;}
+
+.textinput
+{
+font-family:Tahoma;
+font-size:11px;
+color:#000000;
+}
+
+.tabledetailcode,.tabledetailcode:ACTIVE{
+font-family:Tahoma; font-size:11px; color:#000000; text-decoration:none; text-align:left; padding-left:10px; width:60px;
+}
+.tabledetailcode.HOVER{
+font-family:Tahoma; font-size:11px; color: #19355E; text-align:left; padding-left:10px; width:60px;
+}
+
+.tablealigncenter
+{
+font-family:Tahoma; font-size:11px; color:#000000; text-decoration:none; text-align:center;
+}
+
+.tabledescription
+{
+font-family:Tahoma; font-size:11px; color:#000000; text-decoration:none; text-align:left; padding-left:10px;
+}
+
+.tableamount
+{
+font-family:Tahoma; font-size:11px; color:#000000; text-decoration:none; text-align:right; padding-right:10px;
+}
+
+.tabledate
+{
+font-family:Tahoma; font-size:11px; color:#000000; text-align:center; text-decoration:none; width:70px;
+}
+
+.tablestatus
+{
+font-family:Tahoma; font-size:11px; color:#000000; text-align:center; text-decoration:none; width:10px;
+}
+
+.tablecheckbox
+{
+text-align:center;
+text-decoration:none;
+width:20px;
+}
+
+.menutitle
+{
+text-decoration:none; font-family:Tahoma; font-size:11px; font-weight:bold; padding-left:5px; height: 20px;
+}
+
+.menuitem
+{
+text-decoration:none; font-family:Tahoma; font-size:11px;
+}
+
+.titlebarbold
+{
+font-family:Tahoma; font-size:11px; font-weight:bold; text-decoration:none; text-shadow:#CECECE; background-color: #E7EFFC; color: #4A637B; padding-left:5px;
+}
+
+.titlebar
+{
+text-decoration: none; color: #4A637B; border-right: 1px dotted #4A637B;  border-bottom: 1px solid #4A637B; padding-top: 4px; padding-bottom: 4px; padding-right: 10px; padding-left: 10px; font-family:Tahoma; font-size:11px;
+}
+
+.titlebarblank
+{
+background-color: #EEEEEE; color: #4A637B; font-size:11px;
+}
+
+.titlebarseperate
+{
+padding: 4px; background-color: #E7EFFC; color: #4A637B;border-right: 1px solid #6785A7; font-size:11px;
+}
+
+.topLink, A.topLink, A.topLink:ACTIVE, A.topLink:VISITED {
+text-decoration: none; color: #4A637B; border-right: 1px dotted #4A637B;  border-bottom: 1px solid #4A637B; padding-top: 4px; padding-bottom: 4px; padding-right: 10px; padding-left: 10px; font-family:Tahoma; font-size:11px;
+}
+
+.errorMessage
+{
+font-family:Tahoma; font-size:11px; padding-left:10px; color:#FF0000;
+}
+.rich-message
+{
+font-family:Tahoma; font-size:11px; padding-left:10px; color:#FF0000; float: left; white-space: nowrap;
+}
+.errorMessageBox
+{
+font-family:Tahoma; font-size:11px; padding-left:10px; color:#FF0000;
+}
+.infoMessage{
+font-family:Tahoma; font-size:11px; padding-left:10px; color:#FFFF00;
+}
+.infoMessageBox
+{
+font-family:Tahoma; font-size:11px; padding-left:10px; color:#FFFF00;
+}
+.successMessage {
+font-family:Tahoma; font-size:11px; padding-left:10px; color:#00FF00;
+}
+.successMessageBox
+{
+font-family:Tahoma; font-size:11px; padding-left:10px; color:#00FF00;
+}
+.buttonEdit
+{
+height:18px; background-image: url(../images/edit.gif); vertical-align: middle; border-width: 0px; padding-left:10px; padding-right:10px; padding-top:10px; padding-bottom:10px;
+}
+.buttonCopy
+{
+height:18px; background-image: url(../images/copy.gif); vertical-align: middle; border-width: 0px; padding-left:10px; padding-right:10px; padding-top:10px; padding-bottom:10px;
+}
+.buttonRerun
+{
+height:20px; background-image: url(../images/refresh_icon.gif); vertical-align: middle; border-width: 0px; padding-left:10px; padding-right:10px; padding-top:10px; padding-bottom:10px;
+}
+.buttonDelete
+{
+height:18px; background-image: url(../images/del.gif); vertical-align: middle; border-width: 0px; padding-left:10px; padding-right:10px; padding-top:10px; padding-bottom:10px;
+}
+.panelPopUpScroller
+{
+width: 425px; height: 250px; overflow: auto; padding: 5px;
+}
+.panelPopUpScrollerForSetupRedeemControlDate
+{
+height: 150px; overflow: auto; padding: 5px;
+}
+.panelPopUpScrollerPartner
+{
+width: 600px; height: 300px; overflow: auto; padding: 5px
+}
+.panelPopUpScrollerCalculate
+{
+width: 600px; height: 200px; overflow: auto; padding: 5px
+}
+.panelPopUpScrollerPartner_setup
+{
+width: 700px; height: 350px; overflow: auto; padding: 5px; text-align:left;
+}
+.panelPopUpScrollerAddpartnerToProject
+{
+width: 550px; height: 250px; overflow: auto; padding: 5px
+}
+.panelPopupDataTableScroller
+{
+width: 500px; height: 250px; overflow: auto; padding: 5px;
+}
+.panelPopupLoadSimErrorDataTableScroller
+{
+width: 600px; height: 270px; overflow: auto; padding: 5px;
+}
+.panelPopUpScrollerLogErr
+{
+width: 550px; height: 300px; overflow: auto; padding: 5px
+}
+.panelPopupScrollerMemberPointAdjustDoc
+{
+width: 750px; height: 300px; overflow: auto; padding: 5px;
+}
+.requireField
+{
+font-family:Tahoma; font-size:11px; color:#FF0000;
+}
+.rich-picklist-source-items {
+ margin: 0px;
+}
+.rich-picklist-target-items {
+ margin: 0px;
+}
+.rich-calendar-popup{
+ width: 200px;
+ height: 200px;
+}
+.errLoadTransLog:link
+{
+font-family:Tahoma; font-size:11px; color:#FF0000; text-decoration:none; text-align:left; padding-left:10px;
+}
+.errLoadTransLog:hover
+{
+font-family:Tahoma; font-size:11px; color:#000000; text-decoration:none; text-align:left; padding-left:10px;
+}
+
+.topPanelBg{
+	background-image: url(../images/bk_violet.jpg);
+	border:none padding:0px;
+	margin: 0px auto;
+}
+
+.menuMainPanelBg{
+	background-image: url(../images/bk_menu.jpg); 
+	border:none padding:0px;
+	margin: 0px auto;
+}
+
+.maginNo{
+	padding:0px;
+	margin: 0px auto;
+}

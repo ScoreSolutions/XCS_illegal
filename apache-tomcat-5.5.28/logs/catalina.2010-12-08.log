@@ -1,0 +1,260 @@
+8 ¸.¤. 2553 0:44:49 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.5.0_21\bin;.;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\oracle\product\10.2.0\db_1\bin;C:\Program Files\PC Connectivity Solution\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files\Windows Live\Shared;C:\Program Files\Subversion\bin
+8 ¸.¤. 2553 0:44:50 org.apache.coyote.http11.Http11BaseProtocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8888
+8 ¸.¤. 2553 0:44:50 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2471 ms
+8 ¸.¤. 2553 0:44:50 org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+8 ¸.¤. 2553 0:44:50 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/5.5.28
+8 ¸.¤. 2553 0:44:50 org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+8 ¸.¤. 2553 0:44:58 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+8 ¸.¤. 2553 0:45:03 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/GroupIDService/WEB-INF/wsit-service.InquiryGroupID.xml.
+8 ¸.¤. 2553 0:45:10 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+8 ¸.¤. 2553 0:45:11 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+8 ¸.¤. 2553 0:45:18 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+8 ¸.¤. 2553 0:45:27 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort
+8 ¸.¤. 2553 0:45:27 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+8 ¸.¤. 2553 0:45:31 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+8 ¸.¤. 2553 0:45:36 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort
+8 ¸.¤. 2553 0:45:36 org.glassfish.gmbal.impl.JMXRegistrationManager resumeRegistration
+WARNING: "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort]"
+8 ¸.¤. 2553 0:45:36 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+8 ¸.¤. 2553 0:45:36 org.apache.coyote.http11.Http11BaseProtocol start
+INFO: Starting Coyote HTTP/1.1 on http-8888
+8 ¸.¤. 2553 0:45:37 org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+8 ¸.¤. 2553 0:45:37 org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/122  config=null
+8 ¸.¤. 2553 0:45:37 org.apache.catalina.storeconfig.StoreLoader load
+INFO: Find registry server-registry.xml at classpath resource
+8 ¸.¤. 2553 0:45:37 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 47168 ms
+8 ¸.¤. 2553 0:45:38 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 0:48:10 org.apache.coyote.http11.Http11BaseProtocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8888
+8 ¸.¤. 2553 0:48:11 org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+8 ¸.¤. 2553 0:48:11 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+8 ¸.¤. 2553 0:48:11 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort
+8 ¸.¤. 2553 0:48:11 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+8 ¸.¤. 2553 0:48:14 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+8 ¸.¤. 2553 0:48:14 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+8 ¸.¤. 2553 0:48:14 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+8 ¸.¤. 2553 0:48:17 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+8 ¸.¤. 2553 0:48:17 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort
+8 ¸.¤. 2553 0:48:17 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+8 ¸.¤. 2553 0:48:19 org.apache.coyote.http11.Http11BaseProtocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8888
+8 ¸.¤. 2553 0:48:19 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime
+8 ¸.¤. 2553 14:00:27 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.5.0_21\bin;.;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\oracle\product\10.2.0\db_1\bin;C:\Program Files\PC Connectivity Solution\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files\Windows Live\Shared;C:\Program Files\Subversion\bin
+8 ¸.¤. 2553 14:00:28 org.apache.coyote.http11.Http11BaseProtocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8888
+8 ¸.¤. 2553 14:00:28 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3222 ms
+8 ¸.¤. 2553 14:00:29 org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+8 ¸.¤. 2553 14:00:29 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/5.5.28
+8 ¸.¤. 2553 14:00:29 org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+8 ¸.¤. 2553 14:00:38 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+8 ¸.¤. 2553 14:00:44 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/GroupIDService/WEB-INF/wsit-service.InquiryGroupID.xml.
+8 ¸.¤. 2553 14:00:51 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+8 ¸.¤. 2553 14:00:52 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+8 ¸.¤. 2553 14:01:02 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+8 ¸.¤. 2553 14:01:12 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort
+8 ¸.¤. 2553 14:01:13 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+8 ¸.¤. 2553 14:01:20 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+8 ¸.¤. 2553 14:01:27 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort
+8 ¸.¤. 2553 14:01:28 org.glassfish.gmbal.impl.JMXRegistrationManager resumeRegistration
+WARNING: "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort]"
+8 ¸.¤. 2553 14:01:28 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+8 ¸.¤. 2553 14:01:28 org.apache.coyote.http11.Http11BaseProtocol start
+INFO: Starting Coyote HTTP/1.1 on http-8888
+8 ¸.¤. 2553 14:01:29 org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+8 ¸.¤. 2553 14:01:29 org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/124  config=null
+8 ¸.¤. 2553 14:01:29 org.apache.catalina.storeconfig.StoreLoader load
+INFO: Find registry server-registry.xml at classpath resource
+8 ¸.¤. 2553 14:01:29 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 61185 ms
+8 ¸.¤. 2553 14:01:32 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+8 ¸.¤. 2553 14:01:32 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+8 ¸.¤. 2553 14:01:32 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+8 ¸.¤. 2553 14:01:35 org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context [/GroupIDService]
+8 ¸.¤. 2553 14:01:40 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+8 ¸.¤. 2553 14:01:43 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/GroupIDService/WEB-INF/wsit-service.InquiryGroupID.xml.
+8 ¸.¤. 2553 14:01:51 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+8 ¸.¤. 2553 14:01:52 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+8 ¸.¤. 2553 14:01:53 org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/GroupIDService] has already been started
+8 ¸.¤. 2553 14:03:33 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+8 ¸.¤. 2553 14:03:33 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+8 ¸.¤. 2553 14:03:33 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+8 ¸.¤. 2553 14:03:35 org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context [/GroupIDService]
+8 ¸.¤. 2553 14:17:04 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 14:32:37 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 14:38:17 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 15:02:20 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 15:03:55 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 15:28:33 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 15:30:48 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 15:32:11 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 15:32:53 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 15:42:59 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 15:47:51 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 15:50:46 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 16:03:14 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 16:03:38 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 16:07:01 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 16:07:56 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 16:08:36 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 16:29:07 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 16:30:48 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 16:38:27 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 16:38:36 org.apache.coyote.http11.Http11BaseProtocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8888
+8 ¸.¤. 2553 16:38:38 org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+8 ¸.¤. 2553 16:38:38 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+8 ¸.¤. 2553 16:38:40 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort
+8 ¸.¤. 2553 16:38:40 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+8 ¸.¤. 2553 16:38:55 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+8 ¸.¤. 2553 16:38:55 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort
+8 ¸.¤. 2553 16:38:56 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+8 ¸.¤. 2553 16:39:09 org.apache.coyote.http11.Http11BaseProtocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8888
+8 ¸.¤. 2553 16:39:10 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime
+8 ¸.¤. 2553 18:55:23 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.5.0_21\bin;.;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\oracle\product\10.2.0\db_1\bin;C:\Program Files\PC Connectivity Solution\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files\Windows Live\Shared;C:\Program Files\Subversion\bin
+8 ¸.¤. 2553 18:55:23 org.apache.coyote.http11.Http11BaseProtocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8888
+8 ¸.¤. 2553 18:55:23 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2000 ms
+8 ¸.¤. 2553 18:55:24 org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+8 ¸.¤. 2553 18:55:24 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/5.5.28
+8 ¸.¤. 2553 18:55:24 org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+8 ¸.¤. 2553 18:55:33 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+8 ¸.¤. 2553 18:55:45 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort
+8 ¸.¤. 2553 18:55:46 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+8 ¸.¤. 2553 18:55:50 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+8 ¸.¤. 2553 18:55:55 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort
+8 ¸.¤. 2553 18:55:56 org.glassfish.gmbal.impl.JMXRegistrationManager resumeRegistration
+WARNING: "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort]"
+8 ¸.¤. 2553 18:55:56 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+8 ¸.¤. 2553 18:55:56 org.apache.coyote.http11.Http11BaseProtocol start
+INFO: Starting Coyote HTTP/1.1 on http-8888
+8 ¸.¤. 2553 18:55:57 org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+8 ¸.¤. 2553 18:55:57 org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/616  config=null
+8 ¸.¤. 2553 18:55:57 org.apache.catalina.storeconfig.StoreLoader load
+INFO: Find registry server-registry.xml at classpath resource
+8 ¸.¤. 2553 18:55:57 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 34038 ms
+8 ¸.¤. 2553 18:57:47 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+8 ¸.¤. 2553 18:59:21 org.apache.coyote.http11.Http11BaseProtocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8888
+8 ¸.¤. 2553 18:59:22 org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+8 ¸.¤. 2553 18:59:22 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+8 ¸.¤. 2553 18:59:22 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort
+8 ¸.¤. 2553 18:59:22 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+8 ¸.¤. 2553 18:59:26 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+8 ¸.¤. 2553 18:59:26 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort
+8 ¸.¤. 2553 18:59:26 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+8 ¸.¤. 2553 18:59:29 org.apache.coyote.http11.Http11BaseProtocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8888
+8 ¸.¤. 2553 18:59:29 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime

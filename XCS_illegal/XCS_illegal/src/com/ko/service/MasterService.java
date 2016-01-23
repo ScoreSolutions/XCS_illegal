@@ -1,0 +1,228 @@
+package com.ko.service;
+
+import java.rmi.RemoteException;
+import java.util.ArrayList;
+
+import org.jfree.util.Log;
+
+import com.pccth.rdbservice.InquiryDutyTableOperation;
+import com.pccth.rdbservice.InquiryDutyTableOperationResponse;
+import com.pccth.rdbservice.InquiryProductTypeOperation;
+import com.pccth.rdbservice.InquiryProductTypeOperationResponse;
+import com.pccth.rdbservice.InquiryTitleOperation;
+import com.pccth.rdbservice.InquiryTitleOperationResponse;
+import com.pccth.rdbservice.RdbserviceEdStub;
+import com.pccth.rdbservice.BodyGen1;
+import com.pccth.rdbservice.Header;
+import com.pccth.rdbservice.InquiryAccMastReqHeader;
+import com.pccth.rdbservice.ParameterAppend;
+import com.pccth.rdbservice.ProductTypeInfo;
+import com.pccth.rdbservice.TitleInfo;
+import com.pccth.rdbservice.DutyTableInfo;
+
+import com.ko.util.*;
+
+public class MasterService {
+
+	//String endPoint = "http://192.168.101.10/WebServices/rdbserviceEdSoapHttpPort";  เดิม
+	//String endPoint = "http://192.168.103.10/WebServices/rdbserviceEdSoapHttpPort";   //แก้ไขใหม่วันที่ 23/06/2558
+	//String endPoint = "http://web.excise.go.th/WebServices/rdbserviceEdSoapHttpPort?WSDL";  //แก้ไขใหม่วันที่ 08/08/2558
+	//String endPoint = "http://webdr.excise.go.th/WebServices/rdbserviceEdSoapHttpPort?wsdl";  //Test DR Site
+	String err_desc;
+	
+	public String getErr_desc(){
+		return err_desc;
+	}
+
+	// -- Return authentication header
+	private  Header getAuthenticationHeader() {
+		Header header = new Header();
+		//header.setIPAddress("192.168.3.75");
+		header.setServiceID("0000000002");
+		header.setSystemID("002");
+		return header;
+	}
+
+	// -- Return authentication body
+	private  BodyGen1 getAuthenticationBody(String parameterSearch,
+			String parameterValue) {
+		BodyGen1 body = new BodyGen1();
+		body.setUserID("LAW");
+		body.setPassword("11111111");
+		ParameterAppend append = new ParameterAppend();
+		append.setParameterSearch(parameterSearch);
+		append.setParameterValue(parameterValue);
+		body.setParameterAppend(new ParameterAppend[] { append });
+		return body;
+	}
+
+	// -- Return inquiry master request header
+	protected  InquiryAccMastReqHeader getInquiryHeader(
+			String parameterSearch, String parameterValue) {
+		InquiryAccMastReqHeader inHeader = new InquiryAccMastReqHeader();
+
+		Header header = getAuthenticationHeader();
+		BodyGen1 bodyGen = getAuthenticationBody(parameterSearch,
+				parameterValue);
+
+		inHeader.setHeader(header);
+		inHeader.setBody(bodyGen);
+
+		return inHeader;
+	}
+
+	// -- Return service from web.excise.go.th
+	protected  RdbserviceEdStub getService() throws Exception {
+//		RdbserviceEd_Service service = new RdbserviceEd_ServiceLocator();
+//		RdbserviceEd_PortType portType = null;
+//		try {
+//			//portType = service.getrdbserviceEdSoapHttpPort(new URL("http://web.excise.go.th/WebServices/rdbserviceEdSoapHttpPort"));
+//			portType = service.getrdbserviceEdSoapHttpPort(new URL(endPoint));
+//		} catch (MalformedURLException e) {
+//			e.printStackTrace();
+//		} catch (ServiceException e) {
+//			e.printStackTrace();
+//		}
+//		return portType;
+		
+		//RdbserviceEdStub service = new RdbserviceEdStub("http://192.168.103.10/WebServices/rdbserviceEdSoapHttpPort");
+		
+		String endPoint = ConfigUtil.getConfig("RDBWebServiceEnpoint");
+		System.out.println("URL WebService " + endPoint);
+		RdbserviceEdStub service = new RdbserviceEdStub(endPoint);
+		return service;
+	}
+	
+	
+	public  boolean chkServiceConnection() throws Exception
+	{
+		boolean ret = true;
+		RdbserviceEdStub service = getService();
+		InquiryAccMastReqHeader inHeader = getInquiryHeader("","");
+		InquiryTitleOperation req = new InquiryTitleOperation();
+
+		req.setInquiryTitleOperation(inHeader);
+		InquiryTitleOperationResponse res = service.inquiryTitleOperation(req);
+		
+		try{
+			res = service.inquiryTitleOperation(req);
+			ret = true;
+		}catch(RemoteException e){
+			//inHeader.getBody().
+			err_desc = "chkServiceConnection : " + e.getMessage();
+			ret = false;
+			e.printStackTrace();
+			
+		}
+		
+		System.out.println(ret + " chkServiceConnection " + err_desc);
+		
+		return ret;
+	}
+	
+	public  ArrayList<DutyTableInfo> getDutyTableList(String parameterSearch, String parameterValue) throws Exception{
+		RdbserviceEdStub service = getService();
+		InquiryAccMastReqHeader inHeader = getInquiryHeader(parameterSearch,parameterValue);
+		InquiryDutyTableOperationResponse response = new InquiryDutyTableOperationResponse();
+
+		try {
+			InquiryDutyTableOperation req = new InquiryDutyTableOperation();
+			req.setInquiryDutyTableOperation(inHeader);
+			
+			response = service.inquiryDutyTableOperation(req);
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
+
+		DutyTableInfo[] info = response.getInquiryDutyTableOperationResponse().getBody().getDutyTableInfo();
+		ArrayList<DutyTableInfo> dutyTableInfo = new ArrayList<DutyTableInfo>();
+
+		for (DutyTableInfo i : info) {
+			dutyTableInfo.add(i);
+			// System.out.println(i.getOffName());
+		}
+
+		return dutyTableInfo;
+	}
+
+	public  ArrayList<ProductTypeInfo> getProductTypeList(String parameterSearch, String parameterValue) throws Exception {
+
+		RdbserviceEdStub service = getService();
+		InquiryAccMastReqHeader inHeader = getInquiryHeader(parameterSearch, parameterValue);
+		InquiryProductTypeOperationResponse response = new InquiryProductTypeOperationResponse();
+
+		try {
+			InquiryProductTypeOperation req = new InquiryProductTypeOperation();
+			req.setInquiryProductTypeOperation(inHeader);
+			
+			response = service.inquiryProductTypeOperation(req);
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
+
+		//Body body = response.getBody();
+		ProductTypeInfo[] info = response.getInquiryProductTypeOperationResponse().getBody().getProductTypeInfo();
+		ArrayList<ProductTypeInfo> resultInfo = new ArrayList<ProductTypeInfo>();
+
+		for (ProductTypeInfo i : info) {
+			resultInfo.add(i);
+		}
+		return resultInfo;
+	}
+
+
+	
+
+	public  ArrayList<TitleInfo> getTitleList(String parameterSearch, String parameterValue) {
+
+		RdbserviceEdStub service = null;
+		try {
+			service = getService();
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		InquiryAccMastReqHeader inHeader = getInquiryHeader(parameterSearch, parameterValue);
+		InquiryTitleOperationResponse response = new InquiryTitleOperationResponse();
+		
+		InquiryTitleOperation req = new InquiryTitleOperation();
+		req.setInquiryTitleOperation(inHeader);
+		try {
+			response = service.inquiryTitleOperation(req);
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
+
+		//Body body = response.get;
+		TitleInfo[] info = response.getInquiryTitleOperationResponse().getBody().getTitleInfo();
+		ArrayList<TitleInfo> resultInfo = new ArrayList<TitleInfo>();
+
+		for (TitleInfo i : info) {
+			resultInfo.add(i);
+		}
+		return resultInfo;
+	}
+	
+
+	// -- Test Entry
+	public static void main(String args[]) throws Exception {
+		// getProvinceList("", "");
+		// getTambolList("","");
+		// System.out.println("");
+
+		// getEdOfficeList("", "");
+		// getDutyGroupList("", "");
+
+		//getProductTypeList("", "");
+		//getProductUnitList("", "");
+		//getTitleList("", "");
+		//getCountryList("", "");
+		
+		MasterService ms = new MasterService();
+		//System.out.println(ms.getDutyTableList("",""));;
+		for (DutyTableInfo i : ms.getDutyTableList("","")) {
+			System.out.println(i.getDuty_name());
+		}
+	}
+}

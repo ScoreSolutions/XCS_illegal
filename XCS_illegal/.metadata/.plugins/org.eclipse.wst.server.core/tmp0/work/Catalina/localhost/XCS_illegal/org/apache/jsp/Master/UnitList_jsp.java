@@ -1,0 +1,709 @@
+package org.apache.jsp.Master;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+import com.ko.webapp.util.FormHandler;
+
+public final class UnitList_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static java.util.List _jspx_dependants;
+
+  static {
+    _jspx_dependants = new java.util.ArrayList(1);
+    _jspx_dependants.add("/Templates/taglibs.jsp");
+  }
+
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody;
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005fif_0026_005ftest;
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems;
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005fchoose;
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005fwhen_0026_005ftest;
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005fotherwise;
+
+  public Object getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspInit() {
+    _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _005fjspx_005ftagPool_005fc_005fif_0026_005ftest = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _005fjspx_005ftagPool_005fc_005fchoose = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _005fjspx_005ftagPool_005fc_005fwhen_0026_005ftest = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _005fjspx_005ftagPool_005fc_005fotherwise = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+  }
+
+  public void _jspDestroy() {
+    _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.release();
+    _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.release();
+    _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.release();
+    _005fjspx_005ftagPool_005fc_005fchoose.release();
+    _005fjspx_005ftagPool_005fc_005fwhen_0026_005ftest.release();
+    _005fjspx_005ftagPool_005fc_005fotherwise.release();
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    JspFactory _jspxFactory = null;
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+
+    try {
+      _jspxFactory = JspFactory.getDefaultFactory();
+      response.setContentType("text/html; charset=UTF-8");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+
+      out.write('\r');
+      out.write('\n');
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<script type='text/javascript' src='dwr/interface/Master.js'></script>\r\n");
+      out.write("<script type=\"text/javascript\">\r\n");
+      out.write("\tfunction updateData(url){\r\n");
+      out.write("\t\t//if(document.dataform.onsubmit()){\r\n");
+      out.write("\t\tif(document.dataform.thnameUpdate.value == \"\"){\r\n");
+      out.write("\t\t\talert(\"กรุณาป้อนชื่อไทย\");\r\n");
+      out.write("\t\t\tdocument.dataform.thnameUpdate.focus();\r\n");
+      out.write("\t\t}else if(document.dataform.ennameUpdate.value == \"\"){\r\n");
+      out.write("\t\t\talert(\"กรุณาป้อนชื่อภาษาอังกฤษ\");\r\n");
+      out.write("\t\t\tdocument.dataform.ennameUpdate.focus();\r\n");
+      out.write("\t\t}else if(document.dataform.abbnameUpdate.value == \"\"){\r\n");
+      out.write("\t\t\talert(\"กรุณาป้อนชื่อย่อ\");\r\n");
+      out.write("\t\t\tdocument.dataform.abbnameUpdate.focus();\r\n");
+      out.write("\t\t}else{\r\n");
+      out.write("\t\t\tdocument.dataform.action=url;\r\n");
+      out.write("\t\t    document.dataform.submit();\r\n");
+      out.write("\t\t}\r\n");
+      out.write("\t\t//}\r\n");
+      out.write("\t}\r\n");
+      out.write("\tfunction confirmBox(str_text,var_id,var_del){\r\n");
+      out.write("\t\tvar r\r\n");
+      out.write("\t\tMaster.chkRelCourt(var_id,function(data){\r\n");
+      out.write("\t\t\tif(data != \"\"){\r\n");
+      out.write("\t\t\t\talert(data);\r\n");
+      out.write("\t\t\t\tr = false;\r\n");
+      out.write("\t\t\t}\r\n");
+      out.write("\t\t\telse {\r\n");
+      out.write("\t\t\t\tr = confirm(str_text);\r\n");
+      out.write("\t\t  \t\tif(r){\r\n");
+      out.write("\t\t  \t  \twindow.location.href='");
+      if (_jspx_meth_c_005furl_005f0(_jspx_page_context))
+        return;
+      out.write("';\r\n");
+      out.write("\t  \t\t\t}\t\r\n");
+      out.write("\t  \t\t}\r\n");
+      out.write("\t\t});\t\t\r\n");
+      out.write("  \t\treturn r;\r\n");
+      out.write("\t}\r\n");
+      out.write("\tfunction hideSaveButton(){\r\n");
+      out.write("\t\tdocument.getElementById(\"saveButton\").style.display='none';;\r\n");
+      out.write("\t}\r\n");
+      out.write("\t\r\n");
+      out.write("</script>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+
+	FormHandler formHandler = new FormHandler(request);
+
+      out.write("\r\n");
+      out.write("<script>\r\n");
+      out.write("\tfunction chkDupUnit(cName, cID, txtID, btn,fldName){\r\n");
+      out.write("\t\tdocument.getElementById(btn).disabled = true;\r\n");
+      out.write("\t\tif(fldName == \"TH\"){\r\n");
+      out.write("\t\t\tMaster.chkDupUnitTh(cName, cID, function(data){\r\n");
+      out.write("\t\t\t\tif(data != \"\"){\r\n");
+      out.write("\t\t\t\t\talert(data);\r\n");
+      out.write("\t\t\t\t\ttxtID.select();\r\n");
+      out.write("\t\t\t\t}else{\r\n");
+      out.write("\t\t\t\t\tdocument.getElementById(btn).disabled = false;\r\n");
+      out.write("\t\t\t\t}\r\n");
+      out.write("\t\t\t});\t\r\n");
+      out.write("\t\t}else if(fldName == \"EN\"){\r\n");
+      out.write("\t\t\tMaster.chkDupUnitEn(cName, cID, function(data){\r\n");
+      out.write("\t\t\t\tif(data != \"\"){\r\n");
+      out.write("\t\t\t\t\talert(data);\r\n");
+      out.write("\t\t\t\t\ttxtID.select();\r\n");
+      out.write("\t\t\t\t}else{\r\n");
+      out.write("\t\t\t\t\tdocument.getElementById(btn).disabled = false;\r\n");
+      out.write("\t\t\t\t}\r\n");
+      out.write("\t\t\t});\t\r\n");
+      out.write("\t\t}else if(fldName == \"ABB\"){\r\n");
+      out.write("\t\t\tMaster.chkDupUnitAbb(cName, cID, function(data){\r\n");
+      out.write("\t\t\t\tif(data != \"\"){\r\n");
+      out.write("\t\t\t\t\talert(data);\r\n");
+      out.write("\t\t\t\t\ttxtID.select();\r\n");
+      out.write("\t\t\t\t}else{\r\n");
+      out.write("\t\t\t\t\tdocument.getElementById(btn).disabled = false;\r\n");
+      out.write("\t\t\t\t}\r\n");
+      out.write("\t\t\t});\t\r\n");
+      out.write("\t\t}\r\n");
+      out.write("\t}\r\n");
+      out.write("</script>\r\n");
+      out.write("\r\n");
+      out.write("<form method=\"post\" name=\"dataform\" action=\"");
+      if (_jspx_meth_c_005furl_005f1(_jspx_page_context))
+        return;
+      out.write("\" >\r\n");
+      out.write("\t<table width=\"100%\" height=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\r\n");
+      out.write("\t\t<tr>\r\n");
+      out.write("\t\t\t<td width=\"100%\" align=\"left\" valign=\"top\">\r\n");
+      out.write("\t\t\t\t<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\r\n");
+      out.write("\t\t\t\t\t<tr>\r\n");
+      out.write("                  \t\t<td width=\"1%\">&nbsp;</td>\r\n");
+      out.write("                  \t\t<td width=\"99%\"><span class=\"websitename\">หน่วยนับ</span></td>\r\n");
+      out.write("                \t</tr>\r\n");
+      out.write("                \t<tr><td colspan=\"2\">&nbsp;</td></tr>\r\n");
+      out.write("                \t<tr>\r\n");
+      out.write("              \t\t\t<td>&nbsp;</td>  \t\r\n");
+      out.write("                \t\t<td>\r\n");
+      out.write("                \t\t\t<table border=\"0\" width=\"850\" cellpadding=\"0\" cellspacing=\"0\">\r\n");
+      out.write("                \t\t\t\t<tr>\r\n");
+      out.write("                \t\t\t\t\t<td>\r\n");
+      out.write("                \t\t\t\t\t\t<table class=\"tableList\" width=\"850\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\" bordercolor=\"#CCCCCC\">\r\n");
+      out.write("                \t\t\t\t\t\t\t<tr>\r\n");
+      out.write("                              \t\t\t\t\t<td width=\"150\" class=\"TblHeaderColumn AlignCenter\">&nbsp;</td>\r\n");
+      out.write("                              \t\t\t\t\t<td width=\"100\" class=\"TblHeaderColumn\">รหัสหน่วยนับ</td>\r\n");
+      out.write("                              \t\t\t\t\t<td width=\"150\" class=\"TblHeaderColumn\">ชื่อหน่วยนับไทย</td>\r\n");
+      out.write("                              \t\t\t\t\t<td width=\"150\" class=\"TblHeaderColumn\">ชื่อหน่วยนับอังกฤษ</td>\r\n");
+      out.write("                              \t\t\t\t\t<td width=\"100\" class=\"TblHeaderColumn\">ชื่อหน่วยนับย่อ</td>\r\n");
+      out.write("                            \t\t\t\t</tr>\r\n");
+      out.write("                \t\t\t\t\t\t\t<tr><td colspan=\"4\">&nbsp;</td></tr>\r\n");
+      out.write("                \t\t\t\t\t\t\t\r\n");
+      out.write("                \t\t\t\t\t\t\t<tr ");
+      if (_jspx_meth_c_005fif_005f0(_jspx_page_context))
+        return;
+      out.write("  >\r\n");
+      out.write("                              \t\t\t\t\t<td align=\"center\"><span class=\"spanLink\"><input type=\"submit\" class=\"barButton\" name=\"save\" id =\"save\" value=\"บันทึก\"/></span></td>\r\n");
+      out.write("                              \t\t\t\t\t<td align=\"center\">\r\n");
+      out.write("\t                              \t\t\t\t\t<input type=\"text\" name=\"unit_code\" id=\"unit_code\" \r\n");
+      out.write("\t                              \t\t\t\t\t\tsize=\"3\" value=\"NEW\" class=\"textview\" maxlength=\"3\" \r\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\tOnKeyPress=\"txtKeyPress(event);\" onKeyDown=\"disableKeyDown();\" />\r\n");
+      out.write("                              \t\t\t\t\t</td>\r\n");
+      out.write("                              \t\t\t\t\t<td>\r\n");
+      out.write("                              \t\t\t\t\t\t<input type=\"text\" name=\"thname\" id=\"thname\" size=\"25\" class=\"textbox\"\r\n");
+      out.write("                              \t\t\t\t\t\tonBlur=\"chkDupUnit(this.value, '0', this, 'save','TH');\" />\r\n");
+      out.write("                              \t\t\t\t\t\t<font color=\"red\">*</font>\r\n");
+      out.write("                              \t\t\t\t\t</td>\r\n");
+      out.write("                              \t\t\t\t\t<td>\r\n");
+      out.write("                              \t\t\t\t\t\t<input type=\"text\" name=\"enname\" size=\"25\" class=\"textbox\"\r\n");
+      out.write("                              \t\t\t\t\t\tonBlur=\"chkDupUnit(this.value, '0', this, 'save','EN');\"  />\r\n");
+      out.write("                              \t\t\t\t\t\t<font color=\"red\">*</font>\r\n");
+      out.write("                              \t\t\t\t\t</td>\r\n");
+      out.write("                              \t\t\t\t\t<td>\r\n");
+      out.write("                              \t\t\t\t\t\t<input type=\"text\" name=\"abbname\" size=\"25\" class=\"textbox\"\r\n");
+      out.write("                              \t\t\t\t\t\tonBlur=\"chkDupUnit(this.value, '0', this, 'save','ABB');\"  />\r\n");
+      out.write("                              \t\t\t\t\t\t<font color=\"red\">*</font>\r\n");
+      out.write("                              \t\t\t\t\t</td>\r\n");
+      out.write("                            \t\t\t\t </tr>\r\n");
+      out.write("                \t\t\t\t\t\t     ");
+      if (_jspx_meth_c_005fforEach_005f0(_jspx_page_context))
+        return;
+      out.write("              \t\t\t\t\t\t\r\n");
+      out.write("                \t\t\t\t\t\t</table>                \t\t\t\t\t\r\n");
+      out.write("                \t\t\t\t\t</td>                \t\t\t\t\r\n");
+      out.write("                \t\t\t\t</tr>              \t\t\t\r\n");
+      out.write("                \t\t\t</table>             \t\t\r\n");
+      out.write("                \t\t</td>                \t\r\n");
+      out.write("                \t</tr>            \t\r\n");
+      out.write("\t\t\t\t</table>\t\t\t\r\n");
+      out.write("\t\t\t</td>\r\n");
+      out.write("\t\t</tr>\t\r\n");
+      out.write("\t</table>\r\n");
+      out.write("</form>\r\n");
+      out.write("\r\n");
+      out.write("<script language=\"JavaScript\" type=\"text/javascript\">\r\n");
+      out.write("//You should create the validator only after the definition of the HTML form\r\n");
+      out.write("  var frmvalidator  = new Validator(\"dataform\");\r\n");
+      out.write("  //if(document.dataform.id != null){\r\n");
+      out.write("//\t  \tfrmvalidator.addValidation(\"unit_codeUpdate\",\"req\",\"กรุณาป้อนข้อมูล รหัสหน่วยนับ\");\r\n");
+      out.write("//\t\tfrmvalidator.addValidation(\"thnameUpdate\",\"req\",\"กรุณาป้อนข้อมูล ชื่อหน่วยนับไทย\");\r\n");
+      out.write("//\t\tfrmvalidator.addValidation(\"ennameUpdate\",\"req\",\"กรุณาป้อนข้อมูล ชื่อหน่วยนับอังกฤษ\");\r\n");
+      out.write("//\t\tfrmvalidator.addValidation(\"abbnameUpdate\",\"req\",\"กรุณาป้อนข้อมูล ชื่อหน่วยนับย่อ\");\r\n");
+      out.write("//  }else{\r\n");
+      out.write("\t\tfrmvalidator.addValidation(\"unit_code\",\"req\",\"กรุณาป้อนข้อมูล รหัสหน่วยนับ\");\r\n");
+      out.write("\t\tfrmvalidator.addValidation(\"thname\",\"req\",\"กรุณาป้อนข้อมูล ชื่อหน่วยนับไทย\");\r\n");
+      out.write("\t\tfrmvalidator.addValidation(\"enname\",\"req\",\"กรุณาป้อนข้อมูล ชื่อหน่วยนับอังกฤษ\");\r\n");
+      out.write("\t\tfrmvalidator.addValidation(\"abbname\",\"req\",\"กรุณาป้อนข้อมูล ชื่อหน่วยนับย่อ\");\r\n");
+      out.write(" // }\r\n");
+      out.write("</script>");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+      }
+    } finally {
+      if (_jspxFactory != null) _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+
+  private boolean _jspx_meth_c_005furl_005f0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_005furl_005f0 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_005furl_005f0.setPageContext(_jspx_page_context);
+    _jspx_th_c_005furl_005f0.setParent(null);
+    _jspx_th_c_005furl_005f0.setValue("/process?action=UnitList_Master&cmd=delete&id='+var_id+'&iddel='+var_del+'");
+    int _jspx_eval_c_005furl_005f0 = _jspx_th_c_005furl_005f0.doStartTag();
+    if (_jspx_th_c_005furl_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f0);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f0);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005furl_005f1(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_005furl_005f1 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_005furl_005f1.setPageContext(_jspx_page_context);
+    _jspx_th_c_005furl_005f1.setParent(null);
+    _jspx_th_c_005furl_005f1.setValue("/process?action=UnitList_Master&cmd=create");
+    int _jspx_eval_c_005furl_005f1 = _jspx_th_c_005furl_005f1.doStartTag();
+    if (_jspx_th_c_005furl_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f1);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f1);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005fif_005f0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_005fif_005f0.setPageContext(_jspx_page_context);
+    _jspx_th_c_005fif_005f0.setParent(null);
+    _jspx_th_c_005fif_005f0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.id != param.id}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
+    int _jspx_eval_c_005fif_005f0 = _jspx_th_c_005fif_005f0.doStartTag();
+    if (_jspx_eval_c_005fif_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("style=\"display:none\"");
+        int evalDoAfterBody = _jspx_th_c_005fif_005f0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_005fif_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f0);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f0);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005fforEach_005f0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
+    _jspx_th_c_005fforEach_005f0.setParent(null);
+    _jspx_th_c_005fforEach_005f0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unitlist}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+    _jspx_th_c_005fforEach_005f0.setVar("unit");
+    _jspx_th_c_005fforEach_005f0.setVarStatus("i");
+    int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_005fforEach_005f0 = _jspx_th_c_005fforEach_005f0.doStartTag();
+      if (_jspx_eval_c_005fforEach_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\r\n");
+          out.write("\t\t  \t\t\t\t\t\t\t\t\t <!-- odd row -->\r\n");
+          out.write("\t\t  \t\t\t\t\t\t\r\n");
+          out.write("\t\t  \t\t\t\t\t\t\t\t\t ");
+          if (_jspx_meth_c_005fchoose_005f0(_jspx_th_c_005fforEach_005f0, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f0))
+            return true;
+          out.write("\r\n");
+          out.write("\t\t\t\t\t\t\t\t\t\t");
+          int evalDoAfterBody = _jspx_th_c_005fforEach_005f0.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_005fforEach_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_005fforEach_005f0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_005fforEach_005f0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_005fforEach_005f0.doFinally();
+      _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.reuse(_jspx_th_c_005fforEach_005f0);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005fchoose_005f0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fforEach_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_005fforEach_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:choose
+    org.apache.taglibs.standard.tag.common.core.ChooseTag _jspx_th_c_005fchoose_005f0 = (org.apache.taglibs.standard.tag.common.core.ChooseTag) _005fjspx_005ftagPool_005fc_005fchoose.get(org.apache.taglibs.standard.tag.common.core.ChooseTag.class);
+    _jspx_th_c_005fchoose_005f0.setPageContext(_jspx_page_context);
+    _jspx_th_c_005fchoose_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
+    int _jspx_eval_c_005fchoose_005f0 = _jspx_th_c_005fchoose_005f0.doStartTag();
+    if (_jspx_eval_c_005fchoose_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("\t\t  \t\t\t\t\t\t\t\t\t ");
+        if (_jspx_meth_c_005fwhen_005f0(_jspx_th_c_005fchoose_005f0, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f0))
+          return true;
+        out.write("\r\n");
+        out.write("\t\t                            \t\t ");
+        if (_jspx_meth_c_005fotherwise_005f0(_jspx_th_c_005fchoose_005f0, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f0))
+          return true;
+        out.write("\r\n");
+        out.write("\t\t  \t\t\t\t\t\t\t\t\t");
+        int evalDoAfterBody = _jspx_th_c_005fchoose_005f0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_005fchoose_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005fchoose.reuse(_jspx_th_c_005fchoose_005f0);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fc_005fchoose.reuse(_jspx_th_c_005fchoose_005f0);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005fwhen_005f0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fchoose_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_005fforEach_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:when
+    org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_005fwhen_005f0 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _005fjspx_005ftagPool_005fc_005fwhen_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
+    _jspx_th_c_005fwhen_005f0.setPageContext(_jspx_page_context);
+    _jspx_th_c_005fwhen_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fchoose_005f0);
+    _jspx_th_c_005fwhen_005f0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.id == param.id}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
+    int _jspx_eval_c_005fwhen_005f0 = _jspx_th_c_005fwhen_005f0.doStartTag();
+    if (_jspx_eval_c_005fwhen_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("\t\t\t                            \t <tr>\r\n");
+        out.write("\t\t\t                              \t\t<input type=\"hidden\" value=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("\" name=\"id\"/>\r\n");
+        out.write("\t\t\t                              \t\t<td align=\"center\"><span class=\"spanLink\"><input type=\"button\" name=\"save\" id=\"save2\" class=\"barButton\" value=\"แก้ไข\" onclick=\"updateData('");
+        if (_jspx_meth_c_005furl_005f2(_jspx_th_c_005fwhen_005f0, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f0))
+          return true;
+        out.write("');\"/></span></td>\r\n");
+        out.write("\t\t\t                              \t\t<td align=\"center\">");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.unit_code}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("\t\t\t                              \t\t\t\r\n");
+        out.write("\t\t\t                              \t\t</td>\r\n");
+        out.write("\t\t\t                              \t\t<td>\r\n");
+        out.write("\t\t\t                                \t\t<input type=\"text\" name=\"thnameUpdate\" id=\"thnameUpdate\" size=\"25\" class=\"textbox\" value=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.thname}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("\"\r\n");
+        out.write("\t\t\t                                \t\tonBlur=\"chkDupUnit(this.value, '");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("', this, 'save','TH');\" />\r\n");
+        out.write("\t\t\t                                \t\t<font color=\"red\">*</font>\r\n");
+        out.write("\t\t\t                              \t\t</td>\r\n");
+        out.write("\t\t\t                              \t\t<td>\r\n");
+        out.write("\t\t\t                                \t\t<input type=\"text\" name=\"ennameUpdate\" id=\"ennameUpdate\" size=\"25\" class=\"textbox\" value=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.enname}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("\"\r\n");
+        out.write("\t\t\t                                \t\tonBlur=\"chkDupUnit(this.value, '");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("', this, 'save','EN');\" />\r\n");
+        out.write("\t\t\t                                \t\t<font color=\"red\">*</font>\r\n");
+        out.write("\t\t\t                              \t\t</td>                    \r\n");
+        out.write("\t\t\t                              \t\t<td>\r\n");
+        out.write("\t\t\t                                \t\t<input type=\"text\" name=\"abbnameUpdate\" id=\"abbnameUpdate\" size=\"25\" class=\"textbox\" value=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.abbname}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("\" \r\n");
+        out.write("\t\t\t                                \t\tonBlur=\"chkDupUnit(this.value, '");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("', this, 'save','ABB');\"  />\r\n");
+        out.write("\t\t\t                                \t\t<font color=\"red\">*</font>\r\n");
+        out.write("\t\t\t                              \t\t</td>  \r\n");
+        out.write("\t\t\t                            \t </tr>\r\n");
+        out.write("\t\t                            \t\t ");
+        int evalDoAfterBody = _jspx_th_c_005fwhen_005f0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_005fwhen_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005fwhen_0026_005ftest.reuse(_jspx_th_c_005fwhen_005f0);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fc_005fwhen_0026_005ftest.reuse(_jspx_th_c_005fwhen_005f0);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005furl_005f2(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fwhen_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_005fforEach_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_005furl_005f2 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_005furl_005f2.setPageContext(_jspx_page_context);
+    _jspx_th_c_005furl_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fwhen_005f0);
+    _jspx_th_c_005furl_005f2.setValue("/process?action=UnitList_Master&cmd=update");
+    int _jspx_eval_c_005furl_005f2 = _jspx_th_c_005furl_005f2.doStartTag();
+    if (_jspx_th_c_005furl_005f2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f2);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f2);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005fotherwise_005f0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fchoose_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_005fforEach_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:otherwise
+    org.apache.taglibs.standard.tag.common.core.OtherwiseTag _jspx_th_c_005fotherwise_005f0 = (org.apache.taglibs.standard.tag.common.core.OtherwiseTag) _005fjspx_005ftagPool_005fc_005fotherwise.get(org.apache.taglibs.standard.tag.common.core.OtherwiseTag.class);
+    _jspx_th_c_005fotherwise_005f0.setPageContext(_jspx_page_context);
+    _jspx_th_c_005fotherwise_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fchoose_005f0);
+    int _jspx_eval_c_005fotherwise_005f0 = _jspx_th_c_005fotherwise_005f0.doStartTag();
+    if (_jspx_eval_c_005fotherwise_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("\t\t                            \t\t ");
+        if (_jspx_meth_c_005fif_005f1(_jspx_th_c_005fotherwise_005f0, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f0))
+          return true;
+        out.write("\r\n");
+        out.write("\t                            \t\t\t");
+        if (_jspx_meth_c_005fif_005f2(_jspx_th_c_005fotherwise_005f0, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f0))
+          return true;
+        out.write("\r\n");
+        out.write("\t\t                            \t\t");
+        int evalDoAfterBody = _jspx_th_c_005fotherwise_005f0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_005fotherwise_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005fotherwise.reuse(_jspx_th_c_005fotherwise_005f0);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fc_005fotherwise.reuse(_jspx_th_c_005fotherwise_005f0);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005fif_005f1(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fotherwise_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_005fforEach_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f1 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_005fif_005f1.setPageContext(_jspx_page_context);
+    _jspx_th_c_005fif_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fotherwise_005f0);
+    _jspx_th_c_005fif_005f1.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${(i.count % 2) == 1}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
+    int _jspx_eval_c_005fif_005f1 = _jspx_th_c_005fif_005f1.doStartTag();
+    if (_jspx_eval_c_005fif_005f1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("\t\t\t                            \t\t<tr>\r\n");
+        out.write("\t\t\t\t                              \t\t<td class=\"TblRow AlignCenter\"><span class=\"spanLink\" onclick=\"javascript:location.href='");
+        if (_jspx_meth_c_005furl_005f3(_jspx_th_c_005fif_005f1, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f0))
+          return true;
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write('#');
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("'\">แก้ไข</span> | <span class=\"spanLink\" onclick=\"javascript:location.href='");
+        if (_jspx_meth_c_005furl_005f4(_jspx_th_c_005fif_005f1, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f0))
+          return true;
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write('#');
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("'\">สินค้า</span> | <span class=\"spanLink\"  onclick=\"confirmBox('ต้องการลบข้อมูล','");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write('\'');
+        out.write(',');
+        out.write('\'');
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i.count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("')\">ลบ</span></td>\r\n");
+        out.write("\t\t\t\t                              \t\t<td class=\"TblRow AlignCenter\">");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.unit_code}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("</td>\r\n");
+        out.write("\t\t\t\t                              \t\t<td class=\"TblRow AlignLeft\">");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.thname}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("</td>\r\n");
+        out.write("\t\t\t\t                              \t\t<td class=\"TblRow AlignLeft\">");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.enname}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("</td>\r\n");
+        out.write("\t\t\t\t                              \t\t<td class=\"TblRow AlignLeft\">");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.abbname}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("</td>\r\n");
+        out.write("\t\t\t\t                            \t</tr>\r\n");
+        out.write("\t                            \t\t\t");
+        int evalDoAfterBody = _jspx_th_c_005fif_005f1.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_005fif_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f1);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f1);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005furl_005f3(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fif_005f1, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_005fforEach_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_005furl_005f3 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_005furl_005f3.setPageContext(_jspx_page_context);
+    _jspx_th_c_005furl_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fif_005f1);
+    _jspx_th_c_005furl_005f3.setValue("/process?action=UnitList_Master&id=");
+    int _jspx_eval_c_005furl_005f3 = _jspx_th_c_005furl_005f3.doStartTag();
+    if (_jspx_th_c_005furl_005f3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f3);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f3);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005furl_005f4(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fif_005f1, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_005fforEach_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_005furl_005f4 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_005furl_005f4.setPageContext(_jspx_page_context);
+    _jspx_th_c_005furl_005f4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fif_005f1);
+    _jspx_th_c_005furl_005f4.setValue("/process?action=UnitList_Master&cmd=view&id=");
+    int _jspx_eval_c_005furl_005f4 = _jspx_th_c_005furl_005f4.doStartTag();
+    if (_jspx_th_c_005furl_005f4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f4);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f4);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005fif_005f2(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fotherwise_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_005fforEach_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f2 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_005fif_005f2.setPageContext(_jspx_page_context);
+    _jspx_th_c_005fif_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fotherwise_005f0);
+    _jspx_th_c_005fif_005f2.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${(i.count % 2) == 0}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
+    int _jspx_eval_c_005fif_005f2 = _jspx_th_c_005fif_005f2.doStartTag();
+    if (_jspx_eval_c_005fif_005f2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("\t                            \t\t\t\t<tr>\r\n");
+        out.write("\t\t\t\t                              \t\t<td class=\"TblRow AlignCenter bgRowGray\"><span class=\"spanLink\" onclick=\"javascript:location.href='");
+        if (_jspx_meth_c_005furl_005f5(_jspx_th_c_005fif_005f2, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f0))
+          return true;
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write('#');
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("';\">แก้ไข</span> | <span class=\"spanLink\" onclick=\"javascript:location.href='");
+        if (_jspx_meth_c_005furl_005f6(_jspx_th_c_005fif_005f2, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f0))
+          return true;
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write('#');
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("'\">สินค้า</span> | <span class=\"spanLink\" onclick=\"confirmBox('ต้องการบลข้อมูล','");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write('\'');
+        out.write(',');
+        out.write('\'');
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i.count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("')\">ลบ</span></td>\r\n");
+        out.write("\t\t\t\t                              \t\t<td class=\"TblRow AlignCenter bgRowGray\">");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.unit_code}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("</td>\r\n");
+        out.write("\t\t\t\t                              \t\t<td class=\"TblRow AlignLeft bgRowGray\">");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.thname}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("</td>\r\n");
+        out.write("\t\t\t\t                              \t\t<td class=\"TblRow AlignLeft bgRowGray\">");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.enname}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("</td>\r\n");
+        out.write("\t\t\t\t                              \t\t<td class=\"TblRow AlignLeft bgRowGray\">");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${unit.abbname}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+        out.write("</td>\r\n");
+        out.write("\t\t\t\t                            \t</tr>\r\n");
+        out.write("\t                            \t\t\t");
+        int evalDoAfterBody = _jspx_th_c_005fif_005f2.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_005fif_005f2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f2);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f2);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005furl_005f5(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fif_005f2, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_005fforEach_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_005furl_005f5 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_005furl_005f5.setPageContext(_jspx_page_context);
+    _jspx_th_c_005furl_005f5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fif_005f2);
+    _jspx_th_c_005furl_005f5.setValue("/process?action=UnitList_Master&id=");
+    int _jspx_eval_c_005furl_005f5 = _jspx_th_c_005furl_005f5.doStartTag();
+    if (_jspx_th_c_005furl_005f5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f5);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f5);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005furl_005f6(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fif_005f2, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_005fforEach_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_005furl_005f6 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_005furl_005f6.setPageContext(_jspx_page_context);
+    _jspx_th_c_005furl_005f6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fif_005f2);
+    _jspx_th_c_005furl_005f6.setValue("/process?action=UnitList_Master&cmd=view&id=");
+    int _jspx_eval_c_005furl_005f6 = _jspx_th_c_005furl_005f6.doStartTag();
+    if (_jspx_th_c_005furl_005f6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f6);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f6);
+    return false;
+  }
+}

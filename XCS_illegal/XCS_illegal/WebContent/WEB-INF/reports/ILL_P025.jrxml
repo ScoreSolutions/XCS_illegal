@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILL_P025" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20">
+	<property name="ireport.scriptlethandling" value="2"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="getTrackNo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select distinct aae.id, aa.track_no, pke_arrest.getArrestIndictment(aa.track_no) guilt_base,
+pke_arrest.getArrestLawbreaker(aa.track_no) lawbreaker_name,
+to_char(aa.occurrence_date,'fmdd') occurrence_day,
+to_char(aa.occurrence_date,'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') occurrence_month,
+to_char(aa.occurrence_date,'yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') occurrence_year,
+to_char(aa.occurrence_date,'hh24:mi') occurrence_time,
+to_char(bi.case_date,'fmdd') case_day,
+to_char(bi.case_date,'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') case_month,
+to_char(bi.case_date,'yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') case_year,
+to_char(bi.case_date,'hh24:mi') case_time,
+bi.case_id, tia.title_name || sta.first_name || ' ' || sta.last_name accuser_name, aa.legislation_id, lg.legislation_name,
+pke_arrest.getExhibitDesc(aae.id) product_name,
+aa.product_group_id, dg.group_name product_group_name, cc.compare_case_no, aap.exhibit_report_no,
+(select sum(nvl(lbk.fine,0)) from application_arrest_lawbreaker lbk where lbk.track_no=aa.track_no) case_fine, aa.offcode, ed.offname,sta.offname acc_offname,
+ana.notice_no,asw.warrant_no, asi.track_no confirm_no,nvl(aa.accuser_posname,nvl(ps.posname,sta.POSNAME) || sta.staff_level)  POSNAME,
+pke_compare.getCaseStatus(aa.track_no,'0') case_status_code, pke_compare.getCaseStatus(aa.track_no,'1') case_status_name,
+pke_compare.getCompareStatus(aa.track_no,'0') compare_status_code, pke_compare.getCompareStatus(aa.track_no,'1') compare_status_name,
+tis.title_name || sts.first_name || ' ' || sts.last_name staff_name_sue, pss.posname || sts.staff_level sue_posname
+from application_arrest aa
+left join book_impeachment bi on aa.track_no=bi.track_no
+inner join v_accuser_list_popup sta on sta.idcard_no=aa.accuser_idcardno
+left join staff sts on sts.idcard_no=to_char(bi.staff_id_sue)
+left join title tis on tis.title_code=sts.title_code
+left join position pss on trim(pss.poscode)=trim(sts.poscode)
+left join title tia on tia.title_code=sta.title_code
+left join application_arrest_exhibit aae on aa.track_no=aae.track_no
+inner join legislation lg on lg.id=aa.legislation_id
+inner join duty_group dg on dg.group_id=aa.product_group_id
+inner join province pv on pv.province_code=aa.scene_province
+inner join district d on d.district_code=aa.scene_district
+inner join subdistrict sd on sd.subdistrict_code=aa.scene_subdistrict
+left join compare_case cc on cc.track_no=aa.track_no
+left join application_arrest_prove aap on aa.track_no=aap.track_no
+inner join ed_office ed on ed.offcode=aa.offcode
+left join application_arrest_license ali on aa.track_no=ali.track_no
+left join application_notice_arrest ana on ana.id=aa.application_notice_arrest_id
+left join application_search_warrant asw on asw.id=aa.application_search_warrant_id
+left join application_sincere_confirm asi on asi.id=aa.application_sincere_confirm_id
+left join position ps on ps.poscode=aa.accuser_poscode
+where aa.del_flag='N'
+and aa.track_no=$P{getTrackNo}
+order by aae.id]]>
+	</queryString>
+	<field name="ID" class="java.math.BigDecimal"/>
+	<field name="TRACK_NO" class="java.lang.String"/>
+	<field name="GUILT_BASE" class="java.lang.String"/>
+	<field name="LAWBREAKER_NAME" class="java.lang.String"/>
+	<field name="OCCURRENCE_DAY" class="java.lang.String"/>
+	<field name="OCCURRENCE_MONTH" class="java.lang.String"/>
+	<field name="OCCURRENCE_YEAR" class="java.lang.String"/>
+	<field name="OCCURRENCE_TIME" class="java.lang.String"/>
+	<field name="CASE_DAY" class="java.lang.String"/>
+	<field name="CASE_MONTH" class="java.lang.String"/>
+	<field name="CASE_YEAR" class="java.lang.String"/>
+	<field name="CASE_TIME" class="java.lang.String"/>
+	<field name="CASE_ID" class="java.lang.String"/>
+	<field name="ACCUSER_NAME" class="java.lang.String"/>
+	<field name="LEGISLATION_ID" class="java.math.BigDecimal"/>
+	<field name="LEGISLATION_NAME" class="java.lang.String"/>
+	<field name="PRODUCT_NAME" class="java.lang.String"/>
+	<field name="PRODUCT_GROUP_ID" class="java.lang.String"/>
+	<field name="PRODUCT_GROUP_NAME" class="java.lang.String"/>
+	<field name="COMPARE_CASE_NO" class="java.lang.String"/>
+	<field name="EXHIBIT_REPORT_NO" class="java.lang.String"/>
+	<field name="CASE_FINE" class="java.math.BigDecimal"/>
+	<field name="OFFCODE" class="java.lang.String"/>
+	<field name="OFFNAME" class="java.lang.String"/>
+	<field name="ACC_OFFNAME" class="java.lang.String"/>
+	<field name="NOTICE_NO" class="java.lang.String"/>
+	<field name="WARRANT_NO" class="java.lang.String"/>
+	<field name="CONFIRM_NO" class="java.lang.String"/>
+	<field name="POSNAME" class="java.lang.String"/>
+	<field name="CASE_STATUS_CODE" class="java.lang.String"/>
+	<field name="CASE_STATUS_NAME" class="java.lang.String"/>
+	<field name="COMPARE_STATUS_CODE" class="java.lang.String"/>
+	<field name="COMPARE_STATUS_NAME" class="java.lang.String"/>
+	<field name="STAFF_NAME_SUE" class="java.lang.String"/>
+	<field name="SUE_POSNAME" class="java.lang.String"/>
+	<variable name="STAFF_NAME_SUE_1" class="java.lang.Integer" resetType="Group" resetGroup="P025Group" calculation="DistinctCount">
+		<variableExpression><![CDATA[$F{STAFF_NAME_SUE}]]></variableExpression>
+	</variable>
+	<variable name="SUE_POSNAME_1" class="java.lang.Integer" resetType="Group" resetGroup="P025Group" calculation="Count">
+		<variableExpression><![CDATA[$F{SUE_POSNAME}]]></variableExpression>
+	</variable>
+	<variable name="SUE_POSNAME_2" class="java.lang.Integer" resetType="Group" resetGroup="P025Group" calculation="DistinctCount">
+		<variableExpression><![CDATA[$F{SUE_POSNAME}]]></variableExpression>
+	</variable>
+	<group name="P025Group">
+		<groupExpression><![CDATA[$F{TRACK_NO}]]></groupExpression>
+		<groupHeader>
+			<band height="103">
+				<textField isBlankWhenNull="true">
+					<reportElement x="33" y="39" width="998" height="22"/>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{ACC_OFFNAME}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-8" x="0" y="20" width="2000" height="22"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[                       ด้วยข้าพเจ้า .............................................................................ตำแหน่ง ...................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-9" x="0" y="40" width="2000" height="22"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[สังกัด ..............................................................................................................ขอส่งสำนวนคดีพร้อมของกลางราย...................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-10" x="0" y="60" width="2000" height="22"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[..................................................................................................................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-7" x="0" y="0" width="2000" height="22"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[เรียน เจ้าพนักงานเปรียบเทียบคดี]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-11" x="0" y="80" width="2000" height="22"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[(ระบุของกลางซึ่งต้องพิสูจน์ประกอบความผิดตามข้อกล่าวหา)]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="136" y="19" width="284" height="22"/>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{ACCUSER_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="382" y="19" width="684" height="22"/>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{POSNAME}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="8" y="59" width="527" height="22"/>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{LAWBREAKER_NAME}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="354">
+				<staticText>
+					<reportElement key="staticText-23" x="181" y="236" width="2000" height="22"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[ไม่รับคดี เพราะ .....................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-25" x="110" y="212" width="2000" height="22"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[คำสั่ง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-21" x="181" y="185" width="2000" height="22"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[รับคดี]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-22" x="181" y="212" width="2000" height="22"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[ลงสมุดรับคำกล่าวโทษ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-18" x="0" y="0" width="2000" height="22"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[ข้อหา............................................................................................................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-24" x="1" y="282" width="533" height="68"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[..........................................................
+		.................../............................/..........................
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-19" x="0" y="66" width="2000" height="22"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[โปรดดำเนินการต่อไปด้วย]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-19" x="287" y="104" width="2000" height="22"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[ลงชื่อ ..............................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-19" x="310" y="124" width="2000" height="22"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[(.............................................................................................)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-19" x="287" y="144" width="2000" height="22"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[ตำแหน่ง .........................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-12" x="0" y="19" width="2000" height="22"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[.....................................................................................................................................................................................................................]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement key="rectangle-1" x="165" y="187" width="13" height="16"/>
+				</rectangle>
+				<rectangle>
+					<reportElement key="rectangle-2" x="165" y="213" width="13" height="16"/>
+				</rectangle>
+				<rectangle>
+					<reportElement key="rectangle-3" x="165" y="238" width="13" height="16"/>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="285" y="123" width="287" height="22"/>
+					<textElement textAlignment="Center">
+						<font fontName="TH SarabunPSK" size="16" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{ACCUSER_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="331" y="143" width="1272" height="22"/>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{POSNAME}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-12" x="0" y="41" width="2000" height="22"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[.....................................................................................................................................................................................................................]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="26" y="-1" width="533" height="22"/>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.Thaicut.wordwrap($F{GUILT_BASE},80)]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-1" x="1" y="-1" width="2000" height="26"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เลขที่งาน......................................]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="39" y="1" width="323" height="20"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TRACK_NO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="78" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-4" x="0" y="28" width="2000" height="22"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ส่วนราชการ.................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-5" x="401" y="28" width="2000" height="22"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เลขที่..................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-6" x="0" y="49" width="1000" height="22"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ที่ .......................................................................................................]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-1" x="0" y="77" width="535" height="1"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="59" y="27" width="661" height="22"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="16" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{OFFNAME}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="299" y="48" width="72" height="22"/>
+				<textElement textAlignment="Center">
+					<font fontName="TH SarabunPSK" size="16" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CASE_DAY}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="391" y="48" width="145" height="22"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="16" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CASE_MONTH}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="501" y="48" width="123" height="22"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="16" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CASE_YEAR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="430" y="27" width="519" height="22"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="16" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CASE_ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-6" x="282" y="49" width="1000" height="22"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ วันที่ ................... เดือน ................................. พ.ศ. .....................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-2" x="430" y="0" width="2000" height="25"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="16" isBold="true" pdfFontName="THSARABUN BOLD.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[รับคำกล่าวโทษ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-3" x="1" y="2" width="533" height="48"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="TH SarabunPSK" size="18" isBold="true" pdfFontName="THSARABUN BOLD.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[บันทึกข้อความ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-12" x="0" y="0" width="2000" height="22"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="16" isBold="false" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[...................................................................................................................................................................................................................]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="65" y="-1" width="1935" height="22"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="16" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PRODUCT_NAME}]]></textFieldExpression>
+			</textField>
+			<textField pattern="." isBlankWhenNull="true">
+				<reportElement x="50" y="-1" width="17" height="22"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="16" pdfFontName="THSARABUN.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

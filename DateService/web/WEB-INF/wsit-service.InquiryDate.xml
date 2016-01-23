@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="InquiryDateService" targetNamespace="http://service/" xmlns:tns="http://service/"
+ >
+    <message name="AllCaseByDateInfo"/>
+    <message name="AllCaseByDateInfoResponse"/>
+    <message name="Exception"/>
+    <message name="IsValidData"/>
+    <message name="IsValidDataResponse"/>
+    <portType name="InquiryDate">
+        <operation name="AllCaseByDateInfo">
+            <input message="tns:AllCaseByDateInfo"/>
+            <output message="tns:AllCaseByDateInfoResponse"/>
+            <fault name="Exception" message="tns:Exception"/>
+        </operation>
+        <operation name="IsValidData">
+            <input message="tns:IsValidData"/>
+            <output message="tns:IsValidDataResponse"/>
+            <fault name="Exception" message="tns:Exception"/>
+        </operation>
+    </portType>
+    <binding name="InquiryDatePortBinding" type="tns:InquiryDate">
+        <operation name="AllCaseByDateInfo">
+            <input/>
+            <output/>
+            <fault name="Exception"/>
+        </operation>
+        <operation name="IsValidData">
+            <input/>
+            <output/>
+            <fault name="Exception"/>
+        </operation>
+    </binding>
+    <service name="InquiryDateService">
+        <port name="InquiryDatePort" binding="tns:InquiryDatePortBinding"/>
+    </service>
+</definitions>
+

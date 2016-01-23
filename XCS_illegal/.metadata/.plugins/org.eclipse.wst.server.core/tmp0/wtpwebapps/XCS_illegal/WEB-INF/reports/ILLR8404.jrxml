@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILLR8404" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<group name="aaaa">
+		<groupHeader>
+			<band height="52">
+				<rectangle>
+					<reportElement x="0" y="0" width="802" height="52" backcolor="#CCCCCC"/>
+				</rectangle>
+				<line>
+					<reportElement x="43" y="0" width="1" height="52"/>
+				</line>
+				<line>
+					<reportElement x="179" y="0" width="1" height="52"/>
+				</line>
+				<line>
+					<reportElement x="301" y="0" width="1" height="52"/>
+				</line>
+				<line>
+					<reportElement x="482" y="0" width="1" height="52"/>
+				</line>
+				<line>
+					<reportElement x="644" y="0" width="1" height="52"/>
+				</line>
+				<staticText>
+					<reportElement x="0" y="0" width="43" height="52"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ลำดับที่]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="44" y="0" width="135" height="52"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ที่เอกสาร]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="180" y="0" width="121" height="52"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ลงวันที่]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="302" y="0" width="180" height="52"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ยี่ห้อ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="483" y="0" width="161" height="52"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[รวม
+(ซอง)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="645" y="0" width="157" height="52"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[หมายเหตุ]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="13"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="109" splitType="Stretch">
+			<staticText>
+				<reportElement x="162" y="73" width="681" height="36"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ระหว่าง วันที่ .......... เดือน ............................ พ.ศ. ......................ถึง วันที่ .........… เดือน ….................. พ.ศ…..............…]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="47" width="303" height="26"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[สำนักงานสรรพสามิต.....................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="17" width="383" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บัญชีแสดงรายการบุหรี่ต่างประเทศของกลางที่ตรวจสอบคุณภาพ (ไม่มีตัว)]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="27"/>
+			</rectangle>
+			<line>
+				<reportElement x="301" y="0" width="1" height="27"/>
+			</line>
+			<line>
+				<reportElement x="179" y="0" width="1" height="27"/>
+			</line>
+			<line>
+				<reportElement x="482" y="0" width="1" height="27"/>
+			</line>
+			<line>
+				<reportElement x="43" y="0" width="1" height="27"/>
+			</line>
+			<line>
+				<reportElement x="644" y="0" width="1" height="27"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="78" splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILLR8211" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="1031"/>
+	<property name="ireport.y" value="11"/>
+	<parameter name="vDateFrom" class="java.lang.String"/>
+	<parameter name="vDateTo" class="java.lang.String"/>
+	<parameter name="getUserID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select  to_char(bi.case_date,'fmdd/mm/yyyy') case_date,  to_char(bi.case_date,'yyyy-mm-dd') case_date2,
+nvl(aa.accuser_name,tia.title_name || sta.first_name || ' ' || sta.last_name) accuser_name,
+--พรบ.สุรา
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_alcohol'),null,null,'1','1') alcohol_case_qty,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_alcohol'),null,null,'3','1') alcohol_noculprit_qty,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_alcohol'),null,null,'2','1') alcohol_court_qty,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_alcohol'),'แช่','ลิตร',null,'2') alcohol_dip,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_alcohol'),'กลั่น','ลิตร',null,'2') alcohol_distill,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_alcohol'),'ต่างประเทศ','ลิตร',null,'2') alcohol_outbound,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_alcohol'),'แป้งเชื้อ','ลิตร',null,'2') alcohol_powder,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_alcohol'),'อื่น','ลิตร',null,'2') alcohol_other,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_alcohol'),null,null,'1','3') alcohol_case_fine,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_alcohol'),null,null,'2','3') alcohol_estimate_fine,
+--พรบ.ยาสูบ
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tobacco'),null,null,'1','1') tobacco_case_qty,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tobacco'),null,null,'3','1') tobacco_noculprit_qty,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tobacco'),null,null,'2','1') tobacco_court_qty,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tobacco'),'ต่างประเทศ','ซอง',null,'2') tobacco_outbound,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tobacco'),'ในประเทศ','ซอง',null,'2') tobacco_inbound,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tobacco'),'อื่น','ลิตร',null,'2') tobacco_other,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tobacco'),null,null,'1','3') tobacco_case_fine,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tobacco'),null,null,'2','3') tobacco_estimate_fine,
+--พรบ.ภาษี
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tax'),null,null,'1','1') tax_case_qty,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tax'),null,null,'3','1') tax_noculprit_qty,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tax'),null,null,'2','1') tax_court_qty,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tax'),'เครื่องปรับอากาศ',null,null,'2') tax_air,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tax'),'น้ำมัน',null,null,'2') tax_oil,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tax'),'รถยนต์',null,null,'2') tax_car,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tax'),'รถจักรยานยนต์',null,null,'2') tax_motorcycle,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tax'),'น้ำหอม',null,null,'2') tax_motorcycle,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tax'),null,null,'1','3') tax_case_fine,
+pke_report2.getCase2_11(to_char(bi.case_date,'yyyy-mm-dd'),aa.accuser_idcardno,pke_master.getConfigValue('legislation_tax'),null,null,'2','3') tax_estimate_fine,
+to_char(sysdate, 'fmdd month yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') untildate,
+to_char(sysdate, 'hh24:mi', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') systimedate,
+to_char(to_date($P{vDateFrom},'yyyy-mm-dd'), 'fmdd', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  date_from,
+to_char(to_date($P{vDateFrom},'yyyy-mm-dd'), 'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  month_from,
+to_char(to_date($P{vDateFrom},'yyyy-mm-dd'), 'yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  year_from,
+to_char(to_date($P{vDateTo},'yyyy-mm-dd'), 'fmdd', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  date_to,
+to_char(to_date($P{vDateTo},'yyyy-mm-dd'), 'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  month_to,
+to_char(to_date($P{vDateTo},'yyyy-mm-dd'), 'yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  year_to,
+        (select ti.title_name || st.first_name || ' ' || st.last_name staff_name
+                          from staff st
+                          left join title ti on ti.title_code=st.title_code
+                          where st.idcard_no=$P{getUserID}) user_name
+from application_arrest aa
+inner join book_impeachment bi on bi.track_no=aa.track_no
+left join staff sta on sta.idcard_no=aa.accuser_idcardno
+left join title tia on tia.title_code=sta.title_code
+left join compare_case cc on cc.track_no=aa.track_no
+where to_char(bi.case_date,'yyyy-mm-dd') between $P{vDateFrom} and $P{vDateTo}
+group by nvl(aa.accuser_name,tia.title_name || sta.first_name || ' ' || sta.last_name) ,
+bi.case_date,aa.accuser_idcardno, aa.legislation_id
+]]>
+	</queryString>
+	<field name="CASE_DATE" class="java.lang.String"/>
+	<field name="CASE_DATE2" class="java.lang.String"/>
+	<field name="ACCUSER_NAME" class="java.lang.String"/>
+	<field name="ALCOHOL_CASE_QTY" class="java.math.BigDecimal"/>
+	<field name="ALCOHOL_NOCULPRIT_QTY" class="java.math.BigDecimal"/>
+	<field name="ALCOHOL_COURT_QTY" class="java.math.BigDecimal"/>
+	<field name="ALCOHOL_DIP" class="java.math.BigDecimal"/>
+	<field name="ALCOHOL_DISTILL" class="java.math.BigDecimal"/>
+	<field name="ALCOHOL_OUTBOUND" class="java.math.BigDecimal"/>
+	<field name="ALCOHOL_POWDER" class="java.math.BigDecimal"/>
+	<field name="ALCOHOL_OTHER" class="java.math.BigDecimal"/>
+	<field name="ALCOHOL_CASE_FINE" class="java.math.BigDecimal"/>
+	<field name="ALCOHOL_ESTIMATE_FINE" class="java.math.BigDecimal"/>
+	<field name="TOBACCO_CASE_QTY" class="java.math.BigDecimal"/>
+	<field name="TOBACCO_NOCULPRIT_QTY" class="java.math.BigDecimal"/>
+	<field name="TOBACCO_COURT_QTY" class="java.math.BigDecimal"/>
+	<field name="TOBACCO_OUTBOUND" class="java.math.BigDecimal"/>
+	<field name="TOBACCO_INBOUND" class="java.math.BigDecimal"/>
+	<field name="TOBACCO_OTHER" class="java.math.BigDecimal"/>
+	<field name="TOBACCO_CASE_FINE" class="java.math.BigDecimal"/>
+	<field name="TOBACCO_ESTIMATE_FINE" class="java.math.BigDecimal"/>
+	<field name="TAX_CASE_QTY" class="java.math.BigDecimal"/>
+	<field name="TAX_NOCULPRIT_QTY" class="java.math.BigDecimal"/>
+	<field name="TAX_COURT_QTY" class="java.math.BigDecimal"/>
+	<field name="TAX_AIR" class="java.math.BigDecimal"/>
+	<field name="TAX_OIL" class="java.math.BigDecimal"/>
+	<field name="TAX_CAR" class="java.math.BigDecimal"/>
+	<field name="TAX_MOTORCYCLE" class="java.math.BigDecimal"/>
+	<field name="TAX_CASE_FINE" class="java.math.BigDecimal"/>
+	<field name="TAX_ESTIMATE_FINE" class="java.math.BigDecimal"/>
+	<field name="UNTILDATE" class="java.lang.String"/>
+	<field name="SYSTIMEDATE" class="java.lang.String"/>
+	<field name="DATE_FROM" class="java.lang.String"/>
+	<field name="MONTH_FROM" class="java.lang.String"/>
+	<field name="YEAR_FROM" class="java.lang.String"/>
+	<field name="DATE_TO" class="java.lang.String"/>
+	<field name="MONTH_TO" class="java.lang.String"/>
+	<field name="YEAR_TO" class="java.lang.String"/>
+	<field name="USER_NAME" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="119" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="25"/>
+				<textElement textAlignment="Center">
+					<font fontName="Angsana New" size="16" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[รายงานผลการปราบปราม (ข้อมูล]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="28" y="-20" width="578" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" isStrikeThrough="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{UNTILDATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="-20" width="500" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[วันที่ :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="112" y="-20" width="545" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SYSTIMEDATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="678" y="-20" width="248" height="20"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Report ID : 2.11(ILLR8211)]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

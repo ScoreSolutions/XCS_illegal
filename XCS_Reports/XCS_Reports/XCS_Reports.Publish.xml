@@ -1,0 +1,34 @@
+<publishData>
+  <publishTarget publishUrl="D:\XCS_Reports\">
+    <file relUrl="UserControls/PageControl.ascx" publishTime="08/08/2015 18:17:50" />
+    <file relUrl="bin/LinqDB.pdb" publishTime="09/17/2015 16:13:09" />
+    <file relUrl="PopupUserControl/frmSearchIndictment.ascx" publishTime="08/08/2015 18:17:51" />
+    <file relUrl="_Script/datetimepicker_css.js" publishTime="08/08/2015 18:17:51" />
+    <file relUrl="PopupUserControl/frmSearchDepartment.ascx" publishTime="08/08/2015 18:17:51" />
+    <file relUrl="_Script/JScript.js" publishTime="08/08/2015 18:17:51" />
+    <file relUrl="PopupUserControl/frmPopArrestLawbreaker.ascx" publishTime="08/08/2015 18:17:51" />
+    <file relUrl="images/calendarIcon.gif" publishTime="08/08/2015 18:17:51" />
+    <file relUrl="frmArrestAdminEdit.aspx" publishTime="08/08/2015 18:17:50" />
+    <file relUrl="UserControls/txtDate.ascx" publishTime="08/08/2015 18:17:50" />
+    <file relUrl="images/closewindows.png" publishTime="08/08/2015 18:17:51" />
+    <file relUrl="UserControls/txtTime.ascx" publishTime="08/08/2015 18:17:50" />
+    <file relUrl="frmAddDuty_table_list.aspx" publishTime="08/08/2015 18:17:49" />
+    <file relUrl="bin/LinqDB.xml" publishTime="09/17/2015 16:13:09" />
+    <file relUrl="bin/XCS_Reports.xml" publishTime="09/25/2015 13:24:22" />
+    <file relUrl="PopupUserControl/frmSearchAccuser.ascx" publishTime="08/08/2015 18:17:51" />
+    <file relUrl="BBL/QueryILLR8314.txt" publishTime="08/08/2015 18:17:50" />
+    <file relUrl="PopupUserControl/frmPopArrestTeam.ascx" publishTime="08/08/2015 18:17:51" />
+    <file relUrl="PopupUserControl/frmPopArrestExhibit.ascx" publishTime="08/08/2015 18:17:51" />
+    <file relUrl="_Script/StyleSheet.css" publishTime="08/08/2015 18:17:51" />
+    <file relUrl="bin/itextsharp.dll" publishTime="08/08/2015 18:17:45" />
+    <file relUrl="frmReportPreview.aspx" publishTime="08/08/2015 18:17:50" />
+    <file relUrl="Web.config" publishTime="09/25/2015 10:02:33" />
+    <file relUrl="bin/AjaxControlToolkit.dll" publishTime="08/08/2015 18:17:42" />
+    <file relUrl="Default.aspx" publishTime="08/08/2015 18:17:50" />
+    <file relUrl="bin/XCS_Reports.dll" publishTime="09/25/2015 13:24:22" />
+    <file relUrl="bin/XCS_Reports.pdb" publishTime="09/25/2015 13:24:22" />
+    <file relUrl="CssClass.css" publishTime="08/08/2015 18:17:51" />
+    <file relUrl="bin/LinqDB.dll" publishTime="09/17/2015 16:13:09" />
+    <file relUrl="frmSearchArrestLawbreaker.aspx" publishTime="08/08/2015 18:17:51" />
+  </publishTarget>
+</publishData>

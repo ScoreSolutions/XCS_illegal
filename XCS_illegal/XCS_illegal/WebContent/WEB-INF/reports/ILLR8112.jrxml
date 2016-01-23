@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILLR8112" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="90"/>
+	<parameter name="vOffcode1" class="java.lang.String"/>
+	<parameter name="vOffcode2" class="java.lang.String"/>
+	<parameter name="vOffcode3" class="java.lang.String"/>
+	<parameter name="vYear4" class="java.lang.String"/>
+	<parameter name="vYear3" class="java.lang.String"/>
+	<parameter name="vYear2" class="java.lang.String"/>
+	<parameter name="vYear1" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select a.legislation_name,
+(select short_name from ed_office where offcode = nvl($P{vOffcode3},nvl($P{vOffcode2},$P{vOffcode1}))) offname,
+to_char(sysdate,'dd month yyyy HH24:mi', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') date_time,
+a.compare_case4,
+a.compare_fine4,
+a.compare_case3,
+a.compare_fine3,
+a.compare_case2,
+a.compare_fine2,
+a.compare_case1,
+a.compare_fine1,
+nvl(c.backcompare_case4,0) as backcompare_case4,
+nvl(c.backcompare_fine4,0) as backcompare_fine4,
+nvl(c.backcompare_case3,0) as backcompare_case3,
+nvl(c.backcompare_fine3,0) as backcompare_fine3,
+nvl(c.backcompare_case2,0) as backcompare_case2,
+nvl(c.backcompare_fine2,0) as backcompare_fine2,
+nvl(c.backcompare_case1,0) as backcompare_case1,
+nvl(c.backcompare_fine1,0) as backcompare_fine1
+from (
+    select lg.legislation_name,
+        nvl((select count(bii.id)
+    	  from book_impeachment bii
+    	  inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+        	and to_char(bii.case_date,'yyyymm') between ($P{vYear4}-1)||'10' and ($P{vYear4})||'09'
+        	and aai.legislation_id=lg.id and aai.legislation_id not in (pke_master.getConfigvalue('legislation_tax'))),0) compare_case4,
+    	  nvl((select sum(nvl(cci.birbe_money,0)+nvl(cci.reward_money,0)+nvl(cci.treasury_money,0))
+    	  from compare_case cci
+    	  inner join book_impeachment bii  on bii.track_no=cci.track_no
+    	  inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear4}-1)||'10' and ($P{vYear4})||'09'
+        	and aai.legislation_id=lg.id and aai.legislation_id not in (pke_master.getConfigvalue('legislation_tax'))),0) compare_fine4,
+       	 nvl((select count(bii.id)
+    	  from book_impeachment bii
+    	  inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+        	and to_char(bii.case_date,'yyyymm') between ($P{vYear3}-1)||'10' and ($P{vYear3})||'09'
+        	and aai.legislation_id=lg.id and aai.legislation_id not in (pke_master.getConfigvalue('legislation_tax'))),0) compare_case3,
+    	  nvl((select sum(nvl(cci.birbe_money,0)+nvl(cci.reward_money,0)+nvl(cci.treasury_money,0))
+    	  from compare_case cci
+    	  inner join book_impeachment bii  on bii.track_no=cci.track_no
+    	  inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear3}-1)||'10' and ($P{vYear3})||'09'
+        and aai.legislation_id=lg.id and aai.legislation_id not in (pke_master.getConfigvalue('legislation_tax'))),0) compare_fine3,
+        nvl((select count(bii.id)
+    	  from book_impeachment bii
+    	  inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+        	and to_char(bii.case_date,'yyyymm') between ($P{vYear2}-1)||'10' and ($P{vYear2})||'09'
+        	and aai.legislation_id=lg.id and aai.legislation_id not in (pke_master.getConfigvalue('legislation_tax'))),0) compare_case2,
+    	  nvl((select sum(nvl(cci.birbe_money,0)+nvl(cci.reward_money,0)+nvl(cci.treasury_money,0))
+    	  from compare_case cci
+    	  inner join book_impeachment bii  on bii.track_no=cci.track_no
+    	  inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear2}-1)||'10' and ($P{vYear2})||'09'
+        	and aai.legislation_id=lg.id and aai.legislation_id not in (pke_master.getConfigvalue('legislation_tax'))),0) compare_fine2,
+          nvl((select count(bii.id)
+    	  from book_impeachment bii
+    	  inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+        	and to_char(bii.case_date,'yyyymm') between ($P{vYear1}-1)||'10' and ($P{vYear1})||'09'
+        	and aai.legislation_id=lg.id and aai.legislation_id not in (pke_master.getConfigvalue('legislation_tax'))),0) compare_case1,
+    	  nvl((select sum(nvl(cci.birbe_money,0)+nvl(cci.reward_money,0)+nvl(cci.treasury_money,0))
+    	  from compare_case cci
+    	  inner join book_impeachment bii  on bii.track_no=cci.track_no
+    	  inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear1}-1)||'10' and ($P{vYear1})||'09'
+        	and aai.legislation_id=lg.id and aai.legislation_id not in (pke_master.getConfigvalue('legislation_tax'))),0) compare_fine1,
+          'G1' vgroup
+    from legislation lg
+    union all
+    select distinct '    - ' || dg.group_name,
+        nvl((select count(bii.id)
+    	   from book_impeachment bii
+    	   inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear4}-1)||'10' and ($P{vYear4})||'09'
+         and aai.legislation_id=aa.legislation_id and aai.product_group_id=aa.product_group_id),0) compare_case_qty4,
+      	nvl((select sum(nvl(cci.birbe_money,0)+nvl(cci.reward_money,0)+nvl(cci.treasury_money,0))
+      	from compare_case cci
+    	  inner join book_impeachment bii  on bii.track_no=cci.track_no
+      	inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear4}-1)||'10' and ($P{vYear4})||'09'
+         and aai.legislation_id=aa.legislation_id and aai.product_group_id=aa.product_group_id),0) compare_case_fine4,
+        nvl((select count(bii.id)
+    	   from book_impeachment bii
+    	   inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear3}-1)||'10' and ($P{vYear3})||'09'
+         and aai.legislation_id=aa.legislation_id and aai.product_group_id=aa.product_group_id),0) compare_case_qty3,
+      	nvl((select sum(nvl(cci.birbe_money,0)+nvl(cci.reward_money,0)+nvl(cci.treasury_money,0))
+      	from compare_case cci
+    	  inner join book_impeachment bii  on bii.track_no=cci.track_no
+      	inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear3}-1)||'10' and ($P{vYear3})||'09'
+         and aai.legislation_id=aa.legislation_id and aai.product_group_id=aa.product_group_id),0) compare_case_fine3,
+        nvl((select count(bii.id)
+    	   from book_impeachment bii
+    	   inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear2}-1)||'10' and ($P{vYear2})||'09'
+         and aai.legislation_id=aa.legislation_id and aai.product_group_id=aa.product_group_id),0) compare_case_qty2,
+      	nvl((select sum(nvl(cci.birbe_money,0)+nvl(cci.reward_money,0)+nvl(cci.treasury_money,0))
+      	from compare_case cci
+    	  inner join book_impeachment bii  on bii.track_no=cci.track_no
+      	inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear2}-1)||'10' and ($P{vYear2})||'09'
+         and aai.legislation_id=aa.legislation_id and aai.product_group_id=aa.product_group_id),0) compare_case_fine2,
+         nvl((select count(bii.id)
+    	   from book_impeachment bii
+    	   inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear1}-1)||'10' and ($P{vYear1})||'09'
+         and aai.legislation_id=aa.legislation_id and aai.product_group_id=aa.product_group_id),0) compare_case_qty1,
+      	nvl((select sum(nvl(cci.birbe_money,0)+nvl(cci.reward_money,0)+nvl(cci.treasury_money,0))
+      	from compare_case cci
+    	  inner join book_impeachment bii  on bii.track_no=cci.track_no
+      	inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear1}-1)||'10' and ($P{vYear1})||'09'
+         and aai.legislation_id=aa.legislation_id and aai.product_group_id=aa.product_group_id),0) compare_case_fine1,'G2' vgroup
+    from application_arrest aa
+    inner join duty_group dg on dg.group_id=aa.product_group_id
+    where aa.legislation_id=pke_master.getConfigvalue('legislation_tax')
+) a
+left join (
+select
+b.legislation_name,
+b.compare_case4 AS backcompare_case4,
+b.compare_fine4 AS backcompare_fine4,
+b.compare_case3 AS backcompare_case3,
+b.compare_fine3 AS backcompare_fine3,
+b.compare_case2 AS backcompare_case2,
+b.compare_fine2 AS backcompare_fine2,
+b.compare_case1 AS backcompare_case1,
+b.compare_fine1 AS backcompare_fine1
+from (
+    select lg.legislation_name,
+        nvl((select count(bii.id)
+    	  from book_impeachment bii
+    	  inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+        	and to_char(bii.case_date,'yyyymm') between ($P{vYear4}-2)||'10' and ($P{vYear4}-1)||'09'
+        	and aai.legislation_id=lg.id and aai.legislation_id not in (pke_master.getConfigvalue('legislation_tax'))),0) compare_case4,
+    	  nvl((select sum(nvl(cci.birbe_money,0)+nvl(cci.reward_money,0)+nvl(cci.treasury_money,0))
+    	  from compare_case cci
+    	  inner join book_impeachment bii  on bii.track_no=cci.track_no
+    	  inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear4}-2)||'10' and ($P{vYear4}-1)||'09'
+        	and aai.legislation_id=lg.id and aai.legislation_id not in (pke_master.getConfigvalue('legislation_tax'))),0) compare_fine4,
+       	 nvl((select count(bii.id)
+    	  from book_impeachment bii
+    	  inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+        	and to_char(bii.case_date,'yyyymm') between ($P{vYear3}-2)||'10' and ($P{vYear3}-1)||'09'
+        	and aai.legislation_id=lg.id and aai.legislation_id not in (pke_master.getConfigvalue('legislation_tax'))),0) compare_case3,
+    	  nvl((select sum(nvl(cci.birbe_money,0)+nvl(cci.reward_money,0)+nvl(cci.treasury_money,0))
+    	  from compare_case cci
+    	  inner join book_impeachment bii  on bii.track_no=cci.track_no
+    	  inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear3}-2)||'10' and ($P{vYear3}-1)||'09'
+        and aai.legislation_id=lg.id and aai.legislation_id not in (pke_master.getConfigvalue('legislation_tax'))),0) compare_fine3,
+        nvl((select count(bii.id)
+    	  from book_impeachment bii
+    	  inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+        	and to_char(bii.case_date,'yyyymm') between ($P{vYear2}-2)||'10' and ($P{vYear2}-1)||'09'
+        	and aai.legislation_id=lg.id and aai.legislation_id not in (pke_master.getConfigvalue('legislation_tax'))),0) compare_case2,
+    	  nvl((select sum(nvl(cci.birbe_money,0)+nvl(cci.reward_money,0)+nvl(cci.treasury_money,0))
+    	  from compare_case cci
+    	  inner join book_impeachment bii  on bii.track_no=cci.track_no
+    	  inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear2}-2)||'10' and ($P{vYear2}-1)||'09'
+        	and aai.legislation_id=lg.id and aai.legislation_id not in (pke_master.getConfigvalue('legislation_tax'))),0) compare_fine2,
+          nvl((select count(bii.id)
+    	  from book_impeachment bii
+    	  inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+        	and to_char(bii.case_date,'yyyymm') between ($P{vYear1}-1)||'10' and ($P{vYear1})||'09'
+        	and aai.legislation_id=lg.id and aai.legislation_id not in (pke_master.getConfigvalue('legislation_tax'))),0) compare_case1,
+    	  nvl((select sum(nvl(cci.birbe_money,0)+nvl(cci.reward_money,0)+nvl(cci.treasury_money,0))
+    	  from compare_case cci
+    	  inner join book_impeachment bii  on bii.track_no=cci.track_no
+    	  inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear1}-2)||'10' and ($P{vYear1}-1)||'09'
+        	and aai.legislation_id=lg.id and aai.legislation_id not in (pke_master.getConfigvalue('legislation_tax'))),0) compare_fine1,
+          'G1' vgroup
+    from legislation lg
+    union all
+    select distinct '    - ' || dg.group_name,
+        nvl((select count(bii.id)
+    	   from book_impeachment bii
+    	   inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear4}-2)||'10' and ($P{vYear4}-1)||'09'
+         and aai.legislation_id=aa.legislation_id and aai.product_group_id=aa.product_group_id),0) compare_case_qty4,
+      	nvl((select sum(nvl(cci.birbe_money,0)+nvl(cci.reward_money,0)+nvl(cci.treasury_money,0))
+      	from compare_case cci
+    	  inner join book_impeachment bii  on bii.track_no=cci.track_no
+      	inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear4}-2)||'10' and ($P{vYear4}-1)||'09'
+         and aai.legislation_id=aa.legislation_id and aai.product_group_id=aa.product_group_id),0) compare_case_fine4,
+        nvl((select count(bii.id)
+    	   from book_impeachment bii
+    	   inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear3}-2)||'10' and ($P{vYear3}-1)||'09'
+         and aai.legislation_id=aa.legislation_id and aai.product_group_id=aa.product_group_id),0) compare_case_qty3,
+      	nvl((select sum(nvl(cci.birbe_money,0)+nvl(cci.reward_money,0)+nvl(cci.treasury_money,0))
+      	from compare_case cci
+    	  inner join book_impeachment bii  on bii.track_no=cci.track_no
+      	inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear3}-1)||'10' and ($P{vYear3})||'09'
+         and aai.legislation_id=aa.legislation_id and aai.product_group_id=aa.product_group_id),0) compare_case_fine3,
+        nvl((select count(bii.id)
+    	   from book_impeachment bii
+    	   inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear2}-2)||'10' and ($P{vYear2}-1)||'09'
+         and aai.legislation_id=aa.legislation_id and aai.product_group_id=aa.product_group_id),0) compare_case_qty2,
+      	nvl((select sum(nvl(cci.birbe_money,0)+nvl(cci.reward_money,0)+nvl(cci.treasury_money,0))
+      	from compare_case cci
+    	  inner join book_impeachment bii  on bii.track_no=cci.track_no
+      	inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear2}-1)||'10' and ($P{vYear2})||'09'
+         and aai.legislation_id=aa.legislation_id and aai.product_group_id=aa.product_group_id),0) compare_case_fine2,
+         nvl((select count(bii.id)
+    	   from book_impeachment bii
+    	   inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear1}-2)||'10' and ($P{vYear1}-1)||'09'
+         and aai.legislation_id=aa.legislation_id and aai.product_group_id=aa.product_group_id),0) compare_case_qty1,
+      	nvl((select sum(nvl(cci.birbe_money,0)+nvl(cci.reward_money,0)+nvl(cci.treasury_money,0))
+      	from compare_case cci
+    	  inner join book_impeachment bii  on bii.track_no=cci.track_no
+      	inner join application_arrest aai on aai.track_no=bii.track_no
+    	where  substr(aai.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aai.offcode,1,2)||'0000')
+        	and substr(aai.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aai.offcode,1,4)||'00')
+        	and aai.offcode=nvl($P{vOffcode3},aai.offcode)
+    	and to_char(bii.case_date,'yyyymm') between ($P{vYear1}-1)||'10' and ($P{vYear1})||'09'
+         and aai.legislation_id=aa.legislation_id and aai.product_group_id=aa.product_group_id),0) compare_case_fine1,'G2' vgroup
+    from application_arrest aa
+    inner join duty_group dg on dg.group_id=aa.product_group_id
+    where aa.legislation_id=pke_master.getConfigvalue('legislation_tax')
+) b ) c
+ On a.legislation_name = c.legislation_name]]>
+	</queryString>
+	<field name="LEGISLATION_NAME" class="java.lang.String"/>
+	<field name="OFFNAME" class="java.lang.String"/>
+	<field name="DATE_TIME" class="java.lang.String"/>
+	<field name="COMPARE_CASE4" class="java.math.BigDecimal"/>
+	<field name="COMPARE_FINE4" class="java.math.BigDecimal"/>
+	<field name="COMPARE_CASE3" class="java.math.BigDecimal"/>
+	<field name="COMPARE_FINE3" class="java.math.BigDecimal"/>
+	<field name="COMPARE_CASE2" class="java.math.BigDecimal"/>
+	<field name="COMPARE_FINE2" class="java.math.BigDecimal"/>
+	<field name="COMPARE_CASE1" class="java.math.BigDecimal"/>
+	<field name="COMPARE_FINE1" class="java.math.BigDecimal"/>
+	<field name="BACKCOMPARE_CASE4" class="java.math.BigDecimal"/>
+	<field name="BACKCOMPARE_FINE4" class="java.math.BigDecimal"/>
+	<field name="BACKCOMPARE_CASE3" class="java.math.BigDecimal"/>
+	<field name="BACKCOMPARE_FINE3" class="java.math.BigDecimal"/>
+	<field name="BACKCOMPARE_CASE2" class="java.math.BigDecimal"/>
+	<field name="BACKCOMPARE_FINE2" class="java.math.BigDecimal"/>
+	<field name="BACKCOMPARE_CASE1" class="java.math.BigDecimal"/>
+	<field name="BACKCOMPARE_FINE1" class="java.math.BigDecimal"/>
+	<variable name="COMPARE_CASE1_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{COMPARE_CASE1}]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_FINE1_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{COMPARE_FINE1}]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE2_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{COMPARE_CASE2}]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_FINE2_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{COMPARE_FINE2}]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE3_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{COMPARE_CASE3}]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_FINE3_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{COMPARE_FINE3}]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE4_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{COMPARE_CASE4}]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_FINE4_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{COMPARE_FINE4}]]></variableExpression>
+	</variable>
+	<variable name="BACKCOMPARE_CASE1_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BACKCOMPARE_CASE1}]]></variableExpression>
+	</variable>
+	<variable name="BACKCOMPARE_FINE1_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BACKCOMPARE_FINE1}]]></variableExpression>
+	</variable>
+	<variable name="BACKCOMPARE_CASE2_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BACKCOMPARE_CASE2}]]></variableExpression>
+	</variable>
+	<variable name="BACKCOMPARE_FINE2_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BACKCOMPARE_FINE2}]]></variableExpression>
+	</variable>
+	<variable name="BACKCOMPARE_CASE3_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BACKCOMPARE_CASE3}]]></variableExpression>
+	</variable>
+	<variable name="BACKCOMPARE_FINE3_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BACKCOMPARE_FINE3}]]></variableExpression>
+	</variable>
+	<variable name="BACKCOMPARE_CASE4_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BACKCOMPARE_CASE4}]]></variableExpression>
+	</variable>
+	<variable name="BACKCOMPARE_FINE4_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BACKCOMPARE_FINE4}]]></variableExpression>
+	</variable>
+	<variable name="DIFF_CASE1" class="java.lang.String"/>
+	<variable name="DIFF_FINE1" class="java.lang.String"/>
+	<variable name="DIFF_CASE2" class="java.lang.String"/>
+	<variable name="DIFF_FINE2" class="java.lang.String"/>
+	<variable name="DIFF_CASE3" class="java.lang.String"/>
+	<variable name="DIFF_FINE3" class="java.lang.String"/>
+	<variable name="DIFF_CASE4" class="java.lang.String"/>
+	<variable name="DIFF_FINE4" class="java.lang.String"/>
+	<variable name="%CASE1" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="157" splitType="Stretch">
+			<staticText>
+				<reportElement x="126" y="0" width="675" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[สถิติผลการปราบปรามผู้กระทำผิดกฎหมายสรรพสามิต (ข้อมูลโดยรวม)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="25" width="590" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[สำนักงานสรรพสามิต......................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="50" width="569" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ปีงบประมาณ ..............]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="471" y="75" width="335" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[หน่วย : ราย,บาท]]></text>
+			</staticText>
+			<rectangle radius="0">
+				<reportElement x="0" y="94" width="555" height="63"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="468" y="94" width="90" height="23"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ปีงบประมาณ .........]]></text>
+			</staticText>
+			<line>
+				<reportElement x="192" y="95" width="1" height="62"/>
+			</line>
+			<line>
+				<reportElement x="192" y="116" width="363" height="2"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="95" width="192" height="62"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ประเภท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="117" width="45" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ค่าปรับ
+(บาท)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="117" width="45" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[คดี
+(ราย)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="94" width="86" height="24"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ปีงบประมาณ .........]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="117" width="45" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ค่าปรับ
+(บาท)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="117" width="45" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[คดี
+(ราย)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="287" y="93" width="87" height="23"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ปีงบประมาณ .........]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="117" width="45" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ค่าปรับ
+(บาท)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="117" width="45" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[คดี
+(ราย)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="197" y="94" width="86" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ปีงบประมาณ .........]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="117" width="45" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ค่าปรับ
+(บาท)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="117" width="45" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[คดี
+(ราย)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="374" y="94" width="1" height="63"/>
+			</line>
+			<line>
+				<reportElement x="283" y="94" width="1" height="63"/>
+			</line>
+			<line>
+				<reportElement x="464" y="94" width="1" height="63"/>
+			</line>
+			<line>
+				<reportElement x="238" y="116" width="1" height="41"/>
+			</line>
+			<line>
+				<reportElement x="328" y="117" width="1" height="40"/>
+			</line>
+			<line>
+				<reportElement x="419" y="118" width="1" height="39"/>
+			</line>
+			<line>
+				<reportElement x="510" y="118" width="1" height="39"/>
+			</line>
+			<staticText>
+				<reportElement x="438" y="-20" width="182" height="20"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Report ID : 1.12 (ILLR8112)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="-20" width="239" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSAU.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DATE_TIME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="521" y="95" width="100" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[Integer.parseInt($P{vYear4})+543]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="431" y="95" width="100" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[Integer.parseInt($P{vYear3})+543]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="94" width="100" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[Integer.parseInt($P{vYear2})+543]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="251" y="94" width="100" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[Integer.parseInt($P{vYear1})+543]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="47" width="245" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[Integer.parseInt($P{vYear4})+543]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="285" y="22" width="527" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{OFFNAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<rectangle radius="0">
+				<reportElement x="0" y="0" width="555" height="25"/>
+			</rectangle>
+			<line>
+				<reportElement x="238" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="192" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="283" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="328" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="374" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="419" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="464" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="510" y="0" width="1" height="25"/>
+			</line>
+			<textField>
+				<reportElement x="3" y="0" width="189" height="25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{LEGISLATION_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="59" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($F{COMPARE_FINE1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="259" y="0" width="67" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($F{COMPARE_CASE2}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="308" y="0" width="64" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($F{COMPARE_FINE2}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="0" width="58" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($F{COMPARE_CASE3}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="398" y="0" width="64" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($F{COMPARE_FINE3}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="451" y="0" width="57" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($F{COMPARE_CASE4}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="487" y="0" width="65" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($F{COMPARE_FINE4}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="0" width="68" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($F{COMPARE_CASE1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="130" splitType="Stretch">
+			<rectangle radius="0">
+				<reportElement x="0" y="75" width="555" height="25"/>
+			</rectangle>
+			<rectangle radius="0">
+				<reportElement x="0" y="0" width="555" height="25"/>
+			</rectangle>
+			<rectangle radius="0">
+				<reportElement x="0" y="25" width="555" height="25"/>
+			</rectangle>
+			<rectangle radius="0">
+				<reportElement x="0" y="50" width="555" height="25"/>
+			</rectangle>
+			<line>
+				<reportElement x="192" y="0" width="1" height="100"/>
+			</line>
+			<line>
+				<reportElement x="238" y="0" width="1" height="100"/>
+			</line>
+			<line>
+				<reportElement x="283" y="0" width="1" height="100"/>
+			</line>
+			<line>
+				<reportElement x="328" y="0" width="1" height="100"/>
+			</line>
+			<line>
+				<reportElement x="374" y="0" width="1" height="100"/>
+			</line>
+			<line>
+				<reportElement x="419" y="0" width="1" height="100"/>
+			</line>
+			<line>
+				<reportElement x="464" y="0" width="1" height="100"/>
+			</line>
+			<line>
+				<reportElement x="510" y="0" width="1" height="100"/>
+			</line>
+			<staticText>
+				<reportElement x="3" y="0" width="192" height="25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[รวมพ.ร.บ.ภาษีสรรพสามิต พ.ศ.2527]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="25" width="192" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบเมื่อปีก่อน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="192" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ผลต่าง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="105" width="569" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[หมายเหตุ : จำนวนเงินค่าปรับ ไม่ได้รวมประมาณการค่าปรับของคดีไม่มีตัวและคดีส่งฟ้องศาล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="75" width="191" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement x="168" y="0" width="68" height="24"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE1_1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="59" height="24"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_FINE1_1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="259" y="0" width="67" height="24"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE2_1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="308" y="0" width="64" height="24"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_FINE2_1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="0" width="58" height="24"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE3_1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="398" y="0" width="64" height="24"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_FINE3_1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="451" y="0" width="57" height="24"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE4_1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="0" width="64" height="24"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_FINE4_1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="25" width="68" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BACKCOMPARE_CASE1_1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="24" width="59" height="26"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BACKCOMPARE_FINE1_1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="259" y="25" width="67" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BACKCOMPARE_CASE2_1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="308" y="24" width="64" height="26"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BACKCOMPARE_FINE2_1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="24" width="58" height="26"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BACKCOMPARE_CASE3_1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="398" y="25" width="64" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BACKCOMPARE_FINE3_1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="451" y="24" width="57" height="26"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BACKCOMPARE_CASE4_1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="24" width="65" height="26"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BACKCOMPARE_FINE4_1}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="50" width="68" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(($V{COMPARE_CASE1_1}.doubleValue()-$V{BACKCOMPARE_CASE1_1}.doubleValue()),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="50" width="61" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(($V{COMPARE_FINE1_1}.doubleValue()-$V{BACKCOMPARE_FINE1_1}.doubleValue()),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="257" y="50" width="69" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(($V{COMPARE_CASE2_1}.doubleValue()-$V{BACKCOMPARE_CASE2_1}.doubleValue()),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="308" y="50" width="64" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(($V{COMPARE_FINE2_1}.doubleValue()-$V{BACKCOMPARE_FINE2_1}.doubleValue()),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="50" width="58" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(($V{COMPARE_CASE3_1}.doubleValue()-$V{BACKCOMPARE_CASE3_1}.doubleValue()),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="398" y="50" width="64" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(($V{COMPARE_FINE3_1}.doubleValue()-$V{BACKCOMPARE_FINE3_1}.doubleValue()),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="451" y="50" width="57" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(($V{COMPARE_CASE4_1}.doubleValue()-$V{BACKCOMPARE_CASE4_1}.doubleValue()),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="50" width="65" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(($V{COMPARE_FINE4_1}.doubleValue()-$V{BACKCOMPARE_FINE4_1}.doubleValue()),0, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="75" width="68" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(((($V{COMPARE_CASE1_1}.doubleValue()-$V{BACKCOMPARE_CASE1_1}.doubleValue())*100)/$V{COMPARE_CASE1_1}.doubleValue()),2, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="213" y="75" width="68" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(((($V{COMPARE_FINE1_1}.doubleValue()-$V{BACKCOMPARE_FINE1_1}.doubleValue())*100)/$V{COMPARE_FINE1_1}.doubleValue()),2, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="258" y="75" width="68" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(((($V{COMPARE_CASE2_1}.doubleValue()-$V{BACKCOMPARE_CASE2_1}.doubleValue())*100)/$V{COMPARE_CASE2_1}.doubleValue()),2, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="304" y="75" width="68" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(((($V{COMPARE_FINE2_1}.doubleValue()-$V{BACKCOMPARE_FINE2_1}.doubleValue())*100)/$V{COMPARE_FINE2_1}.doubleValue()),2, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="349" y="75" width="68" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(((($V{COMPARE_CASE3_1}.doubleValue()-$V{BACKCOMPARE_CASE3_1}.doubleValue())*100)/$V{COMPARE_CASE3_1}.doubleValue()),2, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="394" y="75" width="68" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(((($V{COMPARE_FINE3_1}.doubleValue()-$V{BACKCOMPARE_FINE3_1}.doubleValue())*100)/$V{COMPARE_FINE3_1}.doubleValue()),2, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="75" width="68" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(((($V{COMPARE_CASE4_1}.doubleValue()-$V{BACKCOMPARE_CASE4_1}.doubleValue())*100)/$V{COMPARE_CASE4_1}.doubleValue()),2, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="75" width="68" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(((($V{COMPARE_FINE4_1}.doubleValue()-$V{BACKCOMPARE_FINE4_1}.doubleValue())*100)/$V{COMPARE_FINE4_1}.doubleValue()),2, "")]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

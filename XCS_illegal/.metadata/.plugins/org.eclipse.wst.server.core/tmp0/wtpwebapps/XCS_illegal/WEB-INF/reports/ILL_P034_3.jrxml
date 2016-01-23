@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILL_P034_3" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="360"/>
+	<parameter name="getAppoveid" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select af3.id, af3.app_req_approve_compare_id, af3.inform_to, af3.inform_for,af3.inform_date,
+        af3.staff_id_inform, tii.title_name || sti.first_name || ' ' || sti.last_name staff_name_inform,
+        af3.poscode_inform, nvl(ps.posname, sti.pos_name) || sti.staff_level posname_inform, af3.offcode_inform,
+        af3.lawyer8_inform_to, af3.lawyer8_inform_for,af3.lawyer8_inform_date,
+        af3.staff_id_lawyer8, til.title_name || stl.first_name || ' ' || stl.last_name staff_name_lawyer8,
+        af3.poscode_lawyer8, nvl(psl.posname,stl.pos_name) ||  stl.staff_level posname_lawyer8, af3.offcode_lawyer8,
+        af3.director_inform_to, af3.director_inform_for, af3.director_inform_date,
+        af3.staff_id_director, tid.title_name || std.first_name || ' ' || std.last_name staff_name_director,
+        af3.poscode_director, nvl(psd.posname,std.pos_name) || std.staff_level posname_director, af3.offcode_director,
+        af3.isaccept,af3.accept_desc,af3.noneaccept_desc,
+        af3.staff_id_accept, tic.title_name || stc.first_name || ' ' || stc.last_name staff_name_accept,
+        af3.poscode_accept, nvl(psc.posname,stc.pos_name) ||  stc.staff_level posname_accept, af3.offcode_accept,
+        af3.isapprove,af3.approve_desc,af3.noneapprove_desc, af3.approve_date,
+        af3.staff_id_approve, tip.title_name || stp.first_name || ' ' || stp.last_name staff_name_approve,
+        af3.poscode_approve, nvl(psp.posname,stp.pos_name) || stp.staff_level posname_approve,af3.offcode_approve,
+        to_char(af3.lawyer8_inform_date, 'fmdd', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') dd_lawyer_date,
+        to_char(af3.lawyer8_inform_date, 'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') mm_lawyer_date,
+        to_char(af3.lawyer8_inform_date, 'yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') yy_lawyer_date,
+        to_char(af3.director_inform_date, 'fmdd', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') dd_director_date,
+        to_char(af3.director_inform_date, 'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') mm_director_date,
+        to_char(af3.director_inform_date, 'yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') yy_director_date,
+        to_char(af3.inform_date, 'fmdd', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') dd_inform_date,
+        to_char(af3.inform_date, 'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') mm_inform_date,
+        to_char(af3.inform_date, 'yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') yy_inform_date
+        from app_req_approve_compare_form3 af3
+        inner join staff sti on sti.idcard_no=af3.staff_id_inform
+        left join title tii on tii.title_code=sti.title_code
+        left join position ps on ps.poscode=af3.poscode_inform
+        left join staff stl on stl.idcard_no=af3.staff_id_lawyer8
+        left join title til on til.title_code=stl.title_code
+        left join position psl on psl.poscode=af3.poscode_lawyer8
+        left join staff std on std.idcard_no=af3.staff_id_director
+        left join title tid on tid.title_code=std.title_code
+        left join position psd on psd.poscode=af3.poscode_director
+        left join staff stc on stc.idcard_no=af3.staff_id_accept
+        left join title tic on tic.title_code=std.title_code
+        left join position psc on psc.poscode=af3.poscode_accept
+        left join staff stp on stp.idcard_no=af3.staff_id_approve
+        left join title tip on tip.title_code=stp.title_code
+        left join position psp on psp.poscode=af3.poscode_approve
+where af3.id=$P{getAppoveid}]]>
+	</queryString>
+	<field name="ID" class="java.math.BigDecimal"/>
+	<field name="APP_REQ_APPROVE_COMPARE_ID" class="java.math.BigDecimal"/>
+	<field name="INFORM_TO" class="java.lang.String"/>
+	<field name="INFORM_FOR" class="java.lang.String"/>
+	<field name="INFORM_DATE" class="java.sql.Timestamp"/>
+	<field name="STAFF_ID_INFORM" class="java.lang.String"/>
+	<field name="STAFF_NAME_INFORM" class="java.lang.String"/>
+	<field name="POSCODE_INFORM" class="java.lang.String"/>
+	<field name="POSNAME_INFORM" class="java.lang.String"/>
+	<field name="OFFCODE_INFORM" class="java.lang.String"/>
+	<field name="LAWYER8_INFORM_TO" class="java.lang.String"/>
+	<field name="LAWYER8_INFORM_FOR" class="java.lang.String"/>
+	<field name="LAWYER8_INFORM_DATE" class="java.sql.Timestamp"/>
+	<field name="STAFF_ID_LAWYER8" class="java.lang.String"/>
+	<field name="STAFF_NAME_LAWYER8" class="java.lang.String"/>
+	<field name="POSCODE_LAWYER8" class="java.lang.String"/>
+	<field name="POSNAME_LAWYER8" class="java.lang.String"/>
+	<field name="OFFCODE_LAWYER8" class="java.lang.String"/>
+	<field name="DIRECTOR_INFORM_TO" class="java.lang.String"/>
+	<field name="DIRECTOR_INFORM_FOR" class="java.lang.String"/>
+	<field name="DIRECTOR_INFORM_DATE" class="java.sql.Timestamp"/>
+	<field name="STAFF_ID_DIRECTOR" class="java.lang.String"/>
+	<field name="STAFF_NAME_DIRECTOR" class="java.lang.String"/>
+	<field name="POSCODE_DIRECTOR" class="java.lang.String"/>
+	<field name="POSNAME_DIRECTOR" class="java.lang.String"/>
+	<field name="OFFCODE_DIRECTOR" class="java.lang.String"/>
+	<field name="ISACCEPT" class="java.lang.String"/>
+	<field name="ACCEPT_DESC" class="java.lang.String"/>
+	<field name="NONEACCEPT_DESC" class="java.lang.String"/>
+	<field name="STAFF_ID_ACCEPT" class="java.lang.String"/>
+	<field name="STAFF_NAME_ACCEPT" class="java.lang.String"/>
+	<field name="POSCODE_ACCEPT" class="java.lang.String"/>
+	<field name="POSNAME_ACCEPT" class="java.lang.String"/>
+	<field name="OFFCODE_ACCEPT" class="java.lang.String"/>
+	<field name="ISAPPROVE" class="java.lang.String"/>
+	<field name="APPROVE_DESC" class="java.lang.String"/>
+	<field name="NONEAPPROVE_DESC" class="java.lang.String"/>
+	<field name="APPROVE_DATE" class="java.sql.Timestamp"/>
+	<field name="STAFF_ID_APPROVE" class="java.lang.String"/>
+	<field name="STAFF_NAME_APPROVE" class="java.lang.String"/>
+	<field name="POSCODE_APPROVE" class="java.lang.String"/>
+	<field name="POSNAME_APPROVE" class="java.lang.String"/>
+	<field name="OFFCODE_APPROVE" class="java.lang.String"/>
+	<field name="DD_LAWYER_DATE" class="java.lang.String"/>
+	<field name="MM_LAWYER_DATE" class="java.lang.String"/>
+	<field name="YY_LAWYER_DATE" class="java.lang.String"/>
+	<field name="DD_DIRECTOR_DATE" class="java.lang.String"/>
+	<field name="MM_DIRECTOR_DATE" class="java.lang.String"/>
+	<field name="YY_DIRECTOR_DATE" class="java.lang.String"/>
+	<field name="DD_INFORM_DATE" class="java.lang.String"/>
+	<field name="MM_INFORM_DATE" class="java.lang.String"/>
+	<field name="YY_INFORM_DATE" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-20" x="291" y="704" width="941" height="88"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ .......................................................................................
+(...............................................................................................)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-20" x="288" y="276" width="966" height="58"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ .......................................................................................
+(................................................................................................)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="172" width="966" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[วันที่ ................ เดือน ................................ พ.ศ. ........................	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="347" width="1000" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[วันที่ ................ เดือน ................................ พ.ศ. ......................	]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="72" y="530" width="14" height="16"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="94" y="668" width="907" height="25"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[อนุมัติ ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="686" width="906" height="25"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ไม่อนุมัติ ............................................................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="226" width="1000" height="25"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เรียน ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="72" y="670" width="14" height="16"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="21" y="0" width="1000" height="25"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="18" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[แบบขออนุมัติ 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="767" width="961" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[วันที่ ................ เดือน ................................ พ.ศ. .....................	]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="72" y="688" width="14" height="16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="72" y="512" width="14" height="16"/>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-20" x="288" y="105" width="966" height="63"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ .........................................................................................
+(..................................................................................................)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="507" width="909" height="25"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เห็นชอบ ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-20" x="289" y="551" width="941" height="70"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ .......................................................................................
+(...............................................................................................)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="743" width="716" height="25"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ ตำแหน่ง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="147" width="427" height="25"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ตำแหน่ง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="320" width="968" height="25"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ ตำแหน่ง ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="39" width="1000" height="25"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เรียน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="477" width="714" height="25"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ตำแหน่ง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-20" x="288" y="429" width="969" height="78"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ .......................................................................................
+(................................................................................................)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="380" width="1000" height="25"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เรียน ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="50" y="41" width="910" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{INFORM_TO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="50" y="64" width="807" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["เพื่อ"+$F{INFORM_FOR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="355" y="123" width="563" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{STAFF_NAME_INFORM}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="339" y="149" width="783" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{POSNAME_INFORM}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="324" y="168" width="100" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DD_INFORM_DATE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="386" y="168" width="122" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{MM_INFORM_DATE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="497" y="168" width="100" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{YY_INFORM_DATE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="50" y="228" width="666" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{LAWYER8_INFORM_TO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="49" y="251" width="803" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["เพื่อ"+$F{LAWYER8_INFORM_FOR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="353" y="303" width="610" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{STAFF_NAME_LAWYER8}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="340" y="322" width="1000" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{POSNAME_LAWYER8}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="325" y="343" width="100" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DD_LAWYER_DATE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="386" y="343" width="100" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{MM_LAWYER_DATE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="497" y="343" width="100" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{YY_LAWYER_DATE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="50" y="383" width="599" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DIRECTOR_INFORM_TO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="50" y="408" width="719" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["เพื่อ"+$F{DIRECTOR_INFORM_FOR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="358" y="457" width="761" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{STAFF_NAME_DIRECTOR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="339" y="477" width="594" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{POSNAME_DIRECTOR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="360" y="573" width="615" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{STAFF_NAME_ACCEPT}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="340" y="597" width="787" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{POSNAME_ACCEPT}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="356" y="721" width="728" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{STAFF_NAME_APPROVE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="340" y="745" width="469" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{POSNAME_APPROVE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="327" y="764" width="100" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DD_DIRECTOR_DATE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="397" y="762" width="140" height="25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{MM_DIRECTOR_DATE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="498" y="763" width="100" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{YY_DIRECTOR_DATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="291" y="597" width="714" height="25"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ตำแหน่ง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="526" width="909" height="25"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ไม่เห็นชอบ .......................................................................................................................................................]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="154" y="523" width="592" height="27"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NONEACCEPT_DESC}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="154" y="679" width="626" height="29"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NONEAPPROVE_DESC}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="29" y="508" width="100" height="23"/>
+				<textElement textAlignment="Center">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($F{ISACCEPT}.equals( "Y" )? "/" : null )]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="29" y="527" width="100" height="23"/>
+				<textElement textAlignment="Center">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($F{ISACCEPT}.equals( "N" )? "/" : null )]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="29" y="667" width="100" height="23"/>
+				<textElement textAlignment="Center">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($F{ISAPPROVE}.equals( "Y" )? "/" : null )]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="30" y="685" width="100" height="23"/>
+				<textElement textAlignment="Center">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($F{ISAPPROVE}.equals( "N" )? "/" : null )]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="22" y="645" width="666" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["คำสั่งของ"+$F{LAWYER8_INFORM_TO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

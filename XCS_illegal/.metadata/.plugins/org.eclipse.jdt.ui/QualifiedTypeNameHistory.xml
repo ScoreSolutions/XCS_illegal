@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.Character"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.ko.domain.ApplicationInvest"/>
+<fullyQualifiedTypeName name="java.sql.Clob"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.ko.util.DateUtil"/>
+<fullyQualifiedTypeName name="javax.servlet.jsp.PageContext"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+<fullyQualifiedTypeName name="com.ko.util.DB"/>
+<fullyQualifiedTypeName name="java.text.NumberFormat"/>
+<fullyQualifiedTypeName name="com.ko.util.NumberUtil"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="com.ko.webapp.bean.UserSession"/>
+<fullyQualifiedTypeName name="com.ko.domain.EdOffice"/>
+<fullyQualifiedTypeName name="com.ko.domain.Legislation"/>
+<fullyQualifiedTypeName name="com.ko.domain.ROLEGRP"/>
+<fullyQualifiedTypeName name="java.text.DateFormat"/>
+<fullyQualifiedTypeName name="com.opensymphony.oscache.base.Config"/>
+<fullyQualifiedTypeName name="com.ko.domain.BookImpeachment"/>
+<fullyQualifiedTypeName name="com.ko.domain.Indictment"/>
+<fullyQualifiedTypeName name="com.ko.domain.Title"/>
+<fullyQualifiedTypeName name="com.ko.domain.Race"/>
+<fullyQualifiedTypeName name="com.ko.domain.Nationality"/>
+<fullyQualifiedTypeName name="com.pccth.rdbservice.TitleInfo"/>
+<fullyQualifiedTypeName name="com.ko.util.ReportsUtil"/>
+<fullyQualifiedTypeName name="com.ko.util.ConfigUtil"/>
+<fullyQualifiedTypeName name="org.jfree.util.Log"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+</qualifiedTypeNameHistroy>

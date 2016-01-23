@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+	<description>A tag library exercising SimpleTag handlers.</description>
+	<tlib-version>1.0</tlib-version>
+	<short-name>SimpleTagLibrary</short-name>
+	<uri>/SimpleTagLibrary</uri>
+	
+	<function>
+		<description>Input Text</description>
+		<name>text</name>
+		<function-class>com.ko.webapp.util.HtmlComponentUtil</function-class>
+		<function-signature>java.lang.String text(java.lang.String,java.lang.String,java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<description>Input Hidden</description>
+		<name>hidden</name>
+		<function-class>com.ko.webapp.util.HtmlComponentUtil</function-class>
+		<function-signature>java.lang.String hidden(java.lang.String,java.lang.String,java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<description>Input Password</description>
+		<name>password</name>
+		<function-class>com.ko.webapp.util.HtmlComponentUtil</function-class>
+		<function-signature>java.lang.String password(java.lang.String,java.lang.String,java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<description>Input Calendar</description>
+		<name>calendar</name>
+		<function-class>com.ko.webapp.util.HtmlComponentUtil</function-class>
+		<function-signature>java.lang.String calendar(java.lang.String,java.util.Date,java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<description>Input File</description>
+		<name>file</name>
+		<function-class>com.ko.webapp.util.HtmlComponentUtil</function-class>
+		<function-signature>java.lang.String file(java.lang.String,java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<description>Input textArea</description>
+		<name>textarea</name>
+		<function-class>com.ko.webapp.util.HtmlComponentUtil</function-class>
+		<function-signature>java.lang.String textarea(java.lang.String,java.lang.String,java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<description>Input Select</description>
+		<name>select</name>
+		<function-class>com.ko.webapp.util.HtmlComponentUtil</function-class>
+		<function-signature>java.lang.String select(java.lang.String,java.util.List,java.lang.String,java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<description>Input Radio</description>
+		<name>radio</name>
+		<function-class>com.ko.webapp.util.HtmlComponentUtil</function-class>
+		<function-signature>java.lang.String radio(java.lang.String,java.lang.String,java.lang.String,java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<description>Input Checkbox</description>
+		<name>checkbox</name>
+		<function-class>com.ko.webapp.util.HtmlComponentUtil</function-class>
+		<function-signature>java.lang.String checkbox(java.lang.String,java.lang.String,java.lang.Object[],java.lang.String)</function-signature>
+	</function>
+</taglib>

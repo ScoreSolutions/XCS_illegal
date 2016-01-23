@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILL_2009" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="93" y="3" width="368" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[การจับกุมผู้กระทำผิดกฏหมายของเจ้าพนักงานสรรพสามิตร]]></text>
+			</staticText>
+			<line>
+				<reportElement x="117" y="51" width="327" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="6" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="383" y="2" width="170" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[สถานที่ทำการ ส่วนคดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="23" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[วันที่  .....................................................]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="651" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="2" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[                           ข้าพเจ้า ......................................................................... ตำแหน่ง ...........................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="23" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ได้ทำการจับกุมผู้กระทำผิดกฏหมายในหน้าที่กรมสรรพสามิตร และเป็นผู้กล่าวโทษจึงขอเสนอรายงานต่อ ............................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="44" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ดังมีข้อความต่อไปนี้]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="65" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[โดยคำสั่ง ...................................................................................................... ข้าพเจ้าพร้อมด้วย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="86" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ได้ทำการจับกุม]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="191" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[จังหวัด ............................................................................................. ผู้ต้องหาเป็น ............................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="128" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ซึ่งกระทำความผิดฐาน ......................................................................................................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="170" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ณ .........................................................................................................................................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="149" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[วันที่ .......................... เดือน ................................................................. พ.ศ. ............................ เวลา ........................................................ น.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="107" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[                  1.  ..............................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="296" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ผู้ต้องหายินยอม                                ชำระค่าปรับตามที่เปรียบเทียบ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="233" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ผู้รับอนุญาติชื่อ ....................................................................................................... ใช้ชื่อการค้าว่า ..............................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="275" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[............................................................ บาท  ( .................................................................................................................................. ) คดีได้เสร็จสิ้นแล้ว]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="254" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ได้นำตัวผู้ต้องหาพร้อมของกลางส่งพนักงานเจ้าหน้าที่ สำนักกฏหมาย กรมสรรพสามิต เปรียบเทียบปรับเป็นเงิน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="212" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ใบอนุญาติเล่มที่/เลขที่ .............................................................................................. ประเภท .......................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="338" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[เพื่อทำการสอบสวนดำเนินคดีต่อไป]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="380" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[                                                                                                                             (ลงชื่อ) ................................................................................... ผู้รายงาน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="359" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[รายละเอียดแจ้งตามบันทึกการตรวจค้นของกลางในคดีแผนกสรรพสามิต แบบ ส.ส. 2/39 ที่แนบเสนอมาพร้อมนี้]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="317" width="551" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[จึงนำตัวผู้ต้องหาพร้อมของกลางส่งพนักงานสอบสวน ............................................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="403" width="224" height="106"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[เรียน
+      เพื่อทราบ
+               ......................../........................./.......................
+ทราบลงทะเบียนไว้
+
+               ......................../........................./.......................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="403" width="224" height="106"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[เรียน
+      เพื่อทราบ
+               ......................../........................./.......................
+ทราบลงทะเบียนไว้
+
+               ......................../........................./.......................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="538" width="44" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[หมายเหตุ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="538" width="441" height="40"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[- รายงานนี้เป็นรายงานของแต่ล่ะคดี ตามปรกติให้ผู้กล่าวโทษจัดกรอกรายการเสนอ
+   ผู้บังคับบรรชาโดยละเอียด และโดยเร็วที่สุดหลังจากส่งผู้ต้องหาดำเนินคดีแล้ว
+]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

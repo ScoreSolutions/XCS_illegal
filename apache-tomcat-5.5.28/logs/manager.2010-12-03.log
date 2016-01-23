@@ -1,0 +1,1995 @@
+3 ¸.¤. 2553 0:29:10 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+3 ¸.¤. 2553 0:29:10 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+3 ¸.¤. 2553 0:29:10 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:29:10 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 0:29:13 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context7734296074389542453.xml'
+3 ¸.¤. 2553 0:29:14 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 0:30:04 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:30:04 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 0:30:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:30:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: stop: Stopping web application at '/DateService'
+3 ¸.¤. 2553 0:30:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 0:30:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:30:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:30:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 0:30:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context2674762468783063181.xml'
+3 ¸.¤. 2553 0:30:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 0:30:12 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:30:14 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:30:14 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 0:30:14 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/DateService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/DateService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 0:30:47 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:30:47 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:30:47 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 0:30:48 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context4198250726515136503.xml'
+3 ¸.¤. 2553 0:30:48 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 0:30:48 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:30:50 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:31:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:31:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: stop: Stopping web application at '/DateService'
+3 ¸.¤. 2553 0:31:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 0:31:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:31:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:31:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 0:31:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context1252488622623929321.xml'
+3 ¸.¤. 2553 0:31:09 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 0:31:10 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:31:10 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 0:31:10 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/DateService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/DateService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 0:32:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:32:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:32:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 0:32:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context6047671381605611949.xml'
+3 ¸.¤. 2553 0:32:20 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 0:32:44 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:32:44 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:32:44 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 0:32:44 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context104170634451454445.xml'
+3 ¸.¤. 2553 0:34:16 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 0:34:21 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:35:56 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: stop: Stopping web application at '/DateService'
+3 ¸.¤. 2553 0:35:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 0:35:58 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:36:12 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:36:12 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 0:36:30 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:36:30 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:36:30 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context7736333965307296672.xml'
+3 ¸.¤. 2553 0:36:32 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 0:36:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:36:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: stop: Stopping web application at '/DateService'
+3 ¸.¤. 2553 0:36:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 0:37:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:37:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:37:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 0:37:13 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context6560458814968287304.xml'
+3 ¸.¤. 2553 0:37:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 0:38:52 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:38:52 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 0:38:52 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/DateService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/DateService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 0:39:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:39:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:39:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 0:39:54 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context841071125171221388.xml'
+3 ¸.¤. 2553 0:41:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 0:43:17 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:43:17 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 0:43:17 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/DateService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/DateService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 0:44:11 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:44:11 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:44:11 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 0:44:11 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context4478727368191831239.xml'
+3 ¸.¤. 2553 0:45:52 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 0:49:06 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:49:06 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:49:06 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 0:49:06 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context2580976883550589697.xml'
+3 ¸.¤. 2553 0:51:15 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 0:53:22 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:53:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: stop: Stopping web application at '/DateService'
+3 ¸.¤. 2553 0:53:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 0:56:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:56:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 0:56:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: stop: Stopping web application at '/DateService'
+3 ¸.¤. 2553 0:56:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 1:00:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:00:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:00:12 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 1:03:05 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: stop: Stopping web application at '/GroupIDService'
+3 ¸.¤. 2553 1:03:09 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 1:06:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+3 ¸.¤. 2553 1:06:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+3 ¸.¤. 2553 1:06:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:06:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:07:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/IllegalService'
+3 ¸.¤. 2553 1:07:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:07:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:07:36 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/GroupIDService'
+3 ¸.¤. 2553 1:07:40 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:07:40 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:07:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/IDCardService'
+3 ¸.¤. 2553 1:07:45 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:07:45 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:07:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/IllegalService'
+3 ¸.¤. 2553 1:07:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:07:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:07:54 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/IllegalService'
+3 ¸.¤. 2553 1:07:54 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:07:54 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:08:02 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/balancer'
+3 ¸.¤. 2553 1:08:02 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:08:02 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:08:05 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/IllegalService'
+3 ¸.¤. 2553 1:08:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/IllegalService'
+3 ¸.¤. 2553 1:08:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:08:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:08:10 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/IllegalService'
+3 ¸.¤. 2553 1:08:10 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:08:10 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:08:15 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/IllegalService'
+3 ¸.¤. 2553 1:08:21 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/IllegalService'
+3 ¸.¤. 2553 1:08:21 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:08:21 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:08:24 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:08:24 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:08:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:08:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:08:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context2984839276061047403.xml'
+3 ¸.¤. 2553 1:08:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 1:12:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:12:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:12:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 1:12:02 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context4399785681733147355.xml'
+3 ¸.¤. 2553 1:12:15 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 1:12:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:12:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:12:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/host-manager'
+3 ¸.¤. 2553 1:12:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:12:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:12:25 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/jsp-examples'
+3 ¸.¤. 2553 1:12:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:12:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:12:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/servlets-examples'
+3 ¸.¤. 2553 1:12:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:12:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:12:37 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/tomcat-docs'
+3 ¸.¤. 2553 1:12:39 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:12:39 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:12:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: stop: Stopping web application at '/manager'
+3 ¸.¤. 2553 1:12:48 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/webdav'
+3 ¸.¤. 2553 1:12:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:12:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:12:51 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/IllegalService'
+3 ¸.¤. 2553 1:12:51 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:12:51 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:15:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:15:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 1:15:17 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:15:18 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 1:16:15 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:16:15 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 1:16:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:16:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 1:18:29 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:18:29 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 1:22:26 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:22:26 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 1:26:55 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:26:55 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 1:29:55 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 1:29:55 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 7:39:56 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+3 ¸.¤. 2553 7:39:56 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+3 ¸.¤. 2553 7:39:56 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 7:39:56 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 7:39:56 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 7:39:58 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context478420762587709944.xml'
+3 ¸.¤. 2553 7:40:01 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 7:40:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 7:40:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 7:50:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 7:50:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 7:50:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 7:50:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 7:51:01 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 7:51:01 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 7:51:34 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 7:51:34 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 7:54:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 7:54:39 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 7:54:48 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 7:54:48 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 7:57:13 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 7:57:13 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 7:57:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 7:57:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 7:59:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 7:59:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:01:05 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:01:05 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:03:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:03:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:05:41 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:05:41 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:07:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:07:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:07:41 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:07:41 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:12:28 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:12:28 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:15:15 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:15:15 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:18:50 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:18:50 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:19:04 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:19:04 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:20:28 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:20:28 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:20:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:20:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:20:47 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:20:47 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:22:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:22:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:22:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:22:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:23:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:23:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:29:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:29:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:29:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:29:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:30:25 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:30:25 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:30:55 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:30:55 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:31:16 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:31:16 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:31:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:31:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:31:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:31:54 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:32:03 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:32:03 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:33:24 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:33:24 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:34:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:34:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:36:17 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:36:17 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:37:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:37:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 8:38:30 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 8:38:30 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 12:39:29 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+3 ¸.¤. 2553 12:39:29 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+3 ¸.¤. 2553 12:39:29 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 12:39:29 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 12:39:29 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 12:39:32 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context2400915655221842044.xml'
+3 ¸.¤. 2553 12:39:45 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 12:41:01 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 12:41:01 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 12:42:59 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 12:42:59 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 12:42:59 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context2895082374269240495.xml'
+3 ¸.¤. 2553 12:43:10 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 12:43:30 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 12:43:30 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 13:25:44 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 13:25:44 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 13:25:44 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context8795553377100699934.xml'
+3 ¸.¤. 2553 13:26:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 13:29:25 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 13:29:25 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 13:29:34 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 13:31:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 13:39:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 13:39:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 13:39:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context3527911755416925082.xml'
+3 ¸.¤. 2553 13:39:37 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 13:41:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 13:41:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 13:44:13 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 13:44:13 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 13:47:14 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 13:47:14 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 13:59:03 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 13:59:03 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 13:59:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 13:59:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 14:00:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:00:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 14:02:36 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:02:36 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 14:03:16 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:03:16 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 14:03:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:03:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 14:08:13 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:08:13 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 14:11:41 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:11:41 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 14:12:06 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:20:04 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:20:04 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:20:04 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context7279220863716417621.xml'
+3 ¸.¤. 2553 14:20:17 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+3 ¸.¤. 2553 14:22:03 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:22:03 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 14:25:05 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:25:05 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 14:25:21 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:25:21 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 14:26:17 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:26:17 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/DateService'
+3 ¸.¤. 2553 14:27:02 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:27:02 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+3 ¸.¤. 2553 14:32:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:32:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:39:58 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+3 ¸.¤. 2553 14:39:58 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+3 ¸.¤. 2553 14:39:58 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:39:59 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:39:59 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context5863586166190734315.xml'
+3 ¸.¤. 2553 14:39:59 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 14:40:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:40:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 14:40:44 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:40:44 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: stop: Stopping web application at '/OffcodeService'
+3 ¸.¤. 2553 14:40:44 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 14:40:52 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:40:52 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:40:52 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 14:40:52 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context2813151767921423679.xml'
+3 ¸.¤. 2553 14:40:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 14:41:17 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:41:17 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 14:41:17 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 14:41:18 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:41:18 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:41:18 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 14:41:18 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context6384801274332159481.xml'
+3 ¸.¤. 2553 14:41:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 14:41:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:41:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 14:41:53 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 14:41:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:41:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:41:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 14:41:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context7348700311172950339.xml'
+3 ¸.¤. 2553 14:41:54 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 14:42:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:42:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 14:42:08 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 14:42:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:42:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:42:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 14:42:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context2343666516310994232.xml'
+3 ¸.¤. 2553 14:42:09 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 14:44:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:44:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 14:44:57 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 14:47:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:47:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:47:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 14:47:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context5812880157566512341.xml'
+3 ¸.¤. 2553 14:47:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 14:48:02 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:48:02 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 14:48:02 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 14:48:03 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:48:03 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:48:03 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 14:48:03 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context2261444557612436379.xml'
+3 ¸.¤. 2553 14:48:03 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 14:51:20 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:51:20 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 14:51:20 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 14:51:21 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:51:21 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:51:21 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 14:51:21 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context3805033563933931515.xml'
+3 ¸.¤. 2553 14:51:22 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 14:52:55 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:52:55 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 14:52:55 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 14:52:56 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:52:56 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:52:56 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 14:52:56 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context7910830268120940748.xml'
+3 ¸.¤. 2553 14:52:56 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 14:53:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:53:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 14:53:19 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 14:53:32 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:53:32 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:53:32 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 14:53:32 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context844989576145849207.xml'
+3 ¸.¤. 2553 14:53:32 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 14:54:35 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:54:35 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 14:54:35 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 14:57:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:57:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:57:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 14:57:44 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context944461042194800256.xml'
+3 ¸.¤. 2553 14:57:44 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 14:57:46 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:57:46 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 14:57:46 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 14:59:18 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:59:18 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 14:59:18 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 14:59:18 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context8595796142400613991.xml'
+3 ¸.¤. 2553 14:59:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:03:37 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:03:37 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:03:37 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:03:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:03:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:03:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:03:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context8197579076514555880.xml'
+3 ¸.¤. 2553 15:03:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:08:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:08:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:08:33 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:09:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:09:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:09:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:09:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context8250519253488548998.xml'
+3 ¸.¤. 2553 15:09:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:09:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:09:44 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:09:44 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:10:16 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:10:16 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:10:16 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:10:17 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context4128443030393039566.xml'
+3 ¸.¤. 2553 15:10:17 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:10:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:10:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:10:38 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:11:56 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:11:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:11:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:11:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context8682379704122690759.xml'
+3 ¸.¤. 2553 15:11:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:12:39 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:12:39 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:12:39 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:13:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:13:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:13:54 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:13:54 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context2497532640989369000.xml'
+3 ¸.¤. 2553 15:13:54 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:18:51 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:18:51 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:18:51 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:19:32 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:19:32 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:19:32 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:19:32 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context844611508493083890.xml'
+3 ¸.¤. 2553 15:19:32 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:25:36 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:25:36 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:25:36 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:29:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:29:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:29:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:29:00 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context3178605335712769764.xml'
+3 ¸.¤. 2553 15:29:01 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:30:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:30:07 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:30:07 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:31:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:31:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:31:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:31:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context1058668697424464953.xml'
+3 ¸.¤. 2553 15:31:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:32:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:32:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:32:53 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:36:01 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:36:01 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:36:01 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:36:01 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context4297423169575839054.xml'
+3 ¸.¤. 2553 15:36:01 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:36:44 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:36:45 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:36:45 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:37:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:37:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:37:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:37:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context7726351398519231438.xml'
+3 ¸.¤. 2553 15:37:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:37:50 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:37:50 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:37:50 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:38:11 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:38:11 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:38:11 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:38:11 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context5245370857591454305.xml'
+3 ¸.¤. 2553 15:38:11 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:40:59 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:40:59 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:40:59 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:41:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:41:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:41:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:41:23 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context6219436454861258576.xml'
+3 ¸.¤. 2553 15:41:24 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:43:03 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:43:03 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:43:03 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:47:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:47:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:47:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:47:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context6443282652430855365.xml'
+3 ¸.¤. 2553 15:47:44 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:47:45 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:47:45 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:47:45 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:47:52 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:47:52 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:47:52 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:47:52 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context5928514810163563572.xml'
+3 ¸.¤. 2553 15:47:52 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:48:24 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:48:24 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:48:24 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:49:15 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:49:15 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:49:15 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:49:15 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context6535414023184786947.xml'
+3 ¸.¤. 2553 15:49:15 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:49:16 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:49:16 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:49:16 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:49:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:49:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:49:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:49:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context3005585491987436379.xml'
+3 ¸.¤. 2553 15:49:31 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:49:46 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:49:46 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:49:46 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 15:50:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:50:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:50:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 15:50:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context8525677529549791146.xml'
+3 ¸.¤. 2553 15:50:49 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 15:51:21 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 15:51:21 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 15:51:21 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 16:00:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:00:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:00:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 16:00:42 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context326345217344784698.xml'
+3 ¸.¤. 2553 16:00:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 16:12:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:12:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 16:12:19 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 16:12:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:12:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:12:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 16:12:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context111502834362528205.xml'
+3 ¸.¤. 2553 16:12:57 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 16:13:24 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:13:24 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 16:13:24 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 16:16:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:16:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:16:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 16:16:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context2980798180884161485.xml'
+3 ¸.¤. 2553 16:16:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 16:33:22 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:33:22 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 16:33:22 org.apache.catalina.core.ApplicationContext log
+SEVERE: Manager: ManagerServlet.reload[/OffcodeService]
+java.lang.IllegalStateException: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/OffcodeService] has not been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3036)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:525)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:873)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Thread.java:595)
+3 ¸.¤. 2553 16:36:45 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:36:45 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:36:45 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 16:36:45 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context6057580457141789748.xml'
+3 ¸.¤. 2553 16:36:45 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 16:38:04 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+3 ¸.¤. 2553 16:38:04 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+3 ¸.¤. 2553 16:38:04 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:38:04 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:38:04 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+3 ¸.¤. 2553 16:38:06 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context1955632876050186663.xml'
+3 ¸.¤. 2553 16:38:28 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+3 ¸.¤. 2553 16:40:18 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:40:18 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 16:42:56 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:42:56 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 16:43:26 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:43:26 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 16:44:29 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:44:29 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 16:45:51 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:45:51 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 16:50:11 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:50:11 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 16:51:55 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:51:55 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 16:54:58 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:54:58 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 16:56:13 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 16:56:13 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 17:09:46 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 17:09:46 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 17:11:50 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 17:11:50 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 17:12:24 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 17:12:24 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 17:16:47 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 17:16:47 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 17:26:55 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 17:26:55 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'
+3 ¸.¤. 2553 17:52:22 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+3 ¸.¤. 2553 17:52:22 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/OffcodeService'

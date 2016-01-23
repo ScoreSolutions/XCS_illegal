@@ -1,0 +1,10 @@
+D:\MyProject\XCS-Illegal\XCS-Convert\XCS-Convert\obj\Debug\ResolveAssemblyReference.cache
+D:\MyProject\XCS-Illegal\XCS-Convert\XCS-Convert\obj\Debug\XCS_Convert.frmCase.resources
+D:\MyProject\XCS-Illegal\XCS-Convert\XCS-Convert\obj\Debug\XCS_Convert.Resources.resources
+D:\MyProject\XCS-Illegal\XCS-Convert\XCS-Convert\obj\Debug\XCS-Convert.vbproj.GenerateResource.Cache
+D:\MyProject\XCS-Illegal\XCS-Convert\XCS-Convert\bin\Debug\XCS-Convert.exe
+D:\MyProject\XCS-Illegal\XCS-Convert\XCS-Convert\bin\Debug\XCS-Convert.pdb
+D:\MyProject\XCS-Illegal\XCS-Convert\XCS-Convert\bin\Debug\XCS-Convert.xml
+D:\MyProject\XCS-Illegal\XCS-Convert\XCS-Convert\obj\Debug\XCS-Convert.exe
+D:\MyProject\XCS-Illegal\XCS-Convert\XCS-Convert\obj\Debug\XCS-Convert.xml
+D:\MyProject\XCS-Illegal\XCS-Convert\XCS-Convert\obj\Debug\XCS-Convert.pdb

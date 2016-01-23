@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILL_P039" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="540" leftMargin="30" rightMargin="25" topMargin="20" bottomMargin="10">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="150"/>
+	<parameter name="getTrackNo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select aop.id, aop.job_no, lg.legislation_name, aop.doc_dept_name, aop.ref_doc_no,
+to_char(aop.ref_doc_date,'dd month yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') ref_doc_date,
+dg.group_name || ' ชนิด ' ||  dt.duty_name  ||
+case when nvl(aoi.brand_name,nvl(bm.brand_main_thai,bm.brand_main_eng)) is not null then ' ยี่ห้อ '|| nvl(aoi.brand_name,nvl(bm.brand_main_thai,bm.brand_main_eng))  else '' end ||
+case when sp.size_desc is not null then ' ขนาดบรรจุ ' || sp.size_desc || ' ' || nvl(su.thname,su.enname)  else '' end ||
+' จำนวน ' || aoi.qty || ' ' || nvl(u.thname,u.enname) ||
+case when aoi.netweight is not null then ' ปริมาณสุทธิ ' ||  trim(to_char(aoi.netweight,'999G999G999G999D000')) || ' ' || nvl(wu.thname,wu.enname) else '' end product_desc,
+aop.prove_objective, aop.prove_result, ti.title_name || st.first_name || ' ' || st.last_name prove_staff_name,trim( ps.posname) prove_posname,
+trim (to_char(aop.prove_date, 'dd month yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')) prove_date,aop.replace_position
+from application_outside_prove aop
+left join application_outside_prove_item aoi on aoi.application_outside_prove_id=aop.id
+left join duty_group dg on dg.group_id=aoi.group_id
+left join duty_table dt on dt.duty_code=aoi.duty_code
+left join unit u on u.unit_code=aoi.unit_qty
+left join brand_main bm on bm.group_id=aoi.group_id and bm.brand_main_code=aoi.brand_code
+inner join legislation lg on lg.id=aop.legislation_id
+inner join staff st on st.idcard_no=aop.staff_id_prove
+left join size_package sp on sp.group_id=aoi.group_id and sp.size_code=aoi.sizes_code
+left join unit su on su.unit_code=aoi.unit_size
+left join unit wu on wu.unit_code=aoi.unit_netweight
+left join title ti on ti.title_code=st.title_code
+left join position ps on ps.poscode=aop.poscode_prove
+where aop.job_no=$P{getTrackNo}
+order by aoi.id]]>
+	</queryString>
+	<field name="ID" class="java.math.BigDecimal"/>
+	<field name="JOB_NO" class="java.lang.String"/>
+	<field name="LEGISLATION_NAME" class="java.lang.String"/>
+	<field name="DOC_DEPT_NAME" class="java.lang.String"/>
+	<field name="REF_DOC_NO" class="java.lang.String"/>
+	<field name="REF_DOC_DATE" class="java.lang.String"/>
+	<field name="PRODUCT_DESC" class="java.lang.String"/>
+	<field name="PROVE_OBJECTIVE" class="java.lang.String"/>
+	<field name="PROVE_RESULT" class="java.lang.String"/>
+	<field name="PROVE_STAFF_NAME" class="java.lang.String"/>
+	<field name="PROVE_POSNAME" class="java.lang.String"/>
+	<field name="PROVE_DATE" class="java.lang.String"/>
+	<field name="REPLACE_POSITION" class="java.lang.String"/>
+	<pageHeader>
+		<band height="179">
+			<textField isBlankWhenNull="true">
+				<reportElement x="266" y="27" width="400" height="27"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{LEGISLATION_NAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="128" y="25" width="1000" height="27"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="18" isBold="true" isUnderline="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[รายงานผลการตรวจพิสูจน์ ................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="1" width="1000" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เลขที่งาน .........................................]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="35" y="0" width="291" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{JOB_NO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="149" width="1000" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="true" isUnderline="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[สิ่งที่ส่งตรวจพิสูจน์]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="72" width="1000" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="true" isUnderline="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[หน่วยงานที่ส่งตรวจพิสูจน์]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="41" y="99" width="961" height="48"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DOC_DEPT_NAME}+"ตามหนังสือ "+$F{REF_DOC_NO}+" ลงวันที่ "+$F{REF_DOC_DATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="41" y="0" width="959" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" isUnderline="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PRODUCT_DESC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="16" y="0" width="22" height="25"/>
+				<textElement textAlignment="Right">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$V{REPORT_COUNT} + "."]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="406">
+			<staticText>
+				<reportElement x="2" y="7" width="1000" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="true" isUnderline="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[วัตถุประสงค์ในการตรวจพิสูจน์]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2" y="34" width="1037" height="48"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["               " + $F{PROVE_OBJECTIVE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2" y="140" width="540" height="118"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["               " + $F{PROVE_RESULT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="39" y="111" width="1000" height="28"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ได้ทำการตรวจพิสูจน์ของกลางแล้วปรากฎว่า]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="83" width="1000" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="true" isUnderline="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ผลการตรวจพิสูจน์]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="157" y="311" width="379" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["( "+$F{PROVE_STAFF_NAME}+" )"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-20" x="192" y="283" width="511" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[         ลงชื่อ ........................................................................... ผู้พิสูจน์
+
+
+]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="157" y="332" width="379" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PROVE_POSNAME}+"\n"+
+($F{REPLACE_POSITION} != null ? "ปฏิบัติราชการแทน"+$F{REPLACE_POSITION}+"\n" : "")+
+$F{PROVE_DATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

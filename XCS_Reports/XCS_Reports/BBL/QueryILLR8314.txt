@@ -1,0 +1,65 @@
+﻿select bb.*
+from (
+    select distinct 1 as grpid , aa.offcode,
+    nvl((select short_name from ed_office where offcode='{?getOffcode}'),'รวมทั่วประเทศ') offname,
+    (select ti.title_name || st.first_name || ' ' || st.last_name staff_name
+                            from staff st
+                              left join title ti on ti.title_code=st.title_code
+                              where st.idcard_no='{?getUserID}') user_name,
+    to_char(sysdate, 'fmdd month yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') untildate,
+    'เวลา :  ' || to_char(sysdate, 'hh24:mi', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') systimedate,
+    aa.legislation_id,
+    lg.id,
+    lg.legislation_name,
+    aa.occurrence_date,
+    '(ก)'||nvl(aa.accuser_name,ti.title_name || st.first_name || ' ' || st.last_name) ||chr(13)||'(ต)'|| nvl(pke_arrest.getArrestLawbreaker(aa.track_no),'ไม่มีตัวผู้กระทำผิด')  accuser_name,
+    pke_arrest.getArrestLawbreaker(aa.track_no) lawbreaker_name,nvl(aa.accuser_name,ti.title_name || st.first_name || ' ' || st.last_name) accuser_name2, 
+    pke_arrest.getSceneAddress(aa.track_no) scene_address,
+    sd.subdistrict_name,
+    d.district_name,
+    '- ' || replace(pke_arrest.getArrestIndictment(aa.track_no),', ',chr(13)||'- ') indictment_name,
+    '- ' || to_char(replace(pke_arrest.getArrestExhibit(aa.track_no),', ',chr(13)||'- '))   exhibit_desc,
+    dg.group_name product_group_name,
+    to_char(aa.occurrence_date, 'fmdd mon yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  occurrence_date2,
+    to_char(sysdate, 'fmddmonthyyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  systemdate,
+    case when to_char(cc.pay_date,'yyyymm')=to_char(bi.case_date,'yyyymm') then
+        nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0)
+    else 0 end compare_case_fine,
+    case bi.case_last when '2' then bi.case_fine else 0 end court_fine,
+    case bi.case_last when '3' then bi.case_fine else 0 end police_fine,
+    case when to_char(cc.pay_date,'yyyymm')=to_char(bi.case_date,'yyyymm') then
+        nvl(cc.birbe_money,0)
+    else 0 end birbe_money,
+    case when to_char(cc.pay_date,'yyyymm')=to_char(bi.case_date,'yyyymm') then
+        nvl(cc.reward_money,0)
+    else 0 end reward_money,
+    case when to_char(cc.pay_date,'yyyymm')=to_char(bi.case_date,'yyyymm') then
+        nvl(cc.treasury_money,0)
+    else 0 end treasury_money,
+    '{?DateFrom}' date_from, '{?MonthFrom}' month_from, '{?YearFrom}' year_from,
+    '{?DateTo}' date_to, '{?MonthTo}' month_to, '{?YearTo}' year_to,
+    aa.accuser_type as type_accuser,
+    aa.have_culprit as culprit_have ,
+    bi.case_quality as quality_case,
+    bi.case_last,aa.track_no,bi.case_date,aa.application_date,bi.case_id, ind.case_law_id,
+    sd.subdistrict_code, d.district_code, d.province_code,aap.exhibit_report_no
+    from book_impeachment bi
+    inner join application_arrest aa on aa.track_no=bi.track_no
+    inner join duty_group dg on dg.group_id=aa.product_group_id
+    inner join legislation lg on lg.id=aa.legislation_id
+    left join compare_case cc on cc.track_no=bi.track_no
+    left join indictment ind on ind.indictment_id=cc.indictment_id
+    inner join ed_office ed on ed.offcode=aa.offcode
+    left join V_ACCUSER_LIST_POPUP st on st.idcard_no=aa.accuser_idcardno
+    left join title ti on ti.title_code=st.title_code
+    left join subdistrict sd on sd.subdistrict_code=aa.scene_subdistrict
+    left join district d on d.district_code=aa.scene_district
+    left join application_arrest_prove aap on aap.track_no=aa.track_no
+    left join application_arrest_lawbreaker aal on aal.track_no=aa.track_no
+    left join application_arrest_license ale on ale.track_no=aa.track_no
+    left join application_notice_arrest ana on aa.application_notice_arrest_id=ana.id
+    left join APPLICATION_SEARCH_WARRANT asw on aa.APPLICATION_SEARCH_WARRANT_ID=asw.id
+    left join APPLICATION_SINCERE_CONFIRM asi on aa.APPLICATION_SINCERE_CONFIRM_ID=asi.id
+    where  1=1 ###
+)bb
+

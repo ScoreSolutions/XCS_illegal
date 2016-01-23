@@ -1,0 +1,307 @@
+.BigDecimal"/>
+	<field name="SENDCOURT_CASE" class="java.math.BigDecimal"/>
+	<field name="SENDCOURT_FINE" class="java.math.BigDecimal"/>
+	<field name="NOCULPRIT_CASE" class="java.math.BigDecimal"/>
+	<field name="NOCULPRIT_FINE" class="java.math.BigDecimal"/>
+	<field name="DESC_CASE" class="java.math.BigDecimal"/>
+	<field name="DESC_FINE" class="java.math.BigDecimal"/>
+	<field name="DISTILL" class="java.math.BigDecimal"/>
+	<field name="DIP" class="java.math.BigDecimal"/>
+	<field name="LINEAGE" class="java.math.BigDecimal"/>
+	<field name="OUTBOUND" class="java.math.BigDecimal"/>
+	<field name="DISTILL_MATCHINE" class="java.math.BigDecimal"/>
+	<variable name="num" class="java.lang.String"/>
+	<variable name="COMPARE_CASE_1" class="java.math.BigDecimal" resetType="Group" resetGroup="aaa" calculation="Sum">
+		<variableExpression><![CDATA[$F{COMPARE_CASE}]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_FINE_1" class="java.math.BigDecimal" resetType="Group" resetGroup="aaa" calculation="Sum">
+		<variableExpression><![CDATA[$F{COMPARE_FINE}]]></variableExpression>
+	</variable>
+	<variable name="SENDCOURT_CASE_1" class="java.math.BigDecimal" resetType="Group" resetGroup="aaa" calculation="Sum">
+		<variableExpression><![CDATA[$F{SENDCOURT_CASE}]]></variableExpression>
+	</variable>
+	<variable name="SENDCOURT_FINE_1" class="java.math.BigDecimal" resetType="Group" resetGroup="aaa" calculation="Sum">
+		<variableExpression><![CDATA[$F{SENDCOURT_FINE}]]></variableExpression>
+	</variable>
+	<variable name="NOCULPRIT_CASE_1" class="java.math.BigDecimal" resetType="Group" resetGroup="aaa" calculation="Sum">
+		<variableExpression><![CDATA[$F{NOCULPRIT_CASE}]]></variableExpression>
+	</variable>
+	<variable name="NOCULPRIT_FINE_1" class="java.math.BigDecimal" resetType="Group" resetGroup="aaa" calculation="Sum">
+		<variableExpression><![CDATA[$F{NOCULPRIT_FINE}]]></variableExpression>
+	</variable>
+	<variable name="DESC_CASE_1" class="java.math.BigDecimal" resetType="Group" resetGroup="aaa" calculation="Sum">
+		<variableExpression><![CDATA[$F{DESC_CASE}]]></variableExpression>
+	</variable>
+	<variable name="DESC_FINE_1" class="java.math.BigDecimal" resetType="Group" resetGroup="aaa" calculation="Sum">
+		<variableExpression><![CDATA[$F{DESC_FINE}]]></variableExpression>
+	</variable>
+	<variable name="DISTILL_1" class="java.math.BigDecimal" resetType="Group" resetGroup="aaa" calculation="Sum">
+		<variableExpression><![CDATA[$F{DISTILL}]]></variableExpression>
+	</variable>
+	<variable name="DIP_1" class="java.math.BigDecimal" resetType="Group" resetGroup="aaa" calculation="Sum">
+		<variableExpression><![CDATA[$F{DIP}]]></variableExpression>
+	</variable>
+	<variable name="LINEAGE_1" class="java.math.BigDecimal" resetType="Group" resetGroup="aaa" calculation="Sum">
+		<variableExpression><![CDATA[$F{LINEAGE}]]></variableExpression>
+	</variable>
+	<variable name="OUTBOUND_1" class="java.math.BigDecimal" resetType="Group" resetGroup="aaa" calculation="Sum">
+		<variableExpression><![CDATA[$F{OUTBOUND}]]></variableExpression>
+	</variable>
+	<variable name="DISTILL_MATCHINE_1" class="java.math.BigDecimal" resetType="Group" resetGroup="aaa" calculation="Sum">
+		<variableExpression><![CDATA[$F{DISTILL_MATCHINE}]]></variableExpression>
+	</variable>
+	<group name="aaa">
+		<groupHeader>
+			<band height="59">
+				<rectangle>
+					<reportElement x="0" y="0" width="802" height="59" backcolor="#CCCCCC"/>
+				</rectangle>
+				<line>
+					<reportElement x="106" y="0" width="1" height="59" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="204" y="19" width="1" height="40" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="297" y="19" width="1" height="40" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="384" y="0" width="1" height="59" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="481" y="0" width="1" height="59" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="570" y="0" width="1" height="59" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="107" y="19" width="277" height="1" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="570" y="17" width="232" height="1" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="155" y="36" width="1" height="23" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="253" y="36" width="1" height="23" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="340" y="35" width="1" height="24" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="107" y="35" width="277" height="1" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="609" y="18" width="1" height="41" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="650" y="18" width="1" height="41" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="698" y="17" width="1" height="42" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="752" y="18" width="1" height="41" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="570" y="35" width="232" height="1" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="385" y="35" width="185" height="1" backcolor="#CCCCCC"/>
+				</line>
+				<staticText>
+					<reportElement x="555" y="1" width="231" height="25" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[รายละเอียดของกลาง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="119" y="0" width="434" height="20" backcolor="#CCCCCC"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[รายละเอียดจำนวนคดี และค่าปรับ ไม่รวมคดีใบอนุญาต/ใบขน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="106" height="59" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[สำนักงาน
+สรรพสามิตพื้นที่]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="77" y="19" width="160" height="19" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[คดีเปรียบเทียบปรับ (1)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="169" y="19" width="170" height="19" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[คดีส่งฟ้องศาล (2)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="286" y="19" width="110" height="19" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[คดีไม่มีตัว (3)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="385" y="1" width="96" height="32" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[รายละเอียดคดี]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="482" y="1" width="88" height="34" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[รวมทั้งสิ้น =]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="560" y="19" width="60" height="19" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[สุรากลั่น]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="601" y="19" width="55" height="19" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[สุราแช่]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="646" y="19" width="55" height="19" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เชื้อสุรา]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="683" y="19" width="90" height="19" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[สุราต่าง ปท.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="732" y="19" width="90" height="19" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เครื่องกลั่น]]></text>
+				</staticText>
+				<line>
+					<reportElement x="428" y="36" width="1" height="23" backcolor="#CCCCCC"/>
+				</line>
+				<line>
+					<reportElement x="519" y="36" width="1" height="23" backcolor="#CCCCCC"/>
+				</line>
+				<staticText>
+					<reportElement x="108" y="36" width="47" height="23" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[คดี]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="151" y="36" width="55" height="23" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ค่าปรับ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="244" y="36" width="60" height="23" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ค่าปรับ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="201" y="36" width="55" height="23" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[คดี]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="352" y="36" width="43" height="23" backcolor="#CCCCCC"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ค่าปรับ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="291" y="36" width="55" height="23" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[คดี]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="440" y="36" width="53" height="23" backcolor="#CCCCCC"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ค่าปรับ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="398" y="36" width="43" height="23" backcolor="#CCCCCC"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[คดี]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="497" y="36" width="45" height="23" backcolor="#CCCCCC"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[คดี]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="537" y="36" width="42" height="23" backcolor="#CCCCCC"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ค่าปรับ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="561" y="36" width="55" height="23" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[(ลิตร)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="642" y="36" width="65" height="23" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[(กิโลกรัม)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="749" y="36" width="55" height="23" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[(ชุด)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="602" y="36" width="55" height="23" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CD

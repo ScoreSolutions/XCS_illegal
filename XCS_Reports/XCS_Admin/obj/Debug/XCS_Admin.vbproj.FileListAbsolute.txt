@@ -1,0 +1,14 @@
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Admin\bin\XCS_Admin.dll
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Admin\bin\XCS_Admin.pdb
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Admin\bin\XCS_Admin.xml
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Admin\bin\AjaxControlToolkit.dll
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Admin\bin\LinqDB.dll
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Admin\bin\Newtonsoft.Json.dll
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Admin\bin\LinqDB.pdb
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Admin\bin\LinqDB.xml
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Admin\obj\Debug\ResolveAssemblyReference.cache
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Admin\obj\Debug\XCS_Admin.Resources.resources
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Admin\obj\Debug\XCS_Admin.vbproj.GenerateResource.Cache
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Admin\obj\Debug\XCS_Admin.dll
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Admin\obj\Debug\XCS_Admin.xml
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Admin\obj\Debug\XCS_Admin.pdb

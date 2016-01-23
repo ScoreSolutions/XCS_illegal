@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILLR8506" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="vYear" class="java.lang.String"/>
+	<parameter name="vMonthFrom" class="java.lang.String">
+		<defaultValueExpression><![CDATA["200903"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="vMonthTo" class="java.lang.String">
+		<defaultValueExpression><![CDATA["200903"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="vOffcode1" class="java.lang.String"/>
+	<parameter name="vOffcode2" class="java.lang.String"/>
+	<parameter name="vOffcode3" class="java.lang.String"/>
+	<parameter name="getUserID" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select aa.*,
+nvl((select short_name from ed_office where offcode = nvl($P{vOffcode3},nvl($P{vOffcode2},$P{vOffcode1}))),'รวมทั่วประเทศ') offname,
+to_char(sysdate, 'fmdd month yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') untildate,
+to_char(sysdate, 'hh24:mi', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') systimedate,
+nvl((select short_name from ed_office where offcode = nvl($P{vOffcode3},nvl($P{vOffcode2},$P{vOffcode1}))),'รวมทั่วประเทศ') offname,
+to_char(sysdate, 'fmdd month yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') untildate,
+to_char(sysdate, 'hh24:mi', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') systimedate,
+to_char(to_date(($P{vYear}-543)||'-'||substr($P{vMonthFrom},5,6)||'-01','yyyy-mm-dd'), 'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') as Month_From ,
+to_char(to_date(($P{vYear}-543)||'-'||substr($P{vMonthTo},5,6)||'-01','yyyy-mm-dd'), 'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') as Month_To ,
+to_char(to_date(substr($P{vMonthFrom},1,4)||'-'||substr($P{vMonthFrom},5,6)||'-01','yyyy-mm-dd'), 'yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') as Year_Name,
+
+        (select ti.title_name || st.first_name || ' ' || st.last_name staff_name
+                          from staff st
+                          left join title ti on ti.title_code=st.title_code
+                          where st.idcard_no=$P{getUserID}) user_name
+from
+(
+
+select  1 as Grp_Id, '1. คดีที่จับโดย' as List_Detail,
+             null  as Case_Oil,
+             null as Case_Drink,
+             null  as Case_Air,
+             null  as Case_Light,
+             null as Case_Crystal,
+             null  as Case_Moter,
+             null  as Case_Boat,
+             null  as Case_Perfume,
+             null  as Case_Carpet,
+             null  as Case_Racecourse,
+             null  as Case_Golf,
+             null  as Case_Motorcycle,
+             null  as Case_Battery,
+             null  as Case_Facilities,
+             null  as Case_Nightclub
+from dual
+union all
+select   2 as Grp_Id,  '  1.1 เจ้าพนักงานสรรพสามิต (ราย)'  as List_Detail,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำมัน%' Then aa.id end)  as Case_Oil,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องดื่ม%' Then aa.id end)  as Case_Drink,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องปรับอากาศ%' Then aa.id end)  as Case_Air,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'โคมไฟฟ้า%' Then aa.id end)  as Case_Light,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'แก้วคริสตัล%' Then aa.id end)  as Case_Crystal,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'รถยนต์%' Then aa.id end)  as Case_Moter,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'เรือยอร์ช%' Then aa.id end)  as Case_Boat,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำหอม%' Then aa.id end)  as Case_Perfume,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'พรม%' Then aa.id end)  as Case_Carpet,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'สนามม้า%' Then aa.id end)  as Case_Racecourse,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'สนามกอล์ฟ%' Then aa.id end)  as Case_Golf,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'รถจักรยานยนต์%' Then aa.id end)  as Case_Motorcycle,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'แบตเตอรี่%' Then aa.id end)  as Case_Battery,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการอาบอบนวด%' Then aa.id end)  as Case_Facilities,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการไนท์คลับ%' Then aa.id end)  as Case_Nightclub
+from  application_arrest  aa
+inner join book_impeachment bi
+       on aa.track_no=bi.track_no  and aa.legislation_id = 4 and aa.accuser_type <> '5'
+inner join application_arrest_exhibit aae
+       on aa.track_no=aae.track_no
+left join duty_table dt
+       on aae.duty_code = dt.duty_code
+where to_char(bi.case_date,'yyyymm') between $P{vMonthFrom} and $P{vMonthTo}
+   and  substr(aa.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aa.offcode,1,2)||'0000')
+   and substr(aa.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aa.offcode,1,4)||'00')
+   and aa.offcode=nvl($P{vOffcode3},aa.offcode)
+union all
+select   3 as Grp_Id, '  1.2 เจ้าพนักงานอื่นๆ (ราย)'  as List_Detail,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำมัน%' Then aa.id end)  as Case_Oil,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องดื่ม%' Then aa.id end)  as Case_Drink,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องปรับอากาศ%' Then aa.id end)  as Case_Air,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'โคมไฟฟ้า%' Then aa.id end)  as Case_Light,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'แก้วคริสตัล%' Then aa.id end)  as Case_Crystal,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'รถยนต์%' Then aa.id end)  as Case_Moter,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'เรือยอร์ช%' Then aa.id end)  as Case_Boat,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำหอม%' Then aa.id end)  as Case_Perfume,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'พรม%' Then aa.id end)  as Case_Carpet,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'สนามม้า%' Then aa.id end)  as Case_Racecourse,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'สนามกอล์ฟ%' Then aa.id end)  as Case_Golf,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'รถจักรยานยนต์%' Then aa.id end)  as Case_Motorcycle,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'แบตเตอรี่%' Then aa.id end)  as Case_Battery,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการอาบอบนวด%' Then aa.id end)  as Case_Facilities,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการไนท์คลับ%' Then aa.id end)  as Case_Nightclub
+from  application_arrest  aa
+inner join book_impeachment bi
+       on aa.track_no=bi.track_no  and aa.legislation_id = 4 and aa.accuser_type = '5'
+inner join application_arrest_exhibit aae
+       on aa.track_no=aae.track_no
+left join duty_table dt
+       on aae.duty_code = dt.duty_code
+where to_char(bi.case_date,'yyyymm') between $P{vMonthFrom} and $P{vMonthTo}
+   and  substr(aa.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aa.offcode,1,2)||'0000')
+   and substr(aa.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aa.offcode,1,4)||'00')
+   and aa.offcode=nvl($P{vOffcode3},aa.offcode)
+union all
+select   4 as Grp_Id, '2. คดีส่งฟ้องศาล (รายงาน)'  as List_Detail,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำมัน%' Then aa.id end)  as Case_Oil,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องดื่ม%' Then aa.id end)  as Case_Drink,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องปรับอากาศ%' Then aa.id end)  as Case_Air,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'โคมไฟฟ้า%' Then aa.id end)  as Case_Light,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'แก้วคริสตัล%' Then aa.id end)  as Case_Crystal,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'รถยนต์%' Then aa.id end)  as Case_Moter,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'เรือยอร์ช%' Then aa.id end)  as Case_Boat,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำหอม%' Then aa.id end)  as Case_Perfume,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'พรม%' Then aa.id end)  as Case_Carpet,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'สนามม้า%' Then aa.id end)  as Case_Racecourse,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'สนามกอล์ฟ%' Then aa.id end)  as Case_Golf,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'รถจักรยานยนต์%' Then aa.id end)  as Case_Motorcycle,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'แบตเตอรี่%' Then aa.id end)  as Case_Battery,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการอาบอบนวด%' Then aa.id end)  as Case_Facilities,
+             count(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการไนท์คลับ%' Then aa.id end)  as Case_Nightclub
+from  application_arrest  aa
+inner join book_impeachment bi
+      on aa.track_no=bi.track_no  and aa.legislation_id = 4 and aa.have_culprit ='Y'  and bi.case_quality = '2'
+inner join application_arrest_exhibit aae
+       on aa.track_no=aae.track_no
+left join duty_table dt
+       on aae.duty_code = dt.duty_code
+where to_char(bi.case_date,'yyyymm') between $P{vMonthFrom} and $P{vMonthTo}
+   and  substr(aa.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aa.offcode,1,2)||'0000')
+   and substr(aa.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aa.offcode,1,4)||'00')
+   and aa.offcode=nvl($P{vOffcode3},aa.offcode)
+union all
+select  5 as Grp_Id,  '3. ผลคดี' as List_Detail,
+             null  as Case_Oil,
+             null as Case_Drink,
+             null  as Case_Air,
+             null  as Case_Light,
+             null as Case_Crystal,
+             null  as Case_Moter,
+             null  as Case_Boat,
+             null  as Case_Perfume,
+             null  as Case_Carpet,
+             null  as Case_Racecourse,
+             null  as Case_Golf,
+             null  as Case_Motorcycle,
+             null  as Case_Battery,
+             null  as Case_Facilities,
+             null  as Case_Nightclub
+from dual
+union all
+select  6 as Grp_Id, '  ศาลปรับ (บาท)'   as List_Detail,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำมัน%' Then bi.case_fine end)  as Case_Oil,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องดื่ม%' Then bi.case_fine end)  as Case_Drink,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องปรับอากาศ%' Then bi.case_fine end)  as Case_Air,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'โคมไฟฟ้า%' Then bi.case_fine end)  as Case_Light,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'แก้วคริสตัล%' Then bi.case_fine end)  as Case_Crystal,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'รถยนต์%' Then bi.case_fine end)  as Case_Moter,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เรือยอร์ช%' Then bi.case_fine end)  as Case_Boat,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำหอม%' Then bi.case_fine end)  as Case_Perfume,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'พรม%' Then bi.case_fine end)  as Case_Carpet,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สนามม้า%' Then bi.case_fine end)  as Case_Racecourse,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สนามกอล์ฟ%' Then bi.case_fine end)  as Case_Golf,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'รถจักรยานยนต์%' Then bi.case_fine end)  as Case_Motorcycle,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'แบตเตอรี่%' Then bi.case_fine end)  as Case_Battery,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการอาบอบนวด%' Then bi.case_fine end)  as Case_Facilities,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการไนท์คลับ%' Then bi.case_fine end)  as Case_Nightclub
+from  application_arrest  aa
+inner join book_impeachment bi
+      on aa.track_no=bi.track_no  and aa.legislation_id = 4 and aa.have_culprit ='Y'  and bi.case_quality = '2'
+inner join  application_arrest_exhibit aae
+       on aa.track_no=aae.track_no
+left join duty_table dt
+       on aae.duty_code = dt.duty_code
+where to_char(bi.case_last_date,'yyyymm') between $P{vMonthFrom} and $P{vMonthTo}
+   and  substr(aa.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aa.offcode,1,2)||'0000')
+   and substr(aa.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aa.offcode,1,4)||'00')
+   and aa.offcode=nvl($P{vOffcode3},aa.offcode)
+union all
+select  7 as Grp_Id, '  เปรียบเทียบปรับ (บาท)'  as List_Detail,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำมัน%' Then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) end)  as Case_Oil,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องดื่ม%' Then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) end)  as Case_Drink,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องปรับอากาศ%' Then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) end)  as Case_Air,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'โคมไฟฟ้า%' Then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) end) as Case_Light,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'แก้วคริสตัล%' Then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) end)  as Case_Crystal,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'รถยนต์%' Then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) end)  as Case_Moter,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เรือยอร์ช%' Then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) end) as Case_Boat,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำหอม%' Then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) end)  as Case_Perfume,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'พรม%' Then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) end)  as Case_Carpet,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สนามม้า%' Then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) end)  as Case_Racecourse,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สนามกอล์ฟ%' Then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) end)  as Case_Golf,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'รถจักรยานยนต์%' Then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) end)  as Case_Motorcycle,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'แบตเตอรี่%' Then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) end)  as Case_Battery,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการอาบอบนวด%' Then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) end)  as Case_Facilities,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการไนท์คลับ%' Then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) end)  as Case_Nightclub
+from  application_arrest  aa
+inner join book_impeachment bi
+      on aa.track_no=bi.track_no  and aa.legislation_id = 4
+inner join application_arrest_exhibit aae
+       on aa.track_no=aae.track_no
+inner join compare_case cc
+      on cc.track_no=aa.track_no
+left join duty_table dt
+       on aae.duty_code = dt.duty_code
+where to_char(cc.pay_date,'yyyymm') between $P{vMonthFrom} and $P{vMonthTo}
+   and  substr(aa.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aa.offcode,1,2)||'0000')
+   and substr(aa.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aa.offcode,1,4)||'00')
+   and aa.offcode=nvl($P{vOffcode3},aa.offcode)
+union all
+select    8 as Grp_Id, '  เงินสินบน (บาท)'  as List_Detail,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำมัน%' Then nvl(cc.birbe_money,0)  end)  as Case_Oil,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องดื่ม%' Then nvl(cc.birbe_money,0)  end)  as Case_Drink,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องปรับอากาศ%' Then nvl(cc.birbe_money,0)  end)  as Case_Air,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'โคมไฟฟ้า%' Then nvl(cc.birbe_money,0)  end)  as Case_Light,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'แก้วคริสตัล%' Then nvl(cc.birbe_money,0)  end)  as Case_Crystal,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'รถยนต์%' Then nvl(cc.birbe_money,0)  end)  as Case_Moter,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เรือยอร์ช%' Then nvl(cc.birbe_money,0)  end) as Case_Boat,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำหอม%' Then nvl(cc.birbe_money,0)  end)  as Case_Perfume,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'พรม%' Then nvl(cc.birbe_money,0)  end)  as Case_Carpet,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สนามม้า%' Then nvl(cc.birbe_money,0)  end)  as Case_Racecourse,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สนามกอล์ฟ%' Then nvl(cc.birbe_money,0)  end)  as Case_Golf,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'รถจักรยานยนต์%' Then nvl(cc.birbe_money,0)  end)  as Case_Motorcycle,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'แบตเตอรี่%' Then nvl(cc.birbe_money,0)  end)  as Case_Battery,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการอาบอบนวด%' Then nvl(cc.birbe_money,0)  end)  as Case_Facilities,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการไนท์คลับ%' Then nvl(cc.birbe_money,0)  end)  as Case_Nightclub
+from  application_arrest  aa
+inner join book_impeachment bi
+      on aa.track_no=bi.track_no  and aa.legislation_id = 4
+inner join application_arrest_exhibit aae
+       on aa.track_no=aae.track_no
+inner join compare_case cc
+      on cc.track_no=aa.track_no
+left join duty_table dt
+       on aae.duty_code = dt.duty_code
+where to_char(cc.pay_date,'yyyymm') between $P{vMonthFrom} and $P{vMonthTo}
+   and  substr(aa.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aa.offcode,1,2)||'0000')
+   and substr(aa.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aa.offcode,1,4)||'00')
+   and aa.offcode=nvl($P{vOffcode3},aa.offcode)
+union all
+select    9 as Grp_Id, '  เงินรางวัล (บาท)'  as List_Detail,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำมัน%' Then nvl(cc.reward_money,0)  end) as Case_Oil,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องดื่ม%' Then nvl(cc.reward_money,0)  end)  as Case_Drink,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องปรับอากาศ%' Then nvl(cc.reward_money,0)  end)  as Case_Air,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'โคมไฟฟ้า%' Then nvl(cc.reward_money,0)  end)  as Case_Light,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'แก้วคริสตัล%' Then nvl(cc.reward_money,0)  end)  as Case_Crystal,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'รถยนต์%' Then nvl(cc.reward_money,0)  end)  as Case_Moter,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เรือยอร์ช%' Then nvl(cc.reward_money,0)  end) as Case_Boat,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำหอม%' Then nvl(cc.reward_money,0)  end)  as Case_Perfume,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'พรม%' Then nvl(cc.reward_money,0)  end)  as Case_Carpet,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สนามม้า%' Then nvl(cc.reward_money,0)  end)  as Case_Racecourse,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สนามกอล์ฟ%' Then nvl(cc.reward_money,0)  end)  as Case_Golf,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'รถจักรยานยนต์%' Then nvl(cc.reward_money,0)  end)  as Case_Motorcycle,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'แบตเตอรี่%' Then nvl(cc.reward_money,0)  end)  as Case_Battery,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการอาบอบนวด%' Then nvl(cc.reward_money,0)  end)   as Case_Facilities,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการไนท์คลับ%' Then nvl(cc.reward_money,0)  end) as Case_Nightclub
+from  application_arrest  aa
+inner join book_impeachment bi
+      on aa.track_no=bi.track_no  and aa.legislation_id = 4
+inner join application_arrest_exhibit aae
+       on aa.track_no=aae.track_no
+inner join compare_case cc
+      on cc.track_no=aa.track_no
+left join duty_table dt
+       on aae.duty_code = dt.duty_code
+ where to_char(cc.pay_date,'yyyymm') between $P{vMonthFrom} and $P{vMonthTo}
+   and  substr(aa.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aa.offcode,1,2)||'0000')
+   and substr(aa.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aa.offcode,1,4)||'00')
+   and aa.offcode=nvl($P{vOffcode3},aa.offcode)
+union all
+select    10 as Grp_Id, '  เงินนำส่งคลัง (บาท)'  as List_Detail,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำมัน%' Then nvl(cc.treasury_money,0)  end) as Case_Oil,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องดื่ม%' Then nvl(cc.treasury_money,0)  end)  as Case_Drink,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องปรับอากาศ%' Then nvl(cc.treasury_money,0)  end)  as Case_Air,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'โคมไฟฟ้า%' Then nvl(cc.treasury_money,0)  end)  as Case_Light,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'แก้วคริสตัล%' Then nvl(cc.treasury_money,0)  end)  as Case_Crystal,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'รถยนต์%' Then nvl(cc.treasury_money,0)  end)  as Case_Moter,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เรือยอร์ช%' Then nvl(cc.treasury_money,0)  end) as Case_Boat,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำหอม%' Then nvl(cc.treasury_money,0)  end)  as Case_Perfume,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'พรม%' Then nvl(cc.treasury_money,0)  end)  as Case_Carpet,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สนามม้า%' Then nvl(cc.treasury_money,0)  end)  as Case_Racecourse,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สนามกอล์ฟ%' Then nvl(cc.treasury_money,0)  end)  as Case_Golf,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'รถจักรยานยนต์%' Then nvl(cc.treasury_money,0)  end)  as Case_Motorcycle,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'แบตเตอรี่%' Then nvl(cc.treasury_money,0)  end)  as Case_Battery,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการอาบอบนวด%' Then nvl(cc.treasury_money,0)  end)   as Case_Facilities,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการไนท์คลับ%' Then nvl(cc.treasury_money,0)  end) as Case_Nightclub
+from  application_arrest  aa
+inner join book_impeachment bi
+      on aa.track_no=bi.track_no  and aa.legislation_id = 4
+inner join application_arrest_exhibit aae
+       on aa.track_no=aae.track_no
+inner join compare_case cc
+      on cc.track_no=aa.track_no
+left join duty_table dt
+       on aae.duty_code = dt.duty_code
+ where to_char(cc.pay_date,'yyyymm') between $P{vMonthFrom} and $P{vMonthTo}
+   and  substr(aa.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aa.offcode,1,2)||'0000')
+   and substr(aa.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aa.offcode,1,4)||'00')
+   and aa.offcode=nvl($P{vOffcode3},aa.offcode)
+union all
+select   11 as Grp_Id, '4. ของกลาง'  as List_Detail,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำมัน%' Then nvl(aae.qty,0)  end) as Case_Oil,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องดื่ม%' Then nvl(aae.qty,0)  end)  as Case_Drink,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เครื่องปรับอากาศ%' Then nvl(aae.qty,0)  end)  as Case_Air,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'โคมไฟฟ้า%' Then nvl(aae.qty,0)  end)  as Case_Light,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'แก้วคริสตัล%' Then nvl(aae.qty,0)  end)  as Case_Crystal,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'รถยนต์%' Then nvl(aae.qty,0)  end)  as Case_Moter,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'เรือยอร์ช%' Then nvl(aae.qty,0)  end) as Case_Boat,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'น้ำหอม%' Then nvl(aae.qty,0)  end)  as Case_Perfume,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'พรม%' Then nvl(aae.qty,0)  end)  as Case_Carpet,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สนามม้า%' Then nvl(aae.qty,0)  end)  as Case_Racecourse,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สนามกอล์ฟ%' Then nvl(aae.qty,0)  end)  as Case_Golf,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'รถจักรยานยนต์%' Then nvl(aae.qty,0)  end)  as Case_Motorcycle,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'แบตเตอรี่%' Then nvl(aae.qty,0)  end)  as Case_Battery,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการอาบอบนวด%' Then nvl(aae.qty,0)  end)   as Case_Facilities,
+             sum(case when nvl(aae.product_name,dt.duty_name) Like 'สถานบริการไนท์คลับ%' Then nvl(aae.qty,0)  end) as Case_Nightclub
+from  application_arrest  aa
+inner join book_impeachment bi
+      on aa.track_no=bi.track_no  and aa.legislation_id = 4
+inner join application_arrest_exhibit aae
+       on aa.track_no=aae.track_no
+left join duty_table dt
+       on aae.duty_code = dt.duty_code
+where to_char(bi.case_date,'yyyymm') between $P{vMonthFrom} and $P{vMonthTo}
+   and  substr(aa.offcode,1,2)||'0000'=nvl($P{vOffcode1},substr(aa.offcode,1,2)||'0000')
+   and substr(aa.offcode,1,4)||'00'=nvl($P{vOffcode2},substr(aa.offcode,1,4)||'00')
+   and aa.offcode=nvl($P{vOffcode3},aa.offcode)
+)aa]]>
+	</queryString>
+	<field name="GRP_ID" class="java.math.BigDecimal"/>
+	<field name="LIST_DETAIL" class="java.lang.String"/>
+	<field name="CASE_OIL" class="java.math.BigDecimal"/>
+	<field name="CASE_DRINK" class="java.math.BigDecimal"/>
+	<field name="CASE_AIR" class="java.math.BigDecimal"/>
+	<field name="CASE_LIGHT" class="java.math.BigDecimal"/>
+	<field name="CASE_CRYSTAL" class="java.math.BigDecimal"/>
+	<field name="CASE_MOTER" class="java.math.BigDecimal"/>
+	<field name="CASE_BOAT" class="java.math.BigDecimal"/>
+	<field name="CASE_PERFUME" class="java.math.BigDecimal"/>
+	<field name="CASE_CARPET" class="java.math.BigDecimal"/>
+	<field name="CASE_RACECOURSE" class="java.math.BigDecimal"/>
+	<field name="CASE_GOLF" class="java.math.BigDecimal"/>
+	<field name="CASE_MOTORCYCLE" class="java.math.BigDecimal"/>
+	<field name="CASE_BATTERY" class="java.math.BigDecimal"/>
+	<field name="CASE_FACILITIES" class="java.math.BigDecimal"/>
+	<field name="CASE_NIGHTCLUB" class="java.math.BigDecimal"/>
+	<field name="OFFNAME" class="java.lang.String"/>
+	<field name="UNTILDATE" class="java.lang.String"/>
+	<field name="SYSTIMEDATE" class="java.lang.String"/>
+	<field name="MONTH_FROM" class="java.lang.String"/>
+	<field name="MONTH_TO" class="java.lang.String"/>
+	<field name="YEAR_NAME" class="java.lang.String"/>
+	<field name="USER_NAME" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="142" splitType="Stretch">
+			<staticText>
+				<reportElement x="135" y="-1" width="1538" height="25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[หน้างบผลการปราบปรามผู้กระทำผิด พ.ร.บ.ภาษีสรรพสามิต สำนักงานสรรพสามิต ........................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="293" y="24" width="555" height="25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ระหว่างเดือน ............................ ถึง ............................]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="361" y="25" width="100" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{MONTH_FROM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="25" width="100" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{MONTH_TO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="404" y="50" width="228" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{YEAR_NAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="341" y="49" width="555" height="25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ปีงบประมาณ .............]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="86" width="802" height="56" backcolor="#CCCCCC"/>
+			</rectangle>
+			<line>
+				<reportElement x="120" y="86" width="1" height="56"/>
+			</line>
+			<line>
+				<reportElement x="164" y="86" width="1" height="56"/>
+			</line>
+			<line>
+				<reportElement x="209" y="86" width="1" height="56"/>
+			</line>
+			<line>
+				<reportElement x="253" y="86" width="1" height="56"/>
+			</line>
+			<line>
+				<reportElement x="300" y="86" width="1" height="56"/>
+			</line>
+			<line>
+				<reportElement x="346" y="86" width="1" height="56"/>
+			</line>
+			<line>
+				<reportElement x="394" y="86" width="1" height="56"/>
+			</line>
+			<line>
+				<reportElement x="485" y="86" width="1" height="56"/>
+			</line>
+			<line>
+				<reportElement x="534" y="86" width="1" height="56"/>
+			</line>
+			<line>
+				<reportElement x="578" y="86" width="1" height="56"/>
+			</line>
+			<line>
+				<reportElement x="623" y="86" width="1" height="56"/>
+			</line>
+			<line>
+				<reportElement x="671" y="86" width="1" height="56"/>
+			</line>
+			<line>
+				<reportElement x="713" y="86" width="1" height="56"/>
+			</line>
+			<line>
+				<reportElement x="760" y="86" width="1" height="56"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="86" width="120" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[รายการ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="86" width="46" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[น้ำมัน]]></text>
+			</staticText>
+			<line>
+				<reportElement x="442" y="86" width="1" height="56"/>
+			</line>
+			<staticText>
+				<reportElement x="149" y="86" width="76" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เครื่องดื่ม]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="48" width="82" height="93"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เครื่อง
+ปรับ
+อากาศ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="86" width="60" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[โคมไฟฟ้า]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="287" y="86" width="73" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[แก้วคริสตัล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="86" width="69" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[รถยนต์]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="387" y="86" width="63" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เรือยอร์ช]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="85" width="60" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[น้ำหอม]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="487" y="86" width="47" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[พรม]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="523" y="86" width="69" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[สนามม้า]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="570" y="85" width="64" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[สนาม
+กอล์ฟ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="604" y="86" width="88" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[รถจักรยาน
+ยนต์]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="672" y="86" width="41" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[แบตเตอรี่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="687" y="62" width="100" height="80"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[สถาน
+บริการ
+อาบอบนวด]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="736" y="62" width="90" height="80"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[สถาน
+บริการ
+ไนท์คลับ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="491" y="0" width="480" height="25"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{OFFNAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="-20" width="500" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[วันที่ :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="28" y="-20" width="578" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" isStrikeThrough="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{UNTILDATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="112" y="-20" width="545" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SYSTIMEDATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="692" y="-20" width="181" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Report ID : 5.6 (ILLR8506)]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="25"/>
+			</rectangle>
+			<line>
+				<reportElement x="120" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="164" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="209" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="253" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="300" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="346" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="394" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="442" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="485" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="534" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="578" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="624" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="713" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="760" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="671" y="0" width="1" height="25"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2" y="0" width="162" height="25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{LIST_DETAIL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="64" y="0" width="100" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{GRP_ID} == 2 || $F{GRP_ID} == 3 || $F{GRP_ID} == 4 || $F{GRP_ID} == 13 ? com.ko.util.NumberUtil.getNumberFormat($F{CASE_OIL}.doubleValue(),0, "") :  com.ko.util.NumberUtil.getNumberFormat($F{CASE_OIL}.doubleValue(),2, ""))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="109" y="0" width="100" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{GRP_ID} == 2 || $F{GRP_ID} == 3 || $F{GRP_ID} == 4 || $F{GRP_ID} == 13 ? com.ko.util.NumberUtil.getNumberFormat($F{CASE_DRINK}.doubleValue(),0, "") :  com.ko.util.NumberUtil.getNumberFormat($F{CASE_DRINK}.doubleValue(),2, ""))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="153" y="0" width="100" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{GRP_ID} == 2 || $F{GRP_ID} == 3 || $F{GRP_ID} == 4 || $F{GRP_ID} == 13 ? com.ko.util.NumberUtil.getNumberFormat($F{CASE_AIR}.doubleValue(),0, "") :  com.ko.util.NumberUtil.getNumberFormat($F{CASE_AIR}.doubleValue(),2, ""))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="199" y="0" width="100" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{GRP_ID} == 2 || $F{GRP_ID} == 3 || $F{GRP_ID} == 4 || $F{GRP_ID} == 13 ? com.ko.util.NumberUtil.getNumberFormat($F{CASE_LIGHT}.doubleValue(),0, "") :  com.ko.util.NumberUtil.getNumberFormat($F{CASE_LIGHT}.doubleValue(),2, ""))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="245" y="0" width="100" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{GRP_ID} == 2 || $F{GRP_ID} == 3 || $F{GRP_ID} == 4 || $F{GRP_ID} == 13 ? com.ko.util.NumberUtil.getNumberFormat($F{CASE_CRYSTAL}.doubleValue(),0, "") :  com.ko.util.NumberUtil.getNumberFormat($F{CASE_CRYSTAL}.doubleValue(),2, ""))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="294" y="0" width="100" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{GRP_ID} == 2 || $F{GRP_ID} == 3 || $F{GRP_ID} == 4 || $F{GRP_ID} == 13 ? com.ko.util.NumberUtil.getNumberFormat($F{CASE_MOTER}.doubleValue(),0, "") :  com.ko.util.NumberUtil.getNumberFormat($F{CASE_MOTER}.doubleValue(),2, ""))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="342" y="0" width="100" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{GRP_ID} == 2 || $F{GRP_ID} == 3 || $F{GRP_ID} == 4 || $F{GRP_ID} == 13 ? com.ko.util.NumberUtil.getNumberFormat($F{CASE_BOAT}.doubleValue(),0, "") :  com.ko.util.NumberUtil.getNumberFormat($F{CASE_BOAT}.doubleValue(),2, ""))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="386" y="0" width="100" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{GRP_ID} == 2 || $F{GRP_ID} == 3 || $F{GRP_ID} == 4 || $F{GRP_ID} == 13 ? com.ko.util.NumberUtil.getNumberFormat($F{CASE_PERFUME}.doubleValue(),0, "") :  com.ko.util.NumberUtil.getNumberFormat($F{CASE_PERFUME}.doubleValue(),2, ""))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="433" y="0" width="100" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{GRP_ID} == 2 || $F{GRP_ID} == 3 || $F{GRP_ID} == 4 || $F{GRP_ID} == 13 ? com.ko.util.NumberUtil.getNumberFormat($F{CASE_CARPET}.doubleValue(),0, "") :  com.ko.util.NumberUtil.getNumberFormat($F{CASE_CARPET}.doubleValue(),2, ""))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="478" y="0" width="100" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{GRP_ID} == 2 || $F{GRP_ID} == 3 || $F{GRP_ID} == 4 || $F{GRP_ID} == 13 ? com.ko.util.NumberUtil.getNumberFormat($F{CASE_RACECOURSE}.doubleValue(),0, "") :  com.ko.util.NumberUtil.getNumberFormat($F{CASE_RACECOURSE}.doubleValue(),2, ""))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="523" y="0" width="100" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{GRP_ID} == 2 || $F{GRP_ID} == 3 || $F{GRP_ID} == 4 || $F{GRP_ID} == 13 ? com.ko.util.NumberUtil.getNumberFormat($F{CASE_GOLF}.doubleValue(),0, "") :  com.ko.util.NumberUtil.getNumberFormat($F{CASE_GOLF}.doubleValue(),2, ""))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="571" y="0" width="100" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{GRP_ID} == 2 || $F{GRP_ID} == 3 || $F{GRP_ID} == 4 || $F{GRP_ID} == 13 ? com.ko.util.NumberUtil.getNumberFormat($F{CASE_MOTORCYCLE}.doubleValue(),0, "") :  com.ko.util.NumberUtil.getNumberFormat($F{CASE_MOTORCYCLE}.doubleValue(),2, ""))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="613" y="0" width="100" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{GRP_ID} == 2 || $F{GRP_ID} == 3 || $F{GRP_ID} == 4 || $F{GRP_ID} == 13 ? com.ko.util.NumberUtil.getNumberFormat($F{CASE_BATTERY}.doubleValue(),0, "") :  com.ko.util.NumberUtil.getNumberFormat($F{CASE_BATTERY}.doubleValue(),2, ""))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="660" y="0" width="100" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{GRP_ID} == 2 || $F{GRP_ID} == 3 || $F{GRP_ID} == 4 || $F{GRP_ID} == 13 ? com.ko.util.NumberUtil.getNumberFormat($F{CASE_FACILITIES}.doubleValue(),0, "") :  com.ko.util.NumberUtil.getNumberFormat($F{CASE_FACILITIES}.doubleValue(),2, ""))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="702" y="0" width="100" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{GRP_ID} == 2 || $F{GRP_ID} == 3 || $F{GRP_ID} == 4 || $F{GRP_ID} == 13 ? com.ko.util.NumberUtil.getNumberFormat($F{CASE_NIGHTCLUB}.doubleValue(),0, "") :  com.ko.util.NumberUtil.getNumberFormat($F{CASE_NIGHTCLUB}.doubleValue(),2, ""))]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20">
+			<staticText>
+				<reportElement x="1" y="0" width="500" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[User :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="770" y="0" width="176" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="38" y="0" width="660" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{USER_NAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="738" y="0" width="507" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Page :]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

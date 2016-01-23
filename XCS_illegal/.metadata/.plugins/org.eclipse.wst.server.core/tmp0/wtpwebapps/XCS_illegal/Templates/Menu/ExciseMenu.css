@@ -1,0 +1,204 @@
+
+div.bnaz-bpAb{
+padding: 0px 0px 0px 0px;
+border-width:1px;
+border-style:solid;
+border-color:#f4e6f8 #f4e6f8 #f4e6f8 #f4e6f8;
+cursor : hand;
+width: auto;
+height: auto;;
+color:#000000;
+background-color:#E7FCBE;  /* สีพื้นหลังของแถบเมนู*/
+z-index:1000;
+}
+
+div.bnaz-bpAb table{
+font:11px tahoma, verdana, sans-serif;
+color:#000000;
+}
+
+div.bnaz-bpAb table tr td.bGaz{
+padding: 3px 9px;
+}
+
+div.bnaz-bpAb table tr td.bGaz img{
+vertical-align: middle;
+}
+
+div.bnaz-bpAb table tr td.bGaz table td.BDaz{
+padding-right: 3px;
+}
+
+/* สีของเมนูหลักเมื่อตอน  MouseOver*/
+div.bnaz-bpAb table tr td.bqAb{
+color:#FFFFFF;
+background-color:#006633;
+}
+
+/* สีของเมนูหลักเมื่อตอน  MouseOver*/
+div.bnaz-bpAb table tr td.brAb{
+color:#FFFFFF;
+background-color:#006633;
+}
+
+div.bnaz-bwAb{
+position: absolute;
+left: 0px;
+top: 0px;
+padding: 0px;
+color:#000000;
+background-color:#FFFFFF;  /* สีพื้นหลังของเมนูย่อย */
+border-width:1px;
+border-style:solid;
+/*border-color:#55A1FF #4086E4 #68ACF8 #3882E2;*/
+border-color:#CCCCDD #CCCCDD #CCCCDD #CCCCDD;
+cursor:hand;
+z-index:1000;
+}
+
+div.bnaz-bpAb table tr td.bqAb table{
+color:#FFFFFF;
+}
+
+div.bnaz-bpAb table tr td.brAb table{
+color:#FFFFFF;
+}
+
+div.bnaz-bpAb table tr td.BTaz{
+width: 6px;
+}
+
+div.bnaz-bpAb table tr td.BTaz div{
+border-left: 1px solid #C5C2B8;
+border-right: none;
+border-top: none;
+border-bottom: none;
+margin: 3px;
+height: 1.3em;
+overflow: hidden;
+}
+
+div.bnaz-bpAb tr td.BDaz{
+padding: 1px 1px 3px 3px;
+width:16px;
+height:16px;
+}
+
+div.bnaz-bpAb tr td.BDaz img,
+div.bnaz-bpAb tr td.BDaz div{
+width:16px;
+height:16px;
+}
+
+div.bnaz-bwAb table{
+font:11px tahoma, verdana, sans-serif;
+}
+
+div.bnaz-bwAb tr.bGaz td.BDaz{
+padding: 1px 1px 1px 3px;
+width:16px;
+height:30px;
+}
+
+div.bnaz-bwAb tr.bGaz td.BDaz img,
+div.bnaz-bwAb tr.bGaz td.BDaz div{
+width:16px;
+height:16px;
+}
+
+div.bnaz-bwAb tr.bGaz td.BJaz{
+padding: 1px 11px 1px 3px;
+}
+
+div.bnaz-bwAb tr.bGaz td.bfAa{
+width: 9px;
+}
+
+div.bnaz-bwAb tr.bGaz td.bfAa div{
+width: 9px; background: transparent url("arrowr.gif") no-repeat 0% 50%;
+}
+
+div.bnaz-bwAb tr.bqAb td.bfAa div,div.bnaz-bwAb tr.brAb td.bfAa div{
+background: transparent url("arrowrh.gif") no-repeat 0% 50%;
+}
+
+/* สี Hightligh ข้อความในเมนูย่อยเมื่อ MouseOver*/
+div.bnaz-bwAb tr.bGaz.bqAb{
+color:#000000;  /* สีของข้อความ*/
+background-color:#E7FCBE;
+}
+
+/* สี Hightligh พื้นที่ว่างๆ ด้านหน้าข้อความในเมนูย่อยเมื่อ MouseOver */
+div.bnaz-bwAb tr.bGaz.bqAb td.BDaz{
+ background-color:#E7FCBE;
+}
+
+/*สี Hightlign เมื่อคลิกเมนูย่อย*/
+div.bnaz-bwAb tr.bGaz.brAb{
+color:#FFFFFF;
+background-color:#006633;
+}
+
+div.bnaz-bwAb tr.bGaz.brAb td.BDaz{
+color:#FFFFFF;
+background-color:#006633;
+}
+
+div.bnaz-bwAb tr.BTaz td div{
+margin: 2px;height: 1px;line-height: 1px;font-size: 1px;border: none;background: url("sep.gif") no-repeat 50% 50%;
+}
+
+div.bnaz-bwAb div.d1{
+border-left: 0px solid #83B0EC; border-right: none; border-top: none; border-bottom: none;
+}
+
+div.bnaz-bwAb div.d2{
+border-left: 0px solid #2C7AE0; border-right: none; border-top: none; border-bottom: none;
+}
+
+div.bnaz-bwAb div.d3{
+border-left: 0px solid #2D7CE2; border-right: none; border-top: none; border-bottom: none;
+}
+
+div.bnaz-bwAb div.d4{
+border-left: 0px solid #307FE5; border-right: none; border-top: none; border-bottom: none;
+}
+
+div.bnaz-bwAb div.d5{
+border-left: 0px solid #3382E8; border-right: none; border-top: none; border-bottom: none;
+}
+
+div.bnaz-bvAb{
+position: absolute;background-color: gray;-moz-opacity: 0.3; filter: alpha(opacity=30);
+z-index:999;
+}
+
+div.bnaz-bwAb div.bnaz-bsAb{
+overflow: hidden;
+}
+
+div.bnaz-bwAb div.bnaz-bsAb-btAb{
+height: 11px; font-size: 11px; line-height: 11px; overflow: hidden; background: url("scrollu.gif") no-repeat 50% 50%;
+}
+
+div.bnaz-bwAb div.bnaz-bsAb-btAb-bqAb{
+background-image: url("scrolluh1.gif");
+}
+
+div.bnaz-bwAb div.bnaz-bsAb-btAb-buAb{
+background-image: url("scrollud.gif");
+}
+
+div.bnaz-bwAb div.bnaz-bsAb-Boaz{
+height: 11px; font-size: 11px; line-height: 11px; overflow: hidden; background: url("scrolld.gif") no-repeat 50% 50%;
+}
+
+div.bnaz-bwAb div.bnaz-bsAb-Boaz-bqAb{
+background-image: url("scrolldh.gif");
+}
+
+div.bnaz-bwAb div.bnaz-bsAb-Boaz-buAb{
+background-image: url("scrolldd.gif");
+}
+
+

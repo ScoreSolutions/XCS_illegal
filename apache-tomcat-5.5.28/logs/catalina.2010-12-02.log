@@ -1,0 +1,726 @@
+2 ¸.¤. 2553 10:45:49 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.5.0_21\bin;.;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\oracle\product\10.2.0\db_1\bin;C:\Program Files\PC Connectivity Solution\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files\Windows Live\Shared;C:\Program Files\Subversion\bin
+2 ¸.¤. 2553 10:45:49 org.apache.coyote.http11.Http11BaseProtocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8888
+2 ¸.¤. 2553 10:45:49 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2348 ms
+2 ¸.¤. 2553 10:45:50 org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+2 ¸.¤. 2553 10:45:50 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/5.5.28
+2 ¸.¤. 2553 10:45:50 org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+2 ¸.¤. 2553 10:45:58 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 10:46:04 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/GroupIDService/WEB-INF/wsit-service.InquiryGroupID.xml.
+2 ¸.¤. 2553 10:46:11 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 10:46:13 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+2 ¸.¤. 2553 10:46:23 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 10:46:28 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/IDCardService/WEB-INF/wsit-service.InquiryGroupID.xml.
+2 ¸.¤. 2553 10:46:34 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 10:46:35 org.glassfish.gmbal.impl.JMXRegistrationManager resumeRegistration
+WARNING: "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort]"
+2 ¸.¤. 2553 10:46:35 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+2 ¸.¤. 2553 10:46:45 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 10:46:50 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/WEB-INF/wsit-service.InquiryGroupID.xml.
+2 ¸.¤. 2553 10:46:55 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 10:46:55 org.glassfish.gmbal.impl.JMXRegistrationManager resumeRegistration
+WARNING: "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort]"
+2 ¸.¤. 2553 10:46:55 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+2 ¸.¤. 2553 10:46:58 org.apache.coyote.http11.Http11BaseProtocol start
+INFO: Starting Coyote HTTP/1.1 on http-8888
+2 ¸.¤. 2553 10:46:59 org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+2 ¸.¤. 2553 10:46:59 org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/154  config=null
+2 ¸.¤. 2553 10:46:59 org.apache.catalina.storeconfig.StoreLoader load
+INFO: Find registry server-registry.xml at classpath resource
+2 ¸.¤. 2553 10:46:59 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 70108 ms
+2 ¸.¤. 2553 10:47:05 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 10:47:26 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryDateService-InquiryDatePort
+2 ¸.¤. 2553 10:47:29 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+2 ¸.¤. 2553 10:47:30 org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/DateService] has already been started
+2 ¸.¤. 2553 10:47:51 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+2 ¸.¤. 2553 10:47:51 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryDateService-InquiryDatePort
+2 ¸.¤. 2553 10:47:51 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 10:47:55 org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context [/DateService]
+2 ¸.¤. 2553 10:58:00 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 10:59:01 com.sun.xml.ws.server.MonitorBase createRoot
+WARNING: Error while creating monitoring root with name: InquiryDateService-InquiryDatePort
+java.lang.OutOfMemoryError: Java heap space
+	at java.lang.reflect.Method.copy(Method.java:139)
+	at java.lang.reflect.ReflectAccess.copyMethod(ReflectAccess.java:118)
+	at sun.reflect.ReflectionFactory.copyMethod(ReflectionFactory.java:282)
+	at java.lang.Class.copyMethods(Class.java:2720)
+	at java.lang.Class.getDeclaredMethods(Class.java:1763)
+	at org.glassfish.gmbal.typelib.TypeEvaluator.getDeclaredMethods(TypeEvaluator.java:221)
+	at org.glassfish.gmbal.typelib.TypeEvaluator.access$800(TypeEvaluator.java:78)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.processClass(TypeEvaluator.java:721)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.getCorrectDeclaration(TypeEvaluator.java:679)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitParameterizedType(TypeEvaluator.java:496)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.evaluateType(TypeEvaluator.java:412)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$1.evaluate(TypeEvaluator.java:552)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$1.evaluate(TypeEvaluator.java:551)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:92)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:115)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitMethodDeclaration(TypeEvaluator.java:548)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.access$900(TypeEvaluator.java:388)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:727)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:724)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:92)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:115)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.processClass(TypeEvaluator.java:721)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.getCorrectDeclaration(TypeEvaluator.java:679)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitClassDeclaration(TypeEvaluator.java:461)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.evaluateType(TypeEvaluator.java:409)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitMethodDeclaration(TypeEvaluator.java:564)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.access$900(TypeEvaluator.java:388)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:727)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:724)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:92)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:115)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.processClass(TypeEvaluator.java:721)
+2 ¸.¤. 2553 10:59:36 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+SEVERE: WSSERVLET11: failed to parse runtime descriptor: java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+	at java.util.zip.InflaterInputStream.<init>(InflaterInputStream.java:71)
+	at java.util.zip.ZipFile$2.<init>(ZipFile.java:348)
+	at java.util.zip.ZipFile.getInputStream(ZipFile.java:320)
+	at java.util.zip.ZipFile.getInputStream(ZipFile.java:286)
+	at java.util.jar.JarFile.getInputStream(JarFile.java:387)
+	at org.apache.catalina.loader.WebappClassLoader.findResourceInternal(WebappClassLoader.java:2048)
+	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:1819)
+	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:889)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1353)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1232)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:620)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:124)
+	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:1880)
+	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:889)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1353)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1232)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.sun.xml.ws.api.pipe.Codecs.createSOAPEnvelopeXmlCodec(Codecs.java:91)
+	at com.sun.xml.ws.encoding.SOAPBindingCodec.<init>(SOAPBindingCodec.java:199)
+	at com.sun.xml.ws.api.BindingID$SOAPHTTPImpl.createEncoder(BindingID.java:426)
+	at com.sun.xml.ws.binding.BindingImpl.createCodec(BindingImpl.java:138)
+	at com.sun.xml.ws.api.pipe.ServerTubeAssemblerContext.<init>(ServerTubeAssemblerContext.java:89)
+	at com.sun.xml.ws.api.pipe.ServerPipeAssemblerContext.<init>(ServerPipeAssemblerContext.java:59)
+	at com.sun.xml.ws.server.WSEndpointImpl.<init>(WSEndpointImpl.java:156)
+	at com.sun.xml.ws.server.EndpointFactory.createEndpoint(EndpointFactory.java:232)
+	at com.sun.xml.ws.api.server.WSEndpoint.create(WSEndpoint.java:505)
+	at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters(DeploymentDescriptorParser.java:253)
+	at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parse(DeploymentDescriptorParser.java:147)
+	at com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized(WSServletContextListener.java:124)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:3795)
+2 ¸.¤. 2553 10:59:39 org.apache.catalina.core.StandardContext start
+SEVERE: Error listenerStart
+2 ¸.¤. 2553 10:59:39 org.apache.catalina.core.StandardContext start
+SEVERE: Context [/DateService] startup failed due to previous errors
+2 ¸.¤. 2553 10:59:40 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 10:59:56 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 11:01:13 com.sun.xml.ws.server.MonitorBase createRoot
+WARNING: Error while creating monitoring root with name: InquiryDateService-InquiryDatePort
+java.lang.OutOfMemoryError: Java heap space
+	at java.util.AbstractList.listIterator(AbstractList.java:392)
+	at java.util.AbstractList.listIterator(AbstractList.java:349)
+	at java.util.AbstractList.equals(AbstractList.java:606)
+	at org.glassfish.gmbal.generic.Pair.equals(Pair.java:82)
+	at java.util.HashMap.eq(HashMap.java:299)
+	at java.util.HashMap.removeEntryForKey(HashMap.java:602)
+	at java.util.HashMap.remove(HashMap.java:584)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$PartialDefinitions.remove(TypeEvaluator.java:379)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitClassDeclaration(TypeEvaluator.java:463)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.evaluateType(TypeEvaluator.java:409)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitWildcardType(TypeEvaluator.java:618)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.evaluateType(TypeEvaluator.java:421)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.getBindings(TypeEvaluator.java:781)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitParameterizedType(TypeEvaluator.java:493)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.evaluateType(TypeEvaluator.java:412)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$1.evaluate(TypeEvaluator.java:552)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$1.evaluate(TypeEvaluator.java:551)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:92)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:115)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitMethodDeclaration(TypeEvaluator.java:548)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.access$900(TypeEvaluator.java:388)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:727)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:724)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:92)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:115)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.processClass(TypeEvaluator.java:721)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.getCorrectDeclaration(TypeEvaluator.java:679)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitParameterizedType(TypeEvaluator.java:496)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.evaluateType(TypeEvaluator.java:412)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$2.evaluate(TypeEvaluator.java:705)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$2.evaluate(TypeEvaluator.java:704)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:92)
+2 ¸.¤. 2553 11:02:20 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+SEVERE: WSSERVLET11: failed to parse runtime descriptor: java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 11:02:20 org.apache.catalina.core.StandardContext start
+SEVERE: Error listenerStart
+2 ¸.¤. 2553 11:02:20 org.apache.catalina.core.StandardContext start
+SEVERE: Context [/DateService] startup failed due to previous errors
+2 ¸.¤. 2553 11:02:21 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 11:06:27 org.apache.coyote.http11.Http11BaseProtocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8888
+2 ¸.¤. 2553 11:06:28 org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+2 ¸.¤. 2553 11:06:29 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+2 ¸.¤. 2553 11:06:29 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 11:06:29 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 11:06:32 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+2 ¸.¤. 2553 11:06:32 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 11:06:32 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 11:06:34 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+2 ¸.¤. 2553 11:06:34 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 11:06:34 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 11:06:37 org.apache.coyote.http11.Http11BaseProtocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8888
+2 ¸.¤. 2553 11:06:37 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime
+2 ¸.¤. 2553 11:26:28 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.5.0_21\bin;.;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\oracle\product\10.2.0\db_1\bin;C:\Program Files\PC Connectivity Solution\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files\Windows Live\Shared;C:\Program Files\Subversion\bin;C:\Program Files\Common Files\Nero\Lib\
+2 ¸.¤. 2553 11:26:28 org.apache.coyote.http11.Http11BaseProtocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8888
+2 ¸.¤. 2553 11:26:28 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1435 ms
+2 ¸.¤. 2553 11:26:28 org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+2 ¸.¤. 2553 11:26:28 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/5.5.28
+2 ¸.¤. 2553 11:26:28 org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+2 ¸.¤. 2553 11:26:32 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 11:26:38 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryDateService-InquiryDatePort
+2 ¸.¤. 2553 11:26:38 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+2 ¸.¤. 2553 11:26:41 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 11:26:44 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/GroupIDService/WEB-INF/wsit-service.InquiryGroupID.xml.
+2 ¸.¤. 2553 11:26:47 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 11:26:47 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+2 ¸.¤. 2553 11:26:49 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 11:26:53 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/IDCardService/WEB-INF/wsit-service.InquiryGroupID.xml.
+2 ¸.¤. 2553 11:26:57 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 11:26:57 org.glassfish.gmbal.impl.JMXRegistrationManager resumeRegistration
+WARNING: "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort]"
+2 ¸.¤. 2553 11:26:57 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+2 ¸.¤. 2553 11:27:00 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 11:27:05 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/WEB-INF/wsit-service.InquiryGroupID.xml.
+2 ¸.¤. 2553 11:27:14 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 11:27:15 org.glassfish.gmbal.impl.JMXRegistrationManager resumeRegistration
+WARNING: "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort]"
+2 ¸.¤. 2553 11:27:15 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+2 ¸.¤. 2553 11:27:18 org.apache.coyote.http11.Http11BaseProtocol start
+INFO: Starting Coyote HTTP/1.1 on http-8888
+2 ¸.¤. 2553 11:27:20 org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+2 ¸.¤. 2553 11:27:20 org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/858  config=null
+2 ¸.¤. 2553 11:27:21 org.apache.catalina.storeconfig.StoreLoader load
+INFO: Find registry server-registry.xml at classpath resource
+2 ¸.¤. 2553 11:27:21 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 53190 ms
+2 ¸.¤. 2553 11:27:22 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+2 ¸.¤. 2553 11:27:22 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryDateService-InquiryDatePort
+2 ¸.¤. 2553 11:27:22 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 11:27:25 org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context [/DateService]
+2 ¸.¤. 2553 11:27:30 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 11:28:51 com.sun.xml.ws.server.MonitorBase createRoot
+WARNING: Error while creating monitoring root with name: InquiryDateService-InquiryDatePort
+java.lang.OutOfMemoryError: Java heap space
+	at java.lang.Class.getGenericSignature(Native Method)
+	at java.lang.Class.getTypeParameters(Class.java:614)
+	at org.glassfish.gmbal.typelib.DeclarationFactory.ecdecl(DeclarationFactory.java:100)
+	at org.glassfish.gmbal.typelib.DeclarationFactory.ecdecl(DeclarationFactory.java:167)
+	at org.glassfish.gmbal.typelib.DeclarationFactory.ecdecl(DeclarationFactory.java:161)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitParameterizedType(TypeEvaluator.java:487)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.evaluateType(TypeEvaluator.java:412)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$2.evaluate(TypeEvaluator.java:705)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$2.evaluate(TypeEvaluator.java:704)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:92)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:115)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.processClass(TypeEvaluator.java:701)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.getCorrectDeclaration(TypeEvaluator.java:679)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitClassDeclaration(TypeEvaluator.java:461)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.evaluateType(TypeEvaluator.java:409)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$1.evaluate(TypeEvaluator.java:552)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$1.evaluate(TypeEvaluator.java:551)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:92)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:115)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitMethodDeclaration(TypeEvaluator.java:548)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.access$900(TypeEvaluator.java:388)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:727)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:724)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:92)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:115)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.processClass(TypeEvaluator.java:721)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.getCorrectDeclaration(TypeEvaluator.java:679)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitParameterizedType(TypeEvaluator.java:496)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.evaluateType(TypeEvaluator.java:412)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitMethodDeclaration(TypeEvaluator.java:564)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.access$900(TypeEvaluator.java:388)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:727)
+2 ¸.¤. 2553 11:29:55 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+SEVERE: WSSERVLET11: failed to parse runtime descriptor: java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+	at java.io.ByteArrayOutputStream.toByteArray(ByteArrayOutputStream.java:136)
+	at com.sun.xml.bind.v2.bytecode.ClassTailor.tailor(ClassTailor.java:194)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector.tailor(AccessorInjector.java:122)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector.prepare(AccessorInjector.java:81)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory.get(OptimizedAccessorFactory.java:165)
+	at com.sun.xml.bind.v2.runtime.reflect.Accessor$FieldReflection.optimize(Accessor.java:256)
+	at com.sun.xml.bind.v2.runtime.reflect.TransducedAccessor$CompositeTransducedAccessorImpl.<init>(TransducedAccessor.java:231)
+	at com.sun.xml.bind.v2.runtime.reflect.TransducedAccessor.get(TransducedAccessor.java:173)
+	at com.sun.xml.bind.v2.runtime.property.AttributeProperty.<init>(AttributeProperty.java:87)
+	at com.sun.xml.bind.v2.runtime.property.PropertyFactory.create(PropertyFactory.java:104)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.<init>(ClassBeanInfoImpl.java:179)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getOrCreate(JAXBContextImpl.java:515)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:330)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1140)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:154)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:121)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:202)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:592)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:127)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:276)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:412)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:375)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:279)
+	at com.sun.xml.ws.assembler.MetroConfigLoader.loadMetroConfig(MetroConfigLoader.java:207)
+	at com.sun.xml.ws.assembler.MetroConfigLoader.<init>(MetroConfigLoader.java:110)
+	at com.sun.xml.ws.assembler.MetroConfigLoader.<init>(MetroConfigLoader.java:100)
+	at com.sun.xml.ws.assembler.TubelineAssemblyController.getTubeCreators(TubelineAssemblyController.java:110)
+	at com.sun.xml.ws.assembler.TubelineAssemblerFactoryImpl$MetroTubelineAssembler.createServer(TubelineAssemblerFactoryImpl.java:151)
+	at com.sun.xml.ws.server.WSEndpointImpl.<init>(WSEndpointImpl.java:157)
+2 ¸.¤. 2553 11:29:57 org.apache.catalina.core.StandardContext start
+SEVERE: Error listenerStart
+2 ¸.¤. 2553 11:29:57 org.apache.catalina.core.StandardContext start
+SEVERE: Context [/DateService] startup failed due to previous errors
+2 ¸.¤. 2553 11:29:57 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 11:30:12 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 11:31:28 com.sun.xml.ws.server.MonitorBase createRoot
+WARNING: Error while creating monitoring root with name: InquiryDateService-InquiryDatePort
+java.lang.OutOfMemoryError: Java heap space
+	at java.util.AbstractList.iterator(AbstractList.java:337)
+	at java.util.AbstractList.hashCode(AbstractList.java:627)
+	at org.glassfish.gmbal.generic.Pair.hashCode(Pair.java:95)
+	at java.util.HashMap.get(HashMap.java:343)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.getCorrectDeclaration(TypeEvaluator.java:673)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitClassDeclaration(TypeEvaluator.java:461)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.evaluateType(TypeEvaluator.java:409)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitMethodDeclaration(TypeEvaluator.java:564)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.access$900(TypeEvaluator.java:388)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:727)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:724)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:92)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:115)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.processClass(TypeEvaluator.java:721)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.getCorrectDeclaration(TypeEvaluator.java:679)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitParameterizedType(TypeEvaluator.java:496)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.evaluateType(TypeEvaluator.java:412)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitMethodDeclaration(TypeEvaluator.java:564)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.access$900(TypeEvaluator.java:388)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:727)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:724)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:92)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:115)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.processClass(TypeEvaluator.java:721)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.getCorrectDeclaration(TypeEvaluator.java:679)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitClassDeclaration(TypeEvaluator.java:461)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.evaluateType(TypeEvaluator.java:409)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitMethodDeclaration(TypeEvaluator.java:564)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.access$900(TypeEvaluator.java:388)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:727)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:724)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:92)
+2 ¸.¤. 2553 11:31:57 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+SEVERE: WSSERVLET11: failed to parse runtime descriptor: java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 11:31:58 org.apache.catalina.core.StandardContext start
+SEVERE: Error listenerStart
+2 ¸.¤. 2553 11:31:58 org.apache.catalina.core.StandardContext start
+SEVERE: Context [/DateService] startup failed due to previous errors
+2 ¸.¤. 2553 11:31:58 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 11:34:44 org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/DateService] has not been started
+2 ¸.¤. 2553 11:34:44 org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context [/DateService]
+2 ¸.¤. 2553 11:34:49 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 11:36:11 com.sun.xml.ws.server.MonitorBase createRoot
+WARNING: Error while creating monitoring root with name: InquiryDateService-InquiryDatePort
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 11:37:16 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+SEVERE: WSSERVLET11: failed to parse runtime descriptor: java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 11:37:18 org.apache.catalina.core.StandardContext start
+SEVERE: Error listenerStart
+2 ¸.¤. 2553 11:37:18 org.apache.catalina.core.StandardContext start
+SEVERE: Context [/DateService] startup failed due to previous errors
+2 ¸.¤. 2553 11:37:18 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 11:37:37 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 11:38:50 com.sun.xml.ws.server.MonitorBase createRoot
+WARNING: Error while creating monitoring root with name: InquiryDateService-InquiryDatePort
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 11:39:35 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+SEVERE: WSSERVLET11: failed to parse runtime descriptor: java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 11:39:37 org.apache.catalina.core.StandardContext start
+SEVERE: Error listenerStart
+2 ¸.¤. 2553 11:39:37 org.apache.catalina.core.StandardContext start
+SEVERE: Context [/DateService] startup failed due to previous errors
+2 ¸.¤. 2553 11:39:37 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 11:40:52 org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/DateService] has not been started
+2 ¸.¤. 2553 11:40:52 org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context [/DateService]
+2 ¸.¤. 2553 11:40:57 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 11:42:29 com.sun.xml.ws.server.MonitorBase createRoot
+WARNING: Error while creating monitoring root with name: InquiryDateService-InquiryDatePort
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 11:42:59 org.apache.coyote.http11.Http11BaseProtocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8888
+2 ¸.¤. 2553 11:43:03 org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+2 ¸.¤. 2553 11:43:31 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+SEVERE: WSSERVLET11: failed to parse runtime descriptor: java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 11:43:32 org.apache.catalina.core.StandardContext start
+SEVERE: Error listenerStart
+2 ¸.¤. 2553 11:43:32 org.apache.catalina.core.StandardContext start
+SEVERE: Context [/DateService] startup failed due to previous errors
+2 ¸.¤. 2553 11:43:33 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 11:43:43 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+2 ¸.¤. 2553 11:43:43 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 11:43:43 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 11:43:45 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+2 ¸.¤. 2553 11:43:45 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 11:43:45 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 11:43:47 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+2 ¸.¤. 2553 11:43:47 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 11:43:47 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 11:43:48 org.apache.coyote.http11.Http11BaseProtocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8888
+2 ¸.¤. 2553 11:43:48 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime
+2 ¸.¤. 2553 23:14:16 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.5.0_21\bin;.;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\oracle\product\10.2.0\db_1\bin;C:\Program Files\PC Connectivity Solution\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files\Windows Live\Shared;C:\Program Files\Subversion\bin
+2 ¸.¤. 2553 23:14:16 org.apache.coyote.http11.Http11BaseProtocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8888
+2 ¸.¤. 2553 23:14:16 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2440 ms
+2 ¸.¤. 2553 23:14:17 org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+2 ¸.¤. 2553 23:14:17 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/5.5.28
+2 ¸.¤. 2553 23:14:17 org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+2 ¸.¤. 2553 23:14:25 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 23:14:38 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryDateService-InquiryDatePort
+2 ¸.¤. 2553 23:14:39 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+2 ¸.¤. 2553 23:14:48 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 23:14:53 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/GroupIDService/WEB-INF/wsit-service.InquiryGroupID.xml.
+2 ¸.¤. 2553 23:14:57 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 23:14:58 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+2 ¸.¤. 2553 23:15:07 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 23:15:12 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/IDCardService/WEB-INF/wsit-service.InquiryGroupID.xml.
+2 ¸.¤. 2553 23:15:15 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 23:15:16 org.glassfish.gmbal.impl.JMXRegistrationManager resumeRegistration
+WARNING: "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort]"
+2 ¸.¤. 2553 23:15:16 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+2 ¸.¤. 2553 23:15:29 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 23:15:34 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/WEB-INF/wsit-service.InquiryGroupID.xml.
+2 ¸.¤. 2553 23:15:42 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 23:15:43 org.glassfish.gmbal.impl.JMXRegistrationManager resumeRegistration
+WARNING: "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort]"
+2 ¸.¤. 2553 23:15:43 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+2 ¸.¤. 2553 23:15:47 org.apache.coyote.http11.Http11BaseProtocol start
+INFO: Starting Coyote HTTP/1.1 on http-8888
+2 ¸.¤. 2553 23:15:48 org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+2 ¸.¤. 2553 23:15:48 org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/655  config=null
+2 ¸.¤. 2553 23:15:49 org.apache.catalina.storeconfig.StoreLoader load
+INFO: Find registry server-registry.xml at classpath resource
+2 ¸.¤. 2553 23:15:49 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 92943 ms
+2 ¸.¤. 2553 23:15:52 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+2 ¸.¤. 2553 23:15:52 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryDateService-InquiryDatePort
+2 ¸.¤. 2553 23:15:52 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 23:15:55 org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context [/DateService]
+2 ¸.¤. 2553 23:16:02 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 23:18:16 com.sun.xml.ws.server.MonitorBase createRoot
+WARNING: Error while creating monitoring root with name: InquiryDateService-InquiryDatePort
+java.lang.OutOfMemoryError: Java heap space
+	at java.lang.Class.getGenericSignature(Native Method)
+	at java.lang.Class.getTypeParameters(Class.java:614)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.getBindings(TypeEvaluator.java:775)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitParameterizedType(TypeEvaluator.java:493)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.evaluateType(TypeEvaluator.java:412)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitMethodDeclaration(TypeEvaluator.java:564)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.access$900(TypeEvaluator.java:388)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:727)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:724)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:92)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:115)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.processClass(TypeEvaluator.java:721)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.getCorrectDeclaration(TypeEvaluator.java:679)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitParameterizedType(TypeEvaluator.java:496)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.evaluateType(TypeEvaluator.java:412)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitMethodDeclaration(TypeEvaluator.java:564)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.access$900(TypeEvaluator.java:388)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:727)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$4.evaluate(TypeEvaluator.java:724)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:92)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:115)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.processClass(TypeEvaluator.java:721)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.getCorrectDeclaration(TypeEvaluator.java:679)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitParameterizedType(TypeEvaluator.java:496)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.evaluateType(TypeEvaluator.java:412)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$2.evaluate(TypeEvaluator.java:705)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor$2.evaluate(TypeEvaluator.java:704)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:92)
+	at org.glassfish.gmbal.generic.Algorithms.map(Algorithms.java:115)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.processClass(TypeEvaluator.java:701)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.getCorrectDeclaration(TypeEvaluator.java:679)
+	at org.glassfish.gmbal.typelib.TypeEvaluator$TypeEvaluationVisitor.visitClassDeclaration(TypeEvaluator.java:461)
+2 ¸.¤. 2553 23:18:48 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+SEVERE: WSSERVLET11: failed to parse runtime descriptor: java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+	at org.apache.catalina.loader.WebappClassLoader.findResourceInternal(WebappClassLoader.java:2117)
+	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:1819)
+	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:889)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1353)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1232)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.createUnmarshaller(JAXBContextImpl.java:776)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.createUnmarshaller(JAXBContextImpl.java:141)
+	at com.sun.xml.ws.assembler.MetroConfigLoader.loadMetroConfig(MetroConfigLoader.java:208)
+	at com.sun.xml.ws.assembler.MetroConfigLoader.<init>(MetroConfigLoader.java:110)
+	at com.sun.xml.ws.assembler.MetroConfigLoader.<init>(MetroConfigLoader.java:100)
+	at com.sun.xml.ws.assembler.TubelineAssemblyController.getTubeCreators(TubelineAssemblyController.java:110)
+	at com.sun.xml.ws.assembler.TubelineAssemblerFactoryImpl$MetroTubelineAssembler.createServer(TubelineAssemblerFactoryImpl.java:151)
+	at com.sun.xml.ws.server.WSEndpointImpl.<init>(WSEndpointImpl.java:157)
+	at com.sun.xml.ws.server.EndpointFactory.createEndpoint(EndpointFactory.java:232)
+	at com.sun.xml.ws.api.server.WSEndpoint.create(WSEndpoint.java:505)
+	at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters(DeploymentDescriptorParser.java:253)
+	at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parse(DeploymentDescriptorParser.java:147)
+	at com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized(WSServletContextListener.java:124)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:3795)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4252)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:760)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:740)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:544)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:626)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:511)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1232)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:592)
+	at org.apache.commons.modeler.BaseModelMBean.invoke(BaseModelMBean.java:458)
+2 ¸.¤. 2553 23:18:49 org.apache.catalina.core.StandardContext start
+SEVERE: Error listenerStart
+2 ¸.¤. 2553 23:18:49 org.apache.catalina.core.StandardContext start
+SEVERE: Context [/DateService] startup failed due to previous errors
+2 ¸.¤. 2553 23:18:50 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 23:19:01 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 23:20:16 com.sun.xml.ws.server.MonitorBase createRoot
+WARNING: Error while creating monitoring root with name: InquiryDateService-InquiryDatePort
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 23:20:54 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+SEVERE: WSSERVLET11: failed to parse runtime descriptor: java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 23:20:54 org.apache.catalina.core.StandardContext start
+SEVERE: Error listenerStart
+2 ¸.¤. 2553 23:20:54 org.apache.catalina.core.StandardContext start
+SEVERE: Context [/DateService] startup failed due to previous errors
+2 ¸.¤. 2553 23:20:55 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 23:28:09 org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/DateService] has not been started
+2 ¸.¤. 2553 23:28:09 org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context [/DateService]
+2 ¸.¤. 2553 23:28:17 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 23:29:33 com.sun.xml.ws.server.MonitorBase createRoot
+WARNING: Error while creating monitoring root with name: InquiryDateService-InquiryDatePort
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 23:30:12 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+SEVERE: WSSERVLET11: failed to parse runtime descriptor: java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 23:30:13 org.apache.catalina.core.StandardContext start
+SEVERE: Error listenerStart
+2 ¸.¤. 2553 23:30:13 org.apache.catalina.core.StandardContext start
+SEVERE: Context [/DateService] startup failed due to previous errors
+2 ¸.¤. 2553 23:30:14 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 23:30:30 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 23:31:42 com.sun.xml.ws.server.MonitorBase createRoot
+WARNING: Error while creating monitoring root with name: InquiryDateService-InquiryDatePort
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 23:32:20 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+SEVERE: WSSERVLET11: failed to parse runtime descriptor: java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 23:32:20 org.apache.catalina.core.StandardContext start
+SEVERE: Error listenerStart
+2 ¸.¤. 2553 23:32:20 org.apache.catalina.core.StandardContext start
+SEVERE: Context [/DateService] startup failed due to previous errors
+2 ¸.¤. 2553 23:32:20 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 23:34:20 org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/DateService] has not been started
+2 ¸.¤. 2553 23:34:20 org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context [/DateService]
+2 ¸.¤. 2553 23:34:28 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 23:35:56 com.sun.xml.ws.server.MonitorBase createRoot
+WARNING: Error while creating monitoring root with name: InquiryDateService-InquiryDatePort
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 23:36:28 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+SEVERE: WSSERVLET11: failed to parse runtime descriptor: java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 23:36:28 org.apache.catalina.core.StandardContext start
+SEVERE: Error listenerStart
+2 ¸.¤. 2553 23:36:28 org.apache.catalina.core.StandardContext start
+SEVERE: Context [/DateService] startup failed due to previous errors
+2 ¸.¤. 2553 23:36:29 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 23:36:44 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+2 ¸.¤. 2553 23:38:00 com.sun.xml.ws.server.MonitorBase createRoot
+WARNING: Error while creating monitoring root with name: InquiryDateService-InquiryDatePort
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 23:38:46 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+SEVERE: WSSERVLET11: failed to parse runtime descriptor: java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+2 ¸.¤. 2553 23:38:46 org.apache.catalina.core.StandardContext start
+SEVERE: Error listenerStart
+2 ¸.¤. 2553 23:38:46 org.apache.catalina.core.StandardContext start
+SEVERE: Context [/DateService] startup failed due to previous errors
+2 ¸.¤. 2553 23:38:46 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 23:45:31 org.apache.coyote.http11.Http11BaseProtocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8888
+2 ¸.¤. 2553 23:45:32 org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+2 ¸.¤. 2553 23:45:33 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+2 ¸.¤. 2553 23:45:33 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 23:45:33 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 23:45:36 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+2 ¸.¤. 2553 23:45:36 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 23:45:36 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 23:45:41 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+2 ¸.¤. 2553 23:45:41 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+2 ¸.¤. 2553 23:45:41 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+2 ¸.¤. 2553 23:45:46 org.apache.coyote.http11.Http11BaseProtocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8888
+2 ¸.¤. 2553 23:45:46 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime

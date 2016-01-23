@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1318169470500
+started,bundle,org.eclipse.wst.html.core,1.1.300.v200903120608,"org.eclipse.wst.html.core",1318169471532
+started,bundle,org.eclipse.wst.common.uriresolver,1.1.301.v200805140415,"org.eclipse.wst.common.uriresolver",1318169472713
+started,bundle,org.eclipse.wst.css.core,1.1.300.v200904131653,"org.eclipse.wst.css.core",1318169472908
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1318169473824
+started,bundle,org.eclipse.wst.server.preview.adapter,1.1.0.v20090311b,"org.eclipse.wst.server.preview.adapter",1318169473925
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1318169478857
+started,bundle,org.eclipse.wst.internet.cache,1.0.301.v200805140020,"org.eclipse.wst.internet.cache",1318169481727
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1318169756497
+started,bundle,org.eclipse.jst.servlet.ui,1.1.301.v200908101600,"org.eclipse.jst.servlet.ui",1318169786990
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1318169787032
+executed,command,org.eclipse.wst.server.ui,1.1.103.v20090909,"org.eclipse.wst.server.run",1318169790711
+started,bundle,org.eclipse.jdt.debug,3.5.0.v20090526,"org.eclipse.jdt.debug",1318169790778
+started,bundle,org.eclipse.jdt.debug.ui,3.4.1.v20090811_r351,"org.eclipse.jdt.debug.ui",1318169826591
+error,log,,,"Server Tomcat v5.5 Server at localhost was unable to start within 45 seconds. If the server requires more time, try increasing the timeout in the server editor.",1318169835720
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1318169836364
+opened,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1318169836731
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1318169886057
+executed,command,org.eclipse.wst.server.ui,1.1.103.v20090909,"org.eclipse.wst.server.run",1318169931640
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1318169934971
+activated,view,org.eclipse.wst.server.ui,1.1.103.v20090909,"org.eclipse.wst.server.ui.ServersView",1318169937904
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1318171571563
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1318171587230
+executed,command,org.eclipse.wst.server.ui,1.1.103.v20090909,"org.eclipse.wst.server.run",1318171590583
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1318171591329

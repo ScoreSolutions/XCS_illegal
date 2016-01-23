@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-RequiredExecutionEnvironment: J2SE-1.5, JavaSE-1.6
+Bundle-ManifestVersion: 2
+Bundle-Name: JavaHL 1.6.0 Win32 Binaries
+Bundle-SymbolicName: org.polarion.eclipse.team.svn.connector.javahl16.win32;singleton:=true
+Bundle-Version: 2.2.1.I20091009-1900
+Bundle-ClassPath: .
+Bundle-Vendor: Polarion Software
+Fragment-Host: org.polarion.eclipse.team.svn.connector.javahl16;bundle-version="2.2.1.I20091009-1900"
+Eclipse-PlatformFilter: (& (osgi.os=win32) (osgi.arch=x86))

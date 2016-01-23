@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILL8406" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<group name="aaaa">
+		<groupHeader>
+			<band height="54">
+				<rectangle>
+					<reportElement x="0" y="1" width="802" height="52" backcolor="#CCCCCC"/>
+				</rectangle>
+				<line>
+					<reportElement x="44" y="1" width="1" height="52"/>
+				</line>
+				<line>
+					<reportElement x="180" y="1" width="1" height="52"/>
+				</line>
+				<line>
+					<reportElement x="335" y="0" width="1" height="52"/>
+				</line>
+				<line>
+					<reportElement x="514" y="1" width="1" height="52"/>
+				</line>
+				<line>
+					<reportElement x="668" y="1" width="1" height="52"/>
+				</line>
+				<line>
+					<reportElement x="45" y="27" width="623" height="1"/>
+				</line>
+				<line>
+					<reportElement x="113" y="27" width="1" height="25"/>
+				</line>
+				<line>
+					<reportElement x="258" y="27" width="1" height="26"/>
+				</line>
+				<line>
+					<reportElement x="424" y="28" width="1" height="25"/>
+				</line>
+				<line>
+					<reportElement x="591" y="27" width="1" height="26"/>
+				</line>
+				<staticText>
+					<reportElement x="1" y="1" width="43" height="52"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ประเภทคดี]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="45" y="1" width="135" height="26"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ปรับ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="45" y="27" width="68" height="26"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[จำนวนคดี]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="114" y="28" width="66" height="24"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ของกลาง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="181" y="1" width="154" height="26"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ส่งฟ้อง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="182" y="28" width="76" height="26"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[จำนวนคดี]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="258" y="28" width="77" height="26"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ของกลาง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="335" y="0" width="180" height="26"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ไม่มีตัว]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="336" y="28" width="88" height="26"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[จำนวนคดี]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="424" y="26" width="88" height="26"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ของกลาง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="515" y="2" width="154" height="26"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[รวม]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="515" y="26" width="76" height="26"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[จำนวนคดี]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="668" y="0" width="134" height="52"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[หมายเหตุ ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="591" y="26" width="77" height="26"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ของกลาง]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="30">
+				<rectangle>
+					<reportElement x="0" y="1" width="803" height="29" backcolor="#FFFFFF"/>
+				</rectangle>
+				<line>
+					<reportElement x="424" y="1" width="1" height="29"/>
+				</line>
+				<line>
+					<reportElement x="113" y="1" width="1" height="28"/>
+				</line>
+				<line>
+					<reportElement x="514" y="1" width="1" height="29"/>
+				</line>
+				<line>
+					<reportElement x="180" y="1" width="1" height="29"/>
+				</line>
+				<line>
+					<reportElement x="731" y="1" width="1" height="29"/>
+				</line>
+				<line>
+					<reportElement x="668" y="1" width="1" height="29"/>
+				</line>
+				<line>
+					<reportElement x="591" y="1" width="1" height="29"/>
+				</line>
+				<line>
+					<reportElement x="258" y="1" width="1" height="29"/>
+				</line>
+				<line>
+					<reportElement x="44" y="1" width="1" height="29"/>
+				</line>
+				<line>
+					<reportElement x="335" y="1" width="1" height="29"/>
+				</line>
+				<staticText>
+					<reportElement x="2" y="1" width="43" height="28"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[รวม]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="99" splitType="Stretch">
+			<staticText>
+				<reportElement x="293" y="14" width="383" height="42"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[จำนวนคดีและของกลางที่ส่งทำการตรวจพิสูจน์]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="56" width="383" height="43"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[วันที่….... ถึง วันที่ …... เดือน ……………..... พ.ศ. ………...…]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="803" height="29" backcolor="#FFFFFF"/>
+			</rectangle>
+			<line>
+				<reportElement x="424" y="0" width="1" height="29"/>
+			</line>
+			<line>
+				<reportElement x="113" y="0" width="1" height="28"/>
+			</line>
+			<line>
+				<reportElement x="514" y="0" width="1" height="29"/>
+			</line>
+			<line>
+				<reportElement x="180" y="0" width="1" height="29"/>
+			</line>
+			<line>
+				<reportElement x="731" y="0" width="1" height="29"/>
+			</line>
+			<line>
+				<reportElement x="668" y="0" width="1" height="29"/>
+			</line>
+			<line>
+				<reportElement x="591" y="0" width="1" height="29"/>
+			</line>
+			<line>
+				<reportElement x="258" y="0" width="1" height="29"/>
+			</line>
+			<line>
+				<reportElement x="44" y="0" width="1" height="29"/>
+			</line>
+			<line>
+				<reportElement x="335" y="0" width="1" height="29"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="151" splitType="Stretch">
+			<staticText>
+				<reportElement x="65" y="10" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[หมายเหตุ :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="10" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[สุรา]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="35" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ยาสูบ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="61" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ไพ่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="87" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[รถยนต์]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="113" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เรือยอร์ซ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="10" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[พนักงานสอบสวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="35" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[พนักงานสอบสวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="61" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[พนักงานสอบสวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="87" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[พนักงานสอบสวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="113" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[พนักงานสอบสวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="10" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ส่งตรวจพิสูจน์]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="35" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ส่งตรวจพิสูจน์]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="61" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ส่งตรวจพิสูจน์]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="87" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ส่งตรวจพิสูจน์]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="113" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ส่งตรวจพิสูจน์]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="10" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[คดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="35" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[คดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="61" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[คดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="87" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[คดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="113" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[คดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="10" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ของกลางจำนวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="35" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ของกลางจำนวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="61" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ของกลางจำนวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="86" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ของกลางจำนวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="113" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ของกลางจำนวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="514" y="10" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ลิตร]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="514" y="35" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ซอง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="514" y="113" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ลำ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="513" y="61" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[สำรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="513" y="86" width="100" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[คัน]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>

@@ -1,0 +1,1166 @@
+body
+{
+	margin: 0 0 0 0;
+	background-color:#FFFFFF;
+}
+p {
+	font-family: arial, Helvetica, sans-serif;
+	font-size:12px; }
+th {
+	font-family: arial, Helvetica, sans-serif;
+	font-size:12px; }
+td {
+	font-family: arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+select {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+
+A.lnkwhite {
+	color:#FFFFFF;
+	text-decoration: none;
+	font-weight: normal;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+A.lnkwhite:visited{
+	color:#FFFFFF;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+A.lnkwhite:hover{
+	color:#FFFFFF;
+	text-decoration: underline;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+A.lnkwhite:link{
+	color:#FFFFFF;
+	text-decoration: none;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+A.lnkwhite:active{
+	color: #FFFFFF;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+
+A.lnkgray {
+	color:#8C8C8E;
+	text-decoration: underline;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+A.lnkgray:visited{
+	color:#FFFFFF;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+A.lnkgray:hover{
+	color:#FFFFFF;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: underline;
+}
+A.lnkgray:link{
+	color:#8C8C8E;
+	text-decoration: none;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+A.lnkgray:active{
+	color: #FFFFFF;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+A.lnkleftmenu {
+	color: #454547;
+	text-decoration: none;
+	font-weight: normal;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+A.lnkleftmenu:visited{
+	color: #454547;
+}
+
+A.lnkleftmenu:hover{
+	color: #454547;
+	text-decoration: underline;
+	font-weight: bold;
+}
+A.lnkleftmenu:link{
+	color: #454547;
+	text-decoration: none;
+}
+A.lnkleftmenu:active{
+	color: #454547;
+	text-decoration: none;
+}
+
+A.lnkleftsubmenu {
+	color: #454547;
+	text-decoration: none;
+	font-weight: normal;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+A.lnkleftsubmenu:visited{
+	color: #454547;
+	text-decoration: none;
+}
+
+A.lnkleftsubmenu:hover{
+	color: #454547;
+	text-decoration: underline;
+	/*font-weight: normal;*/
+}
+A.lnkleftsubmenu:link{
+	color: #454547;
+	text-decoration: none;
+}
+A.lnkleftsubmenu:active{
+	color: #454547;
+	text-decoration: none;
+}
+.barContent{
+	background-color: #F56991;
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	height:30px;
+	line-height: 18px;
+	vertical-align: top;
+	overflow: hidden;
+	padding-left:5px;
+}
+.titlebar{
+	background-color: #F56991;
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	vertical-align: top;
+	overflow: hidden;
+	padding-left:5px;
+	line-height: 18px;
+}
+.btnAutoWrap {
+background-color:#FF950D;
+border-bottom:1px solid #666;
+border-left:1px solid #FFAA3D;
+border-right:1px solid #666;
+border-top:1px solid #FFAA3D;
+color:#FFF;
+cursor:pointer;
+display:block, inline;
+margin-top:10px;
+min-height:22px;
+overflow:visible;
+text-align:center;
+vertical-align:middle;
+white-space:normal;
+width:100px;
+word-wrap:break-word;
+}
+
+.btnAutoWrap:hover {
+background-color: #FEBB64;
+}
+.spanLink
+{
+	color:#000099;
+	text-decoration: none;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	cursor:pointer;;
+}
+
+.websitename {
+	font-size:30px;
+	color:#723373;
+}
+	
+.sectionname {
+	font-size:18px;
+	font-weight:bold;
+}
+
+.TblHeaderColumn{
+	background-color:#666666;
+	background-color:#D7D7D7;
+	height:30;
+	color:#FFFFFF;
+	color:#000000;
+	font-weight:bold;
+	text-align:center;
+}
+
+.spanLinkNo
+{
+	color:#000099;
+	text-decoration: none;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+.barButton{
+	/*background-color: #F56991;*/
+	color: #000000;
+	vertical-align: top;
+	overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+	font-size: 11px;
+	border-width: 2;
+	height: 23px;
+	/*width: auto;*/
+	background-color:#66CC00;
+     border-color:#339900;
+	cursor:pointer;
+}
+.barbutton{
+	/*background-color: #F56991;*/
+	 color: #000000;
+	 vertical-align: top;
+	 overflow: hidden;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight:bold;
+	 font-size: 11px;
+	 border-width: 2;
+	 height: 23px;
+	/*width: auto;*/
+	 background-color:#66CC00;
+     border-color:#339900;
+	 cursor:pointer;
+}
+.ButtonPage{
+	background-color:#ABBCD0;
+	border : solid 1px  #5D79A1;
+	color:White ;
+	font-family: Tahoma, Verdana,'Times New Roman';
+	width: 70px;
+}
+.btnPrintInv{
+	font-family: Tahoma, Verdana,'Times New Roman';
+	width: 75px;
+	color: #000000;
+	height:25px;
+	line-height: 22px;
+	vertical-align: top;
+	overflow: hidden;
+	padding-left:2px;
+}
+.textboxsearch {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	width: 118px;
+	height: 16px;
+	font-size: 12px;
+	border: 1px solid #5D79A1;
+	color: #3f3f3f;
+}
+
+.textbox {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	height: 18px;
+	border: 1px solid #9597aa;
+	color: #000000;
+	width: auto;
+}
+
+.textboxlist
+{
+	border:0px;
+	text-align:center;
+	color:#000000;
+}
+
+.textboxAlignRight {
+	text-align:right;
+}
+
+.textboxform
+{
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	height: 18px;
+	border: 1px solid #5E7AA1;
+	color: #454547;
+	width: 180px;
+	
+}
+.textview
+{
+	font-family:Tahoma;
+	font-size:9pt;
+	/* color:#7d129c; */
+	color:#000000;
+	background-color:#EEEEEE;
+	vertical-align:baseline;
+	border:#EEEEEE 2px solid;
+	width: auto;
+}
+.textView
+{
+	font-family:Tahoma;
+	font-size:9pt;
+	color:#000000;
+	background-color:#EEEEEE;
+	vertical-align:baseline;
+	border:#EEEEEE 2px solid;
+	width: auto;
+}
+.textViewNum {
+	font-family: Tahoma;
+	font-size: 9pt;
+	text-align:right;
+	color:#000000;
+	background-color:#EEEEEE;
+	vertical-align:baseline;
+	border:#EEEEEE 2px solid;
+}
+
+.textNum {
+	font-family: Tahoma;
+	font-size: 9pt;
+	text-align:right;
+}
+
+.headername {
+	font-size:25px;
+	color:#723373;
+}
+.headername2 {
+	font-size:20px;
+	color:#723373;
+}
+.textdate
+{
+	font-family:Tahoma;
+	font-size:9pt;
+	color:#7d129c;
+	background-color:#EEEEEE;
+	vertical-align:baseline;
+	border:#EEEEEE 2px solid;
+	width:70px;
+}
+
+.textreadonly {
+    font-family:Tahoma;
+	font-size:9pt;
+	color:#7d129c;
+	background-color:#EEEEEE;
+	vertical-align:baseline;
+	border:#EEEEEE 2px solid;
+}
+
+.textarea {
+  	font-family: Arial, Helvetica, sans-serif;
+  	border-width: 1px;
+  	border-color: #5E7AA1;
+  	background-color: #FFFFFF;
+  	border-style: solid;
+  	width: 200px;
+}
+
+.textareabig {
+  	font-family: Arial, Helvetica, sans-serif;
+  	border-width: 1px;
+  	border-color: #5E7AA1;
+  	background-color: #FFFFFF;
+  	border-style: solid;
+  	width: 400px;
+}
+
+.textareabig2 {
+  	font-family: Arial, Helvetica, sans-serif;
+  	border-width: 1px;
+  	border-color: #5E7AA1;
+  	background-color: #FFFFFF;
+  	border-style: solid;
+  	width: 500px;
+}
+
+.select {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	height: 20px;
+	border: 1px solid #9597aa;
+	color: #454547;
+	width: auto;
+}
+
+.button {
+  	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 11px;
+	font-weight: bold;
+	border :0;
+	height: 23px;
+	/*width: auto;*/
+	overflow:visible;
+	background-image: url(images/bk_button.jpg);
+	background-color: #D4D0C8;
+	background-repeat : repeat-x;
+	padding:4px 10px 3px 10px; /* IE6 */
+	cursor:hand;
+}
+
+.buttoninvisible {
+  	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: normal;
+	border :0;
+	height: 23px;
+	width: 71px;
+	background-image: url(images/bk_button.jpg);
+	background-color: #5C7496;
+	background-repeat : repeat-x;
+	display:none;
+}
+
+.whitebody {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+
+.graylight{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color: #D2D2D4;
+}
+
+.graydark{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color: #8C8C8E;
+}
+
+.footer {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #414140;
+}
+
+.body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #454547;
+}
+
+.bigbody {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #454547;
+	font-weight: normal;
+
+}
+
+.black{
+	color: #000000;
+	font: Arial, Helvetica, sans-serif;
+	background-color:#ebebeb;
+}
+.red{
+	font-size: 11px;
+	color: #FF0000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.blue
+{
+	color: #FFFFFF;
+	background-color : #5C7496;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	border:0px;
+}
+.dropdown {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	height: 20px;
+	font-size: 11px;
+	border: 1px solid #5E7AA1;
+	color: #454547;
+	width: 180px;
+	padding :0px;
+}
+.dropdowngray {
+	border: 1px solid #8C8C8E;
+	border-style: solid;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	background-color: #454547;
+	color: #FFFFFF;
+}
+
+.dropdownblue {
+	border: 1px solid #5D79A1;
+	border-style: solid;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	background-color: #FFFFFFF;
+	color: #3f3f3f;
+}
+.container {
+border: 0;
+text-align: center;
+background-color:#FFFFFF;
+}
+#mainTable
+{
+	margin: 0 0 0 0;
+	padding: 0;
+	font-size: 8px;
+	background-color :White ;
+
+}
+#header
+{
+   background-color:#454547;
+   color:#8C8C8E;
+   font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+
+}
+.buttongraydark
+{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: normal;
+	border :0;
+	background-color: #636365;
+	width:100px;
+	cursor: hand;
+}
+
+.textdetail
+{
+	color: #000000;
+	font-weight: normal;
+	border :0;
+	vertical-align :middle;
+}
+.textrequired
+{
+	font-family: Arial, Helvetica, sans-serif;
+	color: red;
+	font-size: 11px;
+	font-weight: normal;
+	border :0;
+}
+
+.Listbox
+{
+    border : solid 1 #ffffff ;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	width : 200px;
+	color:#454547;
+
+}
+td.GrayHeader
+{
+	color:#FFFFFF;
+	height:25px;
+	background-color:#454547;
+	text-align :center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+
+}
+/*Gridview CSS*/
+.Grid
+{	border: 0;
+	border-style : none;
+	border-width :0;
+	margin: 0px 0px 0px 0px;
+	padding:  0px 0px 0px 1px;
+	text-align: left;
+}
+
+.Grid td
+{
+	/*border: solid 1px #FFFFFF;*/
+	border :0;
+	margin: 0px 0px 0px 0px;
+	padding: 0px  0px 0px 3px;
+	text-align: left;
+	height:26px;
+	font-family : Arial Tahoma Verdana ;
+	font-size :12px;
+}
+.GridFooter
+{
+	background-color: #636365;
+    color: White;
+    text-align: right;
+    height : 1px;
+}
+.GridHeader
+{
+	font-weight: bold;
+	background-color:#4A004A;
+	text-decoration: none;
+	text-align: left;
+	color: White;
+	height: 30px;
+	padding : 0px 0px 0px 0px;
+	margin: 0px;
+	line-height:15px;
+	/*border-top-width :0;
+	border-left:solid 1px #FFFFFF;
+	border-right:solid 1px #FFFFFF;
+	border-bottom-width :0; */
+}
+.GridHeader a:link {
+    color : white;
+    text-decoration : none;
+    height: 27px;
+}
+
+.GridHeader a:visited {
+    color : white;
+    text-decoration : none;
+    height: 27px;
+}
+
+.GridHeader a:hover {
+    color : white;
+    text-decoration : none;
+    height: 27px;
+}
+
+.GridHeader a:active {
+    color : white;
+    text-decoration : none;
+    height: 27px;
+}
+
+
+.GridItem
+{
+/*background-color: #FFFFFF;*/
+height: 20px;
+}
+
+.GridAltItem
+{
+background-color: #EAEAEA;
+height: 20px;
+}
+
+
+/*Grid Blue Color for Job Request */
+.GridBlue
+{	border: 0;
+	border-style : none;
+	border-width :0;
+	margin: 0px 0px 0px 0px;
+	padding:  0px 0px 0px 1px;
+	text-align: left;
+}
+
+.GridBlue td
+{
+	/*border: solid 1px #FFFFFF;*/
+	border :0;
+	margin: 0px 0px 0px 0px;
+	padding: 0px  0px 0px 3px;
+	text-align: left;
+	height:26px;
+	font-family : Arial Tahoma Verdana ;
+	font-size :12px;
+}
+.GridBlue td.colblack
+{
+	/*border: solid 1px #FFFFFF;*/
+	border :0;
+	margin: 0px 0px 0px 0px;
+	padding: 0px  3px 0px  1px;
+	text-align: right;
+	height:20px;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight : bold ;
+	font-size :11px;
+	background-color:#EBEBEB;
+}
+
+.GridItem a:hover{
+	color: #454547;
+	text-decoration: underline;
+}
+.GridItem a:visited {color: #454547;
+}
+.GridItem a:link {color: #454547;
+	text-decoration: none;
+}
+.GridItem a:active {color: #454547;
+	text-decoration: none;
+}
+
+
+.GridAltItem a:hover{
+	color: #454547;
+	text-decoration: underline;
+}
+.GridAltItem a:visited {color: #454547;
+}
+.GridAltItem a:link {color: #454547;
+	text-decoration: none;
+}
+.GridAltItem a:active {color: #454547;
+	text-decoration: none;
+}
+
+.EmptyRowStyle td /*Common Styles*/
+{
+	    /*padding: 5px;*/
+	    padding-top : 80px;
+	    text-align : center ;
+	    padding-bottom : 80px;
+}
+.GridHeaderBlue
+{
+	font-weight: bold;
+	background-color: #5C7496;
+	text-decoration: none;
+	text-align: center;
+	color: White;
+	height: 20px;
+	padding : 0px 0px 0px 0px;
+	margin: 0px;
+
+}
+.GridHeaderBlue a:link {
+    color : white;
+    text-decoration : none;
+    height: 20px;
+}
+
+.GridHeaderBlue a:visited {
+    color : white;
+    text-decoration : none;
+    height: 20px;
+}
+
+.GridHeaderBlue a:hover {
+    color : white;
+    text-decoration : none;
+    height: 20px;
+}
+
+.GridHeaderBlue a:active {
+    color : white;
+    text-decoration : none;
+    height: 20px;
+}
+
+
+.GridItemBlue
+{
+padding: 0 0 0 3;
+height: 20px;
+vertical-align :top;
+}
+.GridAltItemBlue
+{
+background-color: #EAEAEA;
+height: 20px;
+vertical-align :top;
+}
+/*Grid Detail*/
+.GridHeaderDetail
+{
+	font-weight: bold;
+	background-color: #FFFFFF;
+	text-decoration: none;
+	text-align: center;
+	color: Black;
+	height: 20px;
+	padding : 0px 0px 0px 0px;
+	margin: 0px;
+
+}
+
+
+/*** calendar_dpopdown ***/
+#calender{
+	width: 250px;
+	font-family: ms sans serif, sans serif;
+	font-size: 7pt;
+}
+#calenderTable{
+	border-style: outset;
+	border-width: 1px;
+	border-color: white;
+	background-color: #EEE;
+	display: none;
+	z-index: 99;
+	top: 150px;
+	left: 150px;
+}
+#calenderTable TD {
+	text-align: center;
+	font-size: 7pt;
+	width: 19px;
+}
+#calenderTableHead TR {
+	background-color: white;
+}
+#calenderTableDays TR {
+	background-color: #C3D4E7;
+}
+#selectMonth, #selectYear{
+	font-family: ms sans serif, sans serif;
+	font-size: 7pt;
+	border-width: 0px;
+	border-style: none;
+}
+#calenderTable A{
+	color: blue;
+	text-decoration: none;
+	font-size: 11pt;
+	font-family: "courier new";
+}
+#calenderTable A:hover{
+	color: red;
+	text-decoration: none;
+}
+
+.normalDay{
+	border: 1px dotted black;
+	cursor: pointer;
+}
+.hlDay{
+	border: 1px dotted black;
+	background-color: #FFF;
+	color: red;
+	cursor: pointer;
+}
+.toDay{
+	border: 1px solid #E70;
+	background-color: #FD8;
+	color: #E70;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.choosenDay{
+	border: 1px solid green;
+	background-color: #A8FAA8;
+	color: green;
+	font-weight: bold;
+	cursor: pointer;
+}
+.ucubdwhite{
+	font-family:Tahoma;
+	font-size:11px;
+	color:#ffffff;
+	text-decoration:none;
+}
+/*** calendar_dpopdown ***/
+.CheckBoxList
+{
+font-weight: bold;
+font-family: Tahoma, Verdana, 'Times New Roman';
+}
+.CheckBoxList label
+ {
+ color:black;
+ text-align : left;
+ margin-left : 10px;
+ margin-right :10px;
+ padding-left : 10px;
+ }
+ .CheckBox
+ {
+	vertical-align : top;
+	color: blue;
+	 margin-left : 10px;
+ }
+.bluebutton
+{
+	background-color:#ABBCD0;
+	border : solid 1px  #5D79A1;
+	color:White ;
+	font-family: Tahoma, Verdana,'Times New Roman';
+	width: 65px;
+}
+
+/*for autoCompleted Div Ajax */
+#searchCustomerID_list
+{
+	background-color:White;
+	width:200px;
+}
+#searchCustomerID_list div.item
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color:White;
+	cursor:hand;
+	padding-left:2px;
+	height:16px;
+}
+#searchCustomerID_list div.selected
+{
+	background-color:Blue;
+	color:White
+}
+/*detailsView*/
+.detailsview .actions div {
+	float: right;
+	text-align: right;
+	width: 95px;
+	padding-right: 2px;
+}
+.detailsview td {
+	background: #D7E6F4;
+	color: #333333;
+	font: small "Segoe UI", Segoe, sans-serif;
+	padding: 15px 10px 10px 10px;
+}
+.detailsview td a {
+	color: #0066CC;
+	font: bold small "Segoe UI", Segoe, sans-serif;
+	padding-right: 10px;
+}
+.detailsview td a:hover {
+	font-weight: bold;
+	color: #333;
+}
+.detailsview th {
+	background: #4168BD;
+	color: #FFFFFF;
+	font: small "Segoe UI", Segoe, sans-serif;
+	letter-spacing: 0;
+	padding: 3px 8px 5px;
+	padding: 2px;
+	text-align: left;
+}
+.detailsview tr.header {
+	background: #C5DBF7;
+	padding: 3px 8px 5px;
+}
+
+
+.menutitle {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 0px; CURSOR: pointer; PADDING-TOP: 0px; TEXT-ALIGN: left;
+}
+.submenu {
+	MARGIN-BOTTOM: 0em
+}
+
+
+.style3 {
+	font-size: 16px;
+	color: #414140;
+}
+.style6 {color: #454547}
+
+/**************************Leb Create 20090615 ******************************/
+
+/**************************Leb Create 20090615 ******************************/
+
+
+
+/**************************Create by Pannawith 5 Aug 2009 ******************************/
+<!-- ********************************** -->
+<!-- 			Table Style 			-->
+<!-- ********************************** -->
+
+<!-- 			Table List Data 			-->
+
+.TblRow{
+	height:30;
+	font-weight:normal;
+	vertical-align:middle;
+}
+.AlignLeft{
+text-align:left;
+}
+.AlignCenter{
+text-align:center;
+}
+.AlignRight{
+text-align:right;
+}
+.bgRowWhite{
+background-color:#FFFFFF;
+}
+.bgRowGray{
+background-color:#F3F3F3;
+}
+.tblBoderStyle
+{
+	border-top-color:#000000 solid;
+}
+.total{text-align:right;}
+
+<!-- ********************************** -->
+<!-- 			Link Style 				-->
+<!-- ********************************** -->
+A.linksignout:link{
+	color:#D7EBFF;
+	text-decoration: none;
+	font-size:11px;
+	font-weight: bold;
+}
+A.linksignout:hover{
+	color:#FFFFFF;
+	text-decoration: underline;
+}
+
+A.linkmenu3level{
+	color:#000099;
+	text-decoration: none;
+	font-size:11px;
+	font-weight: bold;
+}
+A.linkmenu3level:hover{
+	color:#000099;
+	text-decoration: underline;
+}
+A.linkmenu3level:link{
+	color: #000099;
+	text-decoration: none;
+}
+A.linkmenu3level:active{
+	color: #000099;
+	text-decoration: none;
+}
+A.linkmenu3level:visited{{
+	color: #000099;
+}
+
+A.linkleftmenu {
+	color: #454547;
+	text-decoration: none;
+	font-weight: bold;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+A.linkleftmenu:hover{
+	color: #454547;
+	text-decoration: underline;
+}
+A.linkleftmenu:link{
+	color: #454547;
+	text-decoration: none;
+}
+A.linkleftmenu:active{
+	color: #454547;
+	text-decoration: none;
+}
+
+
+A.linkleftsubmenu {
+	color: #454547;
+	text-decoration: none;
+	font-weight: normal;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+A.linkleftsubmenu:hover{
+	color: #454547;
+	text-decoration: underline;
+	/*font-weight: normal;*/
+}
+
+A.linkdatarow {
+	color:#000099;
+	text-decoration: none;
+	font-weight: bold;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+A.linkdatarow:hover{
+	color: #000099;
+	text-decoration: underline;
+	/*font-weight: normal;*/
+}
+<!-- ********************************** -->
+<!-- 			Menu Style 				-->
+<!-- ********************************** -->
+.submenuborder {
+	background-color:#CCCCCC;
+}
+.submenucontent {
+	background-color:#F7F7F7;
+}
+
+<!-- ********************************** -->
+<!-- 			Font Style 				-->
+<!-- ********************************** -->
+
+
+
+.logindetail {
+	font-size:11px;
+	font-weight:bold;
+}
+.logindetailnormal {
+	font-size:11px;
+	font-weight:normal;
+}
+.logindetailwhite {
+	font-size:11px;
+	color:#FFFFFF;
+	font-weight:bold;
+}
+.logindetailnormalwhite {
+	font-size:11px;
+	color:#FFFFFF;
+	font-weight:normal;
+}
+
+.footerdetail {
+	font-size:11px;
+	font-weight:normal;
+	color:#F5F5F5;
+}
+
+.odd {
+    background-color: #cccccc;
+}
+
+.even {
+    background-color: #f7f2f2;
+}
+
+.keylink {
+    text-decoration:underline;
+}
+.keylink:hover{
+    text-decoration:underline;
+    cursor:hand;
+}
+
+.even_gray{
+    background-color: #f7f4f4;
+}
+
+.odd_gray{
+    background-color: #ffffff;
+
+}

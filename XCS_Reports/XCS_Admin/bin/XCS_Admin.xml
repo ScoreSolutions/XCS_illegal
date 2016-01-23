@@ -1,0 +1,6491 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+XCS_Admin
+</name>
+</assembly>
+<members>
+<member name="F:XCS_Admin.ucRewardRequestAlcohol.lblApplicationRewardRequestID">
+	<summary>
+lblApplicationRewardRequestID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.txtAcceptDate">
+	<summary>
+txtAcceptDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.txtReportTo">
+	<summary>
+txtReportTo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.Label29">
+	<summary>
+Label29 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblProveStaffName">
+	<summary>
+lblProveStaffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblProveStaffPosname">
+	<summary>
+lblProveStaffPosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblSueStaffName">
+	<summary>
+lblSueStaffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblSueStaffPosname">
+	<summary>
+lblSueStaffPosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblCaseTotalFine">
+	<summary>
+lblCaseTotalFine control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.alCaseTotalFine">
+	<summary>
+alCaseTotalFine control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblBribeP">
+	<summary>
+lblBribeP control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblBribeMoney">
+	<summary>
+lblBribeMoney control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.alBirbeText">
+	<summary>
+alBirbeText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblRewardP">
+	<summary>
+lblRewardP control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblRewardMoney">
+	<summary>
+lblRewardMoney control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.alRewardText">
+	<summary>
+alRewardText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.txtAcceptLean">
+	<summary>
+txtAcceptLean control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblAccuserName">
+	<summary>
+lblAccuserName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.btnSearchAccuserStaff">
+	<summary>
+btnSearchAccuserStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.frmSearchAccuserStaff">
+	<summary>
+frmSearchAccuserStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblAccuserStaffID">
+	<summary>
+lblAccuserStaffID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblAccuserPoscode">
+	<summary>
+lblAccuserPoscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblAccuserOffcode">
+	<summary>
+lblAccuserOffcode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblAccuserPosname">
+	<summary>
+lblAccuserPosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblAccuserOffname">
+	<summary>
+lblAccuserOffname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.txtAcceptDesc">
+	<summary>
+txtAcceptDesc control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.txtLeaderLean">
+	<summary>
+txtLeaderLean control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.rdiLeaderAccept">
+	<summary>
+rdiLeaderAccept control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.txtLeaderDenyReason">
+	<summary>
+txtLeaderDenyReason control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblLeaderName">
+	<summary>
+lblLeaderName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblLeaderStaffID">
+	<summary>
+lblLeaderStaffID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblLeaderPoscode">
+	<summary>
+lblLeaderPoscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.btnSearchLeaderStaff">
+	<summary>
+btnSearchLeaderStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.frmSearchLeaderStaff">
+	<summary>
+frmSearchLeaderStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblLeaderPosname">
+	<summary>
+lblLeaderPosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.txtSectionDirectorLean">
+	<summary>
+txtSectionDirectorLean control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.rdiSectionDirectorAccept">
+	<summary>
+rdiSectionDirectorAccept control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.txtSectionDirectorDenyReason">
+	<summary>
+txtSectionDirectorDenyReason control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblSectionDirectorName">
+	<summary>
+lblSectionDirectorName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblSectionDirectorStaffID">
+	<summary>
+lblSectionDirectorStaffID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblSectionDirectorPoscode">
+	<summary>
+lblSectionDirectorPoscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.btnSearchSectionDirectorStaff">
+	<summary>
+btnSearchSectionDirectorStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.frmSearchSectionDirectorStaff">
+	<summary>
+frmSearchSectionDirectorStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblSectionDirectorPosname">
+	<summary>
+lblSectionDirectorPosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.rdiResDirectorAccept">
+	<summary>
+rdiResDirectorAccept control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.txtResDirectorDenyReason">
+	<summary>
+txtResDirectorDenyReason control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblResDirectorName">
+	<summary>
+lblResDirectorName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblResDirectorStaffID">
+	<summary>
+lblResDirectorStaffID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblResDirectorPoscode">
+	<summary>
+lblResDirectorPoscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.btnSearchResDirectorStaff">
+	<summary>
+btnSearchResDirectorStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.frmSearchResDirectorStaff">
+	<summary>
+frmSearchResDirectorStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestAlcohol.lblResDirectorPosname">
+	<summary>
+lblResDirectorPosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin._Default.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtTrack_no">
+	<summary>
+txtTrack_no control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.btnSearchData">
+	<summary>
+btnSearchData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label39">
+	<summary>
+Label39 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.lblLoginHisID">
+	<summary>
+lblLoginHisID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label16">
+	<summary>
+Label16 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.TxtApplicationDate">
+	<summary>
+TxtApplicationDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label50">
+	<summary>
+Label50 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.frmSearchDepartment1">
+	<summary>
+frmSearchDepartment1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label40">
+	<summary>
+Label40 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label17">
+	<summary>
+Label17 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtOccuranceDate">
+	<summary>
+txtOccuranceDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label34">
+	<summary>
+Label34 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtOccuranceTime">
+	<summary>
+txtOccuranceTime control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.lblOffName">
+	<summary>
+lblOffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label41">
+	<summary>
+Label41 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtOffCode">
+	<summary>
+txtOffCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label18">
+	<summary>
+Label18 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.rdLawbreakType">
+	<summary>
+rdLawbreakType control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label13">
+	<summary>
+Label13 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.ddlLegislation">
+	<summary>
+ddlLegislation control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label42">
+	<summary>
+Label42 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label19">
+	<summary>
+Label19 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.rdHaveCluprit">
+	<summary>
+rdHaveCluprit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.chkIsSendToCourt">
+	<summary>
+chkIsSendToCourt control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label45">
+	<summary>
+Label45 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.ddlProductGroupID">
+	<summary>
+ddlProductGroupID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label43">
+	<summary>
+Label43 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label20">
+	<summary>
+Label20 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtEstimatFine">
+	<summary>
+txtEstimatFine control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label33">
+	<summary>
+Label33 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.rdAccuserType">
+	<summary>
+rdAccuserType control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtAccuserIDcardNo">
+	<summary>
+txtAccuserIDcardNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label21">
+	<summary>
+Label21 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtAccuserPOSCode">
+	<summary>
+txtAccuserPOSCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label27">
+	<summary>
+Label27 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtAccuserOffCode">
+	<summary>
+txtAccuserOffCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label28">
+	<summary>
+Label28 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.lblAccuserName">
+	<summary>
+lblAccuserName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.lblAccuserPosName">
+	<summary>
+lblAccuserPosName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.lblAccuserOffName">
+	<summary>
+lblAccuserOffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.btnSearchDivide_staff_popForArrest">
+	<summary>
+btnSearchDivide_staff_popForArrest control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.frmSearchAccuser1">
+	<summary>
+frmSearchAccuser1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label49">
+	<summary>
+Label49 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtScene_Name">
+	<summary>
+txtScene_Name control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label44">
+	<summary>
+Label44 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label22">
+	<summary>
+Label22 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.ddlSceneProvince">
+	<summary>
+ddlSceneProvince control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label46">
+	<summary>
+Label46 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtSceneNo">
+	<summary>
+txtSceneNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label14">
+	<summary>
+Label14 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtSceneMoo">
+	<summary>
+txtSceneMoo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label23">
+	<summary>
+Label23 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.ddlSceneDistrict">
+	<summary>
+ddlSceneDistrict control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label47">
+	<summary>
+Label47 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label9">
+	<summary>
+Label9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtSceneSoi">
+	<summary>
+txtSceneSoi control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label24">
+	<summary>
+Label24 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.ddlScebeSubDistrict">
+	<summary>
+ddlScebeSubDistrict control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label48">
+	<summary>
+Label48 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label10">
+	<summary>
+Label10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtSceneRoad">
+	<summary>
+txtSceneRoad control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label25">
+	<summary>
+Label25 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtPoliceStation">
+	<summary>
+txtPoliceStation control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label32">
+	<summary>
+Label32 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label11">
+	<summary>
+Label11 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.lblNoOfLawbreak">
+	<summary>
+lblNoOfLawbreak control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label15">
+	<summary>
+Label15 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.chkAllegedCo">
+	<summary>
+chkAllegedCo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label26">
+	<summary>
+Label26 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtCoordinateX">
+	<summary>
+txtCoordinateX control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label31">
+	<summary>
+Label31 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtCoordinateY">
+	<summary>
+txtCoordinateY control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.UpdatePanel7">
+	<summary>
+UpdatePanel7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.btnSave">
+	<summary>
+btnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.UpdatePanel2">
+	<summary>
+UpdatePanel2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.TabContainer1">
+	<summary>
+TabContainer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.tabImdictment">
+	<summary>
+tabImdictment control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.btnAddIndictment">
+	<summary>
+btnAddIndictment control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.frmSearchIndictment1">
+	<summary>
+frmSearchIndictment1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.btnDeleteIndictment">
+	<summary>
+btnDeleteIndictment control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.gvIndictment">
+	<summary>
+gvIndictment control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.tabLawbreakerList">
+	<summary>
+tabLawbreakerList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.btnAddArrestLawbreaker">
+	<summary>
+btnAddArrestLawbreaker control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.frmPopArrestLawbreaker1">
+	<summary>
+frmPopArrestLawbreaker1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.btnDeleteArrestLawbreaker">
+	<summary>
+btnDeleteArrestLawbreaker control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.gvArrestLawbreaker">
+	<summary>
+gvArrestLawbreaker control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.tabCatchNote">
+	<summary>
+tabCatchNote control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label35">
+	<summary>
+Label35 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtBEHAVIOUR">
+	<summary>
+txtBEHAVIOUR control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label36">
+	<summary>
+Label36 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label37">
+	<summary>
+Label37 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtTESTIMONY">
+	<summary>
+txtTESTIMONY control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.Label38">
+	<summary>
+Label38 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.txtAdministration">
+	<summary>
+txtAdministration control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.tabStaffList">
+	<summary>
+tabStaffList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.btnAddDivide_staff_poplist">
+	<summary>
+btnAddDivide_staff_poplist control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.frmPopArrestTeam1">
+	<summary>
+frmPopArrestTeam1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.btnDeleteDivide_staff_poplist">
+	<summary>
+btnDeleteDivide_staff_poplist control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.gvArrestList">
+	<summary>
+gvArrestList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.tabExhibitList">
+	<summary>
+tabExhibitList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.btnAddArrestExhibit">
+	<summary>
+btnAddArrestExhibit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.frmPopArrestExhibit1">
+	<summary>
+frmPopArrestExhibit1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.btnDelArrestExhibit">
+	<summary>
+btnDelArrestExhibit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.gvExhibitList">
+	<summary>
+gvExhibitList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.tabBookImpeachment">
+	<summary>
+tabBookImpeachment control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.ucBookImpeachment1">
+	<summary>
+ucBookImpeachment1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.tabProveExhisit">
+	<summary>
+tabProveExhisit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.ucProveExhibit1">
+	<summary>
+ucProveExhibit1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.tabCompareCase">
+	<summary>
+tabCompareCase control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.ucCompareCase1">
+	<summary>
+ucCompareCase1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.tabPayFine">
+	<summary>
+tabPayFine control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmArrestAdminEdit.ucPayFine1">
+	<summary>
+ucPayFine1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchIndictment.Panel1">
+	<summary>
+Panel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchIndictment.imgClose">
+	<summary>
+imgClose control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchIndictment.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchIndictment.ddlLegislation">
+	<summary>
+ddlLegislation control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchIndictment.Label10">
+	<summary>
+Label10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchIndictment.txtGUILT_BASE">
+	<summary>
+txtGUILT_BASE control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchIndictment.Label9">
+	<summary>
+Label9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchIndictment.txtPENALTY_DESC">
+	<summary>
+txtPENALTY_DESC control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchIndictment.btnSearch">
+	<summary>
+btnSearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchIndictment.btnSelect">
+	<summary>
+btnSelect control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchIndictment.PageControl1">
+	<summary>
+PageControl1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchIndictment.gvData">
+	<summary>
+gvData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchIndictment.Button1">
+	<summary>
+Button1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchIndictment.zPopSearchIndictment">
+	<summary>
+zPopSearchIndictment control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.txtDivideNo">
+	<summary>
+txtDivideNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.btnSearchData">
+	<summary>
+btnSearchData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.Label39">
+	<summary>
+Label39 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.lblLoginHisID">
+	<summary>
+lblLoginHisID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.lblRewardDivideID">
+	<summary>
+lblRewardDivideID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.Label16">
+	<summary>
+Label16 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.txtDivideDate">
+	<summary>
+txtDivideDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.Label50">
+	<summary>
+Label50 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.txtReceiveDate">
+	<summary>
+txtReceiveDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.lblCompareCaseNo">
+	<summary>
+lblCompareCaseNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.lblCompareCaseDate">
+	<summary>
+lblCompareCaseDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.lblLegislationName">
+	<summary>
+lblLegislationName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.lblLegislationID">
+	<summary>
+lblLegislationID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.lblOffname">
+	<summary>
+lblOffname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.lblCaseTotalFine">
+	<summary>
+lblCaseTotalFine control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.lblAccuserName">
+	<summary>
+lblAccuserName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.lblBribeMoney">
+	<summary>
+lblBribeMoney control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.lblLawbreakerName">
+	<summary>
+lblLawbreakerName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.lblRewardMoney">
+	<summary>
+lblRewardMoney control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.lblTreasuryMoney">
+	<summary>
+lblTreasuryMoney control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.ucRewardDivideTax1">
+	<summary>
+ucRewardDivideTax1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.ucRewardDivideAlcohol1">
+	<summary>
+ucRewardDivideAlcohol1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.txtRemark">
+	<summary>
+txtRemark control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.UpdatePanel7">
+	<summary>
+UpdatePanel7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardDivide.btnSave">
+	<summary>
+btnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Panel1">
+	<summary>
+Panel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.imgClose">
+	<summary>
+imgClose control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.ddlCULPRIT">
+	<summary>
+ddlCULPRIT control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label50">
+	<summary>
+Label50 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtSeq">
+	<summary>
+txtSeq control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtAppLawbreakerID">
+	<summary>
+txtAppLawbreakerID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.pnl1">
+	<summary>
+pnl1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtIDCardNo">
+	<summary>
+txtIDCardNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label53">
+	<summary>
+Label53 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.rdSex">
+	<summary>
+rdSex control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label9">
+	<summary>
+Label9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.ddlTitle">
+	<summary>
+ddlTitle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtName">
+	<summary>
+txtName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label23">
+	<summary>
+Label23 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtLastName">
+	<summary>
+txtLastName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.btnSearchArrestLawbreaker">
+	<summary>
+btnSearchArrestLawbreaker control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label10">
+	<summary>
+Label10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtOtherName">
+	<summary>
+txtOtherName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.pnl2">
+	<summary>
+pnl2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label54">
+	<summary>
+Label54 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtLAWBREAKER_PASSPORT">
+	<summary>
+txtLAWBREAKER_PASSPORT control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.rdSex2">
+	<summary>
+rdSex2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label22">
+	<summary>
+Label22 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label55">
+	<summary>
+Label55 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.ddlTitle2">
+	<summary>
+ddlTitle2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label56">
+	<summary>
+Label56 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtName2">
+	<summary>
+txtName2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label60">
+	<summary>
+Label60 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label57">
+	<summary>
+Label57 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtMidName">
+	<summary>
+txtMidName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label58">
+	<summary>
+Label58 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtLastName2">
+	<summary>
+txtLastName2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label59">
+	<summary>
+Label59 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtOtherName2">
+	<summary>
+txtOtherName2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.pnl3">
+	<summary>
+pnl3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label61">
+	<summary>
+Label61 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtExcNo">
+	<summary>
+txtExcNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label62">
+	<summary>
+Label62 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtCorpNo">
+	<summary>
+txtCorpNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label63">
+	<summary>
+Label63 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.ddlEXCTitle">
+	<summary>
+ddlEXCTitle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtEXCName">
+	<summary>
+txtEXCName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label65">
+	<summary>
+Label65 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label64">
+	<summary>
+Label64 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.ddlTitle3">
+	<summary>
+ddlTitle3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtName3">
+	<summary>
+txtName3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label26">
+	<summary>
+Label26 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtLastName3">
+	<summary>
+txtLastName3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label66">
+	<summary>
+Label66 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtOtherName3">
+	<summary>
+txtOtherName3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label11">
+	<summary>
+Label11 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtAddress">
+	<summary>
+txtAddress control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label24">
+	<summary>
+Label24 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtMoo">
+	<summary>
+txtMoo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label12">
+	<summary>
+Label12 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtSoi">
+	<summary>
+txtSoi control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label13">
+	<summary>
+Label13 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtRoad">
+	<summary>
+txtRoad control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label14">
+	<summary>
+Label14 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.ddlProvince">
+	<summary>
+ddlProvince control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label15">
+	<summary>
+Label15 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.ddlDistrict">
+	<summary>
+ddlDistrict control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label16">
+	<summary>
+Label16 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.ddlSubDistrict">
+	<summary>
+ddlSubDistrict control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label17">
+	<summary>
+Label17 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.ddlrace">
+	<summary>
+ddlrace control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label25">
+	<summary>
+Label25 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.ddlNationality">
+	<summary>
+ddlNationality control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label18">
+	<summary>
+Label18 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtCAREER">
+	<summary>
+txtCAREER control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label19">
+	<summary>
+Label19 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtBirthday">
+	<summary>
+txtBirthday control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label20">
+	<summary>
+Label20 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtFatherName">
+	<summary>
+txtFatherName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label21">
+	<summary>
+Label21 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtMotherName">
+	<summary>
+txtMotherName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.btnAdd">
+	<summary>
+btnAdd control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Button1">
+	<summary>
+Button1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.zPopArrestLawbreaker">
+	<summary>
+zPopArrestLawbreaker control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Panel2">
+	<summary>
+Panel2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.imgClosePopSearch">
+	<summary>
+imgClosePopSearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label27">
+	<summary>
+Label27 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtSearchName">
+	<summary>
+txtSearchName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Label28">
+	<summary>
+Label28 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.txtSearchIDCard">
+	<summary>
+txtSearchIDCard control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.btnSearch">
+	<summary>
+btnSearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.PageControl1">
+	<summary>
+PageControl1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.gvDataList">
+	<summary>
+gvDataList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.Button2">
+	<summary>
+Button2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestLawbreaker.zPopSearchLawbreaker">
+	<summary>
+zPopSearchLawbreaker control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.txtTime.TextBox1">
+	<summary>
+TextBox1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.txtTime.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAdminQuery.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAdminQuery.txtTextCommand">
+	<summary>
+txtTextCommand control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAdminQuery.btnExecute">
+	<summary>
+btnExecute control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAdminQuery.lblMsg">
+	<summary>
+lblMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAdminQuery.GridView1">
+	<summary>
+GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.lblTrackNo">
+	<summary>
+lblTrackNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.lblCaseNonOffice">
+	<summary>
+lblCaseNonOffice control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.txtCaseNo1">
+	<summary>
+txtCaseNo1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.txtCaseNo2">
+	<summary>
+txtCaseNo2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.Label29">
+	<summary>
+Label29 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.txtCaseDate">
+	<summary>
+txtCaseDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.Label12">
+	<summary>
+Label12 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.txtCaseTime">
+	<summary>
+txtCaseTime control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.chkNoneOffice">
+	<summary>
+chkNoneOffice control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.lblSueStaffName">
+	<summary>
+lblSueStaffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.lblSueStaffID">
+	<summary>
+lblSueStaffID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.lblSueStaffOffcode">
+	<summary>
+lblSueStaffOffcode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.btnSearchSueStaff">
+	<summary>
+btnSearchSueStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.frmSearchSueStaff">
+	<summary>
+frmSearchSueStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.Label30">
+	<summary>
+Label30 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.rdiCaseQuality">
+	<summary>
+rdiCaseQuality control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.rdiCaseLast">
+	<summary>
+rdiCaseLast control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.pnlCaseLast">
+	<summary>
+pnlCaseLast control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.txtCaseResult">
+	<summary>
+txtCaseResult control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.txtCaseLastDate">
+	<summary>
+txtCaseLastDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucBookImpeachment.txtCaseFine">
+	<summary>
+txtCaseFine control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmDeleteCase.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmDeleteCase.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmDeleteCase.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmDeleteCase.txtTrackNo">
+	<summary>
+txtTrackNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmDeleteCase.btnDelete">
+	<summary>
+btnDelete control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmDeleteCase.Label39">
+	<summary>
+Label39 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmDeleteCase.lblLoginHisID">
+	<summary>
+lblLoginHisID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardDivideTax.lblRewardDivideID">
+	<summary>
+lblRewardDivideID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardDivideTax.lblRewardMoney">
+	<summary>
+lblRewardMoney control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardDivideTax.btnAdd">
+	<summary>
+btnAdd control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardDivideTax.btnDelete">
+	<summary>
+btnDelete control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardDivideTax.frmAddStaffList">
+	<summary>
+frmAddStaffList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardDivideTax.gvStaffList">
+	<summary>
+gvStaffList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmUpdateStaffInfo.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmUpdateStaffInfo.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmUpdateStaffInfo.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmUpdateStaffInfo.btnUpdate">
+	<summary>
+btnUpdate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmUpdateStaffInfo.lblLoginHisID">
+	<summary>
+lblLoginHisID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmUpdateStaffInfo.UpdateProgress1">
+	<summary>
+UpdateProgress1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblTrackNo">
+	<summary>
+lblTrackNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblBookImpeachmentID">
+	<summary>
+lblBookImpeachmentID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblIsNotice">
+	<summary>
+lblIsNotice control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblLegislationID">
+	<summary>
+lblLegislationID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblLawbreakerQty">
+	<summary>
+lblLawbreakerQty control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblCompareCaseNonOffice">
+	<summary>
+lblCompareCaseNonOffice control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.txtCompareCaseNo1">
+	<summary>
+txtCompareCaseNo1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.txtCompareCaseNo2">
+	<summary>
+txtCompareCaseNo2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.Label29">
+	<summary>
+Label29 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.txtCompareCaseDate">
+	<summary>
+txtCompareCaseDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.chkNoneOffice">
+	<summary>
+chkNoneOffice control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.ddlCompareOffice">
+	<summary>
+ddlCompareOffice control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.txtCompareOffice">
+	<summary>
+txtCompareOffice control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.Label42">
+	<summary>
+Label42 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblAccuserName">
+	<summary>
+lblAccuserName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.ddlCompareProvince">
+	<summary>
+ddlCompareProvince control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.Label46">
+	<summary>
+Label46 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.ddlAccuserProvince">
+	<summary>
+ddlAccuserProvince control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.ddlCompareDistrict">
+	<summary>
+ddlCompareDistrict control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.Label47">
+	<summary>
+Label47 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.ddlAccuserDistrict">
+	<summary>
+ddlAccuserDistrict control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.ddlCompareSubDistrict">
+	<summary>
+ddlCompareSubDistrict control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.Label48">
+	<summary>
+Label48 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.ddlAccuserSubdistrict">
+	<summary>
+ddlAccuserSubdistrict control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.rdiManageType">
+	<summary>
+rdiManageType control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblSueStaffName">
+	<summary>
+lblSueStaffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblSueStaffID">
+	<summary>
+lblSueStaffID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblSueStaffPoscode">
+	<summary>
+lblSueStaffPoscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblSueStaffOffcode">
+	<summary>
+lblSueStaffOffcode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.btnSearchSueStaff">
+	<summary>
+btnSearchSueStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.frmSearchSueStaff">
+	<summary>
+frmSearchSueStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.Label30">
+	<summary>
+Label30 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.ddlCompareAuthority">
+	<summary>
+ddlCompareAuthority control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.ddlIndictment">
+	<summary>
+ddlIndictment control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblCaseLawID">
+	<summary>
+lblCaseLawID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblPenaltyDesc">
+	<summary>
+lblPenaltyDesc control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.txtAdministration">
+	<summary>
+txtAdministration control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.txtAccuserTestimony">
+	<summary>
+txtAccuserTestimony control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblCaseID">
+	<summary>
+lblCaseID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblCaseDate">
+	<summary>
+lblCaseDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.txtCaseFine">
+	<summary>
+txtCaseFine control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblTaxVal">
+	<summary>
+lblTaxVal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblCaseTotalFine">
+	<summary>
+lblCaseTotalFine control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblPayDate">
+	<summary>
+lblPayDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.btnCalFine">
+	<summary>
+btnCalFine control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.txtTreasuryP">
+	<summary>
+txtTreasuryP control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblTreasury">
+	<summary>
+lblTreasury control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.txtTreasuryMoney">
+	<summary>
+txtTreasuryMoney control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.txtBribeP">
+	<summary>
+txtBribeP control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblBribe">
+	<summary>
+lblBribe control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.txtBribeMoney">
+	<summary>
+txtBribeMoney control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.txtRewardP">
+	<summary>
+txtRewardP control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblReward">
+	<summary>
+lblReward control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.txtRewardMoney">
+	<summary>
+txtRewardMoney control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblAllP">
+	<summary>
+lblAllP control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblAll">
+	<summary>
+lblAll control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucCompareCase.lblAllMoney">
+	<summary>
+lblAllMoney control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchDepartment.txtDepartmentID">
+	<summary>
+txtDepartmentID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchDepartment.btnSearchDepartment">
+	<summary>
+btnSearchDepartment control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchDepartment.txtDepartmentName">
+	<summary>
+txtDepartmentName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchDepartment.Panel1">
+	<summary>
+Panel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchDepartment.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchDepartment.imgClose">
+	<summary>
+imgClose control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchDepartment.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchDepartment.txtOffCode">
+	<summary>
+txtOffCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchDepartment.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchDepartment.txtOffName">
+	<summary>
+txtOffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchDepartment.btnSearch">
+	<summary>
+btnSearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchDepartment.PageControl1">
+	<summary>
+PageControl1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchDepartment.gvEDOffice">
+	<summary>
+gvEDOffice control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchDepartment.Button1">
+	<summary>
+Button1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchDepartment.zPopSearchDepartment">
+	<summary>
+zPopSearchDepartment control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.lblTrackNo">
+	<summary>
+lblTrackNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.lblProductGroupID">
+	<summary>
+lblProductGroupID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.lblLegislationID">
+	<summary>
+lblLegislationID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.lblArrestOffcode">
+	<summary>
+lblArrestOffcode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.txtReportNo1">
+	<summary>
+txtReportNo1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.txtReportNo2">
+	<summary>
+txtReportNo2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.Label29">
+	<summary>
+Label29 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.lblCaseID">
+	<summary>
+lblCaseID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.txtTakenDate">
+	<summary>
+txtTakenDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.Label12">
+	<summary>
+Label12 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.txtTakenTime">
+	<summary>
+txtTakenTime control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.lblCaseDate">
+	<summary>
+lblCaseDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.lblCaseTime">
+	<summary>
+lblCaseTime control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.lblProveStaffName">
+	<summary>
+lblProveStaffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.lblProveStaffID">
+	<summary>
+lblProveStaffID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.lblProveStaffPoscode">
+	<summary>
+lblProveStaffPoscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.lblProveStaffOffcode">
+	<summary>
+lblProveStaffOffcode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.btnSearchProveStaff">
+	<summary>
+btnSearchProveStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.frmSearchProveStaff">
+	<summary>
+frmSearchProveStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.Label30">
+	<summary>
+Label30 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.txtReplacePosition">
+	<summary>
+txtReplacePosition control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.lblProvePositionName">
+	<summary>
+lblProvePositionName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.txtTaxValue">
+	<summary>
+txtTaxValue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.btnAddExhibit">
+	<summary>
+btnAddExhibit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.frmPopExhibit1">
+	<summary>
+frmPopExhibit1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.btnDelExhibit">
+	<summary>
+btnDelExhibit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.gvExhibitList">
+	<summary>
+gvExhibitList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.txtReportDesc">
+	<summary>
+txtReportDesc control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucProveExhibit.txtReportOrder">
+	<summary>
+txtReportOrder control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchArrestLawbreaker.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchArrestLawbreaker.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchArrestLawbreaker.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchArrestLawbreaker.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchArrestLawbreaker.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchArrestLawbreaker.txtName">
+	<summary>
+txtName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchArrestLawbreaker.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchArrestLawbreaker.txtIDCard">
+	<summary>
+txtIDCard control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchArrestLawbreaker.btnSearch">
+	<summary>
+btnSearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchArrestLawbreaker.PageControl1">
+	<summary>
+PageControl1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchArrestLawbreaker.gvData">
+	<summary>
+gvData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucPayFine.lblTrackNo">
+	<summary>
+lblTrackNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucPayFine.lblLegislationID">
+	<summary>
+lblLegislationID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucPayFine.txtPayDate">
+	<summary>
+txtPayDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucPayFine.lblCompareCaseNo">
+	<summary>
+lblCompareCaseNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucPayFine.gvArrestLawbreaker">
+	<summary>
+gvArrestLawbreaker control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucPayFine.lblCaseTotalFine">
+	<summary>
+lblCaseTotalFine control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.txtRequestNo">
+	<summary>
+txtRequestNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.btnSearchData">
+	<summary>
+btnSearchData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.Label39">
+	<summary>
+Label39 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblLoginHisID">
+	<summary>
+lblLoginHisID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblApplicationRewardRequestID">
+	<summary>
+lblApplicationRewardRequestID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.Label16">
+	<summary>
+Label16 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.txtRequestDate">
+	<summary>
+txtRequestDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.Label50">
+	<summary>
+Label50 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblLegislationName">
+	<summary>
+lblLegislationName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblLegislationID">
+	<summary>
+lblLegislationID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblCompareCaseNo">
+	<summary>
+lblCompareCaseNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblCompareCaseDate">
+	<summary>
+lblCompareCaseDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblLawbreakerName">
+	<summary>
+lblLawbreakerName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblAccuserName">
+	<summary>
+lblAccuserName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblGuiltBase">
+	<summary>
+lblGuiltBase control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblCaseLawID">
+	<summary>
+lblCaseLawID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblPenaltyCaseLawID">
+	<summary>
+lblPenaltyCaseLawID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblSceneAddress">
+	<summary>
+lblSceneAddress control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblRequestName">
+	<summary>
+lblRequestName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.btnSearchRequestStaff">
+	<summary>
+btnSearchRequestStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.frmSearchRequestStaff">
+	<summary>
+frmSearchRequestStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.Label30">
+	<summary>
+Label30 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblRequestStaffID">
+	<summary>
+lblRequestStaffID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblRequestPoscode">
+	<summary>
+lblRequestPoscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblRequestPosname">
+	<summary>
+lblRequestPosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.gvArrestCo">
+	<summary>
+gvArrestCo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.btnCoStaffList">
+	<summary>
+btnCoStaffList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.frmPopArrestCo">
+	<summary>
+frmPopArrestCo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.btnDeleteCoStaffList">
+	<summary>
+btnDeleteCoStaffList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.gvArrestCommand">
+	<summary>
+gvArrestCommand control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.btnAddCommandStaffList">
+	<summary>
+btnAddCommandStaffList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.frmPopArrestCommand">
+	<summary>
+frmPopArrestCommand control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.btnDeleteCommandStaffList">
+	<summary>
+btnDeleteCommandStaffList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.txtInformName">
+	<summary>
+txtInformName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblNotictNo">
+	<summary>
+lblNotictNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblReceiveName">
+	<summary>
+lblReceiveName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.frmSearchReceiveStaff">
+	<summary>
+frmSearchReceiveStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblReceiveStaffID">
+	<summary>
+lblReceiveStaffID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblReceivePoscode">
+	<summary>
+lblReceivePoscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.btnSearchReceiveStaff">
+	<summary>
+btnSearchReceiveStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.lblReceivePosname">
+	<summary>
+lblReceivePosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.txtInformDate">
+	<summary>
+txtInformDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.Label34">
+	<summary>
+Label34 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.txtInformTime">
+	<summary>
+txtInformTime control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.ucRewardRequestAlcohol1">
+	<summary>
+ucRewardRequestAlcohol1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.ucRewardRequestTax1">
+	<summary>
+ucRewardRequestTax1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.ucRewardRequestTobacco1">
+	<summary>
+ucRewardRequestTobacco1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.UpdatePanel7">
+	<summary>
+UpdatePanel7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmApplicationRewardRequest.btnSave">
+	<summary>
+btnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.Panel1">
+	<summary>
+Panel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.imgClose">
+	<summary>
+imgClose control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.ddlInspectorTeam">
+	<summary>
+ddlInspectorTeam control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.Label10">
+	<summary>
+Label10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.txtFirstName">
+	<summary>
+txtFirstName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.Label11">
+	<summary>
+Label11 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.txtLastName">
+	<summary>
+txtLastName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.Label9">
+	<summary>
+Label9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.txtPosName">
+	<summary>
+txtPosName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.txtOffName">
+	<summary>
+txtOffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.btnSearch">
+	<summary>
+btnSearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.PageControl1">
+	<summary>
+PageControl1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.gvData">
+	<summary>
+gvData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.Button1">
+	<summary>
+Button1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchAccuser.zPopSearchAccuser">
+	<summary>
+zPopSearchAccuser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardDivideAlcohol.lblRewardDivideID">
+	<summary>
+lblRewardDivideID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardDivideAlcohol.lblRewardMoney">
+	<summary>
+lblRewardMoney control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardDivideAlcohol.btnAdd">
+	<summary>
+btnAdd control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardDivideAlcohol.btnDelete">
+	<summary>
+btnDelete control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardDivideAlcohol.frmAddStaffList">
+	<summary>
+frmAddStaffList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardDivideAlcohol.gvStaffList">
+	<summary>
+gvStaffList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblApplicationRewardRequestID">
+	<summary>
+lblApplicationRewardRequestID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblTrackNo">
+	<summary>
+lblTrackNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblReportName">
+	<summary>
+lblReportName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblProductGroupName">
+	<summary>
+lblProductGroupName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.chkInform">
+	<summary>
+chkInform control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.chkCountInform">
+	<summary>
+chkCountInform control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.gvExhibit">
+	<summary>
+gvExhibit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.txtAbnormaly">
+	<summary>
+txtAbnormaly control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.gvArrestHelper">
+	<summary>
+gvArrestHelper control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.btnAddHelperSaffList">
+	<summary>
+btnAddHelperSaffList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.frmPopHelperList">
+	<summary>
+frmPopHelperList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.btnDeleteHelperStaffList">
+	<summary>
+btnDeleteHelperStaffList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblControlStaffName">
+	<summary>
+lblControlStaffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblControlStaffID">
+	<summary>
+lblControlStaffID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblControlPoscode">
+	<summary>
+lblControlPoscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblControlOffcode">
+	<summary>
+lblControlOffcode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.btnSearchControlStaff">
+	<summary>
+btnSearchControlStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.frmSearchControlStaff">
+	<summary>
+frmSearchControlStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblControlPosname">
+	<summary>
+lblControlPosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.txtCommentControl">
+	<summary>
+txtCommentControl control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.txtCommentInitial">
+	<summary>
+txtCommentInitial control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblInitialStaffName">
+	<summary>
+lblInitialStaffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblInitialStaffID">
+	<summary>
+lblInitialStaffID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblInitialStaffPoscode">
+	<summary>
+lblInitialStaffPoscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblInitialStaffOffcode">
+	<summary>
+lblInitialStaffOffcode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.btnSearchInitialStaff">
+	<summary>
+btnSearchInitialStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.frmSearchInitialStaff">
+	<summary>
+frmSearchInitialStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblInitialStaffPosname">
+	<summary>
+lblInitialStaffPosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.txtCommentCommander">
+	<summary>
+txtCommentCommander control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblCommanderStaffName">
+	<summary>
+lblCommanderStaffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblCommanderStaffID">
+	<summary>
+lblCommanderStaffID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblCommanderPoscode">
+	<summary>
+lblCommanderPoscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblCommanderOffcode">
+	<summary>
+lblCommanderOffcode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.btnSearchCommanderStaff">
+	<summary>
+btnSearchCommanderStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.frmSearchCommanderStaff">
+	<summary>
+frmSearchCommanderStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblCommanderPosname">
+	<summary>
+lblCommanderPosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.txtCommand">
+	<summary>
+txtCommand control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblConfirmStaffName">
+	<summary>
+lblConfirmStaffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblConfirmStaffID">
+	<summary>
+lblConfirmStaffID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblConfirmStaffPoscode">
+	<summary>
+lblConfirmStaffPoscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblConfirmStaffOffcode">
+	<summary>
+lblConfirmStaffOffcode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.btnSearchConfirmStaff">
+	<summary>
+btnSearchConfirmStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.frmSearchConfirmStaff">
+	<summary>
+frmSearchConfirmStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblConfirmStaffPosname">
+	<summary>
+lblConfirmStaffPosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblAccuserName">
+	<summary>
+lblAccuserName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblAccuserPosname">
+	<summary>
+lblAccuserPosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblOccurrenceDate">
+	<summary>
+lblOccurrenceDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblCaseTotalFine">
+	<summary>
+lblCaseTotalFine control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.alCaseTotalFine">
+	<summary>
+alCaseTotalFine control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblBribeP">
+	<summary>
+lblBribeP control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblBribeMoney">
+	<summary>
+lblBribeMoney control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.alBirbeText">
+	<summary>
+alBirbeText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblRewardP">
+	<summary>
+lblRewardP control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblRewardMoney">
+	<summary>
+lblRewardMoney control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.alRewardText">
+	<summary>
+alRewardText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.txtAskLean">
+	<summary>
+txtAskLean control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.txtDepartmentSend">
+	<summary>
+txtDepartmentSend control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblAskStaffName">
+	<summary>
+lblAskStaffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblAskStaffID">
+	<summary>
+lblAskStaffID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblAskPoscode">
+	<summary>
+lblAskPoscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblAskOffcode">
+	<summary>
+lblAskOffcode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.btnSearchAskStaff">
+	<summary>
+btnSearchAskStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.frmSearchAskStaff">
+	<summary>
+frmSearchAskStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblAskPosname">
+	<summary>
+lblAskPosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.txtApproveLean">
+	<summary>
+txtApproveLean control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblApproveStaffName">
+	<summary>
+lblApproveStaffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblApproveStaffID">
+	<summary>
+lblApproveStaffID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblApproveStaffPoscode">
+	<summary>
+lblApproveStaffPoscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblApproveStaffOffcode">
+	<summary>
+lblApproveStaffOffcode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.btnSearchApproveStaff">
+	<summary>
+btnSearchApproveStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.frmSearchApproveStafff">
+	<summary>
+frmSearchApproveStafff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTax.lblApproveStaffPosname">
+	<summary>
+lblApproveStaffPosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.PageControl.lnbBack">
+	<summary>
+lnbBack control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.PageControl.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.PageControl.cmbPage">
+	<summary>
+cmbPage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.PageControl.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.PageControl.lblTotalPage">
+	<summary>
+lblTotalPage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.PageControl.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.PageControl.lnbNext">
+	<summary>
+lnbNext control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.PageControl.lblSummary">
+	<summary>
+lblSummary control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.PageControl.txtPageIndex">
+	<summary>
+txtPageIndex control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.Panel1">
+	<summary>
+Panel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.imgClose">
+	<summary>
+imgClose control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.ddlInspectorTeam">
+	<summary>
+ddlInspectorTeam control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.Label10">
+	<summary>
+Label10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.txtFirstName">
+	<summary>
+txtFirstName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.Label11">
+	<summary>
+Label11 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.txtLastName">
+	<summary>
+txtLastName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.Label9">
+	<summary>
+Label9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.txtPosName">
+	<summary>
+txtPosName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.txtOffName">
+	<summary>
+txtOffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.btnSearch">
+	<summary>
+btnSearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.PageControl1">
+	<summary>
+PageControl1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.gvData">
+	<summary>
+gvData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.Button1">
+	<summary>
+Button1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmSearchStaff.zPopSearchStaff">
+	<summary>
+zPopSearchStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.txtDate.TextBox1">
+	<summary>
+TextBox1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.txtDate.likA">
+	<summary>
+likA control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.txtDate.ImageButton1">
+	<summary>
+ImageButton1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.txtDate.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.txtDate.lblValidText">
+	<summary>
+lblValidText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.Panel1">
+	<summary>
+Panel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.imgClose">
+	<summary>
+imgClose control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.ddlInspectorTeam">
+	<summary>
+ddlInspectorTeam control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.Label10">
+	<summary>
+Label10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.txtFirstName">
+	<summary>
+txtFirstName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.Label11">
+	<summary>
+Label11 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.txtLastName">
+	<summary>
+txtLastName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.Label9">
+	<summary>
+Label9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.txtPosName">
+	<summary>
+txtPosName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.txtOffName">
+	<summary>
+txtOffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.btnSearch">
+	<summary>
+btnSearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.btnSelect">
+	<summary>
+btnSelect control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.PageControl1">
+	<summary>
+PageControl1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.gvData">
+	<summary>
+gvData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.Button1">
+	<summary>
+Button1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestTeam.zPopArrestTeam">
+	<summary>
+zPopArrestTeam control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.lblApplicationRewardRequestID">
+	<summary>
+lblApplicationRewardRequestID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.lblSueStaffName">
+	<summary>
+lblSueStaffName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.lblSueStaffPosname">
+	<summary>
+lblSueStaffPosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.lblCaseTotalFine">
+	<summary>
+lblCaseTotalFine control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.alCaseTotalFine">
+	<summary>
+alCaseTotalFine control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.lblOccurrenceDate">
+	<summary>
+lblOccurrenceDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.lblRewardP">
+	<summary>
+lblRewardP control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.lblRewardMoney">
+	<summary>
+lblRewardMoney control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.alRewardText">
+	<summary>
+alRewardText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.lblAccuserName">
+	<summary>
+lblAccuserName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.lblAccuserStaffID">
+	<summary>
+lblAccuserStaffID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.lblAccuserPoscode">
+	<summary>
+lblAccuserPoscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.lblAccuserOffcode">
+	<summary>
+lblAccuserOffcode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.btnSearchAccuserStaff">
+	<summary>
+btnSearchAccuserStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.frmSearchAccuserStaff">
+	<summary>
+frmSearchAccuserStaff control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.lblAccuserPosname">
+	<summary>
+lblAccuserPosname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.txtLawerOpinion">
+	<summary>
+txtLawerOpinion control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.txtDirectorPosition">
+	<summary>
+txtDirectorPosition control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.txtDirectorOpinion">
+	<summary>
+txtDirectorOpinion control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.txtCommand">
+	<summary>
+txtCommand control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.ucRewardRequestTobacco.txtArrestOpinion">
+	<summary>
+txtArrestOpinion control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.chkAllegedCo">
+	<summary>
+chkAllegedCo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.ddlLedislation">
+	<summary>
+ddlLedislation control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.Label50">
+	<summary>
+Label50 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.txt1">
+	<summary>
+txt1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.rdAccuser1">
+	<summary>
+rdAccuser1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.Label10">
+	<summary>
+Label10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.txt2">
+	<summary>
+txt2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.btnSearchArrestLawbreaker">
+	<summary>
+btnSearchArrestLawbreaker control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.txt3">
+	<summary>
+txt3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.Label11">
+	<summary>
+Label11 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.txt8">
+	<summary>
+txt8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.Label51">
+	<summary>
+Label51 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.ddlLedislation0">
+	<summary>
+ddlLedislation0 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.Label12">
+	<summary>
+Label12 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.txt9">
+	<summary>
+txt9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.Label52">
+	<summary>
+Label52 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.ddlLedislation1">
+	<summary>
+ddlLedislation1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.Label13">
+	<summary>
+Label13 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.txt10">
+	<summary>
+txt10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.Label53">
+	<summary>
+Label53 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.ddlLedislation2">
+	<summary>
+ddlLedislation2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.Label14">
+	<summary>
+Label14 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.rdAccuser2">
+	<summary>
+rdAccuser2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.Label15">
+	<summary>
+Label15 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.txt4">
+	<summary>
+txt4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.Label16">
+	<summary>
+Label16 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.txt7">
+	<summary>
+txt7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.Label17">
+	<summary>
+Label17 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.txt5">
+	<summary>
+txt5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.Label18">
+	<summary>
+Label18 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.txt6">
+	<summary>
+txt6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmAddDuty_table_list.btnAdd">
+	<summary>
+btnAdd control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Panel1">
+	<summary>
+Panel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.imgClose">
+	<summary>
+imgClose control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.ddlGroupID">
+	<summary>
+ddlGroupID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Label50">
+	<summary>
+Label50 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.lblRowID">
+	<summary>
+lblRowID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.lblExhibitID">
+	<summary>
+lblExhibitID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.ddlDutyCode">
+	<summary>
+ddlDutyCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.rdIsDomestic">
+	<summary>
+rdIsDomestic control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Label10">
+	<summary>
+Label10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.txtBrandCode">
+	<summary>
+txtBrandCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.btnPopBrand">
+	<summary>
+btnPopBrand control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.txtBrandName">
+	<summary>
+txtBrandName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Label11">
+	<summary>
+Label11 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.txtSizeDesc">
+	<summary>
+txtSizeDesc control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Label51">
+	<summary>
+Label51 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.ddlSizeUnitCode">
+	<summary>
+ddlSizeUnitCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Label12">
+	<summary>
+Label12 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.txtQty">
+	<summary>
+txtQty control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Label52">
+	<summary>
+Label52 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.ddlQtyUnitCode">
+	<summary>
+ddlQtyUnitCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Label13">
+	<summary>
+Label13 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.txtWeight">
+	<summary>
+txtWeight control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Label53">
+	<summary>
+Label53 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.ddlWeightUnitCode">
+	<summary>
+ddlWeightUnitCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Label14">
+	<summary>
+Label14 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.rdiExhibitStatus">
+	<summary>
+rdiExhibitStatus control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Label15">
+	<summary>
+Label15 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.txtExhibitList">
+	<summary>
+txtExhibitList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Label16">
+	<summary>
+Label16 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.txtExhibitDesc">
+	<summary>
+txtExhibitDesc control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Label17">
+	<summary>
+Label17 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.txtCarNo">
+	<summary>
+txtCarNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Label18">
+	<summary>
+Label18 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.txtRemark">
+	<summary>
+txtRemark control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.btnAdd">
+	<summary>
+btnAdd control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Button1">
+	<summary>
+Button1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.zPopArrestExhibit">
+	<summary>
+zPopArrestExhibit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Panel2">
+	<summary>
+Panel2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.imgSearchBrandClosePop">
+	<summary>
+imgSearchBrandClosePop control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.txtSearchBrandName">
+	<summary>
+txtSearchBrandName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.txtSearchBrandCode">
+	<summary>
+txtSearchBrandCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.btnSearchBrand">
+	<summary>
+btnSearchBrand control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.PageControl1">
+	<summary>
+PageControl1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.gvBrandList">
+	<summary>
+gvBrandList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.Button2">
+	<summary>
+Button2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.frmPopArrestExhibit.zPopSearchBrandName">
+	<summary>
+zPopSearchBrandName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.txtBirthDate.TextBox1">
+	<summary>
+TextBox1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.txtBirthDate.likA">
+	<summary>
+likA control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.txtBirthDate.ImageButton1">
+	<summary>
+ImageButton1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.txtBirthDate.Label51">
+	<summary>
+Label51 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.txtBirthDate.lblAge">
+	<summary>
+lblAge control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.txtBirthDate.Label52">
+	<summary>
+Label52 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.txtBirthDate.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:XCS_Admin.txtBirthDate.lblValidText">
+	<summary>
+lblValidText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+</members>
+</doc>

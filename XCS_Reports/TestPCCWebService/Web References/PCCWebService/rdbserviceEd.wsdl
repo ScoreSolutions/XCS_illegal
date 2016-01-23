@@ -1,0 +1,1870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WL5G3N0:definitions xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:WL5G3N1="http://rdbservice.pccth.com/" xmlns="" name="rdbserviceEd" targetNamespace="http://rdbservice.pccth.com/" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">
+  <WL5G3N0:types>
+    <xsd:schema xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://rdbservice.pccth.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:conv="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" elementFormDefault="qualified" targetNamespace="http://rdbservice.pccth.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:complexType name="InquiryAccMastReqHeader">
+        <xsd:sequence>
+          <xsd:element name="body" nillable="true" type="tns:BodyGen1" />
+          <xsd:element name="header" nillable="true" type="tns:Header" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BodyGen1">
+        <xsd:sequence>
+          <xsd:element name="userID" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="parameterAppend" nillable="true" type="tns:ParameterAppend" />
+          <xsd:element name="password" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ParameterAppend">
+        <xsd:sequence>
+          <xsd:element name="parameterValue" nillable="true" type="xsd:string" />
+          <xsd:element name="parameterSearch" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Header">
+        <xsd:sequence>
+          <xsd:element name="IPAddress" nillable="true" type="xsd:string" />
+          <xsd:element name="serviceID" nillable="true" type="xsd:string" />
+          <xsd:element name="systemID" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="InquiryAccMastResHeader">
+        <xsd:sequence>
+          <xsd:element name="body" nillable="true" type="tns:Body" />
+          <xsd:element name="header" nillable="true" type="tns:Header" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Body">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="cdProductUnitInfo" nillable="true" type="tns:CdProductUnitInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="hospitalInfo" nillable="true" type="tns:HospitalInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="degreeInfo" nillable="true" type="tns:DegreeInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="zipCodeInfo" nillable="true" type="tns:ZipCodeInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="timeRateInfo" nillable="true" type="tns:TimeRateInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="embassyInfo" nillable="true" type="tns:EmbassyInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="titleInfo" nillable="true" type="tns:TitleInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="anacarGrpInfo" nillable="true" type="tns:AnacarGrpInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="productSubTypeInfo" nillable="true" type="tns:ProductSubTypeInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="areaCodeInfo" nillable="true" type="tns:AreaCodeInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="vatRateInfo" nillable="true" type="tns:VatRateInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="countryInfo" nillable="true" type="tns:CountryInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="approveLevelInfo" nillable="true" type="tns:ApproveLevelInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="accMastInfo" nillable="true" type="tns:AccMastInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="formCodeInfo" nillable="true" type="tns:FormCodeInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="currencyInfo" nillable="true" type="tns:CurrencyInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="objRateInfo" nillable="true" type="tns:ObjRateInfo" />
+          <xsd:element name="returnDesc" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="cusGrpInfo" nillable="true" type="tns:CusGrpInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="anacarSdInfo" nillable="true" type="tns:AnacarSdInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="structureGoodsInfo" nillable="true" type="tns:StructureGoodsInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="incMastInfo" nillable="true" type="tns:IncMastInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="dutyUnitInfo" nillable="true" type="tns:DutyUnitInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="customHouseInfo" nillable="true" type="tns:CustomHouseInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="titleOldInfo" nillable="true" type="tns:TitleOldInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ediGoodsInfo" nillable="true" type="tns:EdiGoodsInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="productUnitInfo" nillable="true" type="tns:ProductUnitInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="sssFundRateInfo" nillable="true" type="tns:SssFundRateInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="dutyMaterialInfo" nillable="true" type="tns:DutyMaterialInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="dutyGroupInfo" nillable="true" type="tns:DutyGroupInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="importCompInfo" nillable="true" type="tns:ImportCompInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="materialInfo" nillable="true" type="tns:MaterialInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="localRateInfo" nillable="true" type="tns:LocalRateInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="cdCountryInfo" nillable="true" type="tns:CdCountryInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="productIncMastInfo" nillable="true" type="tns:ProductIncMastInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="licenseHdInfo" nillable="true" type="tns:LicenseHdInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="incomeTypeInfo" nillable="true" type="tns:IncomeTypeInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="dueDatePs0112Info" nillable="true" type="tns:DueDatePs0112Info" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="licenseDtInfo" nillable="true" type="tns:LicenseDtInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="holidayInfo" nillable="true" type="tns:HolidayInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="systemParamInfo" nillable="true" type="tns:SystemParamInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="bankBranchInfo" nillable="true" type="tns:BankBranchInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="dutyTableInfo" nillable="true" type="tns:DutyTableInfo" />
+          <xsd:element name="returnCode" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="storeInfo" nillable="true" type="tns:StoreInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="tambolInfo" nillable="true" type="tns:TambolInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="productInfo" nillable="true" type="tns:ProductInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="edOfficeInfo" nillable="true" type="tns:EdOfficeInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="vatSplitHdInfo" nillable="true" type="tns:VatSplitHdInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="oilfundRateInfo" nillable="true" type="tns:OilfundRateInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="productTypeInfo" nillable="true" type="tns:ProductTypeInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="bankInfo" nillable="true" type="tns:BankInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="customRateInfo" nillable="true" type="tns:CustomRateInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ediUnitMapInfo" nillable="true" type="tns:EdiUnitMapInfo" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="vatSplitDetInfo" nillable="true" type="tns:VatSplitDetInfo" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CdProductUnitInfo">
+        <xsd:sequence>
+          <xsd:element name="ed_unit_code" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="cd_unit_code" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="unit_name" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HospitalInfo">
+        <xsd:sequence>
+          <xsd:element name="hosp_code" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="tambol_code" nillable="true" type="xsd:string" />
+          <xsd:element name="zipCode" nillable="true" type="xsd:string" />
+          <xsd:element name="hosp_type" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="thnName" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="hosp_cate" nillable="true" type="xsd:string" />
+          <xsd:element name="addrNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hosp_name" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DegreeInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="degree" nillable="true" type="xsd:decimal" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="degree_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZipCodeInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="tambol_code" nillable="true" type="xsd:string" />
+          <xsd:element name="zipCode" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TimeRateInfo">
+        <xsd:sequence>
+          <xsd:element name="rate_value" nillable="true" type="xsd:decimal" />
+          <xsd:element name="maxRate_quantity" nillable="true" type="xsd:decimal" />
+          <xsd:element name="copy_no" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="subtype_code" nillable="true" type="xsd:string" />
+          <xsd:element name="rate_quantity" nillable="true" type="xsd:decimal" />
+          <xsd:element name="duty_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="type_code" nillable="true" type="xsd:string" />
+          <xsd:element name="maxRate_value" nillable="true" type="xsd:decimal" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="copy_year" nillable="true" type="xsd:string" />
+          <xsd:element name="quantity" nillable="true" type="xsd:decimal" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="EmbassyInfo">
+        <xsd:sequence>
+          <xsd:element name="embassy_type" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="embassy_id" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="embassy_name" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TitleInfo">
+        <xsd:sequence>
+          <xsd:element name="short_title" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="title_seq" nillable="true" type="xsd:string" />
+          <xsd:element name="suffix_name" nillable="true" type="xsd:string" />
+          <xsd:element name="title_code" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="title_type" nillable="true" type="xsd:string" />
+          <xsd:element name="short_suffix" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="title_name" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AnacarGrpInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="car_desc" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="car_grp" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="car_type" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ProductSubTypeInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="subtype_name" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="subtype_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="duty_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AreaCodeInfo">
+        <xsd:sequence>
+          <xsd:element name="arscde" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="arsnme" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="VatRateInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="vat_rate" nillable="true" type="xsd:decimal" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CountryInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="country_seq" nillable="true" type="xsd:string" />
+          <xsd:element name="indc_afta" nillable="true" type="xsd:string" />
+          <xsd:element name="race_name" nillable="true" type="xsd:string" />
+          <xsd:element name="continent" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="short_name" nillable="true" type="xsd:string" />
+          <xsd:element name="country_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="country_name" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ApproveLevelInfo">
+        <xsd:sequence>
+          <xsd:element name="approve_level" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="max_value" nillable="true" type="xsd:string" />
+          <xsd:element name="duty_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="min_value" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AccMastInfo">
+        <xsd:sequence>
+          <xsd:element name="acc_code" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="acc_type" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="acc_name" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FormCodeInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="form_name" nillable="true" type="xsd:string" />
+          <xsd:element name="form_code" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="short_name" nillable="true" type="xsd:string" />
+          <xsd:element name="account_status" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CurrencyInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="curr_name" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="curr_code" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ObjRateInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="remark" nillable="true" type="xsd:string" />
+          <xsd:element name="locOth_rate" nillable="true" type="xsd:decimal" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="offCode" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="locExp_rate" nillable="true" type="xsd:decimal" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="inc_code" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CusGrpInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="cusgrp_name" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="cusgrp_id" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AnacarSdInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="low_price" nillable="true" type="xsd:decimal" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="car_grp" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="car_type" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructureGoodsInfo">
+        <xsd:sequence>
+          <xsd:element name="structure_code" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="structure_type" nillable="true" type="xsd:string" />
+          <xsd:element name="group_id" nillable="true" type="xsd:string" />
+          <xsd:element name="sub_struct" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="material_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IncMastInfo">
+        <xsd:sequence>
+          <xsd:element name="acc_code" nillable="true" type="xsd:string" />
+          <xsd:element name="inc_flag" nillable="true" type="xsd:string" />
+          <xsd:element name="incCod_cd" nillable="true" type="xsd:string" />
+          <xsd:element name="money_type" nillable="true" type="xsd:string" />
+          <xsd:element name="incGrp_code" nillable="true" type="xsd:string" />
+          <xsd:element name="group_id" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="locTyp_flag" nillable="true" type="xsd:string" />
+          <xsd:element name="cd_flag" nillable="true" type="xsd:string" />
+          <xsd:element name="inc_type" nillable="true" type="xsd:string" />
+          <xsd:element name="accSend_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="incCod_oth" nillable="true" type="xsd:string" />
+          <xsd:element name="rec_flag" nillable="true" type="xsd:string" />
+          <xsd:element name="loc_flag" nillable="true" type="xsd:string" />
+          <xsd:element name="inc_name" nillable="true" type="xsd:string" />
+          <xsd:element name="form_code" nillable="true" type="xsd:string" />
+          <xsd:element name="inccod_exp" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="incCod_flag" nillable="true" type="xsd:string" />
+          <xsd:element name="incGrp_flag" nillable="true" type="xsd:string" />
+          <xsd:element name="inc_code" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DutyUnitInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="used_for" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="duty_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="unit_code" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomHouseInfo">
+        <xsd:sequence>
+          <xsd:element name="offcode" nillable="true" type="xsd:string" />
+          <xsd:element name="free_zone_flag" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="tambol_code" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="house_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="house_name" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TitleOldInfo">
+        <xsd:sequence>
+          <xsd:element name="short_title" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="title_seq" nillable="true" type="xsd:string" />
+          <xsd:element name="suffix_name" nillable="true" type="xsd:string" />
+          <xsd:element name="title_code" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="title_type" nillable="true" type="xsd:string" />
+          <xsd:element name="short_suffix" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="title_name" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="EdiGoodsInfo">
+        <xsd:sequence>
+          <xsd:element name="goods_desc" nillable="true" type="xsd:string" />
+          <xsd:element name="remark" nillable="true" type="xsd:string" />
+          <xsd:element name="goods_name" nillable="true" type="xsd:string" />
+          <xsd:element name="subtype_code" nillable="true" type="xsd:string" />
+          <xsd:element name="goods_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="duty_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="type_code" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ProductUnitInfo">
+        <xsd:sequence>
+          <xsd:element name="unit_name_thai" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="unit_name_eng" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="short_name" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="unit_code" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SssFundRateInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="sss_rate" nillable="true" type="xsd:decimal" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DutyMaterialInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="group_id" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="material_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DutyGroupInfo">
+        <xsd:sequence>
+          <xsd:element name="group_name" nillable="true" type="xsd:string" />
+          <xsd:element name="group_status" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="sub_group_id" nillable="true" type="xsd:string" />
+          <xsd:element name="group_id" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ImportCompInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="comp_code" nillable="true" type="xsd:string" />
+          <xsd:element name="country_code" nillable="true" type="xsd:string" />
+          <xsd:element name="hosp_name" nillable="true" type="xsd:string" />
+          <xsd:element name="comp_name" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="MaterialInfo">
+        <xsd:sequence>
+          <xsd:element name="material_name" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="material_type" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="material_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="LocalRateInfo">
+        <xsd:sequence>
+          <xsd:element name="loc_rate" nillable="true" type="xsd:decimal" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="remark" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="offCode" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="locExp_rate" nillable="true" type="xsd:decimal" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="locoth_rate" nillable="true" type="xsd:decimal" />
+          <xsd:element name="inc_code" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CdCountryInfo">
+        <xsd:sequence>
+          <xsd:element name="cd_country_code" nillable="true" type="xsd:string" />
+          <xsd:element name="country_code" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ProductIncMastInfo">
+        <xsd:sequence>
+          <xsd:element name="stamp_status" nillable="true" type="xsd:string" />
+          <xsd:element name="duty_code" nillable="true" type="xsd:string" />
+          <xsd:element name="type_code" nillable="true" type="xsd:string" />
+          <xsd:element name="inc_code" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="LicenseHdInfo">
+        <xsd:sequence>
+          <xsd:element name="lic_order" nillable="true" type="xsd:string" />
+          <xsd:element name="issue_by" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="lic_form" nillable="true" type="xsd:string" />
+          <xsd:element name="lic_code" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="period" nillable="true" type="xsd:string" />
+          <xsd:element name="lic_type" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="lic_name" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IncomeTypeInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="inc_type_name" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="inc_type" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DueDatePs0112Info">
+        <xsd:sequence>
+          <xsd:element name="month" nillable="true" type="xsd:string" />
+          <xsd:element name="due_date" nillable="true" type="xsd:string" />
+          <xsd:element name="year" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="LicenseDtInfo">
+        <xsd:sequence>
+          <xsd:element name="lic_fee" nillable="true" type="xsd:decimal" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="lic_grp" nillable="true" type="xsd:string" />
+          <xsd:element name="lic_code" nillable="true" type="xsd:string" />
+          <xsd:element name="lic_seq" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="lic_desc" nillable="true" type="xsd:string" />
+          <xsd:element name="lic_interior" nillable="true" type="xsd:decimal" />
+          <xsd:element name="lic_type" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="inc_code" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HolidayInfo">
+        <xsd:sequence>
+          <xsd:element name="holiday_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SystemParamInfo">
+        <xsd:sequence>
+          <xsd:element name="param" nillable="true" type="xsd:string" />
+          <xsd:element name="value" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BankBranchInfo">
+        <xsd:sequence>
+          <xsd:element name="branch_code" nillable="true" type="xsd:string" />
+          <xsd:element name="branch_name" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DutyTableInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="duty_name" nillable="true" type="xsd:string" />
+          <xsd:element name="duty_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="law_duty_code" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StoreInfo">
+        <xsd:sequence>
+          <xsd:element name="province_code" nillable="true" type="xsd:string" />
+          <xsd:element name="soiName" nillable="true" type="xsd:string" />
+          <xsd:element name="store_id" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="offCode" nillable="true" type="xsd:string" />
+          <xsd:element name="product_type" nillable="true" type="xsd:string" />
+          <xsd:element name="store_type" nillable="true" type="xsd:string" />
+          <xsd:element name="amphur_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="tambol_code" nillable="true" type="xsd:string" />
+          <xsd:element name="add_no" nillable="true" type="xsd:string" />
+          <xsd:element name="branch" nillable="true" type="xsd:string" />
+          <xsd:element name="thnName" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="store_name" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TambolInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="tambol_code" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="offCode" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="tambol_name" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ProductInfo">
+        <xsd:sequence>
+          <xsd:element name="prc_param" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="product_code" nillable="true" type="xsd:string" />
+          <xsd:element name="product_name" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="subtype_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="duty_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="type_code" nillable="true" type="xsd:string" />
+          <xsd:element name="law_duty_code" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="EdOfficeInfo">
+        <xsd:sequence>
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="offCode" nillable="true" type="xsd:string" />
+          <xsd:element name="short_name" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="amphur_name" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="offName" nillable="true" type="xsd:string" />
+          <xsd:element name="province_name" nillable="true" type="xsd:string" />
+          <xsd:element name="tambol_code" nillable="true" type="xsd:string" />
+          <xsd:element name="supOffCode" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="tambol_name" nillable="true" type="xsd:string" />
+          <xsd:element name="indc_off" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="VatSplitHdInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="rec_type" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="offCode" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OilfundRateInfo">
+        <xsd:sequence>
+          <xsd:element name="fund_type" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="copy_no" nillable="true" type="xsd:string" />
+          <xsd:element name="oil_rate" nillable="true" type="xsd:decimal" />
+          <xsd:element name="copy_year" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="subtype_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="duty_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="type_code" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ProductTypeInfo">
+        <xsd:sequence>
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="group_id" nillable="true" type="xsd:string" />
+          <xsd:element name="type_name" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="duty_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+          <xsd:element name="type_code" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BankInfo">
+        <xsd:sequence>
+          <xsd:element name="bank_name" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="short_name" nillable="true" type="xsd:string" />
+          <xsd:element name="bank_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomRateInfo">
+        <xsd:sequence>
+          <xsd:element name="offcode" nillable="true" type="xsd:string" />
+          <xsd:element name="end_date" nillable="true" type="xsd:string" />
+          <xsd:element name="remark" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="cd_rate" nillable="true" type="xsd:decimal" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="EdiUnitMapInfo">
+        <xsd:sequence>
+          <xsd:element name="cd_unit_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_userid" nillable="true" type="xsd:string" />
+          <xsd:element name="ed_uit_code" nillable="true" type="xsd:string" />
+          <xsd:element name="upd_date" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="VatSplitDetInfo">
+        <xsd:sequence>
+          <xsd:element name="rate" nillable="true" type="xsd:decimal" />
+          <xsd:element name="seq_no" nillable="true" type="xsd:string" />
+          <xsd:element name="rec_type" nillable="true" type="xsd:string" />
+          <xsd:element name="begin_date" nillable="true" type="xsd:string" />
+          <xsd:element name="offCode" nillable="true" type="xsd:string" />
+          <xsd:element name="inc_code" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="InquiryAccMastOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryAccMastOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryAnacarGrpOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryAnacarGrpOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryAnacarSdOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryAnacarSdOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryApproveLevelOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryApproveLevelOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryAreaCodeOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryAreaCodeOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryBankBranchOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryBankBranchOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryBankOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryBankOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryCdCountryOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryCdCountryOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryCdProductUnitOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryCdProductUnitOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryCountryOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryCountryOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryCurrencyOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryCurrencyOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryCusGrpOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryCusGrpOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryCustomHouseOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryCustomHouseOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryCustomRateOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryCustomRateOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryDegreeOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryDegreeOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryDueDatePs0112Operation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryDueDatePs0112OperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryDutyGroupOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryDutyGroupOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryDutyMaterialOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryDutyMaterialOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryDutyTableOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryDutyTableOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryDutyUnitOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryDutyUnitOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryEdOfficeOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryEdOfficeOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryEdiGoodsOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryEdiGoodsOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryEdiUnitMapOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryEdiUnitMapOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryEmbassyOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryEmbassyOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryFindAmphurOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryFindAmphurOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryFindTambolOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryFindTambolOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryFormCodeOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryFormCodeOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryHolidayOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryHolidayOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryHospitalOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryHospitalOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryImportCompOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryImportCompOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryIncMastOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryIncMastOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryIncomeTypeOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryIncomeTypeOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryLicenseDtOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryLicenseDtOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryLicenseHdOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryLicenseHdOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryLocalRateOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryLocalRateOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryMaterialOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryMaterialOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryObjRateOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryObjRateOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryOilFundRateOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryOilFundRateOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryProductIncMastOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryProductIncMastOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryProductOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryProductOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryProductSubTypeOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryProductSubTypeOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryProductTypeOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryProductTypeOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryProductUnitOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryProductUnitOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquirySssFundRateOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquirySssFundRateOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryStoreOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryStoreOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryStructureGoodsOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryStructureGoodsOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquirySystemParamOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquirySystemParamOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryTambolOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryTambolOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryTimeRateOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryTimeRateOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryTitleOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryTitleOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryVatRateOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryVatRateOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryVatSplitDetOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryVatSplitDetOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryVatSplitHdOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryVatSplitHdOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+      <xsd:element name="InquiryZipCodeOperation" nillable="true" type="tns:InquiryAccMastReqHeader" />
+      <xsd:element name="InquiryZipCodeOperationResponse" nillable="true" type="tns:InquiryAccMastResHeader" />
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="RdbserviceEd_InquiryAccMastOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryAccMastOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryAccMastOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryAccMastOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryAnacarGrpOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryAnacarGrpOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryAnacarGrpOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryAnacarGrpOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryAnacarSdOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryAnacarSdOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryAnacarSdOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryAnacarSdOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryApproveLevelOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryApproveLevelOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryApproveLevelOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryApproveLevelOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryAreaCodeOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryAreaCodeOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryAreaCodeOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryAreaCodeOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryBankBranchOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryBankBranchOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryBankBranchOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryBankBranchOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryBankOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryBankOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryBankOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryBankOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryCdCountryOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryCdCountryOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryCdCountryOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryCdCountryOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryCdProductUnitOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryCdProductUnitOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryCdProductUnitOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryCdProductUnitOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryCountryOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryCountryOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryCountryOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryCountryOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryCurrencyOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryCurrencyOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryCurrencyOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryCurrencyOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryCusGrpOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryCusGrpOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryCusGrpOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryCusGrpOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryCustomHouseOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryCustomHouseOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryCustomHouseOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryCustomHouseOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryCustomRateOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryCustomRateOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryCustomRateOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryCustomRateOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryDegreeOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryDegreeOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryDegreeOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryDegreeOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryDueDatePs0112Operation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryDueDatePs0112Operation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryDueDatePs0112OperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryDueDatePs0112OperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryDutyGroupOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryDutyGroupOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryDutyGroupOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryDutyGroupOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryDutyMaterialOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryDutyMaterialOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryDutyMaterialOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryDutyMaterialOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryDutyTableOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryDutyTableOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryDutyTableOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryDutyTableOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryDutyUnitOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryDutyUnitOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryDutyUnitOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryDutyUnitOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryEdOfficeOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryEdOfficeOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryEdOfficeOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryEdOfficeOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryEdiGoodsOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryEdiGoodsOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryEdiGoodsOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryEdiGoodsOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryEdiUnitMapOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryEdiUnitMapOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryEdiUnitMapOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryEdiUnitMapOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryEmbassyOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryEmbassyOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryEmbassyOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryEmbassyOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryFindAmphurOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryFindAmphurOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryFindAmphurOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryFindAmphurOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryFindTambolOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryFindTambolOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryFindTambolOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryFindTambolOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryFormCodeOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryFormCodeOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryFormCodeOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryFormCodeOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryHolidayOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryHolidayOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryHolidayOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryHolidayOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryHospitalOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryHospitalOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryHospitalOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryHospitalOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryImportCompOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryImportCompOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryImportCompOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryImportCompOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryIncMastOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryIncMastOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryIncMastOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryIncMastOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryIncomeTypeOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryIncomeTypeOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryIncomeTypeOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryIncomeTypeOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryLicenseDtOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryLicenseDtOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryLicenseDtOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryLicenseDtOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryLicenseHdOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryLicenseHdOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryLicenseHdOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryLicenseHdOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryLocalRateOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryLocalRateOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryLocalRateOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryLocalRateOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryMaterialOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryMaterialOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryMaterialOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryMaterialOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryObjRateOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryObjRateOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryObjRateOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryObjRateOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryOilFundRateOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryOilFundRateOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryOilFundRateOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryOilFundRateOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryProductIncMastOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryProductIncMastOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryProductIncMastOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryProductIncMastOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryProductOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryProductOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryProductOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryProductOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryProductSubTypeOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryProductSubTypeOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryProductSubTypeOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryProductSubTypeOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryProductTypeOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryProductTypeOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryProductTypeOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryProductTypeOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryProductUnitOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryProductUnitOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryProductUnitOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryProductUnitOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquirySssFundRateOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquirySssFundRateOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquirySssFundRateOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquirySssFundRateOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryStoreOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryStoreOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryStoreOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryStoreOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryStructureGoodsOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryStructureGoodsOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryStructureGoodsOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryStructureGoodsOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquirySystemParamOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquirySystemParamOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquirySystemParamOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquirySystemParamOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryTambolOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryTambolOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryTambolOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryTambolOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryTimeRateOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryTimeRateOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryTimeRateOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryTimeRateOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryTitleOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryTitleOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryTitleOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryTitleOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryVatRateOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryVatRateOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryVatRateOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryVatRateOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryVatSplitDetOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryVatSplitDetOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryVatSplitDetOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryVatSplitDetOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryVatSplitHdOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryVatSplitHdOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryVatSplitHdOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryVatSplitHdOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryZipCodeOperation">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:InquiryZipCodeOperation" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="RdbserviceEd_InquiryZipCodeOperationResponse">
+    <WL5G3N0:part name="return" element="WL5G3N1:InquiryZipCodeOperationResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="RdbserviceEdImpl">
+    <WL5G3N0:operation name="InquiryAccMastOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryAccMastOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryAccMastOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryAnacarGrpOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryAnacarGrpOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryAnacarGrpOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryAnacarSdOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryAnacarSdOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryAnacarSdOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryApproveLevelOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryApproveLevelOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryApproveLevelOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryAreaCodeOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryAreaCodeOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryAreaCodeOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryBankBranchOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryBankBranchOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryBankBranchOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryBankOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryBankOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryBankOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryCdCountryOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryCdCountryOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryCdCountryOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryCdProductUnitOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryCdProductUnitOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryCdProductUnitOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryCountryOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryCountryOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryCountryOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryCurrencyOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryCurrencyOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryCurrencyOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryCusGrpOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryCusGrpOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryCusGrpOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryCustomHouseOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryCustomHouseOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryCustomHouseOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryCustomRateOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryCustomRateOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryCustomRateOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryDegreeOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryDegreeOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryDegreeOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryDueDatePs0112Operation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryDueDatePs0112Operation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryDueDatePs0112OperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryDutyGroupOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryDutyGroupOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryDutyGroupOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryDutyMaterialOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryDutyMaterialOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryDutyMaterialOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryDutyTableOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryDutyTableOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryDutyTableOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryDutyUnitOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryDutyUnitOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryDutyUnitOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryEdOfficeOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryEdOfficeOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryEdOfficeOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryEdiGoodsOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryEdiGoodsOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryEdiGoodsOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryEdiUnitMapOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryEdiUnitMapOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryEdiUnitMapOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryEmbassyOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryEmbassyOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryEmbassyOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryFindAmphurOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryFindAmphurOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryFindAmphurOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryFindTambolOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryFindTambolOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryFindTambolOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryFormCodeOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryFormCodeOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryFormCodeOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryHolidayOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryHolidayOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryHolidayOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryHospitalOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryHospitalOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryHospitalOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryImportCompOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryImportCompOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryImportCompOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryIncMastOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryIncMastOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryIncMastOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryIncomeTypeOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryIncomeTypeOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryIncomeTypeOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryLicenseDtOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryLicenseDtOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryLicenseDtOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryLicenseHdOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryLicenseHdOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryLicenseHdOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryLocalRateOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryLocalRateOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryLocalRateOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryMaterialOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryMaterialOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryMaterialOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryObjRateOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryObjRateOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryObjRateOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryOilFundRateOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryOilFundRateOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryOilFundRateOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryProductIncMastOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryProductIncMastOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryProductIncMastOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryProductOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryProductOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryProductOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryProductSubTypeOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryProductSubTypeOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryProductSubTypeOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryProductTypeOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryProductTypeOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryProductTypeOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryProductUnitOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryProductUnitOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryProductUnitOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquirySssFundRateOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquirySssFundRateOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquirySssFundRateOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryStoreOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryStoreOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryStoreOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryStructureGoodsOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryStructureGoodsOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryStructureGoodsOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquirySystemParamOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquirySystemParamOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquirySystemParamOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryTambolOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryTambolOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryTambolOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryTimeRateOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryTimeRateOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryTimeRateOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryTitleOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryTitleOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryTitleOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryVatRateOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryVatRateOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryVatRateOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryVatSplitDetOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryVatSplitDetOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryVatSplitDetOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryVatSplitHdOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryVatSplitHdOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryVatSplitHdOperationResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryZipCodeOperation">
+      <WL5G3N0:input message="WL5G3N1:RdbserviceEd_InquiryZipCodeOperation" />
+      <WL5G3N0:output message="WL5G3N1:RdbserviceEd_InquiryZipCodeOperationResponse" />
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="RdbserviceEdImpl" type="WL5G3N1:RdbserviceEdImpl">
+    <WL5G3N2:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <WL5G3N0:operation name="InquiryAccMastOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryAccMastOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryAnacarGrpOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryAnacarGrpOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryAnacarSdOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryAnacarSdOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryApproveLevelOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryApproveLevelOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryAreaCodeOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryAreaCodeOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryBankBranchOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryBankBranchOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryBankOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryBankOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryCdCountryOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryCdCountryOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryCdProductUnitOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryCdProductUnitOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryCountryOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryCountryOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryCurrencyOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryCurrencyOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryCusGrpOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryCusGrpOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryCustomHouseOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryCustomHouseOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryCustomRateOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryCustomRateOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryDegreeOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryDegreeOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryDueDatePs0112Operation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryDueDatePs0112Operation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryDutyGroupOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryDutyGroupOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryDutyMaterialOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryDutyMaterialOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryDutyTableOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryDutyTableOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryDutyUnitOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryDutyUnitOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryEdOfficeOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryEdOfficeOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryEdiGoodsOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryEdiGoodsOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryEdiUnitMapOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryEdiUnitMapOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryEmbassyOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryEmbassyOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryFindAmphurOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryFindAmphurOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryFindTambolOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryFindTambolOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryFormCodeOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryFormCodeOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryHolidayOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryHolidayOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryHospitalOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryHospitalOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryImportCompOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryImportCompOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryIncMastOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryIncMastOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryIncomeTypeOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryIncomeTypeOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryLicenseDtOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryLicenseDtOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryLicenseHdOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryLicenseHdOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryLocalRateOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryLocalRateOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryMaterialOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryMaterialOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryObjRateOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryObjRateOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryOilFundRateOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryOilFundRateOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryProductIncMastOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryProductIncMastOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryProductOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryProductOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryProductSubTypeOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryProductSubTypeOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryProductTypeOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryProductTypeOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryProductUnitOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryProductUnitOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquirySssFundRateOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquirySssFundRateOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryStoreOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryStoreOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryStructureGoodsOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryStructureGoodsOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquirySystemParamOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquirySystemParamOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryTambolOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryTambolOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryTimeRateOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryTimeRateOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryTitleOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryTitleOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryVatRateOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryVatRateOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryVatSplitDetOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryVatSplitDetOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryVatSplitHdOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryVatSplitHdOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="InquiryZipCodeOperation">
+      <WL5G3N2:operation soapAction="http://rdbservice.pccth.com//InquiryZipCodeOperation" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="return" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="rdbserviceEd">
+    <WL5G3N0:port name="rdbserviceEdSoapHttpPort" binding="WL5G3N1:RdbserviceEdImpl">
+      <WL5G3N2:address location="http://web2.excise.go.th:80/WebServices/rdbserviceEdSoapHttpPort" />
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILLR8304" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="588"/>
+	<property name="ireport.y" value="166"/>
+	<parameter name="getDatefrom" class="java.lang.String"/>
+	<parameter name="getDateto" class="java.lang.String"/>
+	<parameter name="getOffcode1" class="java.lang.String"/>
+	<parameter name="getOffcode2" class="java.lang.String"/>
+	<parameter name="getOffcode3" class="java.lang.String"/>
+	<parameter name="getUserID" class="java.lang.String">
+		<defaultValueExpression><![CDATA["3159900027250"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select aa.*, aa.LEGISLATION_ALCOHOL + aa.LEGISLATION_TOBACCO + aa.LEGISLATION_CARD + aa.LEGISLATION_TAX summary_legislation,
+    to_char(sysdate, 'fmdd month yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') untildate,
+    to_char(sysdate, 'hh24:mi', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') systimedate,
+    to_char(to_date($P{getDatefrom},'yyyy-mm-dd'), 'fmdd', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  date_from,
+    to_char(to_date($P{getDatefrom},'yyyy-mm-dd'), 'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  month_from,
+    to_char(to_date($P{getDatefrom},'yyyy-mm-dd'), 'yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  year_from,
+    to_char(to_date($P{getDateto},'yyyy-mm-dd'), 'dd', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  date_to,
+    to_char(to_date($P{getDateto},'yyyy-mm-dd'), 'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  month_to,
+    to_char(to_date($P{getDateto},'yyyy-mm-dd'), 'yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  year_to,
+(select title_name || first_name || ' ' || last_name from v_staff_list_popup where idcard_no=$P{getUserID}) staff_name
+from(
+select a.group_name, a.subgroup, a.accuser_type ref_id, 'ACCUSER_TYPE' ref_type,'C' dec_type,
+(select e.offname from ed_office e where e.offcode=nvl($P{getOffcode3},nvl($P{getOffcode2},$P{getOffcode1}))) offname,
+
+b.legislation_alcohol,b.legislation_tobacco,b.legislation_card, b.legislation_tax,'1' group_order
+ from (
+    select '1. ผู้จับกุม(ราย)' group_name,'1.1 เจ้าพนักงานสรรพสามิตพื้นที่/สาขา' subgroup, '4' accuser_type from dual
+    union
+    select '1. ผู้จับกุม(ราย)' group_name,'1.2 เจ้าพนักงานสรรพสามิตพื้นที่' subgroup,'1' accuser_type from dual
+    union
+    select '1. ผู้จับกุม(ราย)' group_name,'1.3 เจ้าพนักงานสรรพสามิตภาค' subgroup, '3' accuser_type from dual
+    union
+    select '1. ผู้จับกุม(ราย)' group_name,'1.4 เจ้าหน้าที่อื่นๆ' subgroup, '5' accuser_type from dual
+    union
+    select '1. ผู้จับกุม(ราย)' group_name,'1.5 เจ้าพนักงานสรรพสามิต' subgroup, '2' accuser_type from dual
+) a
+left join (
+    select aa.accuser_type,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_alcohol') then 1 else 0 end) legislation_alcohol,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_tobacco') then 1 else 0 end) legislation_tobacco,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_card') then 1 else 0 end) legislation_card,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_tax') then 1 else 0 end) legislation_tax
+    from application_arrest aa
+    inner join book_impeachment bi on bi.track_no=aa.track_no
+    inner join ed_office ed on ed.offcode=aa.offcode
+    where substr(aa.offcode,1,2) || '0000'=nvl($P{getOffcode1},substr(aa.offcode,1,2) || '0000')
+    and substr(aa.offcode,1,4) || '00'=nvl($P{getOffcode2},substr(aa.offcode,1,4) || '00')
+    and aa.offcode=nvl($P{getOffcode3},aa.offcode)
+    and to_date(bi.case_date) between to_date($P{getDatefrom},'yyyy-mm-dd') and to_date($P{getDateto},'yyyy-mm-dd')
+    group by  aa.accuser_type
+) b on a.accuser_type=b.accuser_type
+union all
+select a.group_name, a.subgroup, a.case_result ref_id, 'CASE_RESULT' ref_type,'C' dec_type,
+(select e.offname from ed_office e where e.offcode=nvl($P{getOffcode3},nvl($P{getOffcode2},$P{getOffcode1}))) offname,
+b.legislation_alcohol,b.legislation_tobacco,b.legislation_card, b.legislation_tax,'2' group_order
+from (
+    select '2. ผลแห่งคดี' group_name,'2.1 ฟ้องศาล/ดำเนินคดี' subgroup,'22' case_result from dual
+    union
+    select '2. ผลแห่งคดี' group_name,'2.2 พนักงานสอบสวน' subgroup, '23' case_result from dual
+    union
+    select '2. ผลแห่งคดี' group_name,'2.3 เปรียบเทียบปรับ' subgroup,'11' case_result from dual
+) a
+left join (
+    select bi.case_quality, bi.case_last,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_alcohol') then 1 else 0 end) legislation_alcohol,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_tobacco') then 1 else 0 end) legislation_tobacco,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_card') then 1 else 0 end) legislation_card,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_tax') then 1 else 0 end) legislation_tax
+    from application_arrest aa
+    inner join book_impeachment bi on bi.track_no=aa.track_no
+    inner join ed_office ed on ed.offcode=aa.offcode
+    where substr(aa.offcode,1,2) || '0000'=nvl($P{getOffcode1},substr(aa.offcode,1,2) || '0000')
+    and substr(aa.offcode,1,4) || '00'=nvl($P{getOffcode2},substr(aa.offcode,1,4) || '00')
+    and aa.offcode=nvl($P{getOffcode3},aa.offcode)
+    and to_date(bi.case_date) between to_date($P{getDatefrom},'yyyy-mm-dd') and to_date($P{getDateto},'yyyy-mm-dd')
+    and aa.have_culprit='Y'
+    group by bi.case_quality, bi.case_last
+) b on a.case_result=b.case_quality||b.case_last
+union all
+select a.group_name, a.subgroup, a.have_culprit ref_id, 'CULPRIT_TYPE' ref_type,'C' dec_type,
+(select e.offname from ed_office e where e.offcode=nvl($P{getOffcode3},nvl($P{getOffcode2},$P{getOffcode1}))) offname,
+b.legislation_alcohol,b.legislation_tobacco,b.legislation_card, b.legislation_tax,'3' group_order
+from (
+      select '3. ผู้ต้องหา(คดี)' group_name,'3.1 คดีมีตัว' subgroup,'Y' have_culprit from dual
+      union
+      select '3. ผู้ต้องหา(คดี)' group_name,'3.2 คดีไม่มีตัว' subgroup, 'N' have_culprit from dual
+) a
+left join (
+    select aa.have_culprit,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_alcohol') then 1 else 0 end) legislation_alcohol,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_tobacco') then 1 else 0 end) legislation_tobacco,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_card') then 1 else 0 end) legislation_card,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_tax') then 1 else 0 end) legislation_tax
+    from application_arrest aa
+    inner join book_impeachment bi on bi.track_no=aa.track_no
+    inner join ed_office ed on ed.offcode=aa.offcode
+    where substr(aa.offcode,1,2) || '0000'=nvl($P{getOffcode1},substr(aa.offcode,1,2) || '0000')
+    and substr(aa.offcode,1,4) || '00'=nvl($P{getOffcode2},substr(aa.offcode,1,4) || '00')
+    and aa.offcode=nvl($P{getOffcode3},aa.offcode)
+    and to_date(bi.case_date) between to_date($P{getDatefrom},'yyyy-mm-dd') and to_date($P{getDateto},'yyyy-mm-dd')
+    group by aa.have_culprit
+) b on a.have_culprit=b.have_culprit
+union all
+select a.group_name, a.subgroup, a.fine_type ref_id, 'COURT_FINE' ref_type,'M' dec_type,
+(select e.offname from ed_office e where e.offcode=nvl($P{getOffcode3},nvl($P{getOffcode2},$P{getOffcode1}))) offname,
+b.legislation_alcohol,b.legislation_tobacco,b.legislation_card, b.legislation_tax,'4' group_order
+from (
+    select '4. เงินค่าปรับ(บาท)' group_name,'4.1 ศาลปรับ' subgroup, '22' fine_type from dual
+    union
+    select '4. เงินค่าปรับ(บาท)' group_name,'4.2 พนักงานสอบสวนปรับ' subgroup, '23' fine_type from dual
+    union
+    select '4. เงินค่าปรับ(บาท)' group_name,'4.3 เปรียบเทียบปรับ' subgroup, '11' fine_type from dual
+) a
+left join (
+    select bi.case_quality,bi.case_last,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_alcohol') then nvl(bi.case_fine,0) else 0 end) legislation_alcohol,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_tobacco') then nvl(bi.case_fine,0) else 0 end) legislation_tobacco,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_card') then nvl(bi.case_fine,0) else 0 end) legislation_card,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_tax') then nvl(bi.case_fine,0) else 0 end) legislation_tax
+    from application_arrest aa
+    inner join book_impeachment bi on bi.track_no=aa.track_no
+    inner join ed_office ed on ed.offcode=aa.offcode
+    where bi.case_quality='2'
+    and substr(aa.offcode,1,2) || '0000'=nvl($P{getOffcode1},substr(aa.offcode,1,2) || '0000')
+    and substr(aa.offcode,1,4) || '00'=nvl($P{getOffcode2},substr(aa.offcode,1,4) || '00')
+    and aa.offcode=nvl($P{getOffcode3},aa.offcode)
+    and to_date(bi.case_last_date) between to_date($P{getDatefrom},'yyyy-mm-dd') and to_date($P{getDateto},'yyyy-mm-dd')
+    group by bi.case_quality,bi.case_last
+    union all
+    select bi.case_quality,bi.case_last,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_alcohol') then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) else 0 end) legislation_alcohol,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_tobacco') then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) else 0 end) legislation_tobacco,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_card') then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) else 0 end) legislation_card,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_tax') then nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) else 0 end) legislation_tax
+    from application_arrest aa
+    inner join book_impeachment bi on bi.track_no=aa.track_no
+    inner join ed_office ed on ed.offcode=aa.offcode
+    inner join compare_case cc on cc.track_no=aa.track_no
+    where bi.case_quality='1'
+    and substr(aa.offcode,1,2) || '0000'=nvl($P{getOffcode1},substr(aa.offcode,1,2) || '0000')
+    and substr(aa.offcode,1,4) || '00'=nvl($P{getOffcode2},substr(aa.offcode,1,4) || '00')
+    and aa.offcode=nvl($P{getOffcode3},aa.offcode)
+    and to_date(cc.pay_date) between to_date($P{getDatefrom},'yyyy-mm-dd') and to_date($P{getDateto},'yyyy-mm-dd')
+    group by bi.case_quality,bi.case_last
+) b on a.fine_type=b.case_quality||b.case_last
+union all
+select a.group_name, a.subgroup, a.fine_type ref_id, 'COMPARE_TYPE' ref_type,'M' dec_type,
+(select e.offname from ed_office e where e.offcode=nvl($P{getOffcode3},nvl($P{getOffcode2},$P{getOffcode1}))) offname,
+b.legislation_alcohol,b.legislation_tobacco,b.legislation_card, b.legislation_tax,'5' group_order
+from (
+    select '4. เงินค่าปรับ(บาท)' group_name,'    4.3.1 เงินสินบน' subgroup, 'BRIBE' fine_type from dual
+    union
+    select '4. เงินค่าปรับ(บาท)' group_name,'    4.3.2 เงินรางวัล' subgroup,'REWARD' fine_type from dual
+    union
+    select '4. เงินค่าปรับ(บาท)' group_name,'    4.3.3 เงินนำส่งคลัง' subgroup,'TREASURY' fine_type from dual
+) a
+left join (
+    select 'BRIBE' fine_type,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_alcohol') then nvl(cc.birbe_money,0) else 0 end) legislation_alcohol,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_tobacco') then nvl(cc.birbe_money,0) else 0 end) legislation_tobacco,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_card') then nvl(cc.birbe_money,0) else 0 end) legislation_card,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_tax') then nvl(cc.birbe_money,0) else 0 end) legislation_tax
+    from application_arrest aa
+    inner join book_impeachment bi on bi.track_no=aa.track_no
+    inner join ed_office ed on ed.offcode=aa.offcode
+    inner join compare_case cc on cc.track_no=aa.track_no
+    where bi.case_quality='1' and bi.case_last='1'
+    and substr(aa.offcode,1,2) || '0000'=nvl($P{getOffcode1},substr(aa.offcode,1,2) || '0000')
+    and substr(aa.offcode,1,4) || '00'=nvl($P{getOffcode2},substr(aa.offcode,1,4) || '00')
+    and aa.offcode=nvl($P{getOffcode3},aa.offcode)
+    and to_date(cc.pay_date) between to_date($P{getDatefrom},'yyyy-mm-dd') and to_date($P{getDateto},'yyyy-mm-dd')
+    union all
+    select 'REWARD' fine_type,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_alcohol') then nvl(cc.reward_money,0) else 0 end) legislation_alcohol,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_tobacco') then nvl(cc.reward_money,0) else 0 end) legislation_tobacco,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_card') then nvl(cc.reward_money,0) else 0 end) legislation_card,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_tax') then nvl(cc.reward_money,0) else 0 end) legislation_tax
+    from application_arrest aa
+    inner join book_impeachment bi on bi.track_no=aa.track_no
+    inner join ed_office ed on ed.offcode=aa.offcode
+    inner join compare_case cc on cc.track_no=aa.track_no
+    where bi.case_quality='1' and bi.case_last='1'
+    and substr(aa.offcode,1,2) || '0000'=nvl($P{getOffcode1},substr(aa.offcode,1,2) || '0000')
+    and substr(aa.offcode,1,4) || '00'=nvl($P{getOffcode2},substr(aa.offcode,1,4) || '00')
+    and aa.offcode=nvl($P{getOffcode3},aa.offcode)
+    and to_date(cc.pay_date) between to_date($P{getDatefrom},'yyyy-mm-dd') and to_date($P{getDateto},'yyyy-mm-dd')
+    union all
+    select 'TREASURY' fine_type,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_alcohol') then nvl(cc.treasury_money,0) else 0 end) legislation_alcohol,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_tobacco') then nvl(cc.treasury_money,0) else 0 end) legislation_tobacco,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_card') then nvl(cc.treasury_money,0) else 0 end) legislation_card,
+    sum(case when aa.legislation_id=pke_master.getConfigValue('legislation_tax') then nvl(cc.treasury_money,0) else 0 end) legislation_tax
+    from application_arrest aa
+    inner join book_impeachment bi on bi.track_no=aa.track_no
+    inner join ed_office ed on ed.offcode=aa.offcode
+    inner join compare_case cc on cc.track_no=aa.track_no
+    where bi.case_quality='1' and bi.case_last='1'
+    and substr(aa.offcode,1,2) || '0000'=nvl($P{getOffcode1},substr(aa.offcode,1,2) || '0000')
+    and substr(aa.offcode,1,4) || '00'=nvl($P{getOffcode2},substr(aa.offcode,1,4) || '00')
+    and aa.offcode=nvl($P{getOffcode3},aa.offcode)
+    and to_date(cc.pay_date) between to_date($P{getDatefrom},'yyyy-mm-dd') and to_date($P{getDateto},'yyyy-mm-dd')
+) b on a.fine_type=b.fine_type
+order by group_order,group_name, subgroup ) aa]]>
+	</queryString>
+	<field name="GROUP_NAME" class="java.lang.String"/>
+	<field name="SUBGROUP" class="java.lang.String"/>
+	<field name="REF_ID" class="java.lang.String"/>
+	<field name="REF_TYPE" class="java.lang.String"/>
+	<field name="DEC_TYPE" class="java.lang.String"/>
+	<field name="OFFNAME" class="java.lang.String"/>
+	<field name="LEGISLATION_ALCOHOL" class="java.math.BigDecimal"/>
+	<field name="LEGISLATION_TOBACCO" class="java.math.BigDecimal"/>
+	<field name="LEGISLATION_CARD" class="java.math.BigDecimal"/>
+	<field name="LEGISLATION_TAX" class="java.math.BigDecimal"/>
+	<field name="GROUP_ORDER" class="java.lang.String"/>
+	<field name="SUMMARY_LEGISLATION" class="java.math.BigDecimal"/>
+	<field name="UNTILDATE" class="java.lang.String"/>
+	<field name="SYSTIMEDATE" class="java.lang.String"/>
+	<field name="DATE_FROM" class="java.lang.String"/>
+	<field name="MONTH_FROM" class="java.lang.String"/>
+	<field name="YEAR_FROM" class="java.lang.String"/>
+	<field name="DATE_TO" class="java.lang.String"/>
+	<field name="MONTH_TO" class="java.lang.String"/>
+	<field name="YEAR_TO" class="java.lang.String"/>
+	<field name="STAFF_NAME" class="java.lang.String"/>
+	<variable name="summary_1" class="java.lang.String"/>
+	<variable name="LEGISLATION_ALCOHOL_1" class="java.math.BigDecimal" resetType="Group" resetGroup="8304_Group" calculation="Sum">
+		<variableExpression><![CDATA[$F{LEGISLATION_ALCOHOL}]]></variableExpression>
+	</variable>
+	<variable name="LEGISLATION_TAX_1" class="java.math.BigDecimal" resetType="Group" resetGroup="8304_Group" calculation="Sum">
+		<variableExpression><![CDATA[$F{LEGISLATION_TAX}]]></variableExpression>
+	</variable>
+	<variable name="LEGISLATION_ALCOHOL_2" class="java.math.BigDecimal" resetType="Group" resetGroup="8304_Group" calculation="Sum">
+		<variableExpression><![CDATA[$F{LEGISLATION_ALCOHOL}]]></variableExpression>
+	</variable>
+	<variable name="LEGISLATION_TOBACCO_1" class="java.math.BigDecimal" resetType="Group" resetGroup="8304_Group" calculation="Sum">
+		<variableExpression><![CDATA[$F{LEGISLATION_TOBACCO}]]></variableExpression>
+	</variable>
+	<variable name="LEGISLATION_CARD_1" class="java.math.BigDecimal" resetType="Group" resetGroup="8304_Group" calculation="Sum">
+		<variableExpression><![CDATA[$F{LEGISLATION_CARD}]]></variableExpression>
+	</variable>
+	<variable name="LEGISLATION_TAX_2" class="java.math.BigDecimal" resetType="Group" resetGroup="8304_Group" calculation="Sum">
+		<variableExpression><![CDATA[$F{LEGISLATION_TAX}]]></variableExpression>
+	</variable>
+	<variable name="SUMMARY_LEGISLATION_1" class="java.math.BigDecimal" resetType="Group" resetGroup="8304_Group" calculation="Sum">
+		<variableExpression><![CDATA[$F{SUMMARY_LEGISLATION}]]></variableExpression>
+	</variable>
+	<variable name="LEGISLATION_ALCOHOL_3" class="java.math.BigDecimal" resetType="Group" resetGroup="8304_Group" calculation="Sum">
+		<variableExpression><![CDATA[$F{LEGISLATION_ALCOHOL}]]></variableExpression>
+	</variable>
+	<variable name="LEGISLATION_TOBACCO_2" class="java.math.BigDecimal" resetType="Group" resetGroup="8304_Group" calculation="Sum">
+		<variableExpression><![CDATA[$F{LEGISLATION_TOBACCO}]]></variableExpression>
+	</variable>
+	<variable name="LEGISLATION_CARD_2" class="java.math.BigDecimal" resetType="Group" resetGroup="8304_Group" calculation="Sum">
+		<variableExpression><![CDATA[$F{LEGISLATION_CARD}]]></variableExpression>
+	</variable>
+	<variable name="LEGISLATION_TAX_3" class="java.math.BigDecimal" resetType="Group" resetGroup="8304_Group" calculation="Sum">
+		<variableExpression><![CDATA[$F{LEGISLATION_TAX}]]></variableExpression>
+	</variable>
+	<variable name="SUMMARY_LEGISLATION_2" class="java.math.BigDecimal" resetType="Group" resetGroup="8304_Group" calculation="Sum">
+		<variableExpression><![CDATA[$F{SUMMARY_LEGISLATION}]]></variableExpression>
+	</variable>
+	<group name="8304_Group">
+		<groupExpression><![CDATA[$F{GROUP_NAME}]]></groupExpression>
+		<groupHeader>
+			<band height="19">
+				<rectangle>
+					<reportElement x="0" y="0" width="555" height="19"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<line>
+					<reportElement x="487" y="0" width="1" height="19"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="267" y="0" width="1" height="19"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="342" y="0" width="1" height="19"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="194" y="0" width="1" height="19"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="415" y="0" width="1" height="19"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement x="4" y="0" width="193" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{GROUP_NAME}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="117" splitType="Stretch">
+			<staticText>
+				<reportElement x="186" y="0" width="1147" height="28"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Angsana New" size="18" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[กรมสรรพสามิต กระทรวงการคลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="213" y="28" width="1117" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="18" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[หน้างบรายงานสถิติผลคดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="56" width="1000" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="18" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[สำนักงานสรรพสามิต..........................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="75" y="84" width="1000" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="18" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ระหว่าง วันที่.......................................... ถึงวันที่ ...................................................]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="264" y="53" width="1047" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="18" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{OFFNAME} == null || $F{OFFNAME} == ""   ? "รวมทั่วประเทศ" : $F{OFFNAME} )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="-20" width="845" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{UNTILDATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="101" y="-20" width="750" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SYSTIMEDATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="446" y="-20" width="919" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Report ID: 3.4 (ILLR8304)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="81" width="100" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="18" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DATE_FROM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="81" width="100" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="18" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{MONTH_FROM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="81" width="100" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="18" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{YEAR_FROM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="81" width="100" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="18" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DATE_TO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="345" y="81" width="133" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="18" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{MONTH_TO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="411" y="81" width="131" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="18" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{YEAR_TO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="3" y="-20" width="919" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[วันที่]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="46" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="46" backcolor="#CCCCCC"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="267" y="0" width="1" height="46"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="342" y="0" width="1" height="46"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="415" y="0" width="1" height="46"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="487" y="0" width="1" height="46"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="195" y="0" width="72" height="46"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[พ.ร.บ.สุรา]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="0" width="74" height="46"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[พ.ร.บ.
+ยาสูบ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="0" width="70" height="46"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[พ.ร.บ.ไพ่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="0" width="69" height="46"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[พ.ร.บ.ภาษี
+สรรพสามิต]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="0" width="67" height="46"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[รวม
+ทั้งหมด]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="0" width="194" height="46"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[รายการ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="194" y="0" width="1" height="46"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="19" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="233" y="0" width="107" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DEC_TYPE}.equals("M")? com.ko.util.NumberUtil.getNumberFormat($F{LEGISLATION_TOBACCO}.doubleValue(),2," ") : com.ko.util.NumberUtil.getNumberFormat($F{LEGISLATION_TOBACCO}.doubleValue(),0," ")]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0" isBlankWhenNull="true">
+				<reportElement x="379" y="0" width="106" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DEC_TYPE}.equals("M")? com.ko.util.NumberUtil.getNumberFormat($F{LEGISLATION_TAX}.doubleValue(),2," ") : com.ko.util.NumberUtil.getNumberFormat($F{LEGISLATION_TAX}.doubleValue(),0," ")]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="309" y="0" width="104" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DEC_TYPE}.equals("M")? com.ko.util.NumberUtil.getNumberFormat($F{LEGISLATION_CARD}.doubleValue(),2," ") : com.ko.util.NumberUtil.getNumberFormat($F{LEGISLATION_CARD}.doubleValue(),0," ")]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="164" y="0" width="102" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DEC_TYPE}.equals("M")? com.ko.util.NumberUtil.getNumberFormat($F{LEGISLATION_ALCOHOL}.doubleValue(),2," ") : com.ko.util.NumberUtil.getNumberFormat($F{LEGISLATION_ALCOHOL}.doubleValue(),0," ")]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0" isBlankWhenNull="true">
+				<reportElement x="446" y="0" width="107" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DEC_TYPE}.equals("M")? com.ko.util.NumberUtil.getNumberFormat($F{SUMMARY_LEGISLATION}.doubleValue(),2," ") : com.ko.util.NumberUtil.getNumberFormat($F{SUMMARY_LEGISLATION}.doubleValue(),0," ")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="12" y="0" width="253" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SUBGROUP}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="267" y="0" width="1" height="19"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="415" y="0" width="1" height="19"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="342" y="0" width="1" height="19"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="487" y="0" width="1" height="19"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="194" y="0" width="1" height="19"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="23">
+			<staticText>
+				<reportElement x="0" y="0" width="500" height="23"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[User :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="537" y="3" width="1000" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="512" y="3" width="500" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Page :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="23" y="1" width="443" height="22"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{STAFF_NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+</jasperReport>

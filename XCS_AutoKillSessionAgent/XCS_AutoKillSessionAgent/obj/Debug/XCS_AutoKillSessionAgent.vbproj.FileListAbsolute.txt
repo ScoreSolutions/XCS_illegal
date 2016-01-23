@@ -1,0 +1,10 @@
+D:\MyProject\XCS-Illegal\XCS_AutoKillSessionAgent\XCS_AutoKillSessionAgent\bin\Debug\XCS_AutoKillSessionAgent.exe
+D:\MyProject\XCS-Illegal\XCS_AutoKillSessionAgent\XCS_AutoKillSessionAgent\bin\Debug\XCS_AutoKillSessionAgent.pdb
+D:\MyProject\XCS-Illegal\XCS_AutoKillSessionAgent\XCS_AutoKillSessionAgent\bin\Debug\XCS_AutoKillSessionAgent.xml
+D:\MyProject\XCS-Illegal\XCS_AutoKillSessionAgent\XCS_AutoKillSessionAgent\obj\Debug\ResolveAssemblyReference.cache
+D:\MyProject\XCS-Illegal\XCS_AutoKillSessionAgent\XCS_AutoKillSessionAgent\obj\Debug\XCS_AutoKillSessionAgent.frmAutoKellSessionAgent.resources
+D:\MyProject\XCS-Illegal\XCS_AutoKillSessionAgent\XCS_AutoKillSessionAgent\obj\Debug\XCS_AutoKillSessionAgent.Resources.resources
+D:\MyProject\XCS-Illegal\XCS_AutoKillSessionAgent\XCS_AutoKillSessionAgent\obj\Debug\XCS_AutoKillSessionAgent.vbproj.GenerateResource.Cache
+D:\MyProject\XCS-Illegal\XCS_AutoKillSessionAgent\XCS_AutoKillSessionAgent\obj\Debug\XCS_AutoKillSessionAgent.exe
+D:\MyProject\XCS-Illegal\XCS_AutoKillSessionAgent\XCS_AutoKillSessionAgent\obj\Debug\XCS_AutoKillSessionAgent.xml
+D:\MyProject\XCS-Illegal\XCS_AutoKillSessionAgent\XCS_AutoKillSessionAgent\obj\Debug\XCS_AutoKillSessionAgent.pdb

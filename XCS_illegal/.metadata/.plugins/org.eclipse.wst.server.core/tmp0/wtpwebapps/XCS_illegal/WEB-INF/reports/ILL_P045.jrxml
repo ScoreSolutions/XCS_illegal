@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILL_P041" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="336"/>
+	<style name="table" isDefault="false">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" isDefault="false" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" isDefault="false" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" isDefault="false" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="2" width="169" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[เลขที่งาน .........................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="214" y="28" width="115" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[บันทึกการส่งของกลาง]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="204" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="167" width="553" height="32"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ซึ่งนายตรวจฯ ส่งมาทำการตรวจพิสูจน์ปรากฎว่ามีรายการของกลางดังนี้]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="68" width="553" height="32"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[เรื่อง ......................................................................................................... พ.ร.บ. ..............................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="2" width="553" height="32"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ส่วนราชการ ......................................................................................................................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="101" width="553" height="32"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[เรียน .....................................................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="134" width="553" height="32"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[                           ด้วยเมื่อวันที่ ........................................................... ฝ่ายพิสูจน์ของกลางได้รับของกลางคดี ......................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="35" width="553" height="32"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ที่ ......................................................................................................... วันที่ .......................................................................................................................]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="5" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="454" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table" style="table" x="0" y="2" width="555" height="140"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Table Dataset 1">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(1)]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="29">
+						<jr:tableHeader style="table_TH" height="43" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="29" height="43"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Angsana New" size="14"/>
+								</textElement>
+								<text><![CDATA[ลำดับ
+ที่]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1"/>
+						<jr:columnFooter style="table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="90">
+						<jr:tableHeader style="table_TH" height="43" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="43"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Angsana New" size="14"/>
+								</textElement>
+								<text><![CDATA[ผู้กล่าวหา]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1"/>
+						<jr:columnFooter style="table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="76">
+						<jr:tableHeader style="table_TH" height="43" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="76" height="43"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Angsana New" size="14"/>
+								</textElement>
+								<text><![CDATA[ผู้ต้องหา]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="76" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Angsana New" size="14" isBold="true" isItalic="false" isUnderline="true"/>
+								</textElement>
+								<text><![CDATA[รวม]]></text>
+							</staticText>
+						</jr:tableFooter>
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1"/>
+						<jr:columnFooter style="table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="90">
+						<jr:tableHeader style="table_TH" height="43" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="43"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Angsana New" size="14"/>
+								</textElement>
+								<text><![CDATA[ชนิดของกลาง]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1"/>
+						<jr:columnFooter style="table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="53">
+						<jr:tableHeader style="table_TH" height="43" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="53" height="43"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Angsana New" size="14"/>
+								</textElement>
+								<text><![CDATA[ยี่ห้อ]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1"/>
+						<jr:columnFooter style="table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="70">
+						<jr:tableHeader style="table_TH" height="43" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="43"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Angsana New" size="14"/>
+								</textElement>
+								<text><![CDATA[จำนวน]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1"/>
+						<jr:columnFooter style="table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="90">
+						<jr:tableHeader style="table_TH" height="43" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="43"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Angsana New" size="14"/>
+								</textElement>
+								<text><![CDATA[ใช้ในการ
+ตรวจพิสูจน์]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1"/>
+						<jr:columnFooter style="table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="70">
+						<jr:tableHeader style="table_TH" height="43" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="43"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Angsana New" size="14"/>
+								</textElement>
+								<text><![CDATA[ที่เหลือ
+นำส่ง]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1"/>
+						<jr:columnFooter style="table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="90">
+						<jr:tableHeader style="table_TH" height="43" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="43"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Angsana New" size="14"/>
+								</textElement>
+								<text><![CDATA[หมายเหตุ]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1"/>
+						<jr:columnFooter style="table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="21" rowSpan="1"/>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement key="staticText-20" x="229" y="159" width="272" height="74"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ ........................................................................... ผู้นำส่ง
+(...................................................................................................................)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="234" width="245" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[วันที่ .........................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="255" width="553" height="32"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[คณะกรรมการตรวจรับของกลางได้พร้อมกันตรวจรับนับของกลางตามหนังสือนี้แล้ว ปรากฏว่า ครบถ้วนถูกต้องทุก]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="288" width="553" height="32"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ประการ และได้รับสำเนารายการงานตรวจพิสูจน์ของกลางตามหนังสือนี้แล้วทุกราย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="321" width="553" height="32"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[                                                                                            ลงชื่อ .......................................................................................................... ประธานกรรมการ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="354" width="553" height="32"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[                                                                                            ลงชื่อ .......................................................................................................... กรรมการ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="387" width="553" height="32"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[                                                                                            ลงชื่อ .......................................................................................................... กรรมการ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="167" y="428" width="245" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[วันที่ .........................................................................................]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,9 @@
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\LinqDB\bin\Debug\LinqDB.dll
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\LinqDB\bin\Debug\LinqDB.pdb
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\LinqDB\bin\Debug\LinqDB.xml
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\LinqDB\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\LinqDB\obj\x86\Debug\LinqDB.Resources.resources
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\LinqDB\obj\x86\Debug\LinqDB.vbproj.GenerateResource.Cache
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\LinqDB\obj\x86\Debug\LinqDB.dll
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\LinqDB\obj\x86\Debug\LinqDB.xml
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\LinqDB\obj\x86\Debug\LinqDB.pdb

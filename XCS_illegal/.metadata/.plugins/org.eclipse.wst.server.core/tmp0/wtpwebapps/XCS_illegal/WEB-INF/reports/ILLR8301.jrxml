@@ -1,0 +1,3349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILLR8301" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="815"/>
+	<parameter name="getDatefrom" class="java.lang.String"/>
+	<parameter name="getDateto" class="java.lang.String"/>
+	<parameter name="getOffcode1" class="java.lang.String"/>
+	<parameter name="getOffcode2" class="java.lang.String"/>
+	<parameter name="getOffcode3" class="java.lang.String"/>
+	<parameter name="getUserID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select bb.*
+from (
+select 1 as grpid , aa.offcode,
+nvl((select short_name from ed_office where offcode=nvl($P{getOffcode3},nvl($P{getOffcode2},$P{getOffcode1}))),'รวมทั่วประเทศ') offname,
+(select ti.title_name || st.first_name || ' ' || st.last_name staff_name
+                        from staff st
+                          left join title ti on ti.title_code=st.title_code
+                          where st.idcard_no=$P{getUserID}) user_name,
+to_char(sysdate, 'fmdd month yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') untildate,
+'เวลา :  ' || to_char(sysdate, 'hh24:mi', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') systimedate,
+aa.legislation_id,
+lg.id,
+lg.legislation_name,
+aa.occurrence_date,
+'(ก)'||nvl(aa.accuser_name,ti.title_name || st.first_name || ' ' || st.last_name) ||chr(13)||'(ต)'|| nvl(pke_arrest.getArrestLawbreaker(aa.track_no),'ไม่มีตัวผู้กระทำผิด')  accuser_name,
+pke_arrest.getSceneAddress(aa.track_no) scene_address,
+sd.subdistrict_name,
+d.district_name,
+'- ' || replace(pke_arrest.getArrestIndictment(aa.track_no),', ',chr(13)||'- ') indictment_name,
+'- ' || replace(pke_arrest.getArrestExhibit(aa.track_no),', ',chr(13)||'- ')   exhibit_desc,
+to_char(aa.occurrence_date, 'fmdd mon yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  occurrence_date2,
+to_char(sysdate, 'fmddmonthyyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  systemdate,
+case when to_char(cc.pay_date,'yyyymm')=to_char(bi.case_date,'yyyymm') then
+    nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0)
+else 0 end compare_case_fine,
+case bi.case_last when '2' then bi.case_fine else 0 end court_fine,
+case bi.case_last when '3' then bi.case_fine else 0 end police_fine,
+case when to_char(cc.pay_date,'yyyymm')=to_char(bi.case_date,'yyyymm') then
+    nvl(cc.birbe_money,0)
+else 0 end birbe_money,
+case when to_char(cc.pay_date,'yyyymm')=to_char(bi.case_date,'yyyymm') then
+    nvl(cc.reward_money,0)
+else 0 end reward_money,
+case when to_char(cc.pay_date,'yyyymm')=to_char(bi.case_date,'yyyymm') then
+    nvl(cc.treasury_money,0)
+else 0 end treasury_money,
+to_char(to_date($P{getDatefrom},'yyyy-mm-dd'), 'fmdd', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  date_from,
+to_char(to_date($P{getDatefrom},'yyyy-mm-dd'), 'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  month_from,
+to_char(to_date($P{getDatefrom},'yyyy-mm-dd'), 'yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  year_from,
+to_char(to_date($P{getDateto},'yyyy-mm-dd'), 'fmdd', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  date_to,
+to_char(to_date($P{getDateto},'yyyy-mm-dd'), 'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  month_to,
+to_char(to_date($P{getDateto},'yyyy-mm-dd'), 'yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  year_to,
+aa.accuser_type as type_accuser,
+aa.have_culprit as culprit_have ,
+bi.case_quality as quality_case,
+bi.case_last
+from book_impeachment bi
+inner join application_arrest aa on aa.track_no=bi.track_no
+inner join legislation lg on lg.id=aa.legislation_id
+left join compare_case cc on cc.track_no=bi.track_no
+inner join ed_office ed on ed.offcode=aa.offcode
+left join staff st on st.idcard_no=aa.accuser_idcardno
+left join title ti on ti.title_code=st.title_code
+left join subdistrict sd on sd.subdistrict_code=aa.scene_subdistrict
+left join district d on d.district_code=aa.scene_district
+where  to_char(bi.case_date,'yyyy-mm-dd') between  $P{getDatefrom} and $P{getDateto}
+and substr(aa.offcode,1,2) || '0000' = nvl($P{getOffcode1},substr(aa.offcode,1,2) || '0000')
+and substr(aa.offcode,1,4) || '00' = nvl($P{getOffcode2},substr(aa.offcode,1,4)||'00')
+and aa.offcode=nvl($P{getOffcode3},aa.offcode)
+union all
+select 2 as grpid , aa.offcode,
+nvl((select short_name from ed_office where offcode=nvl($P{getOffcode3},nvl($P{getOffcode2},$P{getOffcode1}))),'รวมทั่วประเทศ') offname,
+(select ti.title_name || st.first_name || ' ' || st.last_name staff_name
+                        from staff st
+                          left join title ti on ti.title_code=st.title_code
+                          where st.idcard_no=$P{getUserID}) user_name,
+to_char(sysdate, 'fmdd month yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') untildate,
+'เวลา :  ' || to_char(sysdate, 'hh24:mi', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI') systimedate,
+aa.legislation_id,
+lg.id,
+lg.legislation_name,
+aa.occurrence_date,
+'(ก)'||nvl(aa.accuser_name,ti.title_name || st.first_name || ' ' || st.last_name) ||chr(13)||'(ต)'|| nvl(pke_arrest.getArrestLawbreaker(aa.track_no),'ไม่มีตัวผู้กระทำผิด')  accuser_name,
+pke_arrest.getSceneAddress(aa.track_no) scene_address,
+sd.subdistrict_name,
+d.district_name,
+'- ' || replace(pke_arrest.getArrestIndictment(aa.track_no),', ',chr(13)||'- ') indictment_name,
+'- ' || replace(pke_arrest.getArrestExhibit(aa.track_no),', ',chr(13)||'- ')   exhibit_desc,
+to_char(aa.occurrence_date, 'fmddmonyyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  occurrence_date2,
+to_char(sysdate, 'fmddmonthyyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  systemdate,
+nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) compare_case_fine,
+nvl(case bi.case_last when '2' then bi.case_fine else 0 end,0) court_fine,
+nvl(case bi.case_last when '3' then bi.case_fine else 0 end,0) police_fine,
+nvl(cc.birbe_money,0) birbe_money,
+nvl(cc.reward_money,0) reward_money,
+nvl(cc.treasury_money,0) treasury_money,
+to_char(to_date($P{getDatefrom},'yyyy-mm-dd'), 'fmdd', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  date_from,
+to_char(to_date($P{getDatefrom},'yyyy-mm-dd'), 'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  month_from,
+to_char(to_date($P{getDatefrom},'yyyy-mm-dd'), 'yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  year_from,
+to_char(to_date($P{getDateto},'yyyy-mm-dd'), 'fmdd', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  date_to,
+to_char(to_date($P{getDateto},'yyyy-mm-dd'), 'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  month_to,
+to_char(to_date($P{getDateto},'yyyy-mm-dd'), 'yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  year_to,
+aa.accuser_type as type_accuser,
+aa.have_culprit as culprit_have ,
+bi.case_quality as quality_case,
+bi.case_last
+
+from book_impeachment bi
+inner join application_arrest aa on aa.track_no=bi.track_no
+inner join legislation lg on lg.id=aa.legislation_id
+left join compare_case cc on cc.track_no=bi.track_no
+inner join ed_office ed on ed.offcode=aa.offcode
+left join staff st on st.idcard_no=aa.accuser_idcardno
+left join title ti on ti.title_code=st.title_code
+left join subdistrict sd on sd.subdistrict_code=aa.scene_subdistrict
+left join district d on d.district_code=aa.scene_district
+where  to_char(cc.pay_date,'yyyy-mm-dd') between  $P{getDatefrom} and $P{getDateto}
+and substr(aa.offcode,1,2) || '0000' = nvl($P{getOffcode1},substr(aa.offcode,1,2) || '0000')
+and substr(aa.offcode,1,4) || '00' = nvl($P{getOffcode2},substr(aa.offcode,1,4)||'00')
+and aa.offcode=nvl($P{getOffcode3},aa.offcode)
+and to_char(cc.pay_date,'yyyymm')>to_char(bi.case_date,'yyyymm')
+)bb
+--order by lg.id, aa.occurrence_date,ed.offcode
+order by bb.grpid, bb.id, bb.occurrence_date,bb.offcode]]>
+	</queryString>
+	<field name="GRPID" class="java.math.BigDecimal"/>
+	<field name="OFFCODE" class="java.lang.String"/>
+	<field name="OFFNAME" class="java.lang.String"/>
+	<field name="USER_NAME" class="java.lang.String"/>
+	<field name="UNTILDATE" class="java.lang.String"/>
+	<field name="SYSTIMEDATE" class="java.lang.String"/>
+	<field name="LEGISLATION_ID" class="java.math.BigDecimal"/>
+	<field name="ID" class="java.math.BigDecimal"/>
+	<field name="LEGISLATION_NAME" class="java.lang.String"/>
+	<field name="OCCURRENCE_DATE" class="java.sql.Timestamp"/>
+	<field name="ACCUSER_NAME" class="java.lang.String"/>
+	<field name="SCENE_ADDRESS" class="java.lang.String"/>
+	<field name="SUBDISTRICT_NAME" class="java.lang.String"/>
+	<field name="DISTRICT_NAME" class="java.lang.String"/>
+	<field name="INDICTMENT_NAME" class="java.lang.String"/>
+	<field name="EXHIBIT_DESC" class="java.lang.String"/>
+	<field name="OCCURRENCE_DATE2" class="java.lang.String"/>
+	<field name="SYSTEMDATE" class="java.lang.String"/>
+	<field name="COMPARE_CASE_FINE" class="java.math.BigDecimal"/>
+	<field name="COURT_FINE" class="java.math.BigDecimal"/>
+	<field name="POLICE_FINE" class="java.math.BigDecimal"/>
+	<field name="BIRBE_MONEY" class="java.math.BigDecimal"/>
+	<field name="REWARD_MONEY" class="java.math.BigDecimal"/>
+	<field name="TREASURY_MONEY" class="java.math.BigDecimal"/>
+	<field name="DATE_FROM" class="java.lang.String"/>
+	<field name="MONTH_FROM" class="java.lang.String"/>
+	<field name="YEAR_FROM" class="java.lang.String"/>
+	<field name="DATE_TO" class="java.lang.String"/>
+	<field name="MONTH_TO" class="java.lang.String"/>
+	<field name="YEAR_TO" class="java.lang.String"/>
+	<field name="TYPE_ACCUSER" class="java.lang.String"/>
+	<field name="CULPRIT_HAVE" class="java.lang.String"/>
+	<field name="QUALITY_CASE" class="java.lang.String"/>
+	<field name="CASE_LAST" class="java.lang.String"/>
+	<variable name="rowsnumber" class="java.lang.String"/>
+	<variable name="COMPARE_CASE_FINE_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{COMPARE_CASE_FINE}]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE_FINE_2" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[($F{ID}.toString() == "1"&&$F{COMPARE_CASE_FINE}.doubleValue()!= 0 ? 1 : 0  )]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_1" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{COURT_FINE}]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_2" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[($F{ID}.toString() == "1"&&$F{COURT_FINE}.intValue()!= 0 ? 1 : 0  )]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_1" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[($F{ID}.toString() == "1"&&$F{POLICE_FINE}.doubleValue()!= 0 ? 1 : 0  )]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE_FINE_3" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[($F{ID}.toString() == "1" ? $F{COMPARE_CASE_FINE}.doubleValue() : 0  )]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_3" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[($F{ID}.toString() == "1"&& $F{COURT_FINE}.doubleValue()!= 0 ? $F{COURT_FINE}.doubleValue() : 0  )]]></variableExpression>
+	</variable>
+	<variable name="BIRBE_MONEY_1" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[($F{ID}.toString() == "1"&& $F{COMPARE_CASE_FINE}.doubleValue() != 0 ? $F{BIRBE_MONEY}.doubleValue() : 0  )]]></variableExpression>
+	</variable>
+	<variable name="REWARD_MONEY_1" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[($F{ID}.toString() == "1"&& $F{REWARD_MONEY}.doubleValue() != 0 ? $F{REWARD_MONEY}.doubleValue() : 0  )]]></variableExpression>
+	</variable>
+	<variable name="TREASURY_MONEY_1" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[($F{ID}.toString() == "1"&& $F{TREASURY_MONEY}.doubleValue()!= 0 ? $F{TREASURY_MONEY}.doubleValue() : 0  )]]></variableExpression>
+	</variable>
+	<variable name="BIRBE_MONEY_2" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[($F{ID}.toString() == "1"&& $F{BIRBE_MONEY}.doubleValue()!= 0 ? $F{BIRBE_MONEY}.doubleValue() : 0  )]]></variableExpression>
+	</variable>
+	<variable name="BIRBE_MONEY_3" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[$F{BIRBE_MONEY}]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE_FINE_4" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1"  ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_4" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1"  &&  $F{COURT_FINE}.doubleValue() != 0 ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_2" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1"  && $F{POLICE_FINE}.doubleValue() != 0 ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE_FINE_5" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2"   ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_5" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2"  &&$F{COURT_FINE}.doubleValue() != 0 ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_3" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2"  && $F{POLICE_FINE}.doubleValue() != 0 ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE_FINE_6" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3"   ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_6" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3"  && $F{COURT_FINE} .doubleValue() != 0 ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_4" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3"  && $F{POLICE_FINE}.doubleValue() != 0 ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE_FINE_7" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4"   ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_7" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4"  && $F{COURT_FINE}.doubleValue() != 0 ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_5" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4"  && $F{POLICE_FINE}.doubleValue() != 0 ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="num_sum" class="java.lang.String"/>
+	<variable name="COMPARE_CASE_FINE_8" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1" ? $F{COMPARE_CASE_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_8" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1" ? $F{COURT_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_6" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1" ? $F{POLICE_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE_FINE_9" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2" ? $F{COMPARE_CASE_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_9" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2" ? $F{COURT_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_7" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2" ? $F{POLICE_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE_FINE_10" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3" ? $F{COMPARE_CASE_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_10" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3" ? $F{COURT_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_8" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3" ? $F{POLICE_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE_FINE_11" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4" ? $F{COMPARE_CASE_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_11" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4" ? $F{COURT_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_9" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4" ? $F{POLICE_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="num_sum2" class="java.lang.String"/>
+	<variable name="BIRBE_MONEY_4" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1" ? $F{BIRBE_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="BIRBE_MONEY_5" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2" ? $F{BIRBE_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="BIRBE_MONEY_6" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3" ? $F{BIRBE_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="BIRBE_MONEY_7" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4" ? $F{BIRBE_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="REWARD_MONEY_2" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1" ? $F{REWARD_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="REWARD_MONEY_3" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2" ? $F{REWARD_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="REWARD_MONEY_4" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3" ? $F{REWARD_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="REWARD_MONEY_5" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4" ? $F{REWARD_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="TREASURY_MONEY_2" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1" ? $F{TREASURY_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="TREASURY_MONEY_3" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2" ? $F{TREASURY_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="TREASURY_MONEY_4" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3" ? $F{TREASURY_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="TREASURY_MONEY_5" class="java.math.BigDecimal" resetType="Group" resetGroup="grpName" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4" ? $F{TREASURY_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE_FINE_12" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1"  ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_12" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1"  &&  $F{COURT_FINE}.doubleValue() != 0 ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_10" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1"  && $F{POLICE_FINE}.doubleValue() != 0 ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE_FINE_13" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2"   ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_13" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2"  &&  $F{COURT_FINE}.doubleValue() != 0 ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_11" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2"  && $F{POLICE_FINE}.doubleValue() != 0 ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE_FINE_14" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3"   ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_14" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3"  &&  $F{COURT_FINE}.doubleValue() != 0 ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_12" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3"  && $F{POLICE_FINE}.doubleValue() != 0 ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE_FINE_15" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4"   ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_15" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4"  &&  $F{COURT_FINE}.doubleValue() != 0 ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_13" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4"  && $F{POLICE_FINE}.doubleValue() != 0 ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="Summ1" class="java.lang.String"/>
+	<variable name="COMPARE_CASE_FINE_16" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1" ? $F{COMPARE_CASE_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_16" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1" ? $F{COURT_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_14" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1" ? $F{POLICE_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE_FINE_17" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2" ? $F{COMPARE_CASE_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_17" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2" ? $F{COURT_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_15" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2" ? $F{POLICE_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE_FINE_18" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3" ? $F{COMPARE_CASE_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_18" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3" ? $F{COURT_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_16" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3" ? $F{POLICE_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="COMPARE_CASE_FINE_19" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4" ? $F{COMPARE_CASE_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="COURT_FINE_19" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4" ? $F{COURT_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="POLICE_FINE_17" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4" ? $F{POLICE_FINE} : 0)]]></variableExpression>
+	</variable>
+	<variable name="Summ2" class="java.lang.String"/>
+	<variable name="BIRBE_MONEY_8" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1" ? $F{BIRBE_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="BIRBE_MONEY_9" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2" ? $F{BIRBE_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="BIRBE_MONEY_10" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3" ? $F{BIRBE_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="BIRBE_MONEY_11" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4" ? $F{BIRBE_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="Summ3" class="java.lang.String"/>
+	<variable name="REWARD_MONEY_6" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1" ? $F{REWARD_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="REWARD_MONEY_7" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2" ? $F{REWARD_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="REWARD_MONEY_8" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3" ? $F{REWARD_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="REWARD_MONEY_9" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4" ? $F{REWARD_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="Summ4" class="java.lang.String"/>
+	<variable name="TREASURY_MONEY_6" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1" ? $F{TREASURY_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="TREASURY_MONEY_7" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2" ? $F{TREASURY_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="TREASURY_MONEY_8" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3" ? $F{TREASURY_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="TREASURY_MONEY_9" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4" ? $F{TREASURY_MONEY} : 0)]]></variableExpression>
+	</variable>
+	<variable name="Summ5" class="java.lang.String"/>
+	<variable name="SumCaseAlcohol" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "1"  && $F{GRPID}.toString()=="1" ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="SumCaseTobacco" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "2"  && $F{GRPID}.toString()=="1" ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="SumCaseCard" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "3"  && $F{GRPID}.toString()=="1" ? 1 : 0)]]></variableExpression>
+	</variable>
+	<variable name="SumCaseTax" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[( $F{ID}.toString() == "4"  && $F{GRPID}.toString()=="1" ? 1 : 0)]]></variableExpression>
+	</variable>
+	<group name="grpName" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{GRPID}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band height="266">
+				<rectangle>
+					<reportElement x="1" y="246" width="801" height="20" backcolor="#BFBFFF"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="127" y="17" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบ]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="91" y="17" width="134" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE_FINE_4}.doubleValue(),0, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="202" y="17" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ราย]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="265" y="17" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบปรับ]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="278" y="17" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE_FINE_8}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="361" y="17" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="416" y="17" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BIRBE_MONEY_4}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="422" y="17" width="82" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินสินบน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="515" y="17" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="515" y="55" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="422" y="36" width="82" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินสินบน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="422" y="55" width="82" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินสินบน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="515" y="36" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="545" y="17" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{REWARD_MONEY_2}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="559" y="17" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินรางวัล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="645" y="17" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="645" y="36" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="559" y="36" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินรางวัล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="559" y="55" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินรางวัล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="645" y="55" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="669" y="17" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{TREASURY_MONEY_2}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="684" y="17" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินส่งคลัง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="768" y="17" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="768" y="36" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="768" y="55" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="686" y="36" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินส่งคลัง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="686" y="55" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินส่งคลัง]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="91" y="36" width="134" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COURT_FINE_4}.doubleValue(),0, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="127" y="36" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ศาล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="202" y="36" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ราย]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="91" y="55" width="134" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{POLICE_FINE_2}.doubleValue(),0, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="127" y="55" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[พนักงานสอบสวน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="202" y="55" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ราย]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="91" y="74" width="134" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE_FINE_5}.doubleValue(),0, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="127" y="74" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="202" y="74" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ราย]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="74" width="155" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[พ.ร.บ.ยาสูบ พ.ศ.2509]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="91" y="93" width="134" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COURT_FINE_5}.doubleValue(),0, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="127" y="93" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ศาล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="202" y="93" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ราย]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="202" y="112" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ราย]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="91" y="112" width="134" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{POLICE_FINE_3}.doubleValue(),0, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="127" y="112" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[พนักงานสอบสวน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="131" width="155" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[พ.ร.บ. ไพ่ ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="202" y="131" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ราย]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="127" y="131" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบ]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="91" y="131" width="134" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE_FINE_6}.doubleValue(),0, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="127" y="150" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ศาล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="202" y="150" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ราย]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="91" y="150" width="134" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COURT_FINE_6}.doubleValue(),0, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="127" y="169" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[พนักงานสอบสวน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="202" y="169" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ราย]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="91" y="169" width="134" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{POLICE_FINE_4}.doubleValue(),0, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="188" width="280" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[พ.ร.บ.ภาษีสรรพสามิต พ.ศ. 2527]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="202" y="188" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ราย]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="127" y="188" width="113" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบ]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="91" y="188" width="134" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE_FINE_7}.doubleValue(),0, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="127" y="207" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ศาล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="202" y="207" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ราย]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="91" y="207" width="134" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COURT_FINE_7}.doubleValue(),0, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="127" y="226" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[พนักงานสอบสวน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="202" y="226" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ราย]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="91" y="226" width="134" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{POLICE_FINE_5}.doubleValue(),0, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="245" width="162" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[รวมทุกพ.ร.บ.สินค้า]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="127" y="245" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบ]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="91" y="245" width="134" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat(
+    $V{COMPARE_CASE_FINE_4}.doubleValue()+
+    $V{COMPARE_CASE_FINE_5}.doubleValue()+
+    $V{COMPARE_CASE_FINE_6}.doubleValue()+
+    $V{COMPARE_CASE_FINE_7}.doubleValue(),0, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="202" y="245" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ราย]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="361" y="36" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="265" y="36" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบปรับ]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="278" y="36" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COURT_FINE_8}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="361" y="55" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="265" y="55" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบปรับ]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="278" y="55" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{POLICE_FINE_6}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="265" y="74" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบปรับ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="361" y="74" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="278" y="74" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE_FINE_9}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="361" y="93" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="265" y="93" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบปรับ]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="278" y="93" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COURT_FINE_9}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="361" y="112" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="265" y="112" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบปรับ]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="278" y="112" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{POLICE_FINE_7}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="265" y="131" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบปรับ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="361" y="131" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="278" y="131" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE_FINE_10}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="361" y="150" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="265" y="150" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบปรับ]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="278" y="150" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COURT_FINE_10}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="361" y="169" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="265" y="169" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบปรับ]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="278" y="169" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{POLICE_FINE_8}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="265" y="188" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบปรับ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="361" y="188" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="278" y="188" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE_FINE_11}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="361" y="207" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="265" y="207" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบปรับ]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="278" y="207" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COURT_FINE_11}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="361" y="226" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="265" y="226" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบปรับ]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="278" y="226" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{POLICE_FINE_9}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="265" y="245" width="114" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เปรียบเทียบปรับ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="361" y="245" width="42" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="278" y="245" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE_FINE_8}.doubleValue()+$V{COMPARE_CASE_FINE_9}.doubleValue()+$V{COMPARE_CASE_FINE_10}.doubleValue()+$V{COMPARE_CASE_FINE_11}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="515" y="74" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="422" y="74" width="82" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินสินบน]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="416" y="74" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BIRBE_MONEY_5}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="515" y="93" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="515" y="112" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="422" y="112" width="82" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินสินบน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="422" y="93" width="82" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินสินบน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="515" y="131" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="422" y="131" width="82" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินสินบน]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="416" y="131" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BIRBE_MONEY_6}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="515" y="150" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="515" y="169" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="422" y="150" width="82" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินสินบน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="422" y="169" width="82" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินสินบน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="515" y="188" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="422" y="188" width="82" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินสินบน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="515" y="207" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="515" y="226" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="422" y="226" width="82" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินสินบน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="422" y="207" width="82" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินสินบน]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="416" y="188" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BIRBE_MONEY_7}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="515" y="245" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="422" y="245" width="82" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินสินบน]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="416" y="245" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BIRBE_MONEY_4}.doubleValue()+$V{BIRBE_MONEY_5}.doubleValue()+$V{BIRBE_MONEY_6}.doubleValue()+$V{BIRBE_MONEY_7}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="559" y="74" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินรางวัล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="645" y="74" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="545" y="74" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{REWARD_MONEY_3}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="645" y="112" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="645" y="93" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="559" y="93" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินรางวัล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="559" y="112" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินรางวัล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="559" y="131" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินรางวัล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="645" y="131" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="545" y="131" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{REWARD_MONEY_4}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="645" y="169" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="645" y="150" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="559" y="150" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินรางวัล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="559" y="169" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินรางวัล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="559" y="188" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินรางวัล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="645" y="188" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="545" y="188" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{REWARD_MONEY_5}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="645" y="226" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="645" y="207" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="559" y="226" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินรางวัล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="559" y="207" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินรางวัล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="559" y="245" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินรางวัล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="645" y="245" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="545" y="245" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{REWARD_MONEY_2}.doubleValue()+$V{REWARD_MONEY_3}.doubleValue()+$V{REWARD_MONEY_4}.doubleValue()+$V{REWARD_MONEY_5}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="686" y="74" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินส่งคลัง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="768" y="74" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="669" y="74" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{TREASURY_MONEY_3}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="768" y="93" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="768" y="112" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="686" y="112" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินส่งคลัง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="686" y="93" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินส่งคลัง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="686" y="131" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินส่งคลัง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="768" y="131" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="669" y="131" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{TREASURY_MONEY_4}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="768" y="150" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="768" y="169" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="686" y="169" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินส่งคลัง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="686" y="150" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินส่งคลัง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="686" y="188" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินส่งคลัง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="768" y="188" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="669" y="188" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{TREASURY_MONEY_5}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="768" y="207" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="768" y="226" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="686" y="226" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินส่งคลัง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="686" y="207" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินส่งคลัง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="686" y="245" width="76" height="19"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เงินส่งคลัง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="768" y="245" width="30" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[บาท]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="669" y="245" width="100" height="19"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="12" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{TREASURY_MONEY_2}.doubleValue()+$V{TREASURY_MONEY_3}.doubleValue()+$V{TREASURY_MONEY_4}.doubleValue()+$V{TREASURY_MONEY_5}.doubleValue(),2, "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="17" width="155" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[พ.ร.บ.สุรา พ.ศ.2493]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="0" y="0" width="801" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" isUnderline="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( $F{GRPID}.toString()== "2" ? "ผลรวมกรณีปรับย้อนหลัง" : "" )]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="GROUPID" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{ID}]]></groupExpression>
+		<groupHeader>
+			<band height="19">
+				<rectangle>
+					<reportElement x="0" y="0" width="802" height="19" backcolor="#BFBFBF"/>
+				</rectangle>
+				<textField>
+					<reportElement x="0" y="0" width="612" height="19"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{LEGISLATION_NAME}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="122">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="71" width="802" height="1"/>
+			</line>
+			<rectangle>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="802" height="122" backcolor="#FFFFFF"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="753" y="72" width="53" height="49"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เงิน
+ส่งคลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="655" y="72" width="62" height="49"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เงิน
+สินบน]]></text>
+			</staticText>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="612" y="93" width="1" height="29"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="71" width="31" height="51"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ลำดับที่]]></text>
+			</staticText>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="276" y="72" width="1" height="50"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="542" y="0" width="1" height="71"/>
+			</line>
+			<staticText>
+				<reportElement x="28" y="71" width="68" height="51"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[วันที่เกิดเหตุ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="708" y="72" width="60" height="49"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เงิน
+รางวัล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="72" width="111" height="50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ข้อกล่าวหา]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="24" width="432" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{OFFNAME}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="565" y="93" width="1" height="29"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="754" y="72" width="1" height="50"/>
+			</line>
+			<staticText>
+				<reportElement x="389" y="72" width="125" height="50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ของกลาง
+ชนิด/จำนวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="189" height="71"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ส.ส. 2/55
+รายงานผลคดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="0" width="352" height="24"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[กรมสรรพสามิต กระทรวงการคลัง]]></text>
+			</staticText>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="31" y="72" width="1" height="50"/>
+			</line>
+			<staticText>
+				<reportElement x="537" y="92" width="103" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ศาลปรับ]]></text>
+			</staticText>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="506" y="72" width="1" height="50"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="190" y="23" width="352" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="507" y="73" width="156" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ผลคดี]]></text>
+			</staticText>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="388" y="72" width="1" height="49"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="662" y="72" width="1" height="50"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="91" y="72" width="1" height="50"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="189" y="0" width="1" height="122"/>
+			</line>
+			<staticText>
+				<reportElement x="92" y="71" width="97" height="51"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ผู้กล่าวหา(ก)
+ผู้ต้องหา(ต)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="575" y="72" width="132" height="50"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[พนักงาน
+สอบสวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="549" y="47" width="514" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ……………………………ตำแหน่ง………………]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="549" y="25" width="514" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เรียน……………………………………………………..]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="549" y="2" width="505" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ที่ ……./………… วันที่  เดือน .............. พ.ศ. .................]]></text>
+			</staticText>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="709" y="72" width="1" height="50"/>
+			</line>
+			<staticText>
+				<reportElement x="190" y="72" width="86" height="49"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[สถานที่เกิดเหตุ]]></text>
+			</staticText>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="1" y="71" width="801" height="1"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="507" y="92" width="155" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="502" y="92" width="69" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="-33" y="50" width="801" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["ระหว่างวันที่ "+$F{DATE_FROM}+"  "+$F{MONTH_FROM}+" พ.ศ. "+$F{YEAR_FROM}+" ถึงวันที่ "+$F{DATE_TO}+"  "+$F{MONTH_TO}+" พ.ศ. "+$F{YEAR_TO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="26" y="-20" width="1101" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{UNTILDATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="-20" width="500" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[วันที่ :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="-20" width="911" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SYSTIMEDATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="695" y="-20" width="919" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Report ID: 3.1 (ILLR8301)]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<rectangle>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="802" height="50" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+			</rectangle>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="592" y="0" width="71" height="50"/>
+				<textElement textAlignment="Center">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($F{POLICE_FINE}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="549" y="0" width="65" height="50"/>
+				<textElement textAlignment="Center">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($F{COURT_FINE}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="391" y="0" width="118" height="50"/>
+				<textElement>
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.Thaicut.wordwrap($F{EXHIBIT_DESC},25)]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="506" y="0" width="1" height="50" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="754" y="0" width="1" height="50" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="31" y="0" width="1" height="50" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="613" y="0" width="1" height="50" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="19" y="0" width="79" height="50"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{OCCURRENCE_DATE2}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="189" y="0" width="1" height="50" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="565" y="0" width="1" height="50" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="663" y="0" width="1" height="50" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="276" y="0" width="1" height="50" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="193" y="0" width="83" height="50"/>
+				<textElement>
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{SUBDISTRICT_NAME} == null || $F{SUBDISTRICT_NAME} == "" ? "" : $F{SUBDISTRICT_NAME} )+" "+( $F{DISTRICT_NAME} == null || $F{DISTRICT_NAME} == "" ? "" : $F{DISTRICT_NAME} )]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="730" y="0" width="70" height="50"/>
+				<textElement textAlignment="Right">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($F{TREASURY_MONEY}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="279" y="0" width="109" height="50"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.Thaicut.wordwrap($F{INDICTMENT_NAME},25)]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="640" y="0" width="68" height="50"/>
+				<textElement textAlignment="Right">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($F{BIRBE_MONEY}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="91" y="0" width="1" height="50" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="489" y="0" width="74" height="50"/>
+				<textElement textAlignment="Right">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($F{COMPARE_CASE_FINE}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="686" y="0" width="67" height="50"/>
+				<textElement textAlignment="Right">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($F{REWARD_MONEY}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="388" y="0" width="1" height="50" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="93" y="0" width="109" height="50"/>
+				<textElement>
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ACCUSER_NAME}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="709" y="0" width="1" height="50" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<textField>
+				<reportElement x="-11" y="0" width="52" height="50"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$V{GROUPID_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20">
+			<staticText>
+				<reportElement x="1" y="0" width="500" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[User :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="32" y="0" width="337" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{USER_NAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="735" y="0" width="500" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Page :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="766" y="0" width="1598" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="289">
+			<rectangle>
+				<reportElement x="0" y="269" width="801" height="20" backcolor="#BFBFFF"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="127" y="41" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="41" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ราย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="60" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ศาล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="79" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[พนักงานสอบสวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="212" width="280" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[พ.ร.บ.ภาษีสรรพสามิต พ.ศ. 2527]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="269" width="165" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[รวมทุกพ.ร.บ.สินค้า]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="155" width="155" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[พ.ร.บ. ไพ่ ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="98" width="155" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[พ.ร.บ.ยาสูบ พ.ศ.2509]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="98" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="117" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ศาล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="136" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[พนักงานสอบสวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="155" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="193" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[พนักงานสอบสวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="174" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ศาล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="250" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[พนักงานสอบสวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="212" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="231" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ศาล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="269" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="60" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ราย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="79" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ราย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="98" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ราย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="117" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ราย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="136" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ราย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="155" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ราย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="174" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ราย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="212" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ราย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="193" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ราย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="250" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ราย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="231" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ราย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="269" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ราย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="41" width="155" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[พ.ร.บ.สุรา พ.ศ.2493]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="41" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="60" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="79" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="117" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="98" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="136" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="155" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="174" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="212" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="193" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="250" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="231" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="269" width="114" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เปรียบเทียบปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="41" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="79" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="60" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="117" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="136" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="98" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="174" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="193" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="155" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="231" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="250" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="212" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="269" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="41" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="41" width="82" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินสินบน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="60" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="60" width="82" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินสินบน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="79" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="79" width="82" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินสินบน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="136" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="136" width="82" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินสินบน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="98" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="117" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="117" width="82" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินสินบน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="98" width="82" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินสินบน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="174" width="82" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินสินบน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="155" width="82" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินสินบน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="193" width="82" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินสินบน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="193" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="174" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="155" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="269" width="82" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินสินบน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="250" width="82" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินสินบน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="231" width="82" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินสินบน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="212" width="82" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินสินบน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="250" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="212" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="231" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="269" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="559" y="41" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินรางวัล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="41" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="60" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="559" y="60" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินรางวัล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="559" y="98" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินรางวัล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="79" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="98" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="559" y="79" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินรางวัล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="559" y="136" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินรางวัล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="559" y="155" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินรางวัล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="559" y="117" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินรางวัล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="559" y="174" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินรางวัล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="559" y="212" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินรางวัล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="559" y="231" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isStrikeThrough="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เงินรางวัล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="559" y="193" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินรางวัล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="559" y="250" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินรางวัล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="559" y="269" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินรางวัล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="174" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="117" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="136" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="155" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="250" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="231" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="193" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="212" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="269" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="768" y="41" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="686" y="41" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เงินส่งคลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="686" y="60" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินส่งคลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="686" y="98" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินส่งคลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="686" y="79" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินส่งคลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="686" y="136" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินส่งคลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="686" y="174" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินส่งคลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="686" y="155" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินส่งคลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="686" y="117" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินส่งคลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="686" y="212" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินส่งคลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="686" y="193" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินส่งคลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="686" y="231" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินส่งคลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="686" y="269" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินส่งคลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="686" y="250" width="76" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เงินส่งคลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="768" y="60" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="768" y="79" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="768" y="98" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="768" y="174" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="768" y="155" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="768" y="117" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="768" y="136" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="768" y="250" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="768" y="231" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="768" y="193" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="768" y="212" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="768" y="269" width="30" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="15" width="802" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isUnderline="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["ผลรวมค่าปรับเปรียบเทียบเดือน "+$F{MONTH_FROM}+"พ.ศ."+$F{YEAR_FROM}+" และคดีปรับย้อนหลัง"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="91" y="41" width="134" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{SumCaseAlcohol}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="91" y="60" width="134" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COURT_FINE_12}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="91" y="79" width="134" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{POLICE_FINE_10}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="91" y="98" width="134" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{SumCaseTobacco}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="91" y="117" width="134" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COURT_FINE_13}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="91" y="136" width="134" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{POLICE_FINE_11}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="91" y="155" width="134" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{SumCaseCard}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="91" y="174" width="134" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COURT_FINE_14}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="91" y="193" width="134" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{POLICE_FINE_12}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="91" y="212" width="134" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{SumCaseTax}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="91" y="231" width="134" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COURT_FINE_15}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="91" y="250" width="134" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{POLICE_FINE_13}.doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="91" y="269" width="134" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat((
+    $V{SumCaseAlcohol}+
+    $V{SumCaseTobacco}+
+    $V{SumCaseCard}+
+    $V{SumCaseTax}).doubleValue(),0, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="278" y="41" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE_FINE_16}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="278" y="60" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COURT_FINE_16}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="278" y="79" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{POLICE_FINE_14}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="278" y="98" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE_FINE_17}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="278" y="117" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COURT_FINE_17}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="278" y="136" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{POLICE_FINE_15}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="278" y="155" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE_FINE_18}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="278" y="174" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COURT_FINE_18}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="278" y="193" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{POLICE_FINE_16}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="278" y="212" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE_FINE_19}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="278" y="231" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COURT_FINE_19}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="278" y="250" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{POLICE_FINE_17}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="278" y="269" width="100" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{COMPARE_CASE_FINE_16}.doubleValue()+$V{COMPARE_CASE_FINE_17}.doubleValue()+$V{COMPARE_CASE_FINE_18}.doubleValue()+$V{COMPARE_CASE_FINE_19}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="416" y="41" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BIRBE_MONEY_8}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="416" y="98" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BIRBE_MONEY_9}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="416" y="155" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BIRBE_MONEY_10}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="416" y="212" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BIRBE_MONEY_11}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="416" y="269" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{BIRBE_MONEY_8}.doubleValue()+$V{BIRBE_MONEY_9}.doubleValue()+$V{BIRBE_MONEY_10}.doubleValue()+$V{BIRBE_MONEY_11}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="545" y="41" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{REWARD_MONEY_6}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="545" y="98" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{REWARD_MONEY_7}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="545" y="155" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{REWARD_MONEY_8}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="545" y="212" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{REWARD_MONEY_9}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="545" y="269" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{REWARD_MONEY_6}.doubleValue()+$V{REWARD_MONEY_7}.doubleValue()+$V{REWARD_MONEY_8}.doubleValue()+$V{REWARD_MONEY_9}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="669" y="41" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{TREASURY_MONEY_6}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="669" y="98" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{TREASURY_MONEY_7}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="669" y="155" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{TREASURY_MONEY_8}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="669" y="212" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{TREASURY_MONEY_9}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="669" y="269" width="100" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[com.ko.util.NumberUtil.getNumberFormat($V{TREASURY_MONEY_6}.doubleValue()+$V{TREASURY_MONEY_7}.doubleValue()+$V{TREASURY_MONEY_8}.doubleValue()+$V{TREASURY_MONEY_9}.doubleValue(),2, "")]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,50 @@
+<publishData>
+  <publishTarget publishUrl="D:\XCS_Admin\">
+    <file relUrl="PopupUserControl/frmPopArrestExhibit.ascx" publishTime="08/08/2015 18:17:44" />
+    <file relUrl="PopupUserControl/frmPopArrestLawbreaker.ascx" publishTime="08/08/2015 18:17:44" />
+    <file relUrl="UserControls/txtDate.ascx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="FormUserControl/ucRewardDivideTax.ascx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="FormUserControl/ucRewardRequestTobacco.ascx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="bin/LinqDB.xml" publishTime="09/17/2015 16:13:09" />
+    <file relUrl="_Script/StyleSheet.css" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="PopupUserControl/frmPopArrestTeam.ascx" publishTime="08/08/2015 18:17:44" />
+    <file relUrl="CssClass.css" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="images/calendarIcon.gif" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="UserControls/txtBirthDate.ascx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="frmSearchArrestLawbreaker.aspx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="FormUserControl/ucPayFine.ascx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="FormUserControl/ucBookImpeachment.ascx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="frmAdminQuery.aspx" publishTime="08/08/2015 18:17:44" />
+    <file relUrl="PopupUserControl/frmSearchDepartment.ascx" publishTime="08/08/2015 18:17:44" />
+    <file relUrl="frmUpdateStaffInfo.aspx" publishTime="09/17/2015 16:18:17" />
+    <file relUrl="bin/XCS_Admin.pdb" publishTime="09/18/2015 14:15:16" />
+    <file relUrl="bin/AjaxControlToolkit.dll" publishTime="08/08/2015 18:17:42" />
+    <file relUrl="frmArrestAdminEdit.aspx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="PopupUserControl/frmSearchIndictment.ascx" publishTime="08/08/2015 18:17:44" />
+    <file relUrl="UserControls/txtTime.ascx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="Web.config" publishTime="08/17/2015 15:59:00" />
+    <file relUrl="frmApplicationRewardRequest.aspx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="frmAddDuty_table_list.aspx" publishTime="08/08/2015 18:17:44" />
+    <file relUrl="images/closewindows.png" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="bin/XCS_Admin.xml" publishTime="09/18/2015 14:15:16" />
+    <file relUrl="FormUserControl/ucCompareCase.ascx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="FormUserControl/ucRewardRequestAlcohol.ascx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="bin/XCS_Admin.dll" publishTime="09/18/2015 14:15:16" />
+    <file relUrl="FormUserControl/ucProveExhibit.ascx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="bin/Newtonsoft.Json.dll" publishTime="03/07/2014 09:39:48" />
+    <file relUrl="FormUserControl/ucRewardRequestTax.ascx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="_Script/JScript.js" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="PopupUserControl/frmSearchAccuser.ascx" publishTime="08/08/2015 18:17:44" />
+    <file relUrl="_Script/datetimepicker_css.js" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="frmApplicationRewardDivide.aspx" publishTime="09/15/2015 10:02:47" />
+    <file relUrl="images/icon_inprogress.gif" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="bin/LinqDB.dll" publishTime="09/17/2015 16:13:09" />
+    <file relUrl="wsAdminService.asmx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="PopupUserControl/frmSearchStaff.ascx" publishTime="08/08/2015 18:17:44" />
+    <file relUrl="FormUserControl/ucRewardDivideAlcohol.ascx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="frmDeleteCase.aspx" publishTime="08/08/2015 18:17:44" />
+    <file relUrl="UserControls/PageControl.ascx" publishTime="08/08/2015 18:17:43" />
+    <file relUrl="Default.aspx" publishTime="08/08/2015 18:17:44" />
+    <file relUrl="bin/LinqDB.pdb" publishTime="09/17/2015 16:13:09" />
+  </publishTarget>
+</publishData>

@@ -1,0 +1,202 @@
+5 ¸.¤. 2553 15:33:34 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.5.0_21\bin;.;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\oracle\product\10.2.0\db_1\bin;C:\Program Files\PC Connectivity Solution\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files\Windows Live\Shared;C:\Program Files\Subversion\bin;C:\Program Files\Common Files\Nero\Lib\
+5 ¸.¤. 2553 15:33:35 org.apache.coyote.http11.Http11BaseProtocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8888
+5 ¸.¤. 2553 15:33:35 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3113 ms
+5 ¸.¤. 2553 15:33:35 org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+5 ¸.¤. 2553 15:33:35 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/5.5.28
+5 ¸.¤. 2553 15:33:35 org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+5 ¸.¤. 2553 15:34:12 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+5 ¸.¤. 2553 15:34:27 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort
+5 ¸.¤. 2553 15:34:28 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+5 ¸.¤. 2553 15:34:36 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+5 ¸.¤. 2553 15:34:43 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort
+5 ¸.¤. 2553 15:34:43 org.glassfish.gmbal.impl.JMXRegistrationManager resumeRegistration
+WARNING: "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort]"
+5 ¸.¤. 2553 15:34:43 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+5 ¸.¤. 2553 15:34:45 org.apache.coyote.http11.Http11BaseProtocol start
+INFO: Starting Coyote HTTP/1.1 on http-8888
+5 ¸.¤. 2553 15:34:45 org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+5 ¸.¤. 2553 15:34:45 org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/69  config=null
+5 ¸.¤. 2553 15:34:46 org.apache.catalina.storeconfig.StoreLoader load
+INFO: Find registry server-registry.xml at classpath resource
+5 ¸.¤. 2553 15:34:46 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 71420 ms
+5 ¸.¤. 2553 15:34:57 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+5 ¸.¤. 2553 15:35:01 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/GroupIDService/WEB-INF/wsit-service.InquiryGroupID.xml.
+5 ¸.¤. 2553 15:35:04 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:35:05 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+5 ¸.¤. 2553 15:35:05 org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/GroupIDService] has already been started
+5 ¸.¤. 2553 15:36:16 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+5 ¸.¤. 2553 15:36:16 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+5 ¸.¤. 2553 15:36:16 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:36:16 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+5 ¸.¤. 2553 15:36:21 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+5 ¸.¤. 2553 15:36:24 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/GroupIDService/WEB-INF/wsit-service.InquiryGroupID.xml.
+5 ¸.¤. 2553 15:36:37 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:36:38 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+5 ¸.¤. 2553 15:36:39 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+5 ¸.¤. 2553 15:36:39 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+5 ¸.¤. 2553 15:36:39 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:36:39 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+5 ¸.¤. 2553 15:36:47 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+5 ¸.¤. 2553 15:36:50 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/GroupIDService/WEB-INF/wsit-service.InquiryGroupID.xml.
+5 ¸.¤. 2553 15:36:58 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:36:59 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+5 ¸.¤. 2553 15:44:44 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+5 ¸.¤. 2553 15:44:44 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:44:44 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+5 ¸.¤. 2553 15:44:46 org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context [/GroupIDService]
+5 ¸.¤. 2553 15:44:50 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+5 ¸.¤. 2553 15:44:53 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/GroupIDService/WEB-INF/wsit-service.InquiryGroupID.xml.
+5 ¸.¤. 2553 15:45:02 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:45:03 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+5 ¸.¤. 2553 15:45:03 org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/GroupIDService] has already been started
+5 ¸.¤. 2553 15:45:33 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+5 ¸.¤. 2553 15:45:33 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+5 ¸.¤. 2553 15:45:33 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:45:33 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+5 ¸.¤. 2553 15:45:40 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+5 ¸.¤. 2553 15:45:42 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/GroupIDService/WEB-INF/wsit-service.InquiryGroupID.xml.
+5 ¸.¤. 2553 15:45:53 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:45:54 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+5 ¸.¤. 2553 15:45:54 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+5 ¸.¤. 2553 15:45:54 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+5 ¸.¤. 2553 15:45:54 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:45:54 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+5 ¸.¤. 2553 15:45:59 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+5 ¸.¤. 2553 15:46:02 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/GroupIDService/WEB-INF/wsit-service.InquiryGroupID.xml.
+5 ¸.¤. 2553 15:46:14 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:46:15 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+5 ¸.¤. 2553 15:48:14 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+5 ¸.¤. 2553 15:48:14 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+5 ¸.¤. 2553 15:48:15 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:48:15 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+5 ¸.¤. 2553 15:48:20 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+5 ¸.¤. 2553 15:48:22 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/GroupIDService/WEB-INF/wsit-service.InquiryGroupID.xml.
+5 ¸.¤. 2553 15:48:32 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:48:33 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+5 ¸.¤. 2553 15:48:33 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+5 ¸.¤. 2553 15:48:33 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+5 ¸.¤. 2553 15:48:33 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:48:33 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+5 ¸.¤. 2553 15:48:39 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+5 ¸.¤. 2553 15:48:43 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/GroupIDService/WEB-INF/wsit-service.InquiryGroupID.xml.
+5 ¸.¤. 2553 15:48:56 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:48:58 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+5 ¸.¤. 2553 15:53:51 org.apache.catalina.core.StandardContext reload
+INFO: Reloading this Context has started
+5 ¸.¤. 2553 15:53:51 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+5 ¸.¤. 2553 15:53:51 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:53:51 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+5 ¸.¤. 2553 15:53:57 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFO: WSSERVLET12: JAX-WS context listener initializing
+5 ¸.¤. 2553 15:54:00 [com.sun.xml.ws.policy.jaxws.PolicyConfigParser]  parse
+INFO: WSP5018: Loaded WSIT configuration from file: jndi:/localhost/GroupIDService/WEB-INF/wsit-service.InquiryGroupID.xml.
+5 ¸.¤. 2553 15:54:16 com.sun.xml.ws.server.MonitorBase createRoot
+INFO: Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:54:17 com.sun.xml.ws.transport.http.servlet.WSServletDelegate <init>
+INFO: WSSERVLET14: JAX-WS servlet initializing
+5 ¸.¤. 2553 15:56:20 org.apache.coyote.http11.Http11BaseProtocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8888
+5 ¸.¤. 2553 15:56:21 org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+5 ¸.¤. 2553 15:56:21 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+5 ¸.¤. 2553 15:56:21 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort
+5 ¸.¤. 2553 15:56:21 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+5 ¸.¤. 2553 15:56:24 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+5 ¸.¤. 2553 15:56:24 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryGroupIDService-InquiryGroupIDPort
+5 ¸.¤. 2553 15:56:24 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+5 ¸.¤. 2553 15:56:27 com.sun.xml.ws.transport.http.servlet.WSServletDelegate destroy
+INFO: WSSERVLET15: JAX-WS servlet destroyed
+5 ¸.¤. 2553 15:56:27 com.sun.xml.ws.server.MonitorBase closeMOM
+INFO: Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=InquiryOffcodeService-InquiryOffcodePort
+5 ¸.¤. 2553 15:56:27 com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextDestroyed
+INFO: WSSERVLET13: JAX-WS context listener destroyed
+5 ¸.¤. 2553 15:56:29 org.apache.coyote.http11.Http11BaseProtocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8888
+5 ¸.¤. 2553 15:56:29 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime

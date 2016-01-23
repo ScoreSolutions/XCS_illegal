@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILL_P023" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="309"/>
+	<parameter name="getTrackNo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select ar.id application_reward_request_id, ar.request_no, ed.offname,
+ar.request_date,
+to_char(ar.request_date, 'dd/mm/yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  request_date2,
+to_char(ar.request_date, 'dd', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  date_request_date,
+to_char(ar.request_date, 'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  month_request_date,
+to_char(ar.request_date, 'yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  year_request_date,
+tir.title_name || str.first_name || ' ' || str.last_name request_name, psr.posname || ' ' || str.staff_level posname_request,
+pke_arrest.getArrestLawbreaker(aa.track_no) lawbreaker_name,pke_arrest.getArrestIndictment(aa.track_no) guilt_base,
+pke_arrest.getRewardReqTeam(ar.id,pke_master.getConfigValue('commander')) command_team,
+pke_arrest.getSceneAddress(aa.track_no) scene_addr, ar.receive_date, ar.inform_name,
+nvl(cc.birbe_money,0)+nvl(cc.reward_money,0)+nvl(cc.treasury_money,0) case_fine,
+nvl(cc.birbe_money,0) birbe_money, nvl(cc.reward_money,0) reward_money,
+cc.compare_case_date, tia.title_name || sta.first_name || ' ' || sta.last_name accuser_name, psa.posname || ' ' || sta.staff_level accuser_posname,
+tip.title_name || stp.first_name || ' ' || stp.last_name staff_prove, ara.accept_lean, ara.accept_desc,lg.legislation_name,
+ara.leader_accept, ara.leader_accept_reason, ara.leader_deny_reason, til.title_name || stl.first_name || ' ' || stl.last_name staff_leader,
+pol.posname || ' ' || stl.staff_level posname_leader,
+ara.section_director_lean, ara.section_director_accept, ara.section_director_accept_reason, ara.section_director_deny_reason,
+tis.title_name || sts.first_name || ' ' || sts.last_name staff_director, pss.posname || ' ' || sts.staff_level posname_director,
+ara.res_director_accept, ara.res_director_accept_reason, ara.res_director_deny_reason,
+tie.title_name || ste.first_name || ' ' || ste.last_name staff_res_director, pse.posname || ' ' || ste.staff_level posname_res_director
+from application_reward_request ar
+inner join ed_office ed on ed.offcode=ar.offcode
+inner join compare_case cc on cc.id=ar.compare_case_id
+inner join application_arrest aa on aa.track_no=cc.track_no
+inner join staff str on str.idcard_no=ar.staff_id_request
+left join title tir on tir.title_code=str.title_code
+left join position psr on psr.poscode=ar.poscode_request
+inner join staff sta on sta.idcard_no=aa.accuser_idcardno
+left join title tia on tia.title_code=sta.title_code
+left join position psa on psa.poscode=aa.accuser_poscode
+left join application_arrest_prove aap on aap.track_no=aa.track_no
+left join staff stp on stp.idcard_no=aap.staff_idcardno_prove
+left join title tip on tip.title_code=stp.title_code
+left join position psp on psp.poscode=aap.staff_prove_poscode
+inner join legislation lg on lg.id=aa.legislation_id
+left join application_reward_req_alcohol ara on ar.id=ara.application_reward_request_id
+left join staff stl on stl.idcard_no=ara.staff_id_leader
+left join title til on til.title_code=stl.title_code
+left join position pol on pol.poscode=ara.poscode_leader
+left join staff sts on sts.idcard_no=ara.staff_id_section_director
+left join title tis on tis.title_code=sts.title_code
+left join position pss on pss.poscode=ara.poscode_section_director
+left join staff ste on ste.idcard_no=ara.staff_id_section_director
+left join title tie on tie.title_code=ste.title_code
+left join position pse on pse.poscode=ara.poscode_section_director
+where ar.request_no = $P{getTrackNo}]]>
+	</queryString>
+	<field name="APPLICATION_REWARD_REQUEST_ID" class="java.math.BigDecimal"/>
+	<field name="REQUEST_NO" class="java.lang.String"/>
+	<field name="OFFNAME" class="java.lang.String"/>
+	<field name="REQUEST_DATE" class="java.sql.Timestamp"/>
+	<field name="REQUEST_DATE2" class="java.lang.String"/>
+	<field name="DATE_REQUEST_DATE" class="java.lang.String"/>
+	<field name="MONTH_REQUEST_DATE" class="java.lang.String"/>
+	<field name="YEAR_REQUEST_DATE" class="java.lang.String"/>
+	<field name="REQUEST_NAME" class="java.lang.String"/>
+	<field name="POSNAME_REQUEST" class="java.lang.String"/>
+	<field name="LAWBREAKER_NAME" class="java.lang.String"/>
+	<field name="GUILT_BASE" class="java.lang.String"/>
+	<field name="COMMAND_TEAM" class="java.lang.String"/>
+	<field name="SCENE_ADDR" class="java.lang.String"/>
+	<field name="RECEIVE_DATE" class="java.sql.Timestamp"/>
+	<field name="INFORM_NAME" class="java.lang.String"/>
+	<field name="CASE_FINE" class="java.math.BigDecimal"/>
+	<field name="BIRBE_MONEY" class="java.math.BigDecimal"/>
+	<field name="REWARD_MONEY" class="java.math.BigDecimal"/>
+	<field name="COMPARE_CASE_DATE" class="java.sql.Timestamp"/>
+	<field name="ACCUSER_NAME" class="java.lang.String"/>
+	<field name="ACCUSER_POSNAME" class="java.lang.String"/>
+	<field name="STAFF_PROVE" class="java.lang.String"/>
+	<field name="ACCEPT_LEAN" class="java.lang.String"/>
+	<field name="ACCEPT_DESC" class="java.lang.String"/>
+	<field name="LEGISLATION_NAME" class="java.lang.String"/>
+	<field name="LEADER_ACCEPT" class="java.lang.String"/>
+	<field name="LEADER_ACCEPT_REASON" class="java.lang.String"/>
+	<field name="LEADER_DENY_REASON" class="java.lang.String"/>
+	<field name="STAFF_LEADER" class="java.lang.String"/>
+	<field name="POSNAME_LEADER" class="java.lang.String"/>
+	<field name="SECTION_DIRECTOR_LEAN" class="java.lang.String"/>
+	<field name="SECTION_DIRECTOR_ACCEPT" class="java.lang.String"/>
+	<field name="SECTION_DIRECTOR_ACCEPT_REASON" class="java.lang.String"/>
+	<field name="SECTION_DIRECTOR_DENY_REASON" class="java.lang.String"/>
+	<field name="STAFF_DIRECTOR" class="java.lang.String"/>
+	<field name="POSNAME_DIRECTOR" class="java.lang.String"/>
+	<field name="RES_DIRECTOR_ACCEPT" class="java.lang.String"/>
+	<field name="RES_DIRECTOR_ACCEPT_REASON" class="java.lang.String"/>
+	<field name="RES_DIRECTOR_DENY_REASON" class="java.lang.String"/>
+	<field name="STAFF_RES_DIRECTOR" class="java.lang.String"/>
+	<field name="POSNAME_RES_DIRECTOR" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-1" x="2" y="2" width="1000" height="26"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เลขที่งาน......................................]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="44" y="5" width="544" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{REQUEST_NO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-4" x="342" y="75" width="1000" height="26"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เขียนที่ .................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="28" width="470" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[คำร้องขอรับเงินสินบนและเงินรางวัล ตามพ.ร.บ. ภาษีสรรพสามิต พ.ศ.2527]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="381" y="79" width="706" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{OFFNAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-4" x="277" y="110" width="1000" height="26"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[วันที่ ......................................................................................................]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="309" y="114" width="33" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DATE_REQUEST_DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="114" width="79" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{MONTH_REQUEST_DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="113" width="78" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{YEAR_REQUEST_DATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="350" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="2" width="1000" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เรียน ผอ.สกม.(ผ่านส่วนคดี สำนักกฎหมาย)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-8" x="2" y="23" width="1000" height="69"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[                       1.  ข้าพเจ้า ....................................................................... สังกัด ................................................................... ได้ทำการจับกุม ...................................................
+ผู้ต้องหา กระทำผิด พ.ร.บ. .............................................................................................................  เหตุเกิดที่ .................................................................................................
+....................................................................... เมื่อ ...................................................โดยมี ...................................................................................................
+เป็นผู้แจ้งความนำจับเพื่อขอรับเงินสินบนและข้าพเจ้าได้ทำการจับกุมเป็นผลสำเร็จด้วยตนเอง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-8" x="2" y="93" width="1000" height="51"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[                       2.  บัดนี้คดีได้ถึงที่สุดแล้ว โดยผู้ต้องหายินยอมชำระค่าปรับตามที่ผู้มีอำนาจเปรียบเทียบคดี ได้ทำการ
+เปรียบเทียบคดี เป็นเงิน .................................................................. ตามคดีเปรียบเทียบที่ .........................................................
+เมื่อ ............................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-8" x="2" y="145" width="1000" height="100"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[                       3.  ข้าพเจ้าจึงขอรับเงินสินบนและเงินรางวัล ตามระเบียบกระทรวงการคลังว่าด้วยการจ่ายเงินสินบนและ
+เงินรางวัลในคดีที่จับกุมผู้กระทำผิด พ.ร.บ.ภาษีสรรพสามิต พ.ศ.2527 ลงวันที่ ..................................... และ
+ระเบียบกรมสรรพสามิตว่าด้วย หลักเกณฑ์การแบ่งเงินรางวัลและวิธีปฏิบัติในการขอรับเงินสินบนและหรือเงิน
+รางวัลในคดีจับกุมผู้กระทำผิดตามพระราชบัญญัติภาษีสรรพสามิต พ.ศ.2527, พ.ศ.2543 ลงวันที่ 10 มกราคม
+พ.ศ. 2543 ,คำสั่งกรมสรรพสามิต ที่ 518/2550เรื่องมอบอำนาจหน้าที่ให้ปฎิบัติราชการแทนอธิบดีกรม
+สรรพสามิต เกี่ยวกับการปราบปราม และกฎหมาย สั่ง ณ วันที่ 18 ตุลาคม 2550]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="246" width="1000" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[จึงเรียนมาเพื่อโปรดพิจารณา]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-20" x="280" y="266" width="1000" height="58"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Angsana New" size="14" isBold="false" isUnderline="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[           ลงชื่อ ....................................................................... ผู้จับกุมและผู้ยื่นขอ
+                      (......................................................................)
+                       .......................................................................
+]]></text>
+			</staticText>
+		</band>
+		<band height="686">
+			<staticText>
+				<reportElement x="205" y="11" width="1000" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[           การรับรองการจับกุมและผลคดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="42" width="1000" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เรียน นักวิชาการสรรพสามิตเชี่ยวชาญ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="2" y="63" width="1000" height="21"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[                        ข้าพเจ้า ......................................................... ตำแหน่ง ................................................................... ขอรับรองว่า เมื่อ .........................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="2" y="85" width="1000" height="21"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[............................................................................................. ตำแหน่ง ............................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="2" y="107" width="1000" height="21"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[                        ได้จับกุม ......................................................... เป็นผู้ต้องหา โดยกล่าวหาว่า ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="2" y="129" width="1000" height="21"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[คดีนี้ ส่วนคดี สำนักกฎหมายได้ทำการเปรียบเทียบปรับเป็นเงิน .............................................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="2" y="151" width="1000" height="21"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ได้ตรวจคำร้องขอรับเงินสินบนรางวัลแล้ว เห็นว่าถูกต้องตามระเบียบการจ่ายเงินรางวัลคดี พ.ร.บ.ภาษีสรรพสามิต พ.ศ.2527]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="2" y="312" width="1000" height="21"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เรียน ผู้อำนวยการสำนักตรวจสอบ ป้องกันและปราบปราม]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="2" y="334" width="1000" height="21"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[                        ควรส่งส่วนคดี ................................................ เพื่อดำเนินการขออนุมัติจ่ายเงินสินบน ............... และเงินรางวัล .............. ของ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-20" x="325" y="224" width="1000" height="87"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[...................................................................
+      (......................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="2" y="356" width="1000" height="21"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เงินค่าปรับเป็นเงินทั้งสิ้น ...................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="2" y="509" width="1000" height="21"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" isUnderline="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เรียน ผู้อำนวยการสำนักกฎหมาย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="2" y="531" width="1000" height="21"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[                        เพื่อพิจารณาดำเนินการขออนุมัติจ่ายเงินสินบน และเงินรางวัล จำนวน .......................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="2" y="553" width="1000" height="21"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ต่อไปด้วย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-20" x="325" y="440" width="1000" height="68"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[.................................................................
+   (........................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-20" x="325" y="617" width="1000" height="68"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ ............................................................
+   (.....................................................)]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILLR8504" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="103"/>
+	<group name="aaaa">
+		<groupHeader>
+			<band height="31">
+				<rectangle>
+					<reportElement x="0" y="0" width="802" height="31" backcolor="#CCCCCC"/>
+				</rectangle>
+				<line>
+					<reportElement x="144" y="0" width="1" height="31"/>
+				</line>
+				<line>
+					<reportElement x="344" y="0" width="1" height="31"/>
+				</line>
+				<line>
+					<reportElement x="575" y="0" width="1" height="31"/>
+				</line>
+				<staticText>
+					<reportElement x="1" y="0" width="143" height="31"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[พระราชบัญญัติ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="146" y="0" width="198" height="31"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ราย]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="345" y="0" width="230" height="31"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ของกลาง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="575" y="0" width="227" height="31"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[จำนวนเงิน]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="50"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="115" splitType="Stretch">
+			<staticText>
+				<reportElement x="331" y="12" width="220" height="24"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[กรมสรรพสามิต กระทรวงการคลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="36" width="220" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[รายงานสถิติผลคดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="54" width="220" height="20"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="74" width="436" height="41"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ระหว่างเดือน .................... ถึง ................ ปีงบประมาณ........................]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="124">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="124"/>
+			</rectangle>
+			<line>
+				<reportElement x="144" y="0" width="1" height="124"/>
+			</line>
+			<line>
+				<reportElement x="344" y="0" width="1" height="124"/>
+			</line>
+			<line>
+				<reportElement x="575" y="0" width="1" height="124"/>
+			</line>
+		</band>
+		<band height="125" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="802" height="124"/>
+			</rectangle>
+			<line>
+				<reportElement x="144" y="1" width="1" height="124"/>
+			</line>
+			<line>
+				<reportElement x="344" y="1" width="1" height="124"/>
+			</line>
+			<line>
+				<reportElement x="575" y="1" width="1" height="124"/>
+			</line>
+		</band>
+		<band height="124">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="124"/>
+			</rectangle>
+			<line>
+				<reportElement x="144" y="0" width="1" height="124"/>
+			</line>
+			<line>
+				<reportElement x="344" y="0" width="1" height="124"/>
+			</line>
+			<line>
+				<reportElement x="575" y="0" width="1" height="124"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>

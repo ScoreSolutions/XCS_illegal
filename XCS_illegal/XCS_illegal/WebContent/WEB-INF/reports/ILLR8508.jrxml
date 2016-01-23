@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILLR8508" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="92"/>
+	<group name="aaa">
+		<groupHeader>
+			<band height="62">
+				<rectangle>
+					<reportElement x="0" y="0" width="802" height="62" backcolor="#CCCCCC"/>
+				</rectangle>
+				<line>
+					<reportElement x="53" y="0" width="1" height="62"/>
+				</line>
+				<line>
+					<reportElement x="242" y="0" width="1" height="62"/>
+				</line>
+				<line>
+					<reportElement x="303" y="0" width="1" height="62"/>
+				</line>
+				<line>
+					<reportElement x="373" y="0" width="1" height="62"/>
+				</line>
+				<line>
+					<reportElement x="494" y="0" width="1" height="62"/>
+				</line>
+				<line>
+					<reportElement x="605" y="0" width="1" height="62"/>
+				</line>
+				<line>
+					<reportElement x="719" y="0" width="1" height="62"/>
+				</line>
+				<line>
+					<reportElement x="170" y="0" width="1" height="62"/>
+				</line>
+				<staticText>
+					<reportElement x="0" y="0" width="53" height="62"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ลำดับที่]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="54" y="0" width="116" height="62"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[หน่วยงาน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="170" y="0" width="72" height="62"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[พ.ร.บ.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="243" y="0" width="60" height="62"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[คดีที่/วันที่รับเรื่อง/รายงานที่]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="304" y="0" width="69" height="62"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ลขที่นำส่ง/วันที่นำส่ง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="374" y="0" width="120" height="62"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ชื่อผู้กระทำผิด/ผู้จับกุม]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="495" y="0" width="110" height="62"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[สินค้าของกลาง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="606" y="0" width="113" height="62"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ผู้บันทึกข้อมูล]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="720" y="0" width="82" height="62"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เลขงานรับ/วันที่/เวลาที่บันทึก]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="50"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="310" y="13" width="278" height="34"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[รายงานการตรวจสอบบันทึกข้อมูลส่วนพิสูจน์]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="36" width="278" height="43"/>
+				<textElement>
+					<font fontName="Angsana New" size="16" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[วันที่นำส่งระหว่าง .................... ถึง ..................]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="27" backcolor="#FFFFFF"/>
+			</rectangle>
+			<line>
+				<reportElement x="53" y="0" width="1" height="27"/>
+			</line>
+			<line>
+				<reportElement x="242" y="0" width="1" height="27"/>
+			</line>
+			<line>
+				<reportElement x="303" y="0" width="1" height="27"/>
+			</line>
+			<line>
+				<reportElement x="373" y="0" width="1" height="27"/>
+			</line>
+			<line>
+				<reportElement x="494" y="0" width="1" height="27"/>
+			</line>
+			<line>
+				<reportElement x="605" y="0" width="1" height="27"/>
+			</line>
+			<line>
+				<reportElement x="719" y="0" width="1" height="27"/>
+			</line>
+			<line>
+				<reportElement x="170" y="0" width="1" height="27"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>

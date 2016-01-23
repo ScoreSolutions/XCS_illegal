@@ -1,0 +1,553 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" language="JavaScript">
+  	function toggleHidden(mID, btnID) { 
+		
+		document.getElementById('app2_39').style.display='none';
+		document.getElementById('lawbreaker_list').style.display='none';
+		document.getElementById('arrestTeam').style.display='none';
+		document.getElementById('exhibitList').style.display='none';
+		document.getElementById('licenseList').style.display='none';
+		document.getElementById('2_6Tab').style.display='none';
+
+		document.getElementById('btn2_39').style.background='#D4D0C8';
+		document.getElementById('btnLawbreakerList').style.background='#D4D0C8';
+		document.getElementById('btnArrestTeam').style.background='#D4D0C8';
+		document.getElementById('btnExhibitList').style.background='#D4D0C8';
+		document.getElementById('btnlicenseList').style.background='#D4D0C8';
+		document.getElementById('btn2_6').style.background='#D4D0C8';
+
+		mnu = document.getElementById(mID); 
+		btn = document.getElementById(btnID);
+		if (mnu.style.display == 'none'){
+			mnu.style.display ='';
+			btn.style.background='#FFCC33';
+		}else{
+			mnu.style.display ='none';
+		}
+	}
+</script>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="1%">&nbsp;</td>
+     <td style="cursor:hand;" width="98%" >
+        <input name="btnLawbreakerList" type="button" class="button" value="รายชื่อผู้กระทำผิดกฎหมาย" onClick='toggleHidden("lawbreaker_list","btnLawbreakerList");' style="background:#FFCC33">&nbsp;&nbsp;
+        <input name="btn2_39" type="button" class="button" value="บันทึกการจับ" onClick='toggleHidden("app2_39", "btn2_39");' >&nbsp;&nbsp;
+        <input name="btnArrestTeam" type="button" class="button" value="คณะผู้จับกุม" onClick='toggleHidden("arrestTeam","btnArrestTeam");'>&nbsp;&nbsp;
+        <input name="btnExhibitList" type="button" class="button" value="บัญชีสิ่งของ" onClick='toggleHidden("exhibitList","btnExhibitList");'>&nbsp;&nbsp;
+        <input name="btnLicenseList" type="button" class="button" value="ข้อมูลใบอนุญาต/ข้อมูลสืบสวน" onClick='toggleHidden("licenseList","btnLicenseList");'>&nbsp;&nbsp;
+		<input name="btn2_6" type="button" class="button" value="รายงานบันทึกการจับ 2/6ก" onClick='toggleHidden("2_6Tab","btn2_6");'>
+     </td>
+     <td width="1%" >&nbsp;
+          
+     </td>
+  </tr>
+  <tr >
+     <td>&nbsp;</td>
+     <td>
+          <!-- รายชื่อผู้กระทำความผิด-->
+          <div class="innerPosition" id="lawbreaker_list" >
+               <table  border="0" cellspacing="0" cellpadding="0" >
+					
+						<tr>
+							 <td>
+								  <span class="spanLink"
+									   onClick="window.open('Popup/arrest_lawbreaker_form.jsp' , '_blank' , 'menubar=no,toorlbar=no,location=no,scrollbars=no, width=700,height=500,top=120,left=400,modal=yes');"
+									   > เพิ่มใหม่</span> | <span  class="spanLink">ลบรายการที่เลือก</span></td>
+						</tr>
+					
+                    <tr>
+                         <td>
+
+                                <table class="tableList" width="3000" border="0" cellspacing="0" cellpadding="0" bordercolor="#CCCCCC">
+                                   <tr>
+                                     <td class="TblHeaderColumn aligncenter">ลำดับที่</td>
+                                     <td class="TblHeaderColumn aligncenter"><input name="chkAll" type="checkbox" /></td>
+                                     <td class="TblHeaderColumn">ชื่อผู้กระทำผิด</td>
+                                     <td class="TblHeaderColumn">ประเภทผู้กระทำความผิด</td>
+                                     <td class="TblHeaderColumn">อาชีพ</td>
+                                     <td class="TblHeaderColumn">อายุ</td>
+                                     <td class="TblHeaderColumn">เลขที่บัตรปชช</td>
+                                     <td class="TblHeaderColumn">เลขที่หนังสือเดินทาง</td>
+                                     <td class="TblHeaderColumn">เชื้อชาติ</td>
+                                     <td class="TblHeaderColumn">สัญชาติ</td>
+                                     <td class="TblHeaderColumn">ที่อยู่</td>
+                                     <td class="TblHeaderColumn">ชื่อบิดา</td>
+                                     <td class="TblHeaderColumn">ชื่อมารดา</td>
+                                     <td class="TblHeaderColumn">คำยินยอมของผู้ต้องหา</td>
+                                     <td class="TblHeaderColumn">คำให้การของผู้ต้องหา</td>
+                                     <td class="TblHeaderColumn">ผู้ต้องหาดำเนินการ</td>
+                                   </tr>
+                                   <tr>
+                                     <td class="TblRow aligncenter">1</td>
+                                     <td class="TblRow aligncenter"><input name="chk1" type="checkbox"  /></td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">
+                                      
+											<span class="spanLink"
+									   onClick="window.open('Popup/arrest_lawbreaker_form.jsp' , '_blank' , 'menubar=no,toorlbar=no,location=no,scrollbars=no, width=700,height=500,top=120,left=400,modal=yes');">นายสมนึก แซ่เฮ้ง
+											</span>
+										
+											นายสมนึก แซ่เฮ้ง
+									
+                                     </td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">บุคคลทั่วไป</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">รับราชการ</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">36 ปี </td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">3700400425473</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">-</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">ไทย</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">ไทย</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">บ้านเลขที่ 2/6 หมู่4 ตำบลปากเพรียว อำเภอเมือง จังหวัดสระบุรี</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">นายมี บุญอึ่ง</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">นางมา บุญอึ่ง</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">ยินยอม</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">รับสารภาพตลอดข้อกล่าวหา</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">แจ้งให้ผู้ปกครองทราบ</td>
+                                   </tr>
+                                   <tr class="bgRowGray">
+                                     <td class="TblRow aligncenter">2</td>
+                                     <td class="TblRow aligncenter"><input name="chk2" type="checkbox" /></td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">
+                                      
+											<span class="spanLink"
+									   onClick="window.open('Popup/arrest_lawbreaker_form.jsp' , '_blank' , 'menubar=no,toorlbar=no,location=no,scrollbars=no, width=700,height=500,top=120,left=400,modal=yes');">นายเกตติ้ง ณ ราชวัตร
+											</span>
+										
+											นายเกตติ้ง ณ ราชวัตร
+										
+                                     </td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">บุคคลทั่วไป</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">รับจ้าง</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">27 ปี</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">3100500479543</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">-</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">ไทย</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">ไทย</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">11/3 ตำบลคลองลึก อำเภอนายม จังหวัดสกลนคร</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">นายสี ณ ราชวัตร</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">นางสา ณ ราชวัตร</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">ยินยอม</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">-</td>
+                                     <td align="left" valign="top" class="TblRow AlignLeft">-</td>
+                                   </tr>
+                                </table>
+
+                         </td>
+                    </tr>
+               </table>
+          </div>
+          <!-- END รายชื่อผู้กระทำความผิด-->
+
+          <!-- บันทึกจับกุม-->
+         <div class="innerPosition"  id="app2_39" style="width:750px;display:none">
+                 <table border="0" cellspacing="0" cellpadding="0"  width="100%">
+                      
+                    <tr>
+                         <td colspan="2" align="center">
+                              <table width="100%">
+                                 <tr valign="top">
+                                     <td width="155"  align="right">พฤติการณ์ในการจับ :</td>
+                                     <td ><textarea name="textarea" id="textarea" cols="45" rows="3" class="textareabig"  >กระทำผิด</textarea></td>
+                                </tr>
+                                <tr valign="top">
+                                     <td  align="right">คำให้การของผู้ต้องหา :</td>
+                                     <td ><textarea name="textarea" id="textarea" cols="45" rows="3" class="textareabig"  >รับสารภาพ</textarea></td>
+                                </tr>
+                                <tr valign="top">
+                                     <td   align="right">การดำเนินการ :</td>
+                                     <td ><textarea name="textarea" id="textarea" cols="45" rows="3" class="textareabig"  >ปรับ</textarea></td>
+                                </tr>
+                                <tr valign="top">
+                                     <td   align="right">เวลาที่ตรวจค้นเสร็จ:</td>
+                                     <td ><input name="textfield12" type="text" class="textbox"  size="5" maxlength="5" value="09:30"  > น.</td>
+                                </tr>
+                              </table>
+                         </td>
+                     </tr>
+               </table>
+          </div>
+          <!-- END บันทึกจับกุม-->
+
+          <!-- คณะที่เข้าตรวจค้น-->
+          <div class="innerPosition" id="arrestTeam" style="display:none">
+               <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                         <td>
+						
+                              <span class="spanLink"
+                                   onClick="window.open('Popup/divide_staff_pop.jsp' , '_blank' , 'menubar=no,toorlbar=no,location=no,scrollbars=no, width=650,height=600,top=200,left=400,modal=yes');"
+                                   > เพิ่มใหม่</span> | <a href="#" class="linkmenu3level">ลบรายการที่เลือก</a>
+						
+						</td>
+                    </tr>
+                    <tr>
+                         <td>
+
+                                   <table class="tableList" width="1000" border="0" cellspacing="0" cellpadding="0" bordercolor="#CCCCCC">
+                                             <tr>
+                                             <td  height="15" class="TblHeaderColumn AlignCenter">ลำดับ</td>
+                                             <td class="TblHeaderColumn aligncenter"><input name="chkAll" type="checkbox"  /></td>
+                                             <td  class="TblHeaderColumn ">รหัสสายตรวจ</td>
+                                             <td  class="TblHeaderColumn ">ชื่อ</td>
+                                             <td  class="TblHeaderColumn ">ตำแหน่ง</td>
+                                             <td  class="TblHeaderColumn ">ชื่อสังกัด</td>
+                                             <td  class="TblHeaderColumn ">ในฐานะ</td>
+                                          </tr>
+                                          <tr>
+                                                  <td class="TblRow AlignCenter">1</td>
+                                                  <td class="TblRow aligncenter"><input name="chk1" type="checkbox"  /></td>
+                                                  <td class="TblRow AlignLeft">4.4</td>
+                                                  <td class="TblRow AlignLeft">นายสุดใจ คนทัตย</td>
+                                                  <td class="TblRow AlignLeft">เจ้าหน้าที่ตรวจ สรรพสามิต6</td>
+                                                  <td class="TblRow AlignLeft">สำนักตรวจสอบ ป้องกันและปราบปราม </td>
+                                                  <td class="TblRow AlignLeft">
+                                                    <select style="width:100" >
+                                                      <option >เลือก</option>
+                                                      <option >ผู้จับกุม</option>
+                                                      <option selected>ผู้ร่วมจับกุม</option>
+                                                      <option >ผู้สั่งการ</option>
+                                                      <option >ผู้ช่วยเหลือ</option>
+                                                    </select>
+                                                  </td>
+                                          </tr>
+                                          <tr>
+                                                  <td class="bgRowGray AlignCenter" >2</td>
+                                                  <td class="TblRow aligncenter"><input name="chk1" type="checkbox"   /></td>
+                                                  <td class="bgRowGray AlignLeft">4.4</td>
+                                                  <td class="bgRowGray AlignLeft">นายสุรพร ศุกรสุนทร </td>
+                                                  <td class="bgRowGray AlignLeft">นายตรวจสรรพสามิต 5 </td>
+                                                  <td class="bgRowGray AlignLeft">สำนักงานสรรพสามิตพื้นที่ปทุมธานี 1 </td>
+                                                  <td class="bgRowGray AlignLeft">
+                                                    <select style="width:100" >
+                                                      <option >เลือก</option>
+                                                      <option >ผู้จับกุม</option>
+                                                      <option selected>ผู้ร่วมจับกุม</option>
+                                                      <option >ผู้สั่งการ</option>
+                                                      <option >ผู้ช่วยเหลือ</option>
+                                                    </select>
+                                                  </td>
+                                          </tr>
+                                        </table>
+
+                              </td>
+                         </tr>
+               </table>
+          </div>
+          <!-- END คณะที่เข้าตรวจค้น-->
+
+          <!-- บัญชีสิ่งของ-->
+          <div class="innerPosition" id="exhibitList" style="display:none;">
+               <table border="0" cellspacing="0" cellpadding="0" >
+                    <tr>
+                         <td>						
+                              <span class="spanLink" onClick="window.open('Popup/arrest_exhibit_form.jsp' , '_blank' , 'menubar=no,toorlbar=no,location=no,scrollbars=no, width=500,height=450,top=180,left=400,modal=yes');">เพิ่มใหม่</span> |
+                              <span class="spanLink">ลบรายการที่เลือก</span>
+					
+                         </td>
+                    </tr>
+                    <tr>
+                         <td>
+                                   <table class="tableList" width="100%" border="0" cellspacing="0" cellpadding="0" >
+                                        <tr>
+                                             <td width="28"  height="15" class="TblHeaderColumn AlignCenter">ลำดับ</td>
+                                             <td width="20" class="TblHeaderColumn AlignCenter"><input name="chkAll" type="checkbox /></td>
+                                             <td width="68"  class="TblHeaderColumn ">ชนิดสินค้า</td>
+                                             <td width="130"  class="TblHeaderColumn ">ชื่อสินค้า</td>
+                                             <td width="80"  class="TblHeaderColumn ">ใน / นอก</td>
+                                             <td width="80"  class="TblHeaderColumn ">สถานะของกลาง</td>
+                                             <td width="80"  class="TblHeaderColumn ">ขนาด</td>
+                                             <td width="80"  class="TblHeaderColumn ">จำนวน</td>
+                                             <td width="80"  class="TblHeaderColumn ">ปริมาณสุทธิ</td>
+                                             <td width="97"  class="TblHeaderColumn ">ของกลางร่วม(เลขที่คดี)</td>
+                                             <td width="97"  class="TblHeaderColumn ">รายละเอียด</td>
+                                             <td width="97"  class="TblHeaderColumn ">หมายเหตุ</td>
+                                     </tr>
+                                     <tr>
+                                             <td class="TblRow AlignCenter">1</td>
+                                             <td class="TblRow aligncenter"><input name="chk1" type="checkbox"  /></td>
+                                             <td class="TblRow AlignLeft">สุรากลั่น</td>
+                                             <td class="TblRow AlignLeft">
+											 
+													<span class="spanLink" onClick="window.open('Popup/arrest_exhibit_form.jsp' , '_blank' , 'menubar=no,toorlbar=no,location=no,scrollbars=no, width=500,height=450,top=180,left=400,modal=yes');">
+													  สุรา ยี่ห้อ Black Lable
+													</span>
+											
+													สุรา ยี่ห้อ Black Lable
+										
+                                             </td>
+                                             <td class="TblRow AlignLeft">ต่างประเทศ</td>
+                                             <td class="TblRow AlignLeft">ยึด</td>
+                                             <td class="TblRow AlignLeft">650 ซีซี</td>
+                                             <td class="TblRow AlignLeft">12 ขวด</td>
+                                             <td class="TblRow AlignLeft">6 ลิตร</td>
+                                             <td class="TblRow AlignCenter">
+                                               <input type="checkbox" disabled />
+                                             </td>
+                                             <td class="TblRow AlignLeft">&nbsp;</td>
+                                             <td class="TblRow AlignLeft">&nbsp;</td>
+                                     </tr>
+                                     <tr>
+                                             <td class="bgRowGray AlignCenter" >2</td>
+                                             <td class="TblRow aligncenter"><input name="chk1" type="checkbox" /></td>
+                                             <td class="bgRowGray AlignLeft">ยาสูบ</td>
+                                             <td class="bgRowGray AlignLeft">
+											 
+                                                  <span class="spanLink" onClick="window.open('Popup/arrest_exhibit_form.jsp' , '_blank' , 'menubar=no,toorlbar=no,location=no,scrollbars=no, width=500,height=400,top=220,left=400,modal=yes');">
+                                                    บุหรี่ ยี่ห้อกรองทิพย์
+                                                  </span>
+												
+													บุหรี่ ยี่ห้อกรองทิพย์
+											
+                                             </td>
+                                             <td class="bgRowGray AlignLeft">ในประเทศ</td>
+                                             <td class="bgRowGray AlignLeft">ยึด</td>
+                                             <td class="bgRowGray AlignLeft">2 มวน</td>
+                                             <td class="bgRowGray AlignLeft">24 ซอง</td>
+                                             <td class="bgRowGray AlignLeft">1,500 กรัม </td>
+                                             <td class="bgRowGray AlignCenter">
+                                               <input type="checkbox" disabled checked /><br />(100/2553)
+                                             </td>
+                                             <td class="bgRowGray AlignLeft">&nbsp;</td>
+                                             <td class="bgRowGray AlignLeft">&nbsp;</td>
+                                     </tr>
+                                   </table>
+
+                         </td>
+                    </tr>
+               </table>
+          </div>
+          <!-- END บัญชีสิ่งของ-->
+
+          <!-- ใบอนุญาต/ข้อมูลสืบสวน-->
+          <div class="innerPosition" id="licenseList" style="display:none;">
+               <table border="0" cellspacing="0" cellpadding="0" >
+                   <tr class="bgRowGray">
+                      <td ><strong>รายละเอียดใบอนุญาต</strong> </td>
+                   </tr>
+                    <tr>
+                         <td>
+						 	
+                              <span class="spanLink" onClick="window.open('Popup/arrest_license_form.jsp' , '_blank' , 'menubar=no,toorlbar=no,location=no,scrollbars=no, width=500,height=250,top=220,left=400,modal=yes');">เพิ่มใหม่</span> |
+                              <span class="spanLink">ลบรายการที่เลือก</span>
+							
+                         </td>
+                    </tr>
+                    <tr>
+                     <td>
+                        <table class="tableList" width="1000" border="0" cellspacing="0" cellpadding="0" >
+                             <tr  class="TblHeaderColumn">
+                                  <td width="5%" >ลำดับ</td>
+                                  <td width="5%" ><input name="chkAll" type="checkbox"  /></td>
+                                  <td width="15%" >สำนักงาน</td>
+                                  <td width="20%" >ชื่อผู้ประกอบการ</td>
+                                  <td width="20%" >ชื่อสถานประกอบการ</td>
+                                  <td width="15%" >ประเภทใบอนุญาต</td>
+                                  <td width="10%" >เล่มที่ใบอนุญาต</td>
+                                  <td width="10%" >เลขที่ใบอนุญาต</td>
+                             </tr>
+                             <tr  class="TblRow">
+                                  <td  align="center">1</td>
+                                  <td  align="center" ><input name="chk1" type="checkbox"  /></td>
+                                  <td  >
+								  
+                                       <span class="spanLink"
+                                       onClick="window.open('Popup/arrest_license_form.jsp' , '_blank' , 'menubar=no,toorlbar=no,location=no,scrollbars=no, width=500,height=250,top=220,left=400,modal=yes');">สสพ. กรุงเทพฯ 3</span>
+									
+										สสพ. กรุงเทพฯ 3
+								
+                                  </td>
+                                  <td  >บริษัท ABC จำกัด</td>
+                                  <td  >ร้านโชว์ห่วย 1</td>
+                                  <td  >ร้านค้า</td>
+                                  <td  >1042</td>
+                                  <td  >000001</td>
+                             </tr>
+                             <tr  class="bgRowGray">
+                                  <td  align="center" >2</td>
+                                  <td  align="center" ><input name="chk2" type="checkbox"  /></td>
+                                  <td  >
+								  
+                                       <span class="spanLink"
+                                       onClick="window.open('Popup/arrest_license_form.jsp' , '_blank' , 'menubar=no,toorlbar=no,location=no,scrollbars=no, width=500,height=250,top=220,left=400,modal=yes');">สสพ. กรุงเทพฯ 3</span>
+									
+										สสพ. กรุงเทพฯ 3
+								
+                                  </td>
+                                  <td  >บริษัท กขค จำกัด</td>
+                                  <td  >ร้านโชว์ห่วย 2</td>
+                                  <td  >ร้านค้า</td>
+                                  <td  >1043</td>
+                                  <td  >000010</td>
+                             </tr>
+                        </table>
+                     </td>
+                   </tr>
+                   <tr >
+                      <td >&nbsp; </td>
+                   </tr>
+                   <tr class="bgRowGray">
+                      <td ><strong>รายละเอียดในการสืบสวน</strong> </td>
+                   </tr>
+                   <tr >
+                      <td >&nbsp; </td>
+                   </tr>
+                   <tr>
+                     <td>
+                       <table border="0" cellspacing="0" cellpadding="0" width="500">
+                         <tr>
+                           <td width="30%" align="right">
+                             เลขที่การแจ้งความ :&nbsp;
+                           </td>
+                           <td width="70%">
+                             <input type="text" class="textview" size="25">
+                             <img src="images/btn_browse.png" width="18" height="19" border="0" style="cursor:hand"
+                                  onClick="window.open('Popup/notice_arrest_pop.jsp' , '_blank' , 'menubar=no,toorlbar=no,location=no,scrollbars=no, width=700,height=500,top=220,left=400,modal=yes');" >
+                             <a href="Protect.jsp?action=NoticeArrestForm" target="_blank"><img src="images/btn_search_big.png" width="64" height="22" border="0"></a>
+                           </td>
+                         </tr>
+                         <tr>
+                           <td align="right">
+                              ชื่อผู้แจ้งเบาะแส :&nbsp;
+                           </td>
+                           <td>
+                              <input type="text" class="textview" size="40">
+                           </td>
+                         </tr>
+                         <tr>
+                           <td  align="right">
+                             เลขที่หมายค้น :&nbsp;
+                           </td>
+                           <td >
+                             <input type="text" class="textview" size="25">
+                             <img src="images/btn_browse.png" width="18" height="19" border="0" style="cursor:hand"
+                                  onClick="window.open('Popup/searchwarrant_pop.jsp' , '_blank' , 'menubar=no,toorlbar=no,location=no,scrollbars=no, width=700,height=500,top=220,left=400,modal=yes');" >
+                             <a href="Invest.jsp?action=SearchwarrantForm" target="_blank"><img src="images/btn_search_big.png" width="64" height="22" border="0"></a>
+                           </td>
+                         </tr>
+                         <tr>
+                           <td  align="right">
+                             เลขที่ สส.2/27 :&nbsp;
+                           </td>
+                           <td >
+                             <input type="text" class="textview" size="25">
+                             <img src="images/btn_browse.png" width="18" height="19" border="0" style="cursor:hand"
+                                  onClick="window.open('Popup/sincere_confirm_pop.jsp' , '_blank' , 'menubar=no,toorlbar=no,location=no,scrollbars=no, width=700,height=500,top=220,left=400,modal=yes');"   />
+                             <a href="Invest.jsp?action=2_27Form" target="_blank"><img src="images/btn_search_big.png" width="64" height="22" border="0"></a>
+                           </td>
+                         </tr>
+                       </table>
+                       
+                     </td>
+                   </tr>
+               </table>
+          </div>
+
+          <!--END ใบอนุญาต-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- รายงานบันทึกการจับกุม 2/6ก-->
+         <div class="innerPosition"  id="2_6Tab" style="width:750px;display:none">
+                 <table border="0" cellspacing="0" cellpadding="0"  width="100%">
+                      <tr>
+                           <td width="50%" valign="top">
+                                <table border="0" cellspacing="0" cellpadding="0"  width="100%">
+                                     <tr  >
+                                          <td height="25" align="right">วันที่บันทึกรายงาน :&nbsp;</td>
+                                          <td height="25">
+                                                    <input name="theDate2" type="text" class="textdate" readonly value="01/10/2552"  />
+													<img src="images/btn_calendar.png" alt="" width="19" height="19"  />
+                                           </td>
+                                     </tr>
+                                     <tr  >
+                                          <td  align="right">ผู้ครอบครองสถานที่ :&nbsp;</td>
+                                          <td >
+                                               <input name="textfield12" type="text" class="textbox" size="25" maxlength="5" value="นายสมชาย จรดปลายเท้า"  >
+
+                                          </td>
+                                     </tr>
+                                     <tr  >
+                                          <td  align="right">ชื่อกิจการ :&nbsp;</td>
+                                          <td >
+                                               <input name="textfield12" type="text" class="textbox" size="25" maxlength="5" value="ร้านโชว์ห่วย"  >
+
+                                          </td>
+                                     </tr>
+                                     <tr  >
+                                          <td  align="right">ชื่อผู้รับรอง :&nbsp;</td>
+                                          <td >
+                                               <input name="textfield12" type="text" class="textbox" size="25" maxlength="5" >
+
+                                          </td>
+                                     </tr>
+                                     <tr  >
+                                          <td  align="right">เรียน(ตำแหน่งหัวหน้างาน) :&nbsp;</td>
+                                          <td >
+                                               <input name="textfield12" type="text" class="textbox" size="25" maxlength="5" >
+
+                                          </td>
+                                     </tr>
+                                </table>
+                           </td>
+                           <td  width="50%" valign="top">
+                                <table border="0" cellspacing="0" cellpadding="0"  width="100%">
+                                     <tr  >
+                                          <td height="25" ><input name="guilty" type="checkbox"  /> &nbsp;มีความผิด</td>
+                                          <td height="25">&nbsp;
+                                                    
+                                           </td>
+                                     </tr>
+                                     <tr  >
+                                          <td  align="right">รายงานต่อ(ส.ส.2/6ก) :&nbsp;</td>
+                                          <td >
+                                            <input type="text" name="textfield12" class="textview" size="31" value="นายปัณณวิชญ์ สันติประสิทธิ์กุล"  />
+                                            <img src="images/btn_browse.png" width="18" height="19" border="0" style="cursor:hand"
+                                              onClick="window.open('Popup/arrest_accuser_pop.jsp' , '_blank' , 'menubar=no,toorlbar=no,location=no,scrollbars=no, width=650,height=500,top=220,left=400,modal=yes');"  />
+                                          </td>
+                                     </tr>
+                                     <tr  >
+                                          <td  align="right">โดยคำสั่ง(ส.ส.2/6ก) :&nbsp;</td>
+                                          <td >
+                                            <input type="text" name="textfield12" class="textview" size="31" value="นายปัณณวิชญ์ สันติประสิทธิ์กุล">
+                                            <img src="images/btn_browse.png" width="18" height="19" border="0" style="cursor:hand"
+                                              onClick="window.open('Popup/arrest_accuser_pop.jsp' , '_blank' , 'menubar=no,toorlbar=no,location=no,scrollbars=no, width=650,height=500,top=220,left=400,modal=yes');"  />
+                                          </td>
+                                     </tr>
+                                     <tr  >
+                                          <td  align="right">ซึ่งเป็น :&nbsp;</td>
+                                          <td >
+                                               <input name="textfield12" type="text" class="textbox" size="25" maxlength="5" >
+
+                                          </td>
+                                     </tr>
+                                     <tr  >
+                                          <td  align="right">เรียน(เช่น ผู้อำนวยการ) :&nbsp;</td>
+                                          <td >
+                                               <input name="textfield12" type="text" class="textbox" size="25" maxlength="5" >
+
+                                          </td>
+                                     </tr>
+                                </table>
+                         </td>
+                    </tr>
+                   
+               </table>
+          </div>
+          <!-- END รายงานบันทึกการจับกุม-->
+
+
+
+
+     </td>
+     <td>&nbsp;</td>
+   </tr>
+</table>

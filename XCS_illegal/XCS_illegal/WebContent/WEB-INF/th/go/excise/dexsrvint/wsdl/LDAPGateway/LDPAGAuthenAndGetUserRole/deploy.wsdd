@@ -1,0 +1,74 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from LDPAGAuthenAndGetUserRoleService WSDL service -->
+
+  <service name="LDPAGAuthenAndGetUserRolePort" provider="java:RPC" style="document" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://dexsrvint.excise.go.th/wsdl/LDAPGateway/LDPAGAuthenAndGetUserRole"/>
+      <parameter name="wsdlServiceElement" value="LDPAGAuthenAndGetUserRoleService"/>
+      <parameter name="schemaQualified" value="http://dexsrvint.excise.go.th/schema/LdapUserBase,http://dexsrvint.excise.go.th/schema/AuthenAndGetUserRole"/>
+      <parameter name="schemaUnqualified" value="http://dexsrvint.excise.go.th/wsdl/LDAPGateway/LDPAGAuthenAndGetUserRole"/>
+      <parameter name="wsdlServicePort" value="LDPAGAuthenAndGetUserRolePort"/>
+      <parameter name="className" value="th.go.excise.dexsrvint.wsdl.LDAPGateway.LDPAGAuthenAndGetUserRole.LDPAGAuthenAndGetUserRoleBindingSkeleton"/>
+      <parameter name="wsdlPortType" value="LDPAGAuthenAndGetUserRolePortType"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <arrayMapping
+        xmlns:ns="http://dexsrvint.excise.go.th/schema/LdapUserBase"
+        qname="ns:RolesBase"
+        type="java:th.go.excise.dexsrvint.schema.LdapUserBase.RoleBase[]"
+        innerType="cmp-ns:RoleBase" xmlns:cmp-ns="http://dexsrvint.excise.go.th/schema/LdapUserBase"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://dexsrvint.excise.go.th/schema/LdapUserBase"
+        qname="ns:MessageBase"
+        type="java:th.go.excise.dexsrvint.schema.LdapUserBase.MessageBase"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://dexsrvint.excise.go.th/schema/LdapUserBase"
+        qname="ns:UserInfoBase"
+        type="java:th.go.excise.dexsrvint.schema.LdapUserBase.UserInfoBase"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://dexsrvint.excise.go.th/schema/AuthenAndGetUserRole"
+        qname="ns:AuthenAndGetUserRoleRequest"
+        type="java:th.go.excise.dexsrvint.schema.AuthenAndGetUserRole.AuthenAndGetUserRoleRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://dexsrvint.excise.go.th/schema/LdapUserBase"
+        qname="ns:RoleBase"
+        type="java:th.go.excise.dexsrvint.schema.LdapUserBase.RoleBase"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://dexsrvint.excise.go.th/schema/AuthenAndGetUserRole"
+        qname="ns:AuthenAndGetUserRoleResponse"
+        type="java:th.go.excise.dexsrvint.schema.AuthenAndGetUserRole.AuthenAndGetUserRoleResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

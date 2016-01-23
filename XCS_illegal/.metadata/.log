@@ -1,0 +1,992 @@
+!SESSION 2015-07-27 17:31:57.890 -----------------------------------------------
+eclipse.buildId=M20090917-0800
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.reporting.product
+
+This is a continuation of log file D:\MyProject\XCS-Illegal\XCS_illegal\.metadata\.bak_1.log
+Created Time: 2015-07-27 18:08:14.894
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.894
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.894
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.hasLocalChanges(SVNChangeSetContentProvider.java:751)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.canAddToUnnassignedChangeSet(SVNChangeSetContentProvider.java:741)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider$2.visit(SVNChangeSetContentProvider.java:363)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:80)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.addAllUnassignedToUnassignedSet(SVNChangeSetContentProvider.java:361)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getUnassignedSet(SVNChangeSetContentProvider.java:353)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getTheRest(SVNChangeSetContentProvider.java:372)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.diffsChanged(SVNChangeSetContentProvider.java:706)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.898
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.898
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.hasLocalChanges(SVNChangeSetContentProvider.java:751)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.canAddToUnnassignedChangeSet(SVNChangeSetContentProvider.java:741)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider$2.visit(SVNChangeSetContentProvider.java:363)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:80)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.addAllUnassignedToUnassignedSet(SVNChangeSetContentProvider.java:361)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getUnassignedSet(SVNChangeSetContentProvider.java:353)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getTheRest(SVNChangeSetContentProvider.java:372)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.diffsChanged(SVNChangeSetContentProvider.java:706)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.901
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.901
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.hasLocalChanges(SVNChangeSetContentProvider.java:751)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.canAddToUnnassignedChangeSet(SVNChangeSetContentProvider.java:741)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider$2.visit(SVNChangeSetContentProvider.java:363)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:80)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.addAllUnassignedToUnassignedSet(SVNChangeSetContentProvider.java:361)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getUnassignedSet(SVNChangeSetContentProvider.java:353)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getTheRest(SVNChangeSetContentProvider.java:372)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.diffsChanged(SVNChangeSetContentProvider.java:706)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.904
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.904
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.hasLocalChanges(SVNChangeSetContentProvider.java:751)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.canAddToUnnassignedChangeSet(SVNChangeSetContentProvider.java:741)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider$2.visit(SVNChangeSetContentProvider.java:363)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:80)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.addAllUnassignedToUnassignedSet(SVNChangeSetContentProvider.java:361)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getUnassignedSet(SVNChangeSetContentProvider.java:353)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getTheRest(SVNChangeSetContentProvider.java:372)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.diffsChanged(SVNChangeSetContentProvider.java:706)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.907
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.907
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.hasLocalChanges(SVNChangeSetContentProvider.java:751)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.canAddToUnnassignedChangeSet(SVNChangeSetContentProvider.java:741)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider$2.visit(SVNChangeSetContentProvider.java:363)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:80)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.addAllUnassignedToUnassignedSet(SVNChangeSetContentProvider.java:361)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getUnassignedSet(SVNChangeSetContentProvider.java:353)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getTheRest(SVNChangeSetContentProvider.java:372)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.diffsChanged(SVNChangeSetContentProvider.java:706)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.911
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.911
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.hasLocalChanges(SVNChangeSetContentProvider.java:751)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.canAddToUnnassignedChangeSet(SVNChangeSetContentProvider.java:741)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider$2.visit(SVNChangeSetContentProvider.java:363)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:80)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.addAllUnassignedToUnassignedSet(SVNChangeSetContentProvider.java:361)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getUnassignedSet(SVNChangeSetContentProvider.java:353)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getTheRest(SVNChangeSetContentProvider.java:372)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.diffsChanged(SVNChangeSetContentProvider.java:706)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.916
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.916
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.hasLocalChanges(SVNChangeSetContentProvider.java:751)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.canAddToUnnassignedChangeSet(SVNChangeSetContentProvider.java:741)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider$2.visit(SVNChangeSetContentProvider.java:363)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:80)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.addAllUnassignedToUnassignedSet(SVNChangeSetContentProvider.java:361)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getUnassignedSet(SVNChangeSetContentProvider.java:353)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getTheRest(SVNChangeSetContentProvider.java:372)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.diffsChanged(SVNChangeSetContentProvider.java:706)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.921
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.921
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.hasLocalChanges(SVNChangeSetContentProvider.java:751)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.canAddToUnnassignedChangeSet(SVNChangeSetContentProvider.java:741)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider$2.visit(SVNChangeSetContentProvider.java:363)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:80)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.addAllUnassignedToUnassignedSet(SVNChangeSetContentProvider.java:361)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getUnassignedSet(SVNChangeSetContentProvider.java:353)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getTheRest(SVNChangeSetContentProvider.java:372)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.diffsChanged(SVNChangeSetContentProvider.java:706)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.926
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.926
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.hasLocalChanges(SVNChangeSetContentProvider.java:751)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.canAddToUnnassignedChangeSet(SVNChangeSetContentProvider.java:741)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider$2.visit(SVNChangeSetContentProvider.java:363)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:80)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.addAllUnassignedToUnassignedSet(SVNChangeSetContentProvider.java:361)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getUnassignedSet(SVNChangeSetContentProvider.java:353)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getTheRest(SVNChangeSetContentProvider.java:372)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.diffsChanged(SVNChangeSetContentProvider.java:706)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.931
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.931
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.hasLocalChanges(SVNChangeSetContentProvider.java:751)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.canAddToUnnassignedChangeSet(SVNChangeSetContentProvider.java:741)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider$2.visit(SVNChangeSetContentProvider.java:363)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:80)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.addAllUnassignedToUnassignedSet(SVNChangeSetContentProvider.java:361)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getUnassignedSet(SVNChangeSetContentProvider.java:353)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getTheRest(SVNChangeSetContentProvider.java:372)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.diffsChanged(SVNChangeSetContentProvider.java:706)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.936
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.936
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.hasLocalChanges(SVNChangeSetContentProvider.java:751)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.canAddToUnnassignedChangeSet(SVNChangeSetContentProvider.java:741)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider$2.visit(SVNChangeSetContentProvider.java:363)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:80)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.addAllUnassignedToUnassignedSet(SVNChangeSetContentProvider.java:361)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getUnassignedSet(SVNChangeSetContentProvider.java:353)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getTheRest(SVNChangeSetContentProvider.java:372)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.diffsChanged(SVNChangeSetContentProvider.java:706)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.941
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.941
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.hasLocalChanges(SVNChangeSetContentProvider.java:751)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.canAddToUnnassignedChangeSet(SVNChangeSetContentProvider.java:741)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider$2.visit(SVNChangeSetContentProvider.java:363)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:80)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.addAllUnassignedToUnassignedSet(SVNChangeSetContentProvider.java:361)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getUnassignedSet(SVNChangeSetContentProvider.java:353)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getTheRest(SVNChangeSetContentProvider.java:372)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.diffsChanged(SVNChangeSetContentProvider.java:706)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.945
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.945
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.hasLocalChanges(SVNChangeSetContentProvider.java:751)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.canAddToUnnassignedChangeSet(SVNChangeSetContentProvider.java:741)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider$2.visit(SVNChangeSetContentProvider.java:363)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:80)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.addAllUnassignedToUnassignedSet(SVNChangeSetContentProvider.java:361)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getUnassignedSet(SVNChangeSetContentProvider.java:353)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getTheRest(SVNChangeSetContentProvider.java:372)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.diffsChanged(SVNChangeSetContentProvider.java:706)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.948
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.948
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.hasLocalChanges(SVNChangeSetContentProvider.java:751)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.canAddToUnnassignedChangeSet(SVNChangeSetContentProvider.java:741)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider$2.visit(SVNChangeSetContentProvider.java:363)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:80)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.addAllUnassignedToUnassignedSet(SVNChangeSetContentProvider.java:361)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getUnassignedSet(SVNChangeSetContentProvider.java:353)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getTheRest(SVNChangeSetContentProvider.java:372)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.diffsChanged(SVNChangeSetContentProvider.java:706)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.953
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:14.953
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.hasLocalChanges(SVNChangeSetContentProvider.java:751)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.canAddToUnnassignedChangeSet(SVNChangeSetContentProvider.java:741)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider$2.visit(SVNChangeSetContentProvider.java:363)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:80)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.core.diff.provider.DiffTree.accept(DiffTree.java:86)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.addAllUnassignedToUnassignedSet(SVNChangeSetContentProvider.java:361)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getUnassignedSet(SVNChangeSetContentProvider.java:353)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.getTheRest(SVNChangeSetContentProvider.java:372)
+	at org.eclipse.team.svn.ui.mapping.SVNChangeSetContentProvider.diffsChanged(SVNChangeSetContentProvider.java:706)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:16.868
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.synchronize.update.action.logicalmodel.CommitAllModelAction' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:16.868
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.synchronize.update.action.logicalmodel.CommitAllModelAction' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.core.synchronize.FastSyncInfoFilter$SyncInfoDirectionFilter.select(FastSyncInfoFilter.java:198)
+	at org.eclipse.team.svn.ui.synchronize.action.CommitActionHelper$1.select(CommitActionHelper.java:64)
+	at org.eclipse.team.svn.ui.synchronize.action.AbstractSynchronizeLogicalModelAction.getFilteredResources(AbstractSynchronizeLogicalModelAction.java:231)
+	at org.eclipse.team.svn.ui.synchronize.action.logicalmodel.AbstractModelToolbarAction.updateEnablement(AbstractModelToolbarAction.java:71)
+	at org.eclipse.team.svn.ui.synchronize.action.logicalmodel.AbstractModelToolbarAction.diffsChanged(AbstractModelToolbarAction.java:52)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:16.876
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.synchronize.update.action.logicalmodel.ExpandAllModelAction' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:08:16.876
+!MESSAGE SVN: 'org.eclipse.team.svn.ui.synchronize.update.action.logicalmodel.ExpandAllModelAction' operation finished with error: null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.core.synchronize.FastSyncInfoFilter.select(FastSyncInfoFilter.java:216)
+	at org.eclipse.team.svn.ui.synchronize.action.AbstractSynchronizeLogicalModelAction.getFilteredResources(AbstractSynchronizeLogicalModelAction.java:231)
+	at org.eclipse.team.svn.ui.synchronize.action.logicalmodel.AbstractModelToolbarAction.updateEnablement(AbstractModelToolbarAction.java:71)
+	at org.eclipse.team.svn.ui.synchronize.action.logicalmodel.AbstractModelToolbarAction.diffsChanged(AbstractModelToolbarAction.java:52)
+	at org.eclipse.team.core.diff.provider.DiffTree$1.run(DiffTree.java:247)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.team.core.diff.provider.DiffTree.fireChanges(DiffTree.java:239)
+	at org.eclipse.team.core.diff.provider.DiffTree.endInput(DiffTree.java:221)
+	at org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler.dispatchEvents(SubscriberDiffTreeEventHandler.java:238)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.doDispatchEvents(SubscriberEventHandler.java:375)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.dispatchEvents(BackgroundEventHandler.java:394)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.handlePendingDispatch(SubscriberEventHandler.java:245)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.collect(SubscriberEventHandler.java:220)
+	at org.eclipse.team.internal.core.subscribers.SubscriberEventHandler.processEvent(SubscriberEventHandler.java:310)
+	at org.eclipse.team.internal.core.BackgroundEventHandler.processEvents(BackgroundEventHandler.java:369)
+	at org.eclipse.team.internal.core.BackgroundEventHandler$1.run(BackgroundEventHandler.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:09:48.726
+!MESSAGE SVN: '0x00400045: Collecting Properties' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-27 18:09:48.726
+!MESSAGE SVN: '0x00400045: Collecting Properties' operation finished with error: 0x00000014: Resource is inaccessible or it is not under SVN control: 'D:/MyProject/XCS-Illegal/XCS_illegal'.
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: 0x00000014: Resource is inaccessible or it is not under SVN control: 'D:/MyProject/XCS-Illegal/XCS_illegal'.
+	at org.eclipse.team.svn.core.svnstorage.SVNRemoteStorage.asLocalResourceAccessible(SVNRemoteStorage.java:356)
+	at org.eclipse.team.svn.ui.panel.local.CommitPanel$CollectPropertiesOperation.runImpl(CommitPanel.java:859)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:77)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:38)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.ui.utility.DefaultCancellableOperationWrapper.run(DefaultCancellableOperationWrapper.java:55)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SESSION 2558-07-30 18:01:07.275 -----------------------------------------------
+eclipse.buildId=M20090917-0800
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.reporting.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2558-07-30 18:01:30.523
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2015-07-30 18:02:40.606
+!MESSAGE SVN: '0x00000000: Open Project' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2015-07-30 18:02:40.606
+!MESSAGE SVN: '0x00000000: Open Project' operation finished with error: 0x00000000: Unable connect to 'XCS_illegal' project.
+Please check that SVN meta-information exists and its format is supported by the current SVN plug-in version.
+If so, it is possible that project working copy is relocated outside plug-in control.
+At the current moment project will be automatically disconnected from source control.
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: 0x00000000: Unable connect to 'XCS_illegal' project.
+Please check that SVN meta-information exists and its format is supported by the current SVN plug-in version.
+If so, it is possible that project working copy is relocated outside plug-in control.
+At the current moment project will be automatically disconnected from source control.
+	at org.eclipse.team.svn.core.SVNTeamProvider$1.runImpl(SVNTeamProvider.java:221)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:77)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:94)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:77)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:38)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility$1$1.run(ProgressMonitorUtility.java:60)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1800)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility$1.run(ProgressMonitorUtility.java:58)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2558-08-11 14:16:34.456 -----------------------------------------------
+eclipse.buildId=M20090917-0800
+java.version=1.5.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=th_TH
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.reporting.product
+
+!ENTRY org.eclipse.ui.workbench 2 0 2558-08-11 14:38:39.336
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2558-08-11 14:38:39.336
+!MESSAGE Conflict for 'org.eclipse.wst.jsdt.ui.edit.text.java.open.editor':
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@1f36742),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@84b8f9,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@1509f8b)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@17d03c5)),sourcePriority=1064961)
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@1f36742),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@84b8f9,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@1509f8b)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@17d03c5)),sourcePriority=1064961)
+!SESSION 2558-08-17 09:51:12.317 -----------------------------------------------
+eclipse.buildId=M20090917-0800
+java.version=1.5.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=th_TH
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.reporting.product
+
+!ENTRY org.eclipse.wst.server.core 4 0 2558-08-17 14:04:57.533
+!MESSAGE Could not launch Run on Server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not write file: D:\MyProject\XCS-Illegal\XCS_illegal\.metadata\.plugins\org.eclipse.debug.core\.launches\WEB-INF\classes\com\ko\domain\base.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:50)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.checkTargetIsNotWritable(LocalFile.java:83)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.mkdir(LocalFile.java:285)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.writeNewFile(LaunchConfigurationWorkingCopy.java:305)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave0(LaunchConfigurationWorkingCopy.java:248)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:219)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:173)
+	at org.eclipse.wst.server.ui.internal.actions.RunOnServerActionDelegate.getLaunchConfiguration(RunOnServerActionDelegate.java:537)
+	at org.eclipse.wst.server.ui.internal.actions.RunOnServerActionDelegate.run(RunOnServerActionDelegate.java:332)
+	at org.eclipse.wst.server.ui.internal.actions.RunOnServerActionDelegate.run(RunOnServerActionDelegate.java:689)
+	at org.eclipse.wst.server.ui.internal.ServerLaunchShortcut.launch(ServerLaunchShortcut.java:41)
+	at org.eclipse.wst.server.ui.internal.ServerLaunchShortcut.launch(ServerLaunchShortcut.java:56)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.launch(LaunchShortcutExtension.java:424)
+	at org.eclipse.debug.internal.ui.actions.LaunchShortcutAction.run(LaunchShortcutAction.java:70)
+	at org.eclipse.debug.internal.ui.actions.LaunchShortcutAction.runWithEvent(LaunchShortcutAction.java:121)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+!SUBENTRY 1 org.eclipse.core.filesystem 4 272 2558-08-17 14:04:57.533
+!MESSAGE Could not write file: D:\MyProject\XCS-Illegal\XCS_illegal\.metadata\.plugins\org.eclipse.debug.core\.launches\WEB-INF\classes\com\ko\domain\base.
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2558-08-17 15:16:52.889
+!MESSAGE problem with reconciling
+!STACK 0
+java.lang.IllegalArgumentException: This class and API are for Structured Documents only
+	at org.eclipse.wst.sse.core.internal.text.rules.StructuredTextPartitioner.connect(StructuredTextPartitioner.java:180)
+	at org.eclipse.jst.jsp.core.internal.text.StructuredTextPartitionerForJSP.getEmbeddedPartitioner(StructuredTextPartitionerForJSP.java:183)
+	at org.eclipse.jst.jsp.core.internal.text.StructuredTextPartitionerForJSP.getPartitionType(StructuredTextPartitionerForJSP.java:277)
+	at org.eclipse.wst.sse.core.internal.text.rules.StructuredTextPartitioner.internalGetPartition(StructuredTextPartitioner.java:585)
+	at org.eclipse.wst.sse.core.internal.text.rules.StructuredTextPartitioner.computePartitioning(StructuredTextPartitioner.java:119)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.computePartitioning(BasicStructuredDocument.java:1049)
+	at org.eclipse.jface.text.TextUtilities.computePartitioning(TextUtilities.java:429)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DirtyRegionProcessor.computePartitioning(DirtyRegionProcessor.java:343)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DirtyRegionProcessor.computePartitioning(DirtyRegionProcessor.java:324)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DirtyRegionProcessor.process(DirtyRegionProcessor.java:600)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DocumentRegionProcessor.process(DocumentRegionProcessor.java:189)
+	at org.eclipse.wst.sse.ui.internal.reconcile.StructuredRegionProcessor.process(StructuredRegionProcessor.java:221)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DirtyRegionProcessor.run(DirtyRegionProcessor.java:641)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2558-08-17 17:17:41.137
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2558-08-17 17:17:41.137
+!MESSAGE Conflict for 'org.eclipse.wst.jsdt.ui.edit.text.java.open.editor':
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@517e38),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@132fc5f,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@36eb76)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@17d03c5)),sourcePriority=1064961)
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@517e38),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@132fc5f,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@36eb76)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@17d03c5)),sourcePriority=1064961)
+!SESSION 2558-08-31 16:05:15.446 -----------------------------------------------
+eclipse.buildId=M20090917-0800
+java.version=1.5.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=th_TH
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.reporting.product
+
+!ENTRY org.eclipse.core.net 1 0 2558-08-31 16:05:43.296
+!MESSAGE System property http.proxyHost is set to 192.168.4.10 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2558-08-31 16:05:43.358
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2558-08-31 16:05:43.421
+!MESSAGE System property http.proxyHost is set to 192.168.4.10 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2558-08-31 16:05:43.421
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+!SESSION 2558-09-17 23:05:11.234 -----------------------------------------------
+eclipse.buildId=M20090917-0800
+java.version=1.5.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=th_TH
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.reporting.product
+
+!ENTRY org.eclipse.core.net 1 0 2558-09-17 23:06:18.566
+!MESSAGE System property http.proxyHost is set to 192.168.4.10 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2558-09-17 23:06:18.753
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2558-09-17 23:06:18.863
+!MESSAGE System property http.proxyHost is set to 192.168.4.10 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2558-09-17 23:06:18.863
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+!SESSION 2558-09-18 14:35:16.316 -----------------------------------------------
+eclipse.buildId=M20090917-0800
+java.version=1.5.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=th_TH
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.reporting.product
+
+!ENTRY org.eclipse.core.net 1 0 2558-09-18 14:35:42.614
+!MESSAGE System property http.proxyHost is set to 192.168.4.10 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2558-09-18 14:35:42.724
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2558-09-18 14:35:42.786
+!MESSAGE System property http.proxyHost is set to 192.168.4.10 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2558-09-18 14:35:42.802
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+!SESSION 2558-09-21 13:38:01.738 -----------------------------------------------
+eclipse.buildId=M20090917-0800
+java.version=1.5.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=th_TH
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.reporting.product
+
+!ENTRY org.eclipse.ui.workbench 2 0 2558-09-21 15:13:40.260
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2558-09-21 15:13:40.260
+!MESSAGE Conflict for 'org.eclipse.wst.jsdt.ui.edit.text.java.open.editor':
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@87764d),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@ec4462,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@1aec8a9)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1a791f)),sourcePriority=1064961)
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@87764d),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@ec4462,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@1aec8a9)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1a791f)),sourcePriority=1064961)
+!SESSION 2558-09-21 16:20:41.621 -----------------------------------------------
+eclipse.buildId=M20090917-0800
+java.version=1.5.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=th_TH
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.reporting.product
+
+!ENTRY org.eclipse.core.net 1 0 2558-09-21 16:21:01.160
+!MESSAGE System property http.proxyHost is set to 192.168.4.10 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2558-09-21 16:21:01.270
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2558-09-21 16:21:01.332
+!MESSAGE System property http.proxyHost is set to 192.168.4.10 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2558-09-21 16:21:01.332
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+!SESSION 2558-10-09 22:37:04.371 -----------------------------------------------
+eclipse.buildId=M20090917-0800
+java.version=1.5.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=th_TH
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.reporting.product
+
+!ENTRY org.eclipse.wst.server.core 4 0 2558-10-09 22:47:23.314
+!MESSAGE Server Tomcat v5.5 Server at localhost was unable to start within 45 seconds. If the server requires more time, try increasing the timeout in the server editor.
+!SESSION 2558-10-11 17:33:48.608 -----------------------------------------------
+eclipse.buildId=M20090917-0800
+java.version=1.5.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=th_TH
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.reporting.product
+
+!ENTRY org.eclipse.wst.server.core 4 0 2558-10-11 17:43:25.066
+!MESSAGE Server Tomcat v5.5 Server at localhost was unable to start within 45 seconds. If the server requires more time, try increasing the timeout in the server editor.
+!SESSION 2558-10-13 10:48:27.321 -----------------------------------------------
+eclipse.buildId=M20090917-0800
+java.version=1.5.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=th_TH
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.reporting.product
+
+!ENTRY org.eclipse.wst.validation 4 0 2558-10-13 13:51:02.377
+!MESSAGE Plug-in "org.eclipse.jst.jsp.core" was unable to instantiate class "org.eclipse.jst.jsp.core.internal.validation.JSPBatchValidator".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Plug-in "org.eclipse.jst.jsp.core" was unable to instantiate class "org.eclipse.jst.jsp.core.internal.validation.JSPBatchValidator".
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.throwException(RegistryStrategyOSGI.java:180)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:874)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:51)
+	at org.eclipse.wst.validation.Validator$V2.getValidator(Validator.java:1023)
+	at org.eclipse.wst.validation.Validator$V2.getDelegatedValidator(Validator.java:980)
+	at org.eclipse.wst.validation.Validator$V2.validationStarting(Validator.java:1258)
+	at org.eclipse.wst.validation.internal.ValBuilderJob$4.visit(ValBuilderJob.java:171)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:743)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:175)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:125)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.ExceptionInInitializerError
+	at org.eclipse.jst.jsp.core.internal.validation.JSPBatchValidator.<init>(JSPBatchValidator.java:170)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance0(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:170)
+	... 12 more
+Caused by: java.lang.NullPointerException
+	at org.eclipse.jst.jsp.core.internal.validation.JSPDirectiveValidator.<clinit>(JSPDirectiveValidator.java:80)
+	... 20 more
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2558-10-13 13:51:02.377
+!MESSAGE Plug-in "org.eclipse.jst.jsp.core" was unable to instantiate class "org.eclipse.jst.jsp.core.internal.validation.JSPBatchValidator".
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.eclipse.jst.jsp.core.internal.validation.JSPBatchValidator.<init>(JSPBatchValidator.java:170)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance0(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:170)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:874)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:51)
+	at org.eclipse.wst.validation.Validator$V2.getValidator(Validator.java:1023)
+	at org.eclipse.wst.validation.Validator$V2.getDelegatedValidator(Validator.java:980)
+	at org.eclipse.wst.validation.Validator$V2.validationStarting(Validator.java:1258)
+	at org.eclipse.wst.validation.internal.ValBuilderJob$4.visit(ValBuilderJob.java:171)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:743)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:175)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:125)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.jst.jsp.core.internal.validation.JSPDirectiveValidator.<clinit>(JSPDirectiveValidator.java:80)
+	... 20 more
+
+!ENTRY org.eclipse.wst.validation 4 0 2558-10-13 13:51:02.408
+!MESSAGE IWAE0100E Extension configuration error. An internal error has happened, the validator org.eclipse.jst.jsp.core has incorrectly configured the validation extension point.
+
+!ENTRY org.eclipse.wst.validation 4 0 2558-10-13 13:51:02.423
+!MESSAGE Plug-in "org.eclipse.jst.jsp.core" was unable to instantiate class "org.eclipse.jst.jsp.core.internal.validation.TLDValidator".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Plug-in "org.eclipse.jst.jsp.core" was unable to instantiate class "org.eclipse.jst.jsp.core.internal.validation.TLDValidator".
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.throwException(RegistryStrategyOSGI.java:180)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:874)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:51)
+	at org.eclipse.wst.validation.Validator$V2.getValidator(Validator.java:1023)
+	at org.eclipse.wst.validation.Validator$V2.getDelegatedValidator(Validator.java:980)
+	at org.eclipse.wst.validation.Validator$V2.validationStarting(Validator.java:1258)
+	at org.eclipse.wst.validation.internal.ValBuilderJob$4.visit(ValBuilderJob.java:171)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:743)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:175)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:125)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.ExceptionInInitializerError
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance0(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:170)
+	... 12 more
+Caused by: java.lang.NullPointerException
+	at org.eclipse.jst.jsp.core.internal.validation.TLDValidator.<clinit>(TLDValidator.java:62)
+	... 19 more
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2558-10-13 13:51:02.423
+!MESSAGE Plug-in "org.eclipse.jst.jsp.core" was unable to instantiate class "org.eclipse.jst.jsp.core.internal.validation.TLDValidator".
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance0(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:170)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:874)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:51)
+	at org.eclipse.wst.validation.Validator$V2.getValidator(Validator.java:1023)
+	at org.eclipse.wst.validation.Validator$V2.getDelegatedValidator(Validator.java:980)
+	at org.eclipse.wst.validation.Validator$V2.validationStarting(Validator.java:1258)
+	at org.eclipse.wst.validation.internal.ValBuilderJob$4.visit(ValBuilderJob.java:171)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:743)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:175)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:125)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.jst.jsp.core.internal.validation.TLDValidator.<clinit>(TLDValidator.java:62)
+	... 19 more
+
+!ENTRY org.eclipse.wst.validation 4 0 2558-10-13 13:51:02.423
+!MESSAGE IWAE0100E Extension configuration error. An internal error has happened, the validator org.eclipse.jst.jsp.core has incorrectly configured the validation extension point.
+!SESSION 2558-10-20 10:23:18.574 -----------------------------------------------
+eclipse.buildId=M20090917-0800
+java.version=1.5.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=th_TH
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.reporting.product
+
+!ENTRY org.eclipse.ui.workbench 2 0 2558-10-20 12:17:32.629
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2558-10-20 12:17:32.629
+!MESSAGE Conflict for 'org.eclipse.wst.jsdt.ui.edit.text.java.open.editor':
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@1e2abc3),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@165d9bd,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@16ca577)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@17d03c5)),sourcePriority=1064961)
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@1e2abc3),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@165d9bd,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@16ca577)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@17d03c5)),sourcePriority=1064961)
+!SESSION 2559-01-07 14:27:49.914 -----------------------------------------------
+eclipse.buildId=M20090917-0800
+java.version=1.5.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=th_TH
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.reporting.product
+
+!ENTRY org.eclipse.wst.server.core 4 0 2559-01-07 14:34:21.626
+!MESSAGE Server Tomcat v5.5 Server at localhost was unable to start within 45 seconds. If the server requires more time, try increasing the timeout in the server editor.

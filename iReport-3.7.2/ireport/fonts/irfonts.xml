@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+   <fontFamily name="Angsana New">
+       <normal><![CDATA[ANGSA.TTF]]></normal>
+       <bold><![CDATA[ANGSAB.TTF]]></bold>
+       <italic><![CDATA[ANGSAI.TTF]]></italic>
+       <boldItalic><![CDATA[ANGSAZ.TTF]]></boldItalic>
+       <pdfEncoding><![CDATA[ANGSAI.TTF]]></pdfEncoding>
+       <pdfEmbedded><![CDATA[false]]></pdfEmbedded>
+       <locales>
+               <locale><![CDATA[th_TH_TH]]></locale>
+       </locales>
+   </fontFamily>
+
+   <fontFamily name="TH Charm of AU">
+       <normal><![CDATA[TH Charm of AU.ttf]]></normal>
+       <bold><![CDATA[TH Charm of AU.ttf]]></bold>
+       <italic><![CDATA[TH Charm of AU.ttf]]></italic>
+       <boldItalic><![CDATA[TH Charm of AU.ttf]]></boldItalic>
+       <pdfEncoding><![CDATA[TH Charm of AU.ttf]]></pdfEncoding>
+       <pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+       <locales>
+               <locale><![CDATA[th_TH_TH]]></locale>
+       </locales>
+   </fontFamily>
+
+   <fontFamily name="TH SarabunPSK">
+       <normal><![CDATA[THSARABUN.TTF]]></normal>
+       <bold><![CDATA[THSARABUN BOLD.TTF]]></bold>
+       <italic><![CDATA[THSARABUN ITALIC.TTF]]></italic>
+       <boldItalic><![CDATA[THSARABUN BOLDITALIC.TTF]]></boldItalic>
+       <pdfEncoding><![CDATA[THSARABUN ITALIC.TTF]]></pdfEncoding>
+       <pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+       <locales>
+               <locale><![CDATA[th_TH]]></locale>
+       </locales>
+   </fontFamily>
+
+</fontFamilies>

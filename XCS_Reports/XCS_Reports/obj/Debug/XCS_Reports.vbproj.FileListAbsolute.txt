@@ -1,0 +1,14 @@
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Reports\bin\XCS_Reports.dll
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Reports\bin\XCS_Reports.pdb
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Reports\bin\XCS_Reports.xml
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Reports\bin\AjaxControlToolkit.dll
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Reports\bin\itextsharp.dll
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Reports\bin\LinqDB.dll
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Reports\bin\LinqDB.pdb
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Reports\bin\LinqDB.xml
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Reports\obj\Debug\ResolveAssemblyReference.cache
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Reports\obj\Debug\XCS_Reports.Resources.resources
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Reports\obj\Debug\XCS_Reports.vbproj.GenerateResource.Cache
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Reports\obj\Debug\XCS_Reports.dll
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Reports\obj\Debug\XCS_Reports.xml
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\XCS_Reports\obj\Debug\XCS_Reports.pdb

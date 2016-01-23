@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LIL3002" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="320"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="183" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="5" width="100" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[เลขที่งาน ..................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="25" width="163" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[บัญชีรายละเอียดทรัพย์สินที่ถูกอายัด]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="73" y="68" width="482" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[คำสั่งอายัด เลขที่ ....................................................... ลงวันที่ ....................... เดือน ........................................ พ.ศ. ...........................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="88" width="419" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[หน่วยสังกัดของผู้ออกคำสั่ง .....................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="108" width="419" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ชื่อเจ้าของทรัพย์สินที่ถูกอายัด .................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="128" width="545" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ภูมิสำเนาเจ้าของทรัพย์สิน บ้านเลขที่ ................................ ซอย .................................................................. ถนน ........................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="148" width="545" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[แขวง .................................................... เขต .............................................. จังหวัด ..............................................]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="63">
+			<rectangle>
+				<reportElement x="10" y="0" width="46" height="63"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="56" y="0" width="96" height="63"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="152" y="0" width="43" height="63"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="195" y="0" width="42" height="63"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="237" y="0" width="160" height="63"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="397" y="20" width="80" height="43"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="477" y="20" width="78" height="43"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="397" y="0" width="158" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="15" y="25" width="41" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[รายการที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="25" width="89" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[รายละเอียดทรัพย์สิน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="24" width="55" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[วันที่เพิกถอน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="504" y="24" width="44" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[วันขาย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="424" y="43" width="38" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[คำสั่ง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="43" width="45" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ทอดตลาด]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="25" width="32" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[จำนวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="43" width="25" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[หน่วย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="25" width="36" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ประมาณ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="205" y="43" width="21" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ราคา]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="25" width="127" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[สถานที่ตั้งหรือที่เก็บทรัพย์สิน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="436" y="2" width="100" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[การปฎิบัติต่อทรัพย์สิน]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="298" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="10" y="0" width="46" height="298"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="27" y="3" width="540" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[หมายเหตุ สำเนามอบให้ผู้ถูกยึด/อายัด/ผู้ครอบครองด้วยหนึ่งฉบับ ในกรณีที่มีใบต่อไปให้ลงชื่อกำกับไว้ทุกฉบับด้วย]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="27" y="14" width="27" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="14" width="100" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[พนักงานเจ้าหน้ที่/ผู้สั่งอายัด]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="14" width="27" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="14" width="67" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ผู้ถูกยึด/อายัด]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="35" width="27" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="35" width="36" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[พยาน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="35" width="27" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="35" width="35" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[พยาน]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

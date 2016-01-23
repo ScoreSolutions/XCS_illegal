@@ -1,0 +1,124 @@
+30 ¸.¤. 2553 13:57:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+30 ¸.¤. 2553 13:57:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+30 ¸.¤. 2553 13:57:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 13:57:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 13:57:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context3280193532664962254.xml'
+30 ¸.¤. 2553 13:57:21 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/CoorporationCodeService'
+30 ¸.¤. 2553 13:57:37 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 13:57:37 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/CoorporationCodeService'
+30 ¸.¤. 2553 13:59:41 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 13:59:41 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 13:59:41 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context6967287230721802022.xml'
+30 ¸.¤. 2553 13:59:52 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/IDCardService'
+30 ¸.¤. 2553 14:00:52 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 14:00:53 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/IDCardService'
+30 ¸.¤. 2553 14:21:59 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 14:21:59 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 14:22:01 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: stop: Stopping web application at '/IllegalService'
+30 ¸.¤. 2553 15:40:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+30 ¸.¤. 2553 15:40:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+30 ¸.¤. 2553 15:40:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 15:40:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 15:40:08 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context6035626389525769725.xml'
+30 ¸.¤. 2553 15:40:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/OffcodeService'
+30 ¸.¤. 2553 15:41:32 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 15:41:32 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/OffcodeService'
+30 ¸.¤. 2553 15:41:41 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 15:44:15 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 15:44:15 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 15:44:15 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context5346057756297438173.xml'
+30 ¸.¤. 2553 15:44:25 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+30 ¸.¤. 2553 15:50:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 15:50:38 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+30 ¸.¤. 2553 15:58:40 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 15:58:40 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 15:58:40 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context2481977663166172004.xml'
+30 ¸.¤. 2553 15:58:48 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/GroupIDService'
+30 ¸.¤. 2553 15:58:55 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 15:58:55 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/GroupIDService'
+30 ¸.¤. 2553 15:59:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 15:59:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 15:59:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/GroupIDService'
+30 ¸.¤. 2553 15:59:20 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context7670544578300178219.xml'
+30 ¸.¤. 2553 15:59:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/GroupIDService'
+30 ¸.¤. 2553 15:59:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 15:59:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 15:59:33 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context2826060080096967548.xml'
+30 ¸.¤. 2553 15:59:37 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 15:59:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+30 ¸.¤. 2553 15:59:43 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/GroupIDService'
+30 ¸.¤. 2553 16:00:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 16:00:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 16:00:19 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+30 ¸.¤. 2553 16:00:20 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context8725765452550614070.xml'
+30 ¸.¤. 2553 16:00:27 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/DateService'
+30 ¸.¤. 2553 16:00:37 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 16:00:37 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/DateService'
+30 ¸.¤. 2553 16:08:04 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 16:08:04 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 16:08:04 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/ADMINI~1/AppData/Local/Temp/context2551643463015100074.xml'
+30 ¸.¤. 2553 16:08:12 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/GroupIDService'
+30 ¸.¤. 2553 16:08:28 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+30 ¸.¤. 2553 16:08:28 org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/GroupIDService'

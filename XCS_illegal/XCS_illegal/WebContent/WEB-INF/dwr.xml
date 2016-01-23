@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN" "http://getahead.org/dwr/dwr30.dtd">
+<dwr>
+  <allow>
+		<create creator="new" javascript="Lawbreaker">
+			<param name="class" value="com.ko.webapp.ajax.LawbreakerAjax" />
+		</create>
+		<convert converter="bean" match="com.ko.domain.Lawbreaker"/>
+		
+		<create creator="new" javascript="Pke_Compare">
+			<param name="class" value="com.ko.webapp.ajax.Pke_CompareAjax" />
+		</create>
+		<create creator="new" javascript="Tranlog">
+			<param name="class" value="com.ko.webapp.ajax.TranlogAjax" />
+		</create>
+		<create creator="new" javascript="ConfigShareMoney">
+			<param name="class" value="com.ko.webapp.ajax.ConfigsharemoneyAjax" />
+		</create>
+		<create creator="new" javascript="Demo">
+      		<param name="class" value="com.ko.test.Demo"/>
+   	 	</create>
+		
+		<create creator="new" javascript="Exhibit">
+			<param name="class" value="com.ko.webapp.ajax.ExhibitAjax" />
+		</create>
+		<create creator="new" javascript="SelectRegion">
+			<param name="class" value="com.ko.webapp.ajax.SelectRegionAjax" />
+		</create>
+		<create creator="new" javascript="FileUploader">
+			<param name="class" value="com.ko.webapp.ajax.FileUploaderAjax" />
+		</create>
+		<create creator="new" javascript="DutyTable">
+			<param name="class" value="com.ko.webapp.ajax.DutyTableAjax" />
+		</create>
+        <create creator="new" javascript="SuspectRelatif">
+            <param name="class" value="com.ko.webapp.ajax.SuspectRelatifAjax"/>
+        </create>
+        <create creator="new" javascript="SuspectPicture">
+            <param name="class" value="com.ko.webapp.ajax.SuspectPictureAjax"/>
+        </create>
+		<create creator="new" javascript="SuppressTargetList">
+            <param name="class" value="com.ko.webapp.ajax.SuppressTargetListAjax"/>
+        </create>
+		<create creator="new" javascript="OtherStaffList">
+            <param name="class" value="com.ko.webapp.ajax.OtherStaffListAjax"/>
+        </create>
+		<create creator="new" javascript="EdOfficeTest">
+			<param name="class" value="com.ko.webapp.ajax.EdOfficeTestAjax" />
+		</create>
+		<create creator="new" javascript="LegislationProduct">
+			<param name="class" value="com.ko.webapp.ajax.LegislationProductAjax" />
+		</create>
+		<create creator="new" javascript="SearchWarrant">
+			<param name="class" value="com.ko.webapp.ajax.SearchWarrantAjax" />
+		</create>
+		<create creator="new" javascript="Master">
+			<param name="class" value="com.ko.webapp.ajax.MasterAjax" />
+		</create>
+		<create creator="new" javascript="DutyGroup">
+			<param name="class" value="com.ko.webapp.ajax.DutyGroupAjax" />
+		</create>
+		<create creator="new" javascript="Suspect">
+			<param name="class" value="com.ko.webapp.ajax.SuspectAjax" />
+		</create>
+		<create creator="new" javascript="Invest">
+			<param name="class" value="com.ko.webapp.ajax.InvestAjax" />
+		</create>
+		<create creator="new" javascript="Reports">
+			<param name="class" value="com.ko.webapp.ajax.ReportsAjax" />
+		</create>
+		<convert converter="bean" match="com.ko.domain.DutyTable"/>
+		<convert converter="bean" match="com.ko.domain.SizePackage"/>
+  </allow>
+</dwr>

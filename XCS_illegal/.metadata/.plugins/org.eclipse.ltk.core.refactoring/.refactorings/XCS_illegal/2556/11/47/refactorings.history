@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 1 elements(s) to &apos;ILLR8301.jsp&apos;&#x0D;&#x0A;- Original project: &apos;XCS_illegal&apos;&#x0D;&#x0A;- Destination element: &apos;ILLR8301.jsp&apos;&#x0D;&#x0A;- Original element: &apos;ILLR8301.jsp&apos;" description="Copy file" element1="WebContent/SummaryReports/ReportCase/ILLR8301.jsp" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1385109528162" target="/XCS_illegal/WebContent/SummaryReports/ReportCase/ILLR8301.jsp" units="0" version="1.0"/>
+</session>

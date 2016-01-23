@@ -1,0 +1,11 @@
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\TestPCCWebService\bin\Debug\TestPCCWebService.exe.config
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\TestPCCWebService\bin\Debug\TestPCCWebService.exe
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\TestPCCWebService\bin\Debug\TestPCCWebService.pdb
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\TestPCCWebService\bin\Debug\TestPCCWebService.xml
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\TestPCCWebService\obj\Debug\ResolveAssemblyReference.cache
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\TestPCCWebService\obj\Debug\TestPCCWebService.Form1.resources
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\TestPCCWebService\obj\Debug\TestPCCWebService.Resources.resources
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\TestPCCWebService\obj\Debug\TestPCCWebService.vbproj.GenerateResource.Cache
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\TestPCCWebService\obj\Debug\TestPCCWebService.exe
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\TestPCCWebService\obj\Debug\TestPCCWebService.xml
+D:\MyProject\XCS-Illegal\XCS_Reports\trunk\TestPCCWebService\obj\Debug\TestPCCWebService.pdb

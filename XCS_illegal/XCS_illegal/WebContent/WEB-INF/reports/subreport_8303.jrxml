@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subreport_8303" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select  edv.d_offname d_offname, edv.pv_offname pv_offname, edv.branch_offname,
+pke_reports.getCaseQty(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_alcohol')) compare_qty_alcohol,
+pke_reports.getCompareCaseSum(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_alcohol')) compare_fine_alcohol,
+pke_reports.getSendCourtQty(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_alcohol'),'2') sendcourt_qty_alcohol,
+pke_reports.getSendCourtSum(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_alcohol'),'2') sendcourt_fine_alcohol,
+pke_reports.getSendCourtQty(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_alcohol'),'3') sendprosecutor_qty_alcohol,
+pke_reports.getSendCourtSum(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_alcohol'),'3') sendprosecutor_fine_alcohol,
+pke_reports.getCaseQty(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_tobacco')) compare_qty_tobacco,
+pke_reports.getCompareCaseSum(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_tobacco')) compare_fine_tobacco,
+pke_reports.getSendCourtQty(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_tobacco'),'2') sendcourt_qty_tobacco,
+pke_reports.getSendCourtSum(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_tobacco'),'2') sendcourt_fine_tobacco,
+pke_reports.getSendCourtQty(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_tobacco'),'3') sendprosecutor_qty_tobacco,
+pke_reports.getSendCourtSum(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_tobacco'),'3') sendprosecutor_fine_tobacco,
+pke_reports.getCaseQty(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_card')) compare_qty_card,
+pke_reports.getCompareCaseSum(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_card')) compare_fine_card,
+pke_reports.getSendCourtQty(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_card'),'2') sendcourt_qty_card,
+pke_reports.getSendCourtSum(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_card'),'2') sendcourt_fine_card,
+pke_reports.getSendCourtQty(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_card'),'3') sendprosecutor_qty_card,
+pke_reports.getSendCourtSum(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_card'),'3') sendprosecutor_fine_card,
+pke_reports.getCaseQty(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_tax')) compare_qty_tax,
+pke_reports.getCompareCaseSum(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_tax')) compare_fine_tax,
+pke_reports.getSendCourtQty(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_tax'),'2') sendcourt_qty_tax,
+pke_reports.getSendCourtSum(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_tax'),'2') sendcourt_fine_tax,
+pke_reports.getSendCourtQty(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_tax'),'3') sendprosecutor_qty_tax,
+pke_reports.getSendCourtSum(edv.branch_offcode, to_date('2007-03-13','yyyy-mm-dd') , to_date('2007-03-13','yyyy-mm-dd'), pke_master.getConfigValue('legislation_tax'),'3') sendprosecutor_fine_tax
+from v_office_desc edv]]>
+	</queryString>
+	<field name="D_OFFNAME" class="java.lang.String"/>
+	<field name="PV_OFFNAME" class="java.lang.String"/>
+	<field name="BRANCH_OFFNAME" class="java.lang.String"/>
+	<field name="COMPARE_QTY_ALCOHOL" class="java.math.BigDecimal"/>
+	<field name="COMPARE_FINE_ALCOHOL" class="java.math.BigDecimal"/>
+	<field name="SENDCOURT_QTY_ALCOHOL" class="java.math.BigDecimal"/>
+	<field name="SENDCOURT_FINE_ALCOHOL" class="java.math.BigDecimal"/>
+	<field name="SENDPROSECUTOR_QTY_ALCOHOL" class="java.math.BigDecimal"/>
+	<field name="SENDPROSECUTOR_FINE_ALCOHOL" class="java.math.BigDecimal"/>
+	<field name="COMPARE_QTY_TOBACCO" class="java.math.BigDecimal"/>
+	<field name="COMPARE_FINE_TOBACCO" class="java.math.BigDecimal"/>
+	<field name="SENDCOURT_QTY_TOBACCO" class="java.math.BigDecimal"/>
+	<field name="SENDCOURT_FINE_TOBACCO" class="java.math.BigDecimal"/>
+	<field name="SENDPROSECUTOR_QTY_TOBACCO" class="java.math.BigDecimal"/>
+	<field name="SENDPROSECUTOR_FINE_TOBACCO" class="java.math.BigDecimal"/>
+	<field name="COMPARE_QTY_CARD" class="java.math.BigDecimal"/>
+	<field name="COMPARE_FINE_CARD" class="java.math.BigDecimal"/>
+	<field name="SENDCOURT_QTY_CARD" class="java.math.BigDecimal"/>
+	<field name="SENDCOURT_FINE_CARD" class="java.math.BigDecimal"/>
+	<field name="SENDPROSECUTOR_QTY_CARD" class="java.math.BigDecimal"/>
+	<field name="SENDPROSECUTOR_FINE_CARD" class="java.math.BigDecimal"/>
+	<field name="COMPARE_QTY_TAX" class="java.math.BigDecimal"/>
+	<field name="COMPARE_FINE_TAX" class="java.math.BigDecimal"/>
+	<field name="SENDCOURT_QTY_TAX" class="java.math.BigDecimal"/>
+	<field name="SENDCOURT_FINE_TAX" class="java.math.BigDecimal"/>
+	<field name="SENDPROSECUTOR_QTY_TAX" class="java.math.BigDecimal"/>
+	<field name="SENDPROSECUTOR_FINE_TAX" class="java.math.BigDecimal"/>
+	<group name="subreport_8303_group">
+		<groupExpression><![CDATA[$F{PV_OFFNAME}]]></groupExpression>
+		<groupHeader>
+			<band height="24">
+				<rectangle>
+					<reportElement x="0" y="0" width="802" height="24" backcolor="#D8D8D8"/>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="10" y="3" width="629" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{PV_OFFNAME}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="802" height="58"/>
+			</rectangle>
+			<line>
+				<reportElement x="51" y="0" width="1" height="58"/>
+			</line>
+			<line>
+				<reportElement x="165" y="0" width="1" height="59"/>
+			</line>
+			<line>
+				<reportElement x="217" y="0" width="1" height="59"/>
+			</line>
+			<line>
+				<reportElement x="272" y="1" width="1" height="59"/>
+			</line>
+			<line>
+				<reportElement x="322" y="0" width="1" height="59"/>
+			</line>
+			<line>
+				<reportElement x="376" y="0" width="1" height="59"/>
+			</line>
+			<line>
+				<reportElement x="430" y="1" width="1" height="59"/>
+			</line>
+			<line>
+				<reportElement x="485" y="0" width="1" height="59"/>
+			</line>
+			<line>
+				<reportElement x="535" y="0" width="1" height="59"/>
+			</line>
+			<line>
+				<reportElement x="588" y="1" width="1" height="59"/>
+			</line>
+			<line>
+				<reportElement x="638" y="0" width="1" height="59"/>
+			</line>
+			<line>
+				<reportElement x="695" y="0" width="1" height="59"/>
+			</line>
+			<line>
+				<reportElement x="748" y="0" width="1" height="59"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="51" y="1" width="114" height="57"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BRANCH_OFFNAME}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="165" y="1" width="52" height="57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{COMPARE_QTY_ALCOHOL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="217" y="1" width="55" height="57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{SENDCOURT_QTY_ALCOHOL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="271" y="1" width="51" height="59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{SENDPROSECUTOR_QTY_ALCOHOL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="323" y="1" width="53" height="59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{COMPARE_QTY_TOBACCO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="376" y="1" width="54" height="59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{SENDCOURT_QTY_TOBACCO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="432" y="1" width="53" height="57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{SENDPROSECUTOR_QTY_TOBACCO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="485" y="1" width="49" height="57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{COMPARE_QTY_TAX}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="536" y="0" width="51" height="58"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{SENDCOURT_QTY_TAX}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="589" y="0" width="49" height="58"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{SENDPROSECUTOR_QTY_TAX}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="59" width="802" height="1"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="1" width="51" height="59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="12" isBold="true" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILL_P023_1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1008"/>
+	<parameter name="getTrackNo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select arr.subject || '(' || dg.group_name || ')' subject,
+
+to_char(aa.occurrence_date, 'fmdd', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  occurrence_day,
+to_char(aa.occurrence_date, 'month', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  occurrence_month,
+to_char(aa.occurrence_date, 'yyyy', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')  occurrence_year,
+
+pke_arrest.getArrestExhibit(cc.track_no) exhibit_desc, arr.abnormality, pke_arrest.getArrestLawbreaker(cc.track_no) lawbreaker_name,
+decode(arr.isinform,'Y','มี','N','ไม่มี') || 'การแจ้งความนำจับ' isnotice, case arr.isinform when 'Y' then decode(arr.ischkcount,'Y','','N','ไม่')||'ตรงกับที่แจ้ง' else '-' end ischkcount,
+pke_arrest.getRewardReqTeam(ar.id,pke_master.getConfigValue('commander')) staff_commander,
+nvl(aa.accuser_name, tia.title_name || sta.first_name || ' ' || sta.last_name) || ' ' || nvl(aa.accuser_posname,psa.posname || ' ' || sta.staff_level) || ' / ' ||
+pke_arrest.getRewardReqTeam(ar.id,pke_master.getConfigValue('arrest_co')) staff_arrest,
+pke_arrest.getRewardReqTeam(ar.id,pke_master.getConfigValue('help_by')) staff_helper,
+nvl(tic.title_name || stc.first_name || ' '  || stc.last_name,'') staff_control, nvl(psc.posname || ' ' || stc.staff_level,'') posname_control,
+nvl(arr.comment_control,'') comment_control,
+nvl(arr.comment_initial,'') comment_initial,
+nvl(tii.title_name || sti.first_name || ' ' || sti.last_name,'') staff_initial,
+nvl(psi.posname || ' ' || sti.staff_level,'') posname_initial,
+nvl(arr.comment_commander,'') comment_commander,
+nvl(tico.title_name || stco.first_name || ' ' || stco.last_name,'') staff_commander,
+nvl(psco.posname || ' ' || stco.staff_level,'')  posname_commander
+ from application_reward_req_report arr
+ inner join application_reward_request ar on ar.id=arr.application_reward_request_id
+ inner join ed_office ed on ed.offcode=ar.offcode
+ inner join compare_case cc on cc.id=ar.compare_case_id
+ inner join application_arrest aa on aa.track_no=cc.track_no
+ inner join duty_group dg on dg.group_id=aa.product_group_id
+ left join staff stc on stc.idcard_no=arr.staff_id_control
+ left join title tic on tic.title_code=stc.title_code
+ left join position psc on psc.poscode=arr.poscode_control
+ left join staff sti on sti.idcard_no=arr.staff_id_initial
+ left join title tii on tii.title_code=sti.title_code
+ left join position psi on psi.poscode=arr.poscode_initial
+ left join staff stco on stco.idcard_no=arr.staff_id_commander
+ left join title tico on tico.title_code=stco.title_code
+ left join position psco on psco.poscode=arr.poscode_commander
+ left join staff sta on sta.idcard_no=aa.accuser_idcardno
+ left join title tia on tia.title_name=sta.title_code
+ left join position psa on psa.poscode=trim(aa.accuser_poscode)
+where ar.request_no = $P{getTrackNo}]]>
+	</queryString>
+	<field name="SUBJECT" class="java.lang.String"/>
+	<field name="OCCURRENCE_DAY" class="java.lang.String"/>
+	<field name="OCCURRENCE_MONTH" class="java.lang.String"/>
+	<field name="OCCURRENCE_YEAR" class="java.lang.String"/>
+	<field name="EXHIBIT_DESC" class="java.lang.String"/>
+	<field name="ABNORMALITY" class="java.lang.String"/>
+	<field name="LAWBREAKER_NAME" class="java.lang.String"/>
+	<field name="ISNOTICE" class="java.lang.String"/>
+	<field name="ISCHKCOUNT" class="java.lang.String"/>
+	<field name="STAFF_COMMANDER" class="java.lang.String"/>
+	<field name="STAFF_ARREST" class="java.lang.String"/>
+	<field name="STAFF_HELPER" class="java.lang.String"/>
+	<field name="STAFF_CONTROL" class="java.lang.String"/>
+	<field name="POSNAME_CONTROL" class="java.lang.String"/>
+	<field name="COMMENT_CONTROL" class="java.lang.String"/>
+	<field name="COMMENT_INITIAL" class="java.lang.String"/>
+	<field name="STAFF_INITIAL" class="java.lang.String"/>
+	<field name="POSNAME_INITIAL" class="java.lang.String"/>
+	<field name="COMMENT_COMMANDER" class="java.lang.String"/>
+	<field name="POSNAME_COMMANDER" class="java.lang.String"/>
+	<variable name="vREWARD_MONEY" class="java.lang.String"/>
+	<group name="GRP">
+		<groupExpression><![CDATA[]]></groupExpression>
+		<groupHeader>
+			<band height="628">
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="0" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เรื่อง ..................................................................................................................................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="20" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[วันที่จับ .............เดือน.......................... พ.ศ. ...............]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="95" y="40" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ ................................................................................................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="80" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ลักษณะที่ตรวจพบ ...........................................................................................................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="100" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ชื่อผู้ถูกจับกุม ...................................................................................................................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="120" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[มีการแจ้งความนำจับหรือไม่ ............................................................................................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="140" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ตรวจนับได้ตรงกับที่แจ้งจริงหรือไม่ ................................................................................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="160" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[                                        ..................................................................................................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="180" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[..........................................................................................................................................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="200" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[..........................................................................................................................................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="220" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[                                              ............................................................................................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="240" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[..........................................................................................................................................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="260" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ผู้ช่วยเหลือ]]></text>
+				</staticText>
+				<frame>
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="280" width="555" height="20"/>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="20"/>
+						<textElement>
+							<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{STAFF_HELPER}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="317" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ชื่อและตำแหน่งผู้ควบคุมการจับกุม]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="38" y="337" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[รายละเอียดการจับกุมและความเห็น ................................................................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="294" y="360" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[(ลงชื่อ) .............................................................. ผู้ควบคุมการจับกุม]]></text>
+				</staticText>
+				<line>
+					<reportElement x="38" y="420" width="482" height="1"/>
+				</line>
+				<staticText>
+					<reportElement key="staticText-1" x="0" y="421" width="555" height="20"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Angsana New" size="14" isBold="true" isStrikeThrough="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ความเห็นของผู้บังคับบัญชา]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" x="0" y="460" width="1000" height="20"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Angsana New" size="14" isBold="false" isStrikeThrough="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[1 ความเห็นของผู้เชี่ยวชาญเฉพาะด้านการตรวจสอบสรรพสามิต]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" x="278" y="460" width="1000" height="20"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Angsana New" size="14" isBold="false" isStrikeThrough="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[2 ความเห็นของ ผอ.สตป]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="480" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[......................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="278" y="480" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[.................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" x="0" y="568" width="555" height="20"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Angsana New" size="14" isBold="true" isStrikeThrough="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[คำสั่ง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="588" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[..........................................................................................................................................................................................................................................]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="608" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[..........................................................................................................................................................................................................................................]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="27" y="0" width="702" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{SUBJECT}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="39" y="20" width="100" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{OCCURRENCE_DAY}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="84" y="20" width="149" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{OCCURRENCE_MONTH}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="170" y="20" width="100" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{OCCURRENCE_YEAR}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="74" y="80" width="583" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{ABNORMALITY}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="56" y="100" width="480" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{LAWBREAKER_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="111" y="120" width="435" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{ISNOTICE}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="140" y="140" width="406" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{ISCHKCOUNT}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="144" y="317" width="729" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{STAFF_CONTROL}+" "+"ตำแหน่ง"+$F{POSNAME_CONTROL}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="325" y="380" width="261" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( $F{STAFF_CONTROL} == null || $F{STAFF_CONTROL} == " " ? "" :"("+" "+$F{STAFF_CONTROL}+" "+")" )]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="480" width="371" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{COMMENT_INITIAL}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="15" y="520" width="263" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{POSNAME_INITIAL}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="178" y="337" width="717" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{COMMENT_CONTROL}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="295" y="500" width="260" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( $F{STAFF_COMMANDER} == null || $F{STAFF_COMMANDER} == ""  ? "" :"("+" "+$F{STAFF_COMMANDER}+" "+")" )]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="278" y="480" width="277" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{COMMENT_COMMANDER}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="295" y="520" width="260" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{POSNAME_COMMANDER}]]></textFieldExpression>
+				</textField>
+				<frame>
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="160" width="555" height="20"/>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="20"/>
+						<textElement>
+							<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA["ชื่อและตำแหน่งผู้สั่งการ"+" "+( $F{STAFF_COMMANDER} == null ? "" : $F{STAFF_COMMANDER} )]]></textFieldExpression>
+					</textField>
+				</frame>
+				<textField isBlankWhenNull="true">
+					<reportElement x="15" y="500" width="263" height="20"/>
+					<textElement>
+						<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( $F{STAFF_INITIAL} == null || $F{STAFF_INITIAL} == " " ? ""  :"("+" "+$F{STAFF_INITIAL}+" "+")" )]]></textFieldExpression>
+				</textField>
+				<frame>
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="220" width="555" height="20"/>
+					<textField isBlankWhenNull="true">
+						<reportElement x="0" y="0" width="555" height="20"/>
+						<textElement>
+							<font fontName="Angsana New" size="14" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA["ตำแหน่งผู้จับกุม/ร่วมจับกุม"+" "+$F{STAFF_ARREST}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<staticText>
+					<reportElement key="staticText-5" x="0" y="60" width="1000" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Angsana New" size="14" isBold="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[..........................................................................................................................................................................................................................................]]></text>
+				</staticText>
+				<frame>
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="40" width="555" height="20"/>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="20"/>
+						<textElement>
+							<font fontName="Angsana New" size="14" isStrikeThrough="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA["นิดและปริมาณของที่จับ"+" "+$F{EXHIBIT_DESC}]]></textFieldExpression>
+					</textField>
+				</frame>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-1" x="0" y="0" width="555" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Angsana New" size="18" isBold="false" isStrikeThrough="false" pdfFontName="ANGSA.TTF" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[รายงานการจับกุม]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+</jasperReport>

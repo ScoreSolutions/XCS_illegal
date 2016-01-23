@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ILLR8102" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="192"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement x="169" y="3" width="467" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16"/>
+				</textElement>
+				<text><![CDATA[ตารางผลการปราบปรามการกระทำผิดกฏหมายสรรพสามิต (เฉพาะหน่วยงานปราบปราม) (รายเดือน)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="24" width="467" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16"/>
+				</textElement>
+				<text><![CDATA[สำนักงานสรรพสามิต............]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="45" width="467" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="16"/>
+				</textElement>
+				<text><![CDATA[ปีงบประมาณ ...........]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="6" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="730" y="2" width="71" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[หน่วย ราย : บาท]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="14" y="27" width="776" height="60"/>
+			</rectangle>
+			<line>
+				<reportElement x="45" y="27" width="1" height="60"/>
+			</line>
+			<line>
+				<reportElement x="91" y="27" width="1" height="60"/>
+			</line>
+			<line>
+				<reportElement x="178" y="27" width="1" height="60"/>
+			</line>
+			<line>
+				<reportElement x="265" y="27" width="1" height="60"/>
+			</line>
+			<line>
+				<reportElement x="351" y="27" width="1" height="60"/>
+			</line>
+			<line>
+				<reportElement x="438" y="27" width="1" height="60"/>
+			</line>
+			<line>
+				<reportElement x="527" y="27" width="1" height="60"/>
+			</line>
+			<line>
+				<reportElement x="615" y="27" width="1" height="60"/>
+			</line>
+			<line>
+				<reportElement x="703" y="27" width="1" height="60"/>
+			</line>
+			<staticText>
+				<reportElement x="13" y="27" width="32" height="60"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="27" width="45" height="60"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[เดือน]]></text>
+			</staticText>
+			<line>
+				<reportElement x="92" y="52" width="86" height="1"/>
+			</line>
+			<line>
+				<reportElement x="134" y="53" width="1" height="34"/>
+			</line>
+			<line>
+				<reportElement x="180" y="52" width="86" height="1"/>
+			</line>
+			<line>
+				<reportElement x="222" y="53" width="1" height="34"/>
+			</line>
+			<line>
+				<reportElement x="266" y="52" width="86" height="1"/>
+			</line>
+			<line>
+				<reportElement x="308" y="53" width="1" height="34"/>
+			</line>
+			<line>
+				<reportElement x="353" y="52" width="86" height="1"/>
+			</line>
+			<line>
+				<reportElement x="395" y="53" width="1" height="34"/>
+			</line>
+			<line>
+				<reportElement x="440" y="52" width="86" height="1"/>
+			</line>
+			<line>
+				<reportElement x="482" y="53" width="1" height="34"/>
+			</line>
+			<line>
+				<reportElement x="529" y="52" width="86" height="1"/>
+			</line>
+			<line>
+				<reportElement x="571" y="53" width="1" height="34"/>
+			</line>
+			<line>
+				<reportElement x="616" y="52" width="86" height="1"/>
+			</line>
+			<line>
+				<reportElement x="658" y="53" width="1" height="34"/>
+			</line>
+			<line>
+				<reportElement x="704" y="52" width="86" height="1"/>
+			</line>
+			<line>
+				<reportElement x="746" y="53" width="1" height="34"/>
+			</line>
+			<staticText>
+				<reportElement x="92" y="29" width="86" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[สุรา]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="53" width="40" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[คดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="53" width="43" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ค่าปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="53" width="40" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[คดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="29" width="86" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ยาสูบ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="53" width="43" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ค่าปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="267" y="53" width="40" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[คดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="29" width="86" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ไพ่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="53" width="43" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ค่าปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="354" y="53" width="40" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[คดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="29" width="86" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[น้ำมัน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="53" width="43" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ค่าปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="53" width="40" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[คดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="29" width="86" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[เครื่องดื่ม]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="53" width="43" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ค่าปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="529" y="53" width="40" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[คดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="29" width="86" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[เครื่องปรับอากาศ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="570" y="53" width="43" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ค่าปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="617" y="53" width="40" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[คดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="615" y="29" width="86" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[โคมไฟฟ้า]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="658" y="53" width="43" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ค่าปรับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="705" y="53" width="40" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[คดี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="703" y="29" width="86" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[แก้วคริสตัล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="746" y="53" width="43" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ค่าปรับ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="246" splitType="Stretch">
+			<line>
+				<reportElement x="14" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="45" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="91" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="134" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="178" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="222" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="265" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="308" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="351" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="395" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="438" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="482" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="527" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="571" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="615" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="658" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="703" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="746" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="790" y="0" width="1" height="246"/>
+			</line>
+			<line>
+				<reportElement x="14" y="32" width="775" height="1"/>
+			</line>
+			<line>
+				<reportElement x="14" y="64" width="775" height="1"/>
+			</line>
+			<line>
+				<reportElement x="14" y="95" width="775" height="1"/>
+			</line>
+			<line>
+				<reportElement x="15" y="127" width="775" height="1"/>
+			</line>
+			<line>
+				<reportElement x="15" y="158" width="775" height="1"/>
+			</line>
+			<line>
+				<reportElement x="14" y="189" width="775" height="1"/>
+			</line>
+			<line>
+				<reportElement x="14" y="219" width="775" height="1"/>
+			</line>
+			<line>
+				<reportElement x="703" y="247" width="1" height="20"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="86" splitType="Stretch">
+			<rectangle>
+				<reportElement x="14" y="1" width="776" height="20"/>
+			</rectangle>
+			<line>
+				<reportElement x="91" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="134" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="178" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="222" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="265" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="308" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="351" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="395" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="438" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="482" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="527" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="571" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="615" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="658" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="703" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="746" y="2" width="1" height="20"/>
+			</line>
+			<staticText>
+				<reportElement x="16" y="35" width="597" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[ที่มา : ส่วนป้องกันและปราบปราม สตป.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="57" width="597" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[หมายเหตุ : จำนวนเงินค่าเปรียบเทียบปรับ ไม่ได้รวมประมาณการค่าปรับของคดีไม่มีตัวและคดีส่งฟ้องศาล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="2" width="76" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Angsana New" size="14"/>
+				</textElement>
+				<text><![CDATA[รวม]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
